@@ -1,0 +1,35 @@
+.contactcard {
+  width: 90%;
+  height: 70%;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.title {
+  height: 15%;
+  width: 100%;
+  padding-left: 2.5%;
+  background: -webkit-linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
+  display: flex;
+  align-items: center;
+}
+.title p {
+  flex-grow: 1;
+}
+.links {
+  display: flex;
+  justify-content: end;
+  padding-right: 5%;
+}
+
+.infosection {
+  height: 85%;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+}
+.infosection p {
+  color: black;
+  margin: 0;
+}
