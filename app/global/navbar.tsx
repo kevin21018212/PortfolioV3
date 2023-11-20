@@ -7,23 +7,23 @@ const NavBar = () => {
       <div className="red-rectangle"></div>
       <div className="red-triangle"></div>
       <div className="first-link">
-        <Link className="lnk" href="/">
-          Home
+        <Link href="/">
+          <p>Home</p>
         </Link>
       </div>
       <div className="link">
-        <Link className="lnk" href="/projects">
-          Projects
+        <Link href="/projects">
+          <p>Projects</p>
         </Link>
       </div>
       <div className="link">
-        <Link className="lnk" href="/resume">
-          Resume
+        <Link href="/resume">
+          <p>Resume</p>
         </Link>
       </div>
       <div className="link">
-        <Link className="lnk" href="/contact">
-          Contact
+        <Link href="/contact">
+          <p>Contact</p>
         </Link>
       </div>
       <div className="empty-rhombus"></div>

@@ -36,11 +36,8 @@
   width: 190%;
   box-sizing: border-box;
   background-color: var(--secondary-color);
-  padding: 20px;
-  font-family: "Sequel Black", sans-serif;
-  font-size: small;
   transform-origin: top right;
-  padding-left: 65%;
+  padding-left: 70%;
   margin-left: -39px;
   transform: skew(-10deg) rotate(25deg);
   transition: transform 0.5s ease;
@@ -65,7 +62,6 @@
 .first-link:hover {
   background-color: #7f1437;
   padding-left: 45%;
-
   transform: skew(-10deg) rotate(25deg) translate(10px, -10px);
 }
 .first-link:hover {

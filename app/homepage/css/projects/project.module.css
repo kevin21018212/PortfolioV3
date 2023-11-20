@@ -80,7 +80,7 @@
 
 .toggleButton.upArrow::before {
   border-bottom-color: #000;
-  top: 50%;
+  top: 65%;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
