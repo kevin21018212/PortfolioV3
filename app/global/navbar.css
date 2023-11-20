@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #f0f0f0;
+  --secondary-color: #ef0017;
+  --background-color: #0a0a0a;
+}
+
+.navbar {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.red-rectangle {
+  width: 100%;
+  height: 30px;
+  background-color: var(--secondary-color);
+}
+
+.red-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 25px 0;
+  border-color: transparent var(--secondary-color) transparent transparent;
+}
+
+.link,
+.first-link {
+  width: 190%;
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  font-family: "Sequel Black", sans-serif;
+  font-size: small;
+  transform-origin: top right;
+  padding-left: 65%;
+  margin-left: -39px;
+  transform: skew(-10deg) rotate(25deg);
+  transition: transform 0.5s ease;
+}
+
+.first-link {
+  padding-left: 80%;
+}
+
+.empty-rhombus {
+  width: 180%;
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  transform-origin: top right;
+  margin-left: -25px;
+  transform: skew(-10deg) rotate(25deg);
+}
+
+.link:hover,
+.first-link:hover {
+  background-color: #7f1437;
+  padding-left: 45%;
+
+  transform: skew(-10deg) rotate(25deg) translate(10px, -10px);
+}
+.first-link:hover {
+  padding-left: 55%;
+}
+
+.link a,
+.first-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.link:hover .empty-rhombus,
+.first-link:hover .empty-rhombus {
+  transform: skew(-10deg) rotate(25deg);
+}

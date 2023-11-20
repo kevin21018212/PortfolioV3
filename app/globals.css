@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Sequel-Black";
+  src: url("../public/fonts/Sequel100Black-75.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Genesys";
+  src: url("../public/fonts/Genesys.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Byotone-Thin";
+  src: url("../public/fonts/Byotone-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Byotone-Medium";
+  src: url("../public/fonts/Byotone-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abstract";
+  src: url("../public/fonts/meeksa.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Monument-Regular";
+  src: url("../public/fonts/MonumentExtended-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Petrov-ExtraLight";
+  src: url("../public/fonts/PetrovSans-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Petrov";
+  src: url("../public/fonts/PetrovSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Petrov-Thin";
+  src: url("../public/fonts/PetrovSans-Thin.ttf") format("truetype");
+}
+
+.line {
+  border: 1px solid #ffffff;
+  margin: 0;
+  margin-bottom: 10%;
+}
+
+/* Define default font sizes */
+.xs {
+  font-family: "Petrov-Thin", sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.s {
+  font-family: "Petrov-ExtraLight", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.m {
+  font-family: "Petrov", sans-serif;
+  font-size: 1.6vw;
+  color: #ffffff;
+}
+.l {
+  font-family: "Genesys", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+.t1 {
+  font-family: "Genesys", sans-serif;
+  font-size: 4.5vw;
+  color: #ffffff;
+  margin: 0;
+}
+.t2 {
+  font-family: "Genesys", sans-serif;
+  font-size: 4rem;
+  color: #ffffff;
+  margin: 0;
+}
+.t3 {
+  font-family: "Monument-Regular", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0;
+}
+.t4 {
+  font-family: "Petrov", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+}
+.t5 {
+  font-family: "Petrov", sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0;
+}
+.lnk {
+  font-family: "Byotone", sans-serif;
+  font-size: 1.1rem;
+}
+p {
+  font-family: "Byotone ", sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  .xs {
+    font-size: 0.8rem;
+  }
+  .s {
+    font-size: 0.9rem;
+  }
+  .m {
+    font-size: 1.5rem;
+  }
+  .l {
+    font-size: 1.8rem;
+  }
+  .t1 {
+    font-size: 3rem;
+  }
+  .t2 {
+    font-size: 2rem;
+  }
+  .t3 {
+    font-size: 1.8rem;
+  }
+  .t4 {
+    font-size: 1.5rem;
+  }
+  .t5 {
+    font-size: 1.2rem;
+  }
+  .lnk {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+body {
+  background-color: #0a0a0a;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}

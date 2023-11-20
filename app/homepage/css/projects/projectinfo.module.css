@@ -1,0 +1,79 @@
+/* Main Container */
+.projectsContent {
+  display: flex;
+  margin: 1%;
+  width: 100%;
+}
+
+/* Image for Project */
+.projectImage {
+  margin: 1%;
+  border: 1px solid white;
+}
+
+/* Three Sections of Project Info */
+.projectsContentLeft {
+  flex-direction: column;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.projectsContentMiddle {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.projectsContentRight {
+  flex-grow: 1;
+}
+
+/* Sections of the Projects Info */
+.middleLeft {
+  margin-top: 20vh;
+  font-size: 5rem;
+  color: white;
+}
+
+.bottomLeft {
+  margin-top: 12vh;
+}
+
+.idea {
+  margin-top: 15vh;
+  height: 55%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.ideaBody {
+  /* Consider changing 'text-wrap' to 'white-space' */
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+}
+
+.bottomMiddle {
+  margin-top: 12vh;
+}
+
+/* Sizing for iPhone */
+@media screen and (max-width: 600px) {
+  .projectsContentRight {
+    display: 1;
+  }
+  .t1 {
+    font-size: 2rem;
+  }
+  .m {
+    font-size: 1rem;
+  }
+  .t3 {
+    font-size: 1.5rem;
+  }
+  .idea {
+    width: 75%;
+  }
+}

@@ -1,0 +1,11 @@
+.skillsliderContainer {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+}

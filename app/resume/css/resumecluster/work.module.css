@@ -1,0 +1,70 @@
+.workcontainer {
+  height: 130vh;
+  display: flex;
+  padding-bottom: 10%;
+}
+
+.workimg {
+  height: 80%;
+  width: 40%;
+  background: url(../../../../public/deereimg.jpeg);
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.worktext {
+  height: 8%;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.worktext p {
+  color: #131313;
+}
+
+/* Non-image */
+.workbox {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Display For Jobs */
+.workdisplay {
+  width: 65%;
+  height: 35%;
+  margin-left: -10%;
+  display: flex;
+  flex-direction: column;
+  background-color: #131313;
+  justify-content: center;
+}
+
+.jobtext p {
+  padding: 0;
+  padding-left: 5%;
+  color: #828282;
+}
+
+.jobtext p:nth-child(2) {
+  padding-left: 10%;
+}
+
+.jobtext p:nth-child(3) {
+  padding-left: 15%;
+}
+
+/* About Display */
+.aboutdisplay {
+  align-self: flex-end;
+  display: flex;
+  margin-top: 25%;
+  width: 70%;
+  height: 20%;
+}
