@@ -62,16 +62,10 @@
   .projectsContentRight {
     display: 1;
   }
-  .t1 {
-    font-size: 2rem;
+  .middleLeft {
+    font-size: 3rem;
   }
-  .m {
-    font-size: 1rem;
-  }
-  .t3 {
-    font-size: 1.5rem;
-  }
-  .idea {
-    width: 75%;
+  .bottomLeft {
+    font-size: 0.8vw;
   }
 }

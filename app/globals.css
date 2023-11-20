@@ -123,7 +123,7 @@ p {
     font-size: 3rem;
   }
   .t2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   .t3 {
     font-size: 1.8rem;
@@ -132,11 +132,9 @@ p {
     font-size: 1.5rem;
   }
   .t5 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
-  .lnk {
-    font-size: 0.9rem;
-  }
+
   p {
     font-size: 0.9rem;
   }
