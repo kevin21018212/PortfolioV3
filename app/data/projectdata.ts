@@ -11,8 +11,8 @@ export const projects = [
   {
     id: "circle2",
     topRight: "Project 002",
-    middleRight: "Code Bounties",
-    bottomRight: "Fun",
+    middleRight: "DASH",
+    bottomRight: "Orginization",
     middleMiddle:
       "Step into the world of Code Bounties, a platform where creativity, collaboration, and innovation come together. This digital realm is a playground for coding enthusiasts and problem solvers. Get ready to embark on exciting coding adventures, unlock achievements, and contribute to projects that make a difference.",
     bottomMiddle: "DATABASE PRISMA NEXTJS CSS API",

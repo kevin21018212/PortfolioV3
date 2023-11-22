@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Landing from "./homepage/components/landing/landing";
 import NewProjects from "./homepage/components/newprojects/newprojects";
 import styles from "./page.module.css";
-import NewProjectsMobile from "./homepage/components/newprojects/newprojectsmobile";
+import NewProjectsMobile from "./homepage/components/newprojects/mobile/newprojectsmobile";
 
 export default function Home() {
   const [screenSize, setScreenSize] = useState("desktop"); // "desktop" or "mobile"
