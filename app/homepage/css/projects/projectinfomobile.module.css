@@ -1,0 +1,20 @@
+.title {
+  width: 100%;
+  background: gray;
+  padding: 5%;
+}
+.title p {
+  margin: 0;
+}
+.description {
+  display: flex;
+}
+.image {
+  width: 50%;
+  background: -webkit-linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
+}
+.text {
+  width: 50%;
+  text-align: left;
+  padding: 5%;
+}

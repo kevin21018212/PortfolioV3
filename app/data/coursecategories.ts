@@ -1,6 +1,6 @@
 const courseCategories = [
   {
-    name: "Core Software Engineering Courses",
+    name: " Software Engineering",
     description: "Courses related to the fundamentals of software engineering.",
     courses: [
       "S E 185 - Problem Solving for Software Engineering",
@@ -26,7 +26,7 @@ const courseCategories = [
     ],
   },
   {
-    name: "General Education and Electives",
+    name: "Gen Ed and Electives",
     description: "Courses covering general education and elective subjects.",
     courses: [
       "ENGL 150 - English course",
