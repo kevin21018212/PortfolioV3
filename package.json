@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@barba/core": "^2.9.7",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",

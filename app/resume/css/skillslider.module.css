@@ -1,11 +1,24 @@
+/* skillslider.module.css */
+
 .skillsliderContainer {
   height: 50vh;
+  margin-top: 5vw;
   display: flex;
   align-items: center;
   width: 100vw;
-  overflow: hidden;
+
+  position: relative;
 }
-.carousel {
-  display: flex;
-  justify-content: center;
+
+.splide__slide {
+  height: 80%; /* Set the height of the cards to 90% of the slider height */
+  padding-top: 10%; /* Add a top padding of 5% between the list and the cards */
+}
+
+/* Hide arrows and pagination on small screens if needed */
+@media screen and (max-width: 768px) {
+  .splide__arrows,
+  .splide__pagination {
+    display: none;
+  }
 }

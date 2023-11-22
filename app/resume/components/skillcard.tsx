@@ -7,7 +7,7 @@ interface SkillCardProps {
   title: string;
   skillName: string;
   experience: string;
-  backgroundImageUrl: string;
+  backgroundImageUrl: string | null;
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({
@@ -31,34 +31,31 @@ const SkillCard: React.FC<SkillCardProps> = ({
   };
 
   return (
-    <>
-      <motion.div
-        whileHover={{ scale: 1.1, zIndex: 50 }}
-        className={`${styles.skillcardContainer} ${
-          isFlipped ? styles.flipped : ""
-        }`}
-        style={cardStyle}
-        onClick={flipCard}
-        initial={{ rotateY: 0 }}
-        animate={controls}
-      >
-        <div className={styles.cardfront}>
-          <div className={styles.text}>
-            <p className="s">{title}</p>
-            <p className="m">{skillName}</p>
-            <p className="s">{experience}</p>
-          </div>
+    <motion.div
+      whileHover={{ scale: 1.1, zIndex: 50 }}
+      className={`${styles.skillcardContainer} ${
+        isFlipped ? styles.flipped : ""
+      }`}
+      style={cardStyle}
+      onClick={flipCard}
+      initial={{ rotateY: 0 }}
+      animate={controls}
+    >
+      <div className={styles.cardfront}>
+        <div className={styles.text}>
+          <p className="s">{title}</p>
+          <p className="m">{skillName}</p>
+          <p className="s">{experience}</p>
         </div>
-        <div className={styles.cardback}>
-          <div className="card__body">
-            <h3>JavaScript Wizard</h3>
-            <p>
-              Sample text for the back of the card. Click again to flip back.
-            </p>
-          </div>
+      </div>
+      <div className={styles.cardback}>
+        {/* Display dynamic content for the back side */}
+        <div className="card__body">
+          <h3>{title}</h3>
+          <p>{/* Add dynamic content here */}</p>
         </div>
-      </motion.div>
-    </>
+      </div>
+    </motion.div>
   );
 };
 
