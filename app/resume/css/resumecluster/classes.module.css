@@ -6,10 +6,10 @@
 }
 
 .classestitle {
-  height: 50%;
+  height: 40%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .classestitle p {
@@ -20,6 +20,7 @@
 
 .cardcontainer {
   height: 50%;
+  padding: 2%;
   display: flex;
   justify-content: center;
 }

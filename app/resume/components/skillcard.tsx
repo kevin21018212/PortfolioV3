@@ -49,7 +49,6 @@ const SkillCard: React.FC<SkillCardProps> = ({
         </div>
       </div>
       <div className={styles.cardback}>
-        {/* Display dynamic content for the back side */}
         <div className="card__body">
           <h3>{title}</h3>
           <p>{/* Add dynamic content here */}</p>
