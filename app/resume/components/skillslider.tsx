@@ -18,7 +18,7 @@ interface SkillData {
 }
 
 const SkillSlider = () => {
-  const splideRef = useRef(null);
+  const splideRef = useRef<any | null>(null);
   const [filteredSkills, setFilteredSkills] = useState<SkillData[]>(skillsData); // All skills are initially selected
   const allTags = [
     "Frontend",
@@ -33,18 +33,37 @@ const SkillSlider = () => {
   useEffect(() => {
     // Initialize Splide after the component is mounted
     if (splideRef.current) {
-      new Splide(splideRef.current, {
-        type: "loop",
+      const splideInstance = new Splide(splideRef.current, {
         perPage: 5.5,
         width: "100%",
         height: "40vh",
         gap: "2vw",
-      }).mount();
+      });
+
+      // Save the Splide instance to ref for later use
+      splideRef.current.splide = splideInstance;
+
+      // Mount Splide only if there are skills to display
+      if (filteredSkills.length > 0) {
+        splideInstance.mount();
+      }
     }
 
+    // Filter skills when selected tags change
     filterSkills(selectedTags);
-    console.log(filteredSkills, selectedTags);
   }, [selectedTags]);
+
+  useEffect(() => {
+    // Update Splide slides when filtered skills change
+    if (splideRef.current && splideRef.current.splide) {
+      splideRef.current.splide.refresh();
+
+      // Destroy Splide if there are zero items in filtered skills
+      if (filteredSkills.length === 0) {
+        splideRef.current.splide.destroy();
+      }
+    }
+  }, [filteredSkills]);
 
   const handleTagToggle = (selectedTags: string[]) => {
     setSelectedTags(selectedTags);
@@ -65,23 +84,28 @@ const SkillSlider = () => {
   return (
     <div className={styles.skillsliderContainer}>
       <SkillFilterToggle tags={allTags} onToggle={handleTagToggle} />
-      <div className="splide" ref={splideRef}>
-        <div className="splide__track">
-          <ul className="splide__list">
-            {filteredSkills.map((skill, index) => (
-              <SplideSlide key={index}>
-                <div className={styles.splide__slide}>
-                  <SkillCard
-                    title={skill.title}
-                    skillName={skill.skillName}
-                    experience={skill.experience}
-                    backgroundImageUrl={skill.backgroundImageUrl}
-                  />
-                </div>
-              </SplideSlide>
-            ))}
-          </ul>
-        </div>
+      <div
+        className={`splide ${filteredSkills.length === 0 ? "is-overflow" : ""}`}
+        ref={splideRef}
+      >
+        {filteredSkills.length > 0 && (
+          <div className="splide__track">
+            <ul className="splide__list" style={{ justifyContent: "center" }}>
+              {filteredSkills.map((skill, index) => (
+                <SplideSlide key={index}>
+                  <div className={styles.splide__slide}>
+                    <SkillCard
+                      title={skill.title}
+                      skillName={skill.skillName}
+                      experience={skill.experience}
+                      backgroundImageUrl={skill.backgroundImageUrl}
+                    />
+                  </div>
+                </SplideSlide>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className={styles.navigation}></div>
     </div>

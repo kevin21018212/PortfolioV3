@@ -9,7 +9,7 @@
   height: 40%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .classestitle p {
