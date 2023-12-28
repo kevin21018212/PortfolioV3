@@ -7,15 +7,17 @@
 
 .classestitle {
   height: 40%;
+
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .classestitle p {
   color: black;
   font-family: "Monument-Regular", sans-serif;
   font-size: 10vw;
+  padding-top: 5%;
 }
 
 .cardcontainer {

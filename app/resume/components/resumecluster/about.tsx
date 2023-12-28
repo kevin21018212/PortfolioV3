@@ -8,61 +8,43 @@ interface AboutDisplayProps {}
 const AboutDisplay: React.FC<AboutDisplayProps> = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
+  const items = ["Outdoor", "Travel", "Fashion", "Art", "Music"];
+
   const handleItemHover = (item: string | null) => {
     setHoveredItem(item);
+  };
+
+  const getImagePath = (item: string | null): string => {
+    return item ? `/about/${item}.jpg` : "";
   };
 
   return (
     <div className={styles.aboutdisplay}>
       <div className={styles.abouttext}>
         <p className="t4">Extra</p>
-        <motion.p
-          whileHover={{ scale: 1.1 }}
-          onMouseEnter={() => handleItemHover("Outdoor Rec")}
-          onMouseLeave={() => handleItemHover(null)}
-        >
-          Outdoor Rec
-        </motion.p>
-        <motion.p
-          whileHover={{ scale: 1.1 }}
-          onMouseEnter={() => handleItemHover("Traveling")}
-          onMouseLeave={() => handleItemHover(null)}
-        >
-          Traveling
-        </motion.p>
-        <motion.p
-          whileHover={{ scale: 1.1 }}
-          onMouseEnter={() => handleItemHover("Fashion")}
-          onMouseLeave={() => handleItemHover(null)}
-        >
-          Fashion
-        </motion.p>
-        <motion.p
-          whileHover={{ scale: 1.1 }}
-          onMouseEnter={() => handleItemHover("Art")}
-          onMouseLeave={() => handleItemHover(null)}
-        >
-          Art
-        </motion.p>
+        {items.map((item, index) => (
+          <motion.p
+            key={index}
+            whileHover={{ scale: 1.1 }}
+            onMouseEnter={() => handleItemHover(item)}
+            onMouseLeave={() => handleItemHover(null)}
+          >
+            {item}
+          </motion.p>
+        ))}
       </div>
       <motion.div
         className={styles.aboutimg}
-        initial={{ backgroundColor: "#131313" }} // Initial color
+        initial={{
+          backgroundImage: `url(${getImagePath(hoveredItem)})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
         animate={{
-          backgroundColor: (() => {
-            switch (hoveredItem) {
-              case "Outdoor Rec":
-                return "#4bf905";
-              case "Traveling":
-                return "#c8a59b";
-              case "Fashion":
-                return "#b4bfd3";
-              case "Art":
-                return "#c18a6a";
-              default:
-                return "#131313";
-            }
-          })(),
+          backgroundImage: `url(${getImagePath(hoveredItem)})`,
+          backgroundSize: "cover",
+
+          backgroundPosition: "center",
         }}
         transition={{ duration: 0.5 }}
       ></motion.div>

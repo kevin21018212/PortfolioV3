@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../../css/resumecluster/work.module.css";
 import AboutDisplay from "./about";
 
@@ -7,33 +8,42 @@ const ResumeWork = () => {
       <div className={styles.workcontainer}>
         <div className={styles.workimg}>
           <div className={styles.worktext}>
-            <p className="t1">WORK</p>
+            <p className="t1">WORK EXPERIENCE</p>
           </div>
         </div>
         <div className={styles.workbox}>
           <div className={styles.workdisplay}>
-            <div className={styles.jobtext}>
-              <p className="t5">John Deere 2022-Current</p>
-              <p>Year round developer intership at John Deere</p>
-              <p>
-                Working with fullstack development on multiple company apps.
-                Working with:AWS,APIs,Databases,Next js
-              </p>
-            </div>
-            <div className={styles.jobtext}>
-              <p className="t5">Acacia Frateniry Web Dev 2023-Current</p>
-              <p>
-                Web developement and general matience. Working with: Next
-                js,Tailwind,Framer,Firebase Hositng
-              </p>
-            </div>
-            <div className={styles.jobtext}>
-              <p className="t5">Cabot Corporation 2021-2022</p>
-              <p>
-                General intership mainly focusing on analyizing large
-                datasets,loss/spill prevention and action,VBA integration
-              </p>
-            </div>
+            {[
+              {
+                title: "John Deere | 2022 - Present",
+                description: [
+                  "Year-round developer internship at John Deere.",
+                  "Full-stack development on multiple company apps.",
+                  "Technologies used: AWS, APIs, Databases, Next.js.",
+                ],
+              },
+              {
+                title: "Acacia Fraternity Web Dev | 2023 - Present",
+                description: [
+                  "Web development and general maintenance.",
+                  "Technologies used: Next.js, Tailwind, Framer, Firebase Hosting.",
+                ],
+              },
+              {
+                title: "Cabot Corporation | 2021 - 2022",
+                description: [
+                  "General internship focusing on analyzing large datasets.",
+                  "Specialized in loss/spill prevention, VBA integration.",
+                ],
+              },
+            ].map((job, index) => (
+              <div key={index} className={styles.jobtext}>
+                <p className="t5">{job.title}</p>
+                {job.description.map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+              </div>
+            ))}
           </div>
           <div className={styles.aboutdisplay}>
             <AboutDisplay />

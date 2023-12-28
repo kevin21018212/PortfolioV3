@@ -68,7 +68,7 @@
 }
 .t1 {
   font-family: "Genesys", sans-serif;
-  font-size: 4.5vw;
+  font-size: 5.5vh;
   color: #ffffff;
   margin: 0;
 }
@@ -92,7 +92,7 @@
 }
 .t5 {
   font-family: "Petrov", sans-serif;
-  font-size: 1.5rem;
+  font-size: 3vh;
   color: #ffffff;
   margin: 0;
 }
@@ -102,8 +102,9 @@
 }
 p {
   font-family: "Byotone ", sans-serif;
-  font-size: 1.05rem;
+  font-size: 2vh;
   color: #ffffff;
+  margin: 1;
 }
 
 @media screen and (max-width: 600px) {
