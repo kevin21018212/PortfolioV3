@@ -29,7 +29,6 @@ const SkillSlider = () => {
   ];
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
 
-  //Use effects for keeping track of the slider cards and the filter cards
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
@@ -47,9 +46,7 @@ const SkillSlider = () => {
     }
 
     filterSkills(selectedTags);
-  }, [selectedTags]);
 
-  useEffect(() => {
     if (splideRef.current && splideRef.current.splide) {
       splideRef.current.splide.refresh();
 
@@ -57,13 +54,7 @@ const SkillSlider = () => {
         splideRef.current.splide.destroy();
       }
     }
-  }, [filteredSkills]);
-
-  //Handleing toggles and updating the skills displayed in cards
-  const handleTagToggle = (selectedTags: string[]) => {
-    setSelectedTags(selectedTags);
-    filterSkills(selectedTags);
-  };
+  }, [selectedTags, filteredSkills]);
 
   const filterSkills = (selectedTags: string[]) => {
     if (selectedTags.length === 0) {
@@ -77,13 +68,17 @@ const SkillSlider = () => {
   };
 
   return (
-    <div className={styles.skillsliderContainer}>
-      <SkillFilterToggle tags={allTags} onToggle={handleTagToggle} />
-      <div
-        className={`splide ${filteredSkills.length === 0 ? "is-overflow" : ""}`}
-        ref={splideRef}
-      >
-        {filteredSkills.length > 0 && (
+    <div className={styles.sliderContainer}>
+      <div className={styles.toggleContainer}>
+        <SkillFilterToggle tags={allTags} onToggle={setSelectedTags} />
+      </div>
+      <div className={styles.sliderTrack}>
+        <div
+          className={`splide ${
+            filteredSkills.length === 0 ? "is-overflow" : ""
+          }`}
+          ref={splideRef}
+        >
           <div className="splide__track">
             <ul className="splide__list" style={{ justifyContent: "center" }}>
               {filteredSkills.map((skill, index) => (
@@ -100,9 +95,9 @@ const SkillSlider = () => {
               ))}
             </ul>
           </div>
-        )}
+        </div>
+        <div className={styles.navigation}></div>
       </div>
-      <div className={styles.navigation}></div>
     </div>
   );
 };

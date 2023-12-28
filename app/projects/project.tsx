@@ -8,7 +8,7 @@ interface ProjectData {
   tags: string[];
   link: string | null;
   image: string | null; 
-
+}
 const Project = (data: ProjectData) => {
   const imageStyle = data.image
     ? { backgroundImage: `url(${data.image})` }
