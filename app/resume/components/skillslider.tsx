@@ -7,6 +7,7 @@ import styles from "../css/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
+import allTags from "@/app/data/alltags";
 
 interface SkillData {
   title: string;
@@ -19,14 +20,7 @@ interface SkillData {
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);
   const [filteredSkills, setFilteredSkills] = useState<SkillData[]>(skillsData);
-  const allTags = [
-    "Frontend",
-    "Backend",
-    "Devops",
-    "Version Control",
-    "Data Science",
-    "Languages",
-  ];
+
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
 
   useEffect(() => {

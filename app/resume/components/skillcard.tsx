@@ -33,11 +33,8 @@ const SkillCard: React.FC<SkillCardProps> = ({
   return (
     <motion.div
       whileHover={{ scale: 1.1, zIndex: 50 }}
-      className={`${styles.skillcardContainer} ${
-        isFlipped ? styles.flipped : ""
-      }`}
+      className={styles.skillcardContainer}
       style={cardStyle}
-      onClick={flipCard}
       initial={{ rotateY: 0 }}
       animate={controls}
     >
@@ -46,12 +43,6 @@ const SkillCard: React.FC<SkillCardProps> = ({
           <p className="s">{title}</p>
           <p className="m">{skillName}</p>
           <p className="s">{experience}</p>
-        </div>
-      </div>
-      <div className={styles.cardback}>
-        <div className="card__body">
-          <h3>{title}</h3>
-          <p>{/* Add dynamic content here */}</p>
         </div>
       </div>
     </motion.div>
