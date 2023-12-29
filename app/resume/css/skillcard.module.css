@@ -1,5 +1,3 @@
-/* skillcard.module.css */
-
 .skillcardContainer {
   width: 100%;
   height: 100%;
@@ -8,8 +6,7 @@
   background-position: center;
   background-size: cover;
   margin-right: 10px;
-  transform-style: preserve-3d;
-  transition: transform 0.3s;
+  /* Remove flipping transition properties */
   position: relative;
 }
 

@@ -19,10 +19,13 @@ interface SkillData {
 
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);
-  const [filteredSkills, setFilteredSkills] = useState<SkillData[]>(skillsData);
-
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
 
+  const filteredSkills = skillsData.filter((skill) =>
+    selectedTags.length === 0
+      ? true
+      : selectedTags.some((tag) => skill.tags.includes(tag))
+  );
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
@@ -36,30 +39,12 @@ const SkillSlider = () => {
 
       if (filteredSkills.length > 0) {
         splideInstance.mount();
+        splideInstance.refresh();
+      } else {
+        splideInstance.destroy();
       }
     }
-
-    filterSkills(selectedTags);
-
-    if (splideRef.current && splideRef.current.splide) {
-      splideRef.current.splide.refresh();
-
-      if (filteredSkills.length === 0) {
-        splideRef.current.splide.destroy();
-      }
-    }
-  }, [selectedTags, filteredSkills]);
-
-  const filterSkills = (selectedTags: string[]) => {
-    if (selectedTags.length === 0) {
-      setFilteredSkills([]);
-    } else {
-      const filtered = skillsData.filter((skill) =>
-        selectedTags.some((tag) => skill.tags.includes(tag))
-      );
-      setFilteredSkills(filtered);
-    }
-  };
+  }, [filteredSkills]);
 
   return (
     <div className={styles.sliderContainer}>

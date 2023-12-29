@@ -32,7 +32,7 @@ const skillsData: SkillData[] = [
     title: "DATABASE",
     skillName: "SQL",
     experience: "1 year, On-Job/Class",
-    tags: ["Database Management", "Data Science"],
+    tags: ["Database Management", "Data Science", "SQL"],
     backgroundImageUrl: null,
   },
   {
@@ -46,29 +46,16 @@ const skillsData: SkillData[] = [
     title: "PROGRAMMING",
     skillName: "C++",
     experience: "1/2 year, Class",
-    tags: ["Programming Languages", "C++"],
+    tags: ["Programming Languages"],
     backgroundImageUrl: "/projectimg/c++.png",
   },
-  {
-    title: "PROGRAMMING",
-    skillName: "C",
-    experience: "2 years, Class",
-    tags: ["Programming Languages", "C"],
-    backgroundImageUrl: null,
-  },
+
   {
     title: "PROGRAMMING",
     skillName: "Java",
     experience: "2 years, Class/Personal",
     tags: ["Programming Languages", "Java"],
     backgroundImageUrl: "/projectimg/java.jpeg",
-  },
-  {
-    title: "DATABASE",
-    skillName: "PrismaDB",
-    experience: "1/2 year, On-Job",
-    tags: ["Database Management", "Data Science"],
-    backgroundImageUrl: null,
   },
   {
     title: "PROGRAMMING",
@@ -200,7 +187,7 @@ const skillsData: SkillData[] = [
     title: "PROGRAMMING",
     skillName: "C",
     experience: "2 years, Class",
-    tags: ["Programming Languages", "C"],
+    tags: ["Programming Languages"],
     backgroundImageUrl: null,
   },
   {
@@ -242,7 +229,7 @@ const skillsData: SkillData[] = [
     title: "HARDWARE DESCRIPTION",
     skillName: "Verilog",
     experience: "1 year, Class",
-    tags: ["Hardware Description", "Verilog"],
+    tags: ["Assembly"],
     backgroundImageUrl: null,
   },
   {
@@ -257,13 +244,6 @@ const skillsData: SkillData[] = [
     skillName: "MongoDB",
     experience: "1 year, On-Job/Personal Projects",
     tags: ["Database Management", "MongoDB"],
-    backgroundImageUrl: null,
-  },
-  {
-    title: "DATABASE",
-    skillName: "SQL",
-    experience: "1 year, On-Job/Class",
-    tags: ["Database Management", "SQL"],
     backgroundImageUrl: null,
   },
   {
