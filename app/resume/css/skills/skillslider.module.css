@@ -24,21 +24,8 @@
   padding-top: 10%;
 }
 
-@media screen and (max-width: 768px) {
-  .splide__arrows,
-  .splide__pagination {
-    display: none;
-  }
-}
-
 /* Sizing for Iphone */
 @media screen and (max-width: 800px) {
-  .skillcardContainer {
-    width: 100%;
-  }
-  .splide__slide {
-    height: 60%;
-  }
   .toggleContainer {
     width: 100vw;
   }

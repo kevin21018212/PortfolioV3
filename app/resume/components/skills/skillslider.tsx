@@ -21,7 +21,7 @@ const SkillSlider = () => {
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
-        perPage: 5.5,
+        perPage: window.innerWidth <= 800 ? 3 : 5.5,
         width: "100%",
         height: "40vh",
         gap: "2vw",

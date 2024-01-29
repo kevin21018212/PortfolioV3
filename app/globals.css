@@ -28,10 +28,11 @@ h3 {
 }
 h4 {
   font-family: "Monument Extended Bold ", sans-serif;
-  color: #262626;
+  color: #f2f2f2;
 }
 h5,
 h6 {
+  margin: 2.5% 0%;
   font-family: "Neue Montreal Semibold", sans-serif;
-  color: #262626;
+  color: #f2f2f2;
 }

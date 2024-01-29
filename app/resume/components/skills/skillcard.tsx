@@ -26,11 +26,11 @@ const SkillCard: React.FC<SkillCardProps> = ({
       className={styles.skillcardContainer}
       style={cardStyle}
     >
-      <div className={styles.cardfront}>
+      <div className={styles.card}>
         <div className={styles.text}>
-          <p className="s">{title}</p>
-          <p className="m">{skillName}</p>
-          <p className="s">{experience}</p>
+          <h5>{title}</h5>
+          <h6>{skillName}</h6>
+          <p>{experience}</p>
         </div>
       </div>
     </motion.div>
