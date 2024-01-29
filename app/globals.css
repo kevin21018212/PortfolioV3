@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #262626;
+  background-color: #181818;
   height: 100vh;
   width: 100%;
   padding: 0;
@@ -14,19 +14,22 @@ body {
 
 p {
   font-family: 'Neue Montreal Book', sans-serif;
+  color: #f2f2f2;
 }
 
 
 h1, h2 {
-  font-family: 'GT America Extended Black', sans-serif;
+  font-family: 'GT America Expanded Black', sans-serif;
 }
 
  
 h3, h4 {
   font-family: 'Neue Montreal Bold', sans-serif;
+  color: #262626;;
 }
 
 
 h5, h6 {
   font-family: 'Neue Montreal Semibold', sans-serif;
+  color: #262626;
 }

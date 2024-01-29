@@ -5,13 +5,12 @@
   color: #0a0a0a;
 }
 .title h1 {
-  font-family: "GT-America-Bold";
   font-size: 8vw;
   margin: 0;
 }
-.title p {
-  font-family: "GT-America-Bold";
-  font-size: 3vw;
+.title h3 {
+  font-family: "Monument Grotesk Regular";
+  font-size: 3.5vw;
   margin: 0;
 }
 /*Left Side*/
@@ -23,7 +22,6 @@
   width: 50%;
   text-align: left;
   padding: 5%;
-  color: white;
 }
 
 /*Right Side*/
@@ -33,6 +31,11 @@
 }
 
 .image {
-  height: 50%;
-  background: -webkit-linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
+  height: 75%;
+  background: -webkit-linear-gradient(45deg, #2B76D8,  #f277B0);
+}
+.about p{ 
+  font-family: 'Monument Grotesk Regular', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
