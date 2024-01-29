@@ -32,11 +32,14 @@
 }
 
 /* Sizing for Iphone */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .skillcardContainer {
     width: 100%;
   }
   .splide__slide {
     height: 60%;
+  }
+  .toggleContainer {
+    width: 100vw;
   }
 }

@@ -7,15 +7,31 @@
 }
 .headerContainer {
   height: 20vh;
-  width: 70%;
+  width: 85%;
   display: flex;
   align-items: center;
   margin-left: 2.5%;
-  margin-top: 5%;
+  margin-top: 2.5%;
+}
+.headerContainer h2 {
+  color: #f2f2f2;
+  font-size: 4vw;
+  margin-bottom: 0;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+.headerContainer h4 {
+  color: #f2f2f2;
+  font-size: 3.5vw;
+  margin: 1% 0% 0% 5%;
+  letter-spacing: 0.025em;
+}
+.headerContainer h5 {
+  color: #f2f2f2;
 }
 
 .textGradient {
-  background: -webkit-linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
+  background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
