@@ -6,11 +6,11 @@ import styles from "../../css/projects/project.module.css";
 import ProjectInfo from "./projectinfo";
 
 const circles = [
-  { id: "circle1", info: "Information for Circle 1" },
-  { id: "circle2", info: "Information for Circle 2" },
-  { id: "circle3", info: "Information for Circle 3" },
-  { id: "circle4", info: "Information for Circle 4" },
-  { id: "circle5", info: "Information for Circle 5" },
+  { id: "circle1" },
+  { id: "circle2" },
+  { id: "circle3" },
+  { id: "circle4" },
+  { id: "circle5" },
 ];
 
 const NewProjects = () => {
@@ -48,7 +48,7 @@ const NewProjects = () => {
   return (
     <div className={styles.projectsComponent}>
       <div className={styles.spacerContainer}>
-        <p className="t1">New Projects</p>
+        <p className={styles.title}>New Projects</p>
         <button
           onClick={handleToggleProject}
           className={`${styles.toggleButton} ${

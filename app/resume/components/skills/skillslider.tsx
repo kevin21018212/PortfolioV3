@@ -3,19 +3,11 @@ import Splide from "@splidejs/splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
-import styles from "../css/skillslider.module.css";
+import styles from "../../css/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
 import allTags from "@/app/data/alltags";
-
-interface SkillData {
-  title: string;
-  skillName: string;
-  experience: string;
-  tags: string[];
-  backgroundImageUrl: string | null;
-}
 
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);

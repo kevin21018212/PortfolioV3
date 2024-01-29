@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../css/skillfiltertoggle.module.css";
+import styles from "../../css/skillfiltertoggle.module.css";
 
 interface SkillFilterToggleProps {
   tags: string[];

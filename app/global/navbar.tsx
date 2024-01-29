@@ -8,22 +8,22 @@ const NavBar = () => {
       <div className="red-triangle"></div>
       <div className="first-link">
         <Link href="/">
-          <p>Home</p>
+          <p>HOME</p>
         </Link>
       </div>
       <div className="link">
         <Link href="/projects">
-          <p>Projects</p>
+          <p>WORKS</p>
         </Link>
       </div>
       <div className="link">
         <Link href="/resume">
-          <p>Resume</p>
+          <p>RESUME</p>
         </Link>
       </div>
       <div className="link">
         <Link href="/contact">
-          <p>Contact</p>
+          <p>CONTACT</p>
         </Link>
       </div>
       <div className="empty-rhombus"></div>

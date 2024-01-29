@@ -17,12 +17,12 @@ const ProjectInfoMobile = ({ projectData }: { projectData: ProjectData }) => {
       {projectData && (
         <div>
           <div className={styles.title}>
-            <p className="t1"> {projectData.middleRight}</p>
-            <p className="m">{projectData.bottomRight}</p>
+            <h1> {projectData.middleRight}</h1>
+            <p>{projectData.bottomRight}</p>
           </div>
           <div className={styles.description}>
             <div className={styles.text}>
-              <p className="s"> {projectData.middleMiddle}</p>
+              <p> {projectData.middleMiddle}</p>
             </div>
             <div className={styles.info}>
               <div className={styles.image}></div>

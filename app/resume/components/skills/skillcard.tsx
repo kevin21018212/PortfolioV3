@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "../css/skillcard.module.css";
+import styles from "../../css/skillcard.module.css";
 
 interface SkillCardProps {
   title: string;
