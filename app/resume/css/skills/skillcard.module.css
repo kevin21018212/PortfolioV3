@@ -26,13 +26,11 @@
 .card h6 {
   font-family: "Monument Extended ", sans-serif;
   letter-spacing: 1px;
-  font-size: 2.5vw;
 }
 
 .card p {
   margin: 2.5% 0 0 0;
   font-family: "MDNichrome Light", serif;
-  letter-spacing: 2px;
 }
 
 /*Sizing for Iphone*/

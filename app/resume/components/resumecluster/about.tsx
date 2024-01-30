@@ -21,7 +21,7 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
   return (
     <div className={styles.aboutdisplay}>
       <div className={styles.abouttext}>
-        <p className="t4">Extra</p>
+        <h4>Extra</h4>
         {items.map((item, index) => (
           <motion.p
             key={index}

@@ -8,7 +8,7 @@ const ResumeWork = () => {
       <div className={styles.workcontainer}>
         <div className={styles.workimg}>
           <div className={styles.worktext}>
-            <p className="t1">WORK EXPERIENCE</p>
+            <h1>EXPERIENCE</h1>
           </div>
         </div>
         <div className={styles.workbox}>
@@ -38,7 +38,7 @@ const ResumeWork = () => {
               },
             ].map((job, index) => (
               <div key={index} className={styles.jobtext}>
-                <p className="t5">{job.title}</p>
+                <h4>{job.title}</h4>
                 {job.description.map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
                 ))}
