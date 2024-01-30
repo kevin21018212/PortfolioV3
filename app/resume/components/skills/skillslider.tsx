@@ -59,7 +59,6 @@ const SkillSlider = () => {
                       title={skill.title}
                       skillName={skill.skillName}
                       experience={skill.experience}
-                      backgroundImageUrl={skill.backgroundImageUrl}
                     />
                   </div>
                 </SplideSlide>

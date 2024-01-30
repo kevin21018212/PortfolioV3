@@ -9,7 +9,7 @@
   display: flex;
   height: 0vh;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-  background-color: #0a0a0a;
+  background-color: #181818;
 }
 
 /* Circle and Circle Container */
@@ -19,17 +19,17 @@
   align-items: center;
   justify-content: center;
   width: 10%;
-  background: linear-gradient(to bottom, #fd2000, #df007c);
+  background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   overflow-y: hidden;
 }
 
 .circle {
-  width: 2vw;
-  height: 2vw;
+  width: 2.25vw;
+  height: 2.25vw;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid #0a0a0a;
+  border: 2px solid #0a0a0a;
   transition: background-color 0.5s ease;
   margin-top: 25px;
 }
@@ -41,23 +41,22 @@
 /* New Projects Spacer */
 .spacerContainer {
   height: 100%;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   padding-left: 2.5%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.spacerContainer p {
+.spacerContainer h1 {
   color: black;
-  width: 80%;
+  width: 90%;
+  font-size: 3.25vw;
+  letter-spacing: 8px;
+  list-style: 1px;
 }
 
-.t1 {
-  padding-top: 1%;
-  width: 100%;
-}
-
+/*Everything Involving the toggle button*/
 .toggleButton {
   background: transparent;
   border: none;

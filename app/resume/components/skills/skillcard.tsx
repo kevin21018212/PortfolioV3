@@ -5,19 +5,35 @@ interface SkillCardProps {
   title: string;
   skillName: string;
   experience: string;
-  backgroundImageUrl: string | null;
 }
+
+const hexColorOptions = [
+  "#f277B0", // Pink
+  "#152FBF", // Purple
+  "#2B76D9", // Blue
+  "#0DF205", // Lime
+  "#F26E50", // Salmon
+];
+
+const getRandomGradient = () => {
+  const randomColor1 =
+    hexColorOptions[Math.floor(Math.random() * hexColorOptions.length)];
+  let randomColor2;
+  do {
+    randomColor2 =
+      hexColorOptions[Math.floor(Math.random() * hexColorOptions.length)];
+  } while (randomColor2 === randomColor1);
+
+  return `linear-gradient(45deg, ${randomColor1}, ${randomColor2})`;
+};
 
 const SkillCard: React.FC<SkillCardProps> = ({
   title,
   skillName,
   experience,
-  backgroundImageUrl,
 }: SkillCardProps) => {
   const cardStyle = {
-    backgroundImage: backgroundImageUrl
-      ? `url(${backgroundImageUrl})`
-      : "linear-gradient(45deg, #ffd700, #ff4500, #ff1493)",
+    backgroundImage: getRandomGradient(),
   };
 
   return (

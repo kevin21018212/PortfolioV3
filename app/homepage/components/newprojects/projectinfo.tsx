@@ -54,13 +54,13 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
             exit="inactive"
             className={styles.projectsContentLeft}
           >
-            <motion.p className="s" variants={textanimation}>
+            <motion.p className={styles.topLeft} variants={textanimation}>
               {projectData.topRight}
             </motion.p>
             <motion.div className={styles.middleLeft} variants={textanimation}>
-              {projectData.middleRight}
+              <h1>{projectData.middleRight}</h1>
             </motion.div>
-            <motion.p className={styles.bottom} variants={textanimation}>
+            <motion.p className={styles.bottomLeft} variants={textanimation}>
               {projectData.bottomRight}
             </motion.p>
           </motion.div>
@@ -72,12 +72,12 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
             className={styles.projectsContentMiddle}
           >
             <motion.div className={styles.idea} variants={textanimation}>
-              <motion.p className="t3">IDEA</motion.p>
+              <motion.h3>IDEA</motion.h3>
               <motion.p className="s">{projectData.middleMiddle}</motion.p>
             </motion.div>
-            <motion.p className={styles.bottomMiddle} variants={textanimation}>
+            <motion.h6 className={styles.bottomMiddle} variants={textanimation}>
               {projectData.bottomMiddle}
-            </motion.p>
+            </motion.h6>
           </motion.div>
           <div className={styles.projectsContentRight}></div>
         </>

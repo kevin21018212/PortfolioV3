@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "circle1",
     topRight: "Project 001",
-    middleRight: "Portfolio V2",
+    middleRight: "Portfolio",
     bottomRight: "Showcase of self",
     middleMiddle:
       "Experience a compelling showcase of creativity and craftsmanship, where every project is a testament to dedication and artistic expression. Each pixel, each line of code, is a brushstroke on the canvas of innovation. Discover a world of visually stunning designs and technically refined solutions, carefully crafted to leave a lasting impression on your senses.",
