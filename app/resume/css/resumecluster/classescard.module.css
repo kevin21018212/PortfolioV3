@@ -18,3 +18,9 @@
 .description p {
   color: black;
 }
+
+.description h4 {
+  font-family: "Monument Grotesk Regular", sans-serif;
+  color: black;
+  font-size: 1.5vw;
+}

@@ -32,7 +32,9 @@ h3 {
 h4 {
   font-family: "Monument Extended Bold ", sans-serif;
   color: #f2f2f2;
-  margin: 2.5% 0;
+
+  letter-spacing: 2px;
+  margin: 0;
 }
 h5,
 h6 {

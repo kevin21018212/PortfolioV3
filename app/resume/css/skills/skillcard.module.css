@@ -5,7 +5,6 @@
   display: flex;
   background-position: center;
   background-size: cover;
-  margin-right: 10px;
 }
 
 .card {
@@ -21,10 +20,11 @@
 .card h5 {
   font-family: "Neue Montreal Bold", sans-serif;
   letter-spacing: 3px;
-  font-size: 3vw;
+  font-size: 1.5vw;
 }
 .card h6 {
   font-family: "Monument Extended ", sans-serif;
+  font-size: 1.25vw;
   letter-spacing: 1px;
 }
 
@@ -37,5 +37,8 @@
 @media screen and (max-width: 600px) {
   .skillcardContainer {
     width: 120%;
+  }
+  .card h5 {
+    font-size: 3vw;
   }
 }

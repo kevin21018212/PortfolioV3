@@ -15,7 +15,6 @@ const ResumePage = () => {
             I am always looking for{" "}
             <strong className={styles.textGradient}>new opportinunites</strong>
           </h4>
-          <h5>Text Version</h5>
           <p></p>
         </div>
       </div>

@@ -6,8 +6,7 @@ const ResumeClasses = () => {
   return (
     <div className={styles.classescontainer}>
       <div className={styles.classestitle}>
-        <p>CLASSES</p>
-        <p></p>
+        <h1>CLASSES</h1>
       </div>
       <div className={styles.cardcontainer}>
         {courseCategories.map((category, index) => (

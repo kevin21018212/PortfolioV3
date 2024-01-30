@@ -23,12 +23,10 @@ const ClassesCard: React.FC<ClassesCardProps> = ({ category }) => {
         initial="hidden"
         whileHover="visible"
       >
-        <p className="t5">{category.name}</p>
+        <h4>{category.name}</h4>
 
         {category.courses.map((course, index) => (
-          <p className="s" key={index}>
-            {course}
-          </p>
+          <p key={index}>{course}</p>
         ))}
       </motion.div>
     </motion.div>

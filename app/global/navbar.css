@@ -2,7 +2,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 75px;
+  width: 90px;
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -12,7 +12,7 @@
 }
 .navbar p {
   font-family: "Neue Montreal", sans-serif;
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 .red-rectangle {
@@ -35,8 +35,8 @@
   box-sizing: border-box;
   background-color: #f28177;
   transform-origin: top right;
-  padding-left: 70%;
-  margin-left: -39px;
+  padding-left: 60%;
+  margin-left: -45px;
   transform: skew(-10deg) rotate(25deg);
   transition: transform 0.5s ease;
 }
