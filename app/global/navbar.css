@@ -76,3 +76,12 @@
 .first-link:hover .empty-rhombus {
   transform: skew(-10deg) rotate(25deg);
 }
+
+@media only screen and (max-width: 800px) {
+  .navbar p {
+    font-size: 2vw;
+  }
+  .first-link {
+    padding-left: 70%;
+  }
+}

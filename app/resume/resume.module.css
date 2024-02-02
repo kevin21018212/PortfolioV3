@@ -36,3 +36,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media only screen and (max-width: 800px) {
+  .headerContainer h2 {
+    font-size: 5.4vw;
+  }
+  .headerContainer h4 {
+    font-size: 4vw;
+  }
+  .headerContainer {
+    height: 25vh;
+    width: 84.5%;
+    display: flex;
+    align-items: center;
+
+    margin-top: 0%;
+  }
+}

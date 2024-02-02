@@ -1,41 +1,48 @@
 .title {
   width: 100%;
   background: #f2f2f2;
-  padding: 5%;
-  color: #0a0a0a;
+  padding: 2% 5%;
 }
 .title h1 {
   font-size: 8vw;
+  color: #0a0a0a;
   margin: 0;
 }
 .title h3 {
   font-family: "Monument Grotesk Regular";
   font-size: 3.5vw;
-  margin: 0;
+  margin: 0 0 0 0;
+  padding-left: 1.5%;
 }
 /*Left Side*/
 .description {
   display: flex;
+  height: 45vh;
 }
 
 .text {
-  width: 50%;
+  width: 55%;
   text-align: left;
   padding: 5%;
+}
+.text p {
+  font-size: 2.5vw;
+  letter-spacing: 2px;
 }
 
 /*Right Side*/
 .info {
-  width: 50%;
+  width: 40%;
   padding: 5%;
 }
 
 .image {
-  height: 75%;
-  background: -webkit-linear-gradient(45deg, #2B76D8,  #f277B0);
+  height: 60%;
+  background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
 }
-.about p{ 
-  font-family: 'Monument Grotesk Regular', sans-serif;
+.about p {
+  font-family: "Monument Grotesk Regular", sans-serif;
   letter-spacing: 2px;
   font-weight: 100;
+  font-size: 3vw;
 }

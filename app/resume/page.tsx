@@ -10,7 +10,7 @@ const ResumePage = () => {
     <div className={styles.resumeContainer}>
       <div className={styles.headerContainer}>
         <div>
-          <h2>Displayed here, is a slice of what I am capable of</h2>
+          <h2>ALWAYS LEARNING, ALWAYS MAKING, ALWAYS CREATING</h2>
           <h4>
             I am always looking for{" "}
             <strong className={styles.textGradient}>new opportinunites</strong>

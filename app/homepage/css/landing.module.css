@@ -1,0 +1,67 @@
+.landingContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5% 2.5%;
+  margin-bottom: 1%;
+}
+.landingContainer h1 {
+  color: #f2f2f2;
+  font-size: 6vw;
+}
+
+.top,
+.middle,
+.bottom {
+  height: 20vh;
+  margin: 0%;
+  display: flex;
+}
+.middle {
+  margin: 5cqmax 0%;
+}
+
+.topText {
+  width: 45vw;
+  display: flex;
+  align-items: center;
+}
+.topImage {
+  width: 35vw;
+  margin-left: 10%;
+  background: url(../../../public/landing2.jpeg);
+  border-radius: 30px;
+}
+
+.middleTextLeft {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+}
+.middleImage {
+  width: 22.5vw;
+  margin: 0% 2.5%;
+  background: url(../../../public/landing1.jpeg);
+  border-radius: 30px;
+}
+.middleTextRight {
+  width: 42.5vw;
+  display: flex;
+  align-items: center;
+}
+
+.bottomText {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+}
+
+.bottomImage {
+  width: 45vw;
+  margin-right: 4%;
+  border-radius: 30px;
+  background: url(../../../public/landing3.png);
+  background-position-y: center;
+  background-size: cover;
+}
