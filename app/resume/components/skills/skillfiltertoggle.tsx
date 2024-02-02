@@ -25,7 +25,10 @@ const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
           onClick={() => toggleTag(tag)}
           className={selectedTags.includes(tag) ? styles.selected : ""}
         >
-          {tag}
+          <div className={styles.circle}></div>
+          <div className={styles.tag}>
+            <p>{tag}</p>
+          </div>
         </button>
       ))}
     </div>

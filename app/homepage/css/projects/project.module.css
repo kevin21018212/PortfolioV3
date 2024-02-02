@@ -44,16 +44,14 @@
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  padding-left: 2.5%;
+  padding-left: 1%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .spacerContainer h1 {
   color: black;
   width: 90%;
-  font-size: 3.25vw;
-  letter-spacing: 8px;
-  list-style: 1px;
+  font-size: 3.8vw;
 }
 
 /*Everything Involving the toggle button*/

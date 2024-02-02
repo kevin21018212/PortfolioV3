@@ -16,14 +16,16 @@
 }
 
 .worktext {
-  height: 8%;
+  height: 10%;
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  padding-left: 5%;
 }
 .worktext h1 {
-  font-size: 3vw;
+  padding-left: 2.5%;
+  font-size: 4vw;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
 /* Non-image */
