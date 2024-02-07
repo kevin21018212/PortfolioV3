@@ -20,16 +20,17 @@
 .card h5 {
   font-family: "Neue Montreal Bold", sans-serif;
   letter-spacing: 3px;
-  font-size: 1.5vw;
+  font-size: 2.75vw;
 }
 .card h6 {
   font-family: "Monument Extended ", sans-serif;
-  font-size: 1.25vw;
+  font-size: 2vw;
   letter-spacing: 1px;
 }
 
 .card p {
   margin: 2.5% 0 0 0;
+  font-size: 1.5vw;
 }
 
 /*Sizing for Iphone*/

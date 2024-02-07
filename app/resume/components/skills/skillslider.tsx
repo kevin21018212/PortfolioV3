@@ -7,11 +7,14 @@ import styles from "../../css/skills/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
-import allTags from "@/app/data/alltags";
+import { allTags, mobileTags } from "@/app/data/alltags";
 
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
+
+  const isDesktop = window.innerWidth <= 800;
+  const tags = isDesktop ? mobileTags : mobileTags.concat(allTags);
 
   const filteredSkills = skillsData.filter((skill) =>
     selectedTags.length === 0
@@ -21,7 +24,7 @@ const SkillSlider = () => {
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
-        perPage: window.innerWidth <= 800 ? 3.5 : 6,
+        perPage: isDesktop ? 3 : 6,
         width: "100%",
         height: "40vh",
         gap: "1vw",
@@ -41,7 +44,7 @@ const SkillSlider = () => {
   return (
     <div className={styles.sliderContainer}>
       <div className={styles.toggleContainer}>
-        <SkillFilterToggle tags={allTags} onToggle={setSelectedTags} />
+        <SkillFilterToggle tags={tags} onToggle={setSelectedTags} />
       </div>
       <div className={styles.sliderTrack}>
         <div
@@ -73,3 +76,6 @@ const SkillSlider = () => {
 };
 
 export default SkillSlider;
+function useMediaQuery(arg0: string) {
+  throw new Error("Function not implemented.");
+}

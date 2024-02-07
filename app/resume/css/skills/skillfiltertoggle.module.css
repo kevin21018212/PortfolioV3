@@ -1,6 +1,8 @@
 .filterToggleContainer {
   margin-bottom: 1rem;
+
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -19,7 +21,7 @@
 }
 
 .tag p {
-  margin: 0;
+  font-size: calc(0.8rem + 0.4vw);
 }
 
 .filterToggleContainer button .circle {
@@ -39,4 +41,13 @@
 .filterToggleContainer button.selected .circle {
   background-color: #2b76d9;
   border-color: #2b76d9;
+}
+@media screen and (max-width: 800px) {
+  .filterToggleContainer {
+    width: 95%;
+  }
+
+  .filterToggleContainer button {
+    flex-grow: 1; /* Make the buttons flexible to take up available space */
+  }
 }

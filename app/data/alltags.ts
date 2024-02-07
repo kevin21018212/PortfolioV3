@@ -1,4 +1,4 @@
-const allTags = [
+export const allTags = [
   "Web Development",
   "Databases",
   "Java",
@@ -12,5 +12,4 @@ const allTags = [
   "Assembly",
   "Build Tools",
 ];
-
-export default allTags;
+export const mobileTags = ["Frontend", "Backend", "Devops"];
