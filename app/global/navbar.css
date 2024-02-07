@@ -2,7 +2,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 90px;
+  width: 10vh;
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -12,13 +12,13 @@
 }
 .navbar p {
   font-family: "Neue Montreal", sans-serif;
-  font-size: 1vw;
+  font-size: 1.5vh;
 }
 
 .red-rectangle {
   width: 100%;
-  height: 30px;
-  background-color: #f28177;
+  height: 3vh;
+  background-color: #ff3333;
 }
 
 .red-triangle {
@@ -26,29 +26,29 @@
   height: 0;
   border-style: solid;
   border-width: 0 100px 25px 0;
-  border-color: transparent #f28177 transparent transparent;
+  border-color: transparent #ff3333 transparent transparent;
 }
 
 .link,
 .first-link {
   width: 190%;
   box-sizing: border-box;
-  background-color: #f28177;
+  background-color: #ff3333;
   transform-origin: top right;
-  padding-left: 60%;
+  padding-left: 65%;
   margin-left: -45px;
   transform: skew(-10deg) rotate(25deg);
   transition: transform 0.5s ease;
 }
 
 .first-link {
-  padding-left: 80%;
+  padding-left: 75%;
 }
 
 .empty-rhombus {
   width: 180%;
   box-sizing: border-box;
-  background-color: #f28177;
+  background-color: #ff3333;
   padding: 20px;
   transition: background-color 0.3s ease;
   transform-origin: top right;
@@ -79,9 +79,37 @@
 
 @media only screen and (max-width: 800px) {
   .navbar p {
-    font-size: 2vw;
+    font-size: 1.5vh;
   }
+
+  .link,
   .first-link {
     padding-left: 70%;
+    margin-left: -45px;
+    transform: skew(-10deg) rotate(25deg);
+    transition: transform 0.5s ease;
+  }
+  .first-link {
+    padding-left: 80%;
+  }
+}
+@media only screen and (min-width: 2561px) {
+  .link,
+  .first-link {
+    width: 190%;
+    padding-left: 50%;
+    margin-left: -50px;
+    transform: skew(-10deg) rotate(25deg);
+    transition: transform 0.5s ease;
+  }
+  .first-link {
+    padding-left: 60%;
+  }
+
+  .red-rectangle {
+    height: 4vh;
+  }
+  .empty-rhombus {
+    margin-left: -50px;
   }
 }
