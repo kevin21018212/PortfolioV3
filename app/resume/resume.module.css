@@ -39,14 +39,14 @@
 
 @media only screen and (max-width: 800px) {
   .headerContainer h2 {
-    font-size: 5.4vw;
+    font-size: 6.25vw;
   }
   .headerContainer h4 {
-    font-size: 4vw;
+    font-size: 5.75vw;
   }
   .headerContainer {
     height: 25vh;
-    width: 84.5%;
+    width: 75%;
     display: flex;
     align-items: center;
 

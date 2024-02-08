@@ -14,7 +14,7 @@ const SkillSlider = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
 
   const isDesktop = window.innerWidth <= 800;
-  const tags = isDesktop ? mobileTags : mobileTags.concat(allTags);
+  const tags = isDesktop ? mobileTags : allTags.concat(mobileTags);
 
   const filteredSkills = skillsData.filter((skill) =>
     selectedTags.length === 0
@@ -24,9 +24,9 @@ const SkillSlider = () => {
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
-        perPage: isDesktop ? 3 : 6,
+        perPage: isDesktop ? 2.5 : 5.5,
         width: "100%",
-        height: "40vh",
+        height: isDesktop ? "40vh" : "50vh",
         gap: "1vw",
       });
 

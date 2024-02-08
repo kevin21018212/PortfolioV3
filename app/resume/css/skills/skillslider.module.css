@@ -11,8 +11,9 @@
 .toggleContainer {
   display: flex;
   justify-self: flex-start;
-  width: 90vw;
+  width: 85vw;
   padding-left: 2.5%;
+  margin: 2.5% 0%;
 }
 
 .sliderTrack {

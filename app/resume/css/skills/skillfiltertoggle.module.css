@@ -1,15 +1,12 @@
 .filterToggleContainer {
-  margin-bottom: 1rem;
-
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
 .filterToggleContainer button {
   position: relative;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   background-color: #26221b;
   color: #fff;
   border: none;
@@ -21,7 +18,7 @@
 }
 
 .tag p {
-  font-size: calc(0.8rem + 0.4vw);
+  font-size: 1.25w;
 }
 
 .filterToggleContainer button .circle {
@@ -44,10 +41,18 @@
 }
 @media screen and (max-width: 800px) {
   .filterToggleContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .filterToggleContainer {
     width: 95%;
   }
 
   .filterToggleContainer button {
-    flex-grow: 1; /* Make the buttons flexible to take up available space */
+    flex-grow: 1;
+  }
+  .tag p {
+    font-size: 3vw;
   }
 }

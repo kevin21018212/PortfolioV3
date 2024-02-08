@@ -17,10 +17,26 @@
 }
 .description p {
   color: black;
+  margin-left: 2.5%;
 }
 
 .description h4 {
   font-family: "Monument Grotesk Regular", sans-serif;
   color: black;
   font-size: 1.5vw;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 85%;
+    height: 45vh;
+    margin-bottom: 2.5vh;
+  }
+
+  .description h4 {
+    font-size: 4vw;
+  }
+  .description p {
+    font-size: 2.5vw;
+  }
 }

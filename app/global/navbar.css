@@ -2,7 +2,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 10vh;
+  width: 12.5vh;
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -12,12 +12,12 @@
 }
 .navbar p {
   font-family: "Neue Montreal", sans-serif;
-  font-size: 1.5vh;
+  font-size: 2vh;
 }
 
 .red-rectangle {
   width: 100%;
-  height: 3vh;
+  height: 5vh;
   background-color: #ff3333;
 }
 
@@ -31,12 +31,12 @@
 
 .link,
 .first-link {
-  width: 190%;
+  width: 25vh;
   box-sizing: border-box;
   background-color: #ff3333;
   transform-origin: top right;
   padding-left: 65%;
-  margin-left: -45px;
+  margin-left: -55%;
   transform: skew(-10deg) rotate(25deg);
   transition: transform 0.5s ease;
 }
@@ -46,13 +46,13 @@
 }
 
 .empty-rhombus {
-  width: 180%;
+  width: 25vh;
   box-sizing: border-box;
   background-color: #ff3333;
   padding: 20px;
   transition: background-color 0.3s ease;
   transform-origin: top right;
-  margin-left: -25px;
+  margin-left: -35%;
   transform: skew(-10deg) rotate(25deg);
 }
 
@@ -79,18 +79,7 @@
 
 @media only screen and (max-width: 800px) {
   .navbar p {
-    font-size: 1.5vh;
-  }
-
-  .link,
-  .first-link {
-    padding-left: 70%;
-    margin-left: -45px;
-    transform: skew(-10deg) rotate(25deg);
-    transition: transform 0.5s ease;
-  }
-  .first-link {
-    padding-left: 80%;
+    font-size: 1.75vh;
   }
 }
 @media only screen and (min-width: 2561px) {

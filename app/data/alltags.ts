@@ -10,6 +10,5 @@ export const allTags = [
   "APIs",
   "Languages",
   "Assembly",
-  "Build Tools",
 ];
 export const mobileTags = ["Frontend", "Backend", "Devops"];

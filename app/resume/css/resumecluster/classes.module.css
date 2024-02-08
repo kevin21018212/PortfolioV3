@@ -2,6 +2,7 @@
   height: 90vh;
   background: #f2f2f2;
   position: relative;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -9,7 +10,7 @@
   height: 20%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   padding: 2.5%;
   margin: 0%;
 }
@@ -26,4 +27,25 @@
   padding: 2%;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .cardcontainer {
+    height: 175vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .classescontainer {
+    height: 200vh;
+  }
+  .classestitle {
+    height: 20vh;
+    padding: 2.5%;
+    margin: 0%;
+  }
+  .classestitle h1 {
+    color: black;
+    margin: 0%;
+    font-size: 12vw;
+  }
 }
