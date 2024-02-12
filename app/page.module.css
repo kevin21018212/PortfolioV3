@@ -1,16 +1,13 @@
-.maincontent{
-  height: fit-content;
+.maincontent {
+  height: 100vh;
+  overflow: hidden;
 }
 
-.landingcontainer{
+.landingcontainer {
   height: 90vh;
   margin: 0;
-
 }
 .projectcontainer {
   height: 10vh;
   margin: 0;
 }
-
-
-

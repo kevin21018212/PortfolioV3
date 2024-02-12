@@ -2,41 +2,22 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
-.contactcard {
-  width: 90%;
-  height: 70%;
-  background-color: #f0f0f0;
-  border-radius: 25px;
+.contactCard {
+  height: 25%;
+  border-bottom: 2.5px solid white;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
-.title {
-  height: 15%;
-  width: 100%;
-  padding-left: 2.5%;
-  background: -webkit-linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
-  display: flex;
-  align-items: center;
-}
-.title p {
-  flex-grow: 1;
-}
-.links {
-  display: flex;
-  justify-content: end;
-  padding-right: 5%;
-}
+.contactCard h1 {
+  color: #f2f2f2;
+  font-size: 20vh;
+  font-family: "Neue Montreal Semibold";
 
-.infosection {
-  height: 85%;
-  padding-left: 5%;
-  display: flex;
-  align-items: center;
-}
-.infosection p {
-  color: black;
-  margin: 0;
+  padding: 0% 2.5%;
+  line-height: 100%;
+  text-wrap: nowrap;
 }
