@@ -60,6 +60,7 @@
   border: none;
   cursor: pointer;
   position: relative;
+
   width: 20%;
   height: 100%;
   padding: 0;
@@ -78,12 +79,12 @@
 
 .toggleButton.upArrow::before {
   border-bottom-color: #000;
-  top: 70%;
+  top: 65%;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .toggleButton.downArrow::before {
   border-bottom-color: #000;
-  top: 35%;
+  top: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
 }

@@ -13,8 +13,13 @@ const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
 
-  const isDesktop = window.innerWidth <= 800;
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
   const tags = isDesktop ? mobileTags : allTags.concat(mobileTags);
+
+  useEffect(() => {
+    setIsDesktop(window.innerWidth <= 800);
+  }, []);
 
   const filteredSkills = skillsData.filter((skill) =>
     selectedTags.length === 0

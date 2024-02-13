@@ -12,11 +12,11 @@
   overflow: hidden;
 }
 
-.contactCard h1 {
+.contactContainer h1 {
   color: #f2f2f2;
   font-size: 20vh;
   font-family: "Neue Montreal Semibold";
-
+  word-spacing: 1.5em;
   padding: 0% 2.5%;
   line-height: 100%;
   text-wrap: nowrap;

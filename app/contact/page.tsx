@@ -1,58 +1,44 @@
 "use client";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import styles from "./page.module.css";
+import Marquee from "react-fast-marquee";
 
 const ContactPage = () => {
-  const words = ["Email", "LinkedIn", "Instagram", "Phone"];
-  const contactCards = [];
+  const words = ["Email ", "LinkedIn ", "Instagram ", "Phone "]; // Include space after each word
 
-  useEffect(() => {
-    let xPercent = 0;
+  const gradients = [
+    "linear-gradient(to right, #4285F4, #EA4335)", // Gradient for "Email Email"
+    "linear-gradient(to right, #0077B5, #0056A2)", // Gradient for "LinkedIn"
+    "linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7)",
+    "linear-gradient(to right, #00bcd4, #4caf50)", // Gradient for "Phone Phone"
+  ];
 
-    const animate = () => {
-      if (xPercent > 0) {
-        xPercent = -100;
-      }
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
 
-      for (let i = 0; i < words.length; i++) {
-        const firstText = document.getElementById(`firstText${i}`);
-        const secondText = document.getElementById(`secondText${i}`);
-
-        if (firstText && secondText) {
-          firstText.style.left = `${firstText.getBoundingClientRect().width}px`;
-          secondText.style.left = `${
-            secondText.getBoundingClientRect().width
-          }px`;
-
-          firstText.style.transform = `translateX(${xPercent}%)`;
-          secondText.style.transform = `translateX(${xPercent}%)`;
-        }
-      }
-
-      requestAnimationFrame(animate);
-      xPercent += 0.1;
-    };
-
-    requestAnimationFrame(animate);
-
-    return () => {};
-  }, []);
-
-  for (let i = 0; i < words.length; i++) {
-    contactCards.push(
-      <div key={i} className={styles.contactCard}>
-        <h1 id={`firstText${i}`} className={styles.text}>
-          {words[i]}
-        </h1>
-        <h1 id={`secondText${i}`} className={styles.text}>
-          {words[i]}
-        </h1>
-      </div>
-    );
-  }
-
-  return <div className={styles.contactContainer}>{contactCards}</div>;
+  return (
+    <div className={styles.contactContainer}>
+      {words.map((word, index) => (
+        <div
+          key={index}
+          className={styles.contactCard}
+          style={{
+            background: hoveredIndex === index ? gradients[index] : undefined,
+          }}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(-1)}
+        >
+          <Marquee
+            className={styles.marquee}
+            pauseOnHover={true}
+            autoFill={true}
+          >
+            <h1>{word}</h1>
+            {index !== words.length - 1 && <span>&nbsp;</span>}
+          </Marquee>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default ContactPage;

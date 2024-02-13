@@ -4,7 +4,6 @@ export const allTags = [
   "Java",
   "Testing",
   "React",
-  "Devops",
   "Deployment",
   "Styling",
   "APIs",
