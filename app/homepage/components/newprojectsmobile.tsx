@@ -4,6 +4,7 @@ import { animate, motion } from "framer-motion";
 import styles from "../css/projectmobile.module.css";
 import { Project } from "next/dist/build/swc";
 import { projectData } from "@/app/data/projectdata";
+import SpacerContainer from "@/app/global/spacer";
 
 const NewProjectsMobile = () => {
   return (
@@ -11,9 +12,12 @@ const NewProjectsMobile = () => {
       {projectData.map((project) => (
         <motion.div key={project.id} className={styles.projectsContent}>
           <div>
-            <div className="spacerContainer">
-              <h1>{project.projectTitle}</h1>
-            </div>
+            <SpacerContainer
+              title={project.projectTitle}
+              tag={project.projectTag}
+              handleToggleProject={null}
+              isProjectOpen={false}
+            />
             <div className={styles.description}>
               <div className={styles.text}>
                 <p>{project.description}</p>

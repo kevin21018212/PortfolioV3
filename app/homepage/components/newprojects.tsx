@@ -6,6 +6,7 @@ import styles from "../css/project.module.css";
 import ProjectInfo from "./projectinfo";
 import { circles } from "@/app/data/smallData";
 import { Project } from "@/app/data/types";
+import SpacerContainer from "@/app/global/spacer";
 
 const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
@@ -43,15 +44,12 @@ const NewProjects = () => {
 
   return (
     <div className={styles.projectsComponent}>
-      <div className="spacerContainer">
-        <h1 className={styles.projectNumber}>New Projects</h1>
-        <button
-          onClick={handleToggleProject}
-          className={`${styles.toggleButton} ${
-            isProjectOpen ? styles.upArrow : styles.downArrow
-          }`}
-        ></button>
-      </div>
+      <SpacerContainer
+        title={"NewProjects"}
+        tag={""}
+        handleToggleProject={handleToggleProject}
+        isProjectOpen={isProjectOpen}
+      />
       <motion.div className={styles.projectsContainer}>
         <div className={styles.circlesContainer}>
           {circles.map((circle) => (

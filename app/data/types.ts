@@ -22,6 +22,14 @@ export type ClassesCardProps = {
   };
 };
 
+type handleToggleProject = () => void;
+export type spacerContainerProps = {
+  title: string;
+  tag: string;
+  handleToggleProject: handleToggleProject | null;
+  isProjectOpen: boolean;
+};
+
 export type SkillCardProps = {
   title: string;
   skillName: string;

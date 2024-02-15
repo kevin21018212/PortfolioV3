@@ -82,14 +82,6 @@ h6 {
   flex-direction: column;
 }
 
-.spacerContainer {
-  height: 100%;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
 .textGradient {
   background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
   background-clip: text;

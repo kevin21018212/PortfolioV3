@@ -43,35 +43,3 @@
   padding-left: 1%;
   font-size: 3.8vw;
 }
-
-.toggleButton {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 20%;
-  height: 100%;
-  padding: 0;
-  transition: transform 0.5s;
-  position: relative;
-}
-
-.toggleButton::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 2.5vw solid transparent;
-  transition: transform 0.5s;
-  top: 40%;
-  transform: translate(-50%, -50%);
-}
-
-.toggleButton.upArrow::before {
-  border-bottom-color: #000;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-.toggleButton.downArrow::before {
-  border-bottom-color: #000;
-  transform: translate(-50%, -50%) rotate(0deg);
-}
