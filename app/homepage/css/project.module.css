@@ -44,47 +44,43 @@
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  padding-left: 1%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .spacerContainer h1 {
-  color: black;
-  width: 90%;
+  width: 80%;
+  padding-left: 1%;
   font-size: 3.8vw;
 }
 
-/*Everything Involving the toggle button*/
 .toggleButton {
   background: transparent;
   border: none;
   cursor: pointer;
-  position: relative;
-
   width: 20%;
   height: 100%;
   padding: 0;
   transition: transform 0.5s;
+  position: relative;
 }
 
-.toggleButton::before,
-.toggleButton::after {
+.toggleButton::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
   border: 2.5vw solid transparent;
   transition: transform 0.5s;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .toggleButton.upArrow::before {
   border-bottom-color: #000;
-  top: 65%;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .toggleButton.downArrow::before {
   border-bottom-color: #000;
-  top: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
 }

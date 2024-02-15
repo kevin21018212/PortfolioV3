@@ -2,7 +2,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 12.5vh;
+  width: 12vh;
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -20,7 +20,7 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 12.5vh 5vh 0;
+  border-width: 0 12vh 5vh 0;
   border-color: transparent #ff3333 transparent transparent;
 }
 

@@ -2,7 +2,7 @@
 import { projects } from "@/app/data/projectdata";
 import { animate, motion } from "framer-motion";
 import { useState } from "react";
-import styles from "../../css/projects/project.module.css";
+import styles from "../css/project.module.css";
 import ProjectInfo from "./projectinfo";
 
 const circles = [

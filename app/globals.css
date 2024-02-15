@@ -26,33 +26,46 @@ h1 {
   margin: 0;
   text-transform: uppercase;
   line-height: 1.2;
+  font-size: 8vw;
+  color: #0a0a0a;
+  margin: 0;
+  letter-spacing: 10px;
 }
 
 h2 {
   font-family: "Monument Grotesk Black", sans-serif;
+  font-size: 4vw;
+  margin-bottom: 0;
+  letter-spacing: 0.025em;
+  color: #f2f2f2;
+  text-transform: uppercase;
 }
 
 h3 {
   font-family: "Monument Grotesk Bold", sans-serif;
   color: #262626;
   margin: 2.5% 0;
+  font-size: 3.5vw;
 }
 
 h4 {
   font-family: "Monument Grotesk Medium", sans-serif;
   color: #f2f2f2;
-  letter-spacing: 2px;
-  margin: 0;
+  font-size: 3vw;
+  margin: 1% 0% 0% 5%;
+  letter-spacing: 0.025em;
 }
 
 h5 {
   font-family: "Monument Extended Bold", sans-serif;
   margin: 2.5% 0%;
+  font-size: 2.5vw;
   color: #f2f2f2;
 }
 
-h6 {
-  font-family: "Monument Grotesk Mono Condensed", sans-serif;
-  margin: 2.5% 0%;
-  color: #f2f2f2;
+.pageContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }

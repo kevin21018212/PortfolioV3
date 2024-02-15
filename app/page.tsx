@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import NewProjects from "./homepage/components/newprojects/newprojects";
+import NewProjects from "./homepage/components/newprojects";
 import styles from "./page.module.css";
-import NewProjectsMobile from "./homepage/components/newprojects/mobile/newprojectsmobile";
 import Landing from "./homepage/components/landing";
+import NewProjectsMobile from "./homepage/components/newprojectsmobile";
 
 export default function Home() {
   const [screenSize, setScreenSize] = useState("desktop"); // "desktop" or "mobile"
@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.maincontent}>
+    <div className="pageContainer">
       <div className={styles.landingcontainer}>
         <Landing />
         <div className={styles.projectcontainer}>

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import styles from "../../css/projects/projectinfo.module.css";
+import styles from "../css/projectinfo.module.css";
 
 type ProjectData = {
   id: string;
