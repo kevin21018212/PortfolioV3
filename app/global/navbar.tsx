@@ -1,32 +1,33 @@
 import Link from "next/link";
-import "./navbar.css";
+import styles from "./navbar.module.css";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-      <div className="red-rectangle"></div>
-      <div className="red-triangle"></div>
-      <div className="first-link">
-        <Link href="/">
-          <p>HOME</p>
-        </Link>
+    <div className={styles.navbar}>
+      <div className={styles.redTriangle}></div>
+      <div className={styles.linksContainer}>
+        <div className={styles.firstLink}>
+          <Link href="/">
+            <p>HOME</p>
+          </Link>
+        </div>
+        <div className={styles.link}>
+          <Link href="/projects">
+            <p>WORKS</p>
+          </Link>
+        </div>
+        <div className={styles.link}>
+          <Link href="/resume">
+            <p>RESUME</p>
+          </Link>
+        </div>
+        <div className={styles.link}>
+          <Link href="/contact">
+            <p>CONTACT</p>
+          </Link>
+        </div>
+        <div className={styles.emptyLink}></div>
       </div>
-      <div className="link">
-        <Link href="/projects">
-          <p>WORKS</p>
-        </Link>
-      </div>
-      <div className="link">
-        <Link href="/resume">
-          <p>RESUME</p>
-        </Link>
-      </div>
-      <div className="link">
-        <Link href="/contact">
-          <p>CONTACT</p>
-        </Link>
-      </div>
-      <div className="empty-rhombus"></div>
     </div>
   );
 };

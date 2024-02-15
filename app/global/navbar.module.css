@@ -7,74 +7,67 @@
   flex-direction: column;
   background-color: transparent;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 2;
 }
+
 .navbar p {
   font-family: "Neue Montreal", sans-serif;
   font-size: 2vh;
 }
 
-.red-rectangle {
-  width: 100%;
-  height: 5vh;
-  background-color: #ff3333;
-}
-
-.red-triangle {
+.redTriangle {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 100px 25px 0;
+  border-width: 0 12.5vh 5vh 0;
   border-color: transparent #ff3333 transparent transparent;
 }
 
+/*Links*/
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: -15%;
+  margin-bottom: 20%;
+}
+
 .link,
-.first-link {
+.firstLink,
+.lastLink,
+.emptyLink {
   width: 25vh;
+  margin-left: -25%;
+  padding-left: 35%;
   box-sizing: border-box;
   background-color: #ff3333;
-  transform-origin: top right;
-  padding-left: 55%;
-  margin-left: -45%;
-  transform: skew(-10deg) rotate(25deg);
+  transform: skew(-10deg) rotate(20deg);
   transition: transform 0.5s ease;
+  min-height: 2vh;
 }
 
-.first-link {
-  padding-left: 70%;
-}
-
-.empty-rhombus {
-  width: 25vh;
-  box-sizing: border-box;
-  background-color: #ff3333;
-  padding: 20px;
-  transition: background-color 0.3s ease;
-  transform-origin: top right;
-  margin-left: -35%;
-  transform: skew(-10deg) rotate(25deg);
+.firstLink {
+  padding-left: 40%;
 }
 
 .link:hover,
-.first-link:hover {
+.firstLink:hover {
   background-color: #f26e50;
+  transform: skew(-8deg) translateX(-1vw) rotate(20deg) scale(1.1);
   padding-left: 45%;
-  transform: skew(-10deg) rotate(25deg) translate(10px, -10px);
+  padding-bottom: 5.5%;
 }
-.first-link:hover {
-  padding-left: 55%;
+
+.firstLink:hover {
+  padding-left: 50%;
 }
 
 .link a,
-.first-link a {
+.firstLink a,
+.lastLink a {
   color: var(--primary-color);
   text-decoration: none;
-}
-
-.link:hover .empty-rhombus,
-.first-link:hover .empty-rhombus {
-  transform: skew(-10deg) rotate(25deg);
 }
 
 @media only screen and (max-width: 800px) {
@@ -82,6 +75,7 @@
     font-size: 1.75vh;
   }
 }
+
 @media only screen and (min-width: 2561px) {
   .link,
   .first-link {
@@ -97,8 +91,5 @@
 
   .red-rectangle {
     height: 4vh;
-  }
-  .empty-rhombus {
-    margin-left: -50px;
   }
 }
