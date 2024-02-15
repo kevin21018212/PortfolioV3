@@ -38,16 +38,7 @@
   background-color: #0a0a0a;
 }
 
-/* New Projects Spacer */
-.spacerContainer {
-  height: 100%;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.spacerContainer h1 {
+.projectsComponent h1 {
   width: 80%;
   padding-left: 1%;
   font-size: 3.8vw;
@@ -71,7 +62,7 @@
   height: 0;
   border: 2.5vw solid transparent;
   transition: transform 0.5s;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
 }
 

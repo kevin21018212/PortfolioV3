@@ -18,9 +18,8 @@ const NewProjectsMobile = () => {
       {projects.map((project) => (
         <motion.div key={project.id} className={styles.projectsContent}>
           <div>
-            <div className={styles.title}>
+            <div className="spacerContainer">
               <h1>{project.middleRight}</h1>
-              <h3>{project.bottomRight}</h3>
             </div>
             <div className={styles.description}>
               <div className={styles.text}>
@@ -29,6 +28,7 @@ const NewProjectsMobile = () => {
               <div className={styles.info}>
                 <div className={styles.image}></div>
                 <div className={styles.about}>
+                  <h3>{project.bottomRight}</h3>
                   <p>{project.bottomMiddle}</p>
                 </div>
               </div>

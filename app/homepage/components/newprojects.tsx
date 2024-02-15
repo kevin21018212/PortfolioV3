@@ -47,7 +47,7 @@ const NewProjects = () => {
 
   return (
     <div className={styles.projectsComponent}>
-      <div className={styles.spacerContainer}>
+      <div className="spacerContainer">
         <h1 className={styles.title}>New Projects</h1>
         <button
           onClick={handleToggleProject}
