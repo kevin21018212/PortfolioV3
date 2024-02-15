@@ -101,13 +101,23 @@ h6 {
   h1 {
     font-size: 2vw;
   }
-  h2,
-  h3,
-  h4,
+  h2 {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 2vw;
+  }
+
+  h4 {
+    font-size: 2vw;
+  }
+
   h5 {
     font-size: 2vh;
   }
   h6 {
+    font-size: 2vw;
   }
   p {
     font-size: 2vw;

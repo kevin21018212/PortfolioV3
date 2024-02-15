@@ -1,10 +1,18 @@
-export type ProjectData = {
+export type Project = {
   id: string;
-  topRight: string;
-  middleRight: string;
-  bottomRight: string;
-  middleMiddle: string;
-  bottomMiddle: string;
+  projectNumber: string;
+  projectTitle: string;
+  projectTag: string;
+  description: string;
+  projectTech: string;
+  imageUrl: string | null;
+  linkUrl: string | null;
+};
+export type SkillData = {
+  title: string;
+  skillName: string;
+  experience: string;
+  tags: string[];
 };
 export type ClassesCardProps = {
   category: {

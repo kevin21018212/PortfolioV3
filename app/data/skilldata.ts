@@ -1,9 +1,18 @@
-interface SkillData {
-  title: string;
-  skillName: string;
-  experience: string;
-  tags: string[]; // Added tags for categorization
-}
+import { SkillData } from "./types";
+
+export const allTags = [
+  "Web Development",
+  "Databases",
+  "Java",
+  "Testing",
+  "React",
+  "Deployment",
+  "Styling",
+  "APIs",
+  "Languages",
+  "Assembly",
+];
+export const mobileTags = ["Frontend", "Backend", "Devops"];
 
 const skillsData: SkillData[] = [
   {

@@ -1,17 +1,10 @@
 import React from "react";
 import styles from "./project.module.css";
+import { Project } from "../data/types";
 
-interface ProjectData {
-  title: string;
-  date: string;
-  description: string;
-  tags: string[];
-  link: string | null;
-  image: string | null;
-}
-const Project = (data: ProjectData) => {
-  const imageStyle = data.image
-    ? { backgroundImage: `url(${data.image})` }
+const Project = (data: { imageUrl: any }) => {
+  const imageStyle = data.imageUrl
+    ? { backgroundImage: `url(${data.imageUrl})` }
     : undefined;
 
   return <div className="pageContainer"></div>;

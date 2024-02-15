@@ -1,10 +1,11 @@
 "use client";
-import { projects } from "@/app/data/projectdata";
+
 import { animate, motion } from "framer-motion";
 import { useState } from "react";
 import styles from "../css/project.module.css";
 import ProjectInfo from "./projectinfo";
 import { circles } from "@/app/data/smallData";
+import { Project } from "@/app/data/types";
 
 const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
@@ -22,7 +23,9 @@ const NewProjects = () => {
   };
 
   const handleCircleClick = (circleId: string) => {
-    const selectedProject = projects.find((project) => project.id === circleId);
+    const selectedProject = projectData.find(
+      (project: Project) => project.id === circleId
+    );
     setProjectData(selectedProject || null);
   };
 
@@ -41,7 +44,7 @@ const NewProjects = () => {
   return (
     <div className={styles.projectsComponent}>
       <div className="spacerContainer">
-        <h1 className={styles.title}>New Projects</h1>
+        <h1 className={styles.projectNumber}>New Projects</h1>
         <button
           onClick={handleToggleProject}
           className={`${styles.toggleButton} ${

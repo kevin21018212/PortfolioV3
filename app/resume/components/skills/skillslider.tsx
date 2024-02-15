@@ -5,9 +5,8 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
 import styles from "../../css/skills/skillslider.module.css";
 import SkillCard from "./skillcard";
-import skillsData from "@/app/data/skilldata";
+import skillsData, { allTags, mobileTags } from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
-import { allTags, mobileTags } from "@/app/data/alltags";
 
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);

@@ -1,12 +1,12 @@
 import React from "react";
 import Project from "./project";
-import { fakeData } from "../data/smallData";
+import { projectData } from "../data/projectdata";
 
 const ProjectsPage = () => {
   return (
     <div>
-      {fakeData.map((project, index) => (
-        <Project key={index} {...project} />
+      {projectData.map((project, index) => (
+        <p>hi</p>
       ))}
     </div>
   );
