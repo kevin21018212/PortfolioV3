@@ -29,7 +29,7 @@ const SkillSlider = () => {
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
-        perPage: isDesktop ? 2.5 : 5.5,
+        perPage: isDesktop ? 2.5 : 4.5,
         width: "100%",
         height: isDesktop ? "40vh" : "50vh",
         gap: "1vw",
@@ -81,6 +81,3 @@ const SkillSlider = () => {
 };
 
 export default SkillSlider;
-function useMediaQuery(arg0: string) {
-  throw new Error("Function not implemented.");
-}

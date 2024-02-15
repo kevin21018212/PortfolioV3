@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../css/skills/skillfiltertoggle.module.css";
-
-interface SkillFilterToggleProps {
-  tags: string[];
-  onToggle: (selectedTags: string[]) => void;
-}
+import { SkillFilterToggleProps } from "@/app/data/types";
 
 const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
   const [selectedTags, setSelectedTags] = useState<string[]>(tags);

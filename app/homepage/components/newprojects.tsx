@@ -4,14 +4,7 @@ import { animate, motion } from "framer-motion";
 import { useState } from "react";
 import styles from "../css/project.module.css";
 import ProjectInfo from "./projectinfo";
-
-const circles = [
-  { id: "circle1" },
-  { id: "circle2" },
-  { id: "circle3" },
-  { id: "circle4" },
-  { id: "circle5" },
-];
+import { circles } from "@/app/data/smallData";
 
 const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<string | null>(null);

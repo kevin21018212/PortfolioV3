@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "../../css/resumecluster/about.module.css";
+import { getImagePath } from "@/app/data/functions";
 
 interface AboutDisplayProps {}
 
@@ -9,14 +10,6 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const items = ["Outdoor", "Travel", "Fashion", "Art", "Music"];
-
-  const handleItemHover = (item: string | null) => {
-    setHoveredItem(item);
-  };
-
-  const getImagePath = (item: string | null): string => {
-    return item ? `/about/${item}.jpg` : "";
-  };
 
   return (
     <div className={styles.aboutdisplay}>
@@ -26,8 +19,8 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
           <motion.p
             key={index}
             whileHover={{ scale: 1.1 }}
-            onMouseEnter={() => handleItemHover(item)}
-            onMouseLeave={() => handleItemHover(null)}
+            onMouseEnter={() => setHoveredItem(item)}
+            onMouseLeave={() => setHoveredItem(null)}
           >
             {item}
           </motion.p>

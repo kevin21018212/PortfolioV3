@@ -3,15 +3,6 @@ import { animate, motion } from "framer-motion";
 import { projects } from "@/app/data/projectdata";
 import styles from "../css/projectmobile.module.css";
 
-type ProjectData = {
-  id: string;
-  topRight: string;
-  middleRight: string;
-  bottomRight: string;
-  middleMiddle: string;
-  bottomMiddle: string;
-};
-
 const NewProjectsMobile = () => {
   return (
     <div className={styles.projectsComponent}>

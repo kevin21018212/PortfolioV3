@@ -13,7 +13,7 @@ const ResumePage = () => {
           <h2>ALWAYS LEARNING, ALWAYS MAKING, ALWAYS CREATING</h2>
           <h4>
             I am always looking for{" "}
-            <strong className={styles.textGradient}>new opportinunites</strong>
+            <strong className="textGradient">new opportinunites</strong>
           </h4>
           <p></p>
         </div>

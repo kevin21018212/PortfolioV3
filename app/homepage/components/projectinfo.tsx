@@ -2,35 +2,8 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import styles from "../css/projectinfo.module.css";
-
-type ProjectData = {
-  id: string;
-  topRight: string;
-  middleRight: string;
-  bottomRight: string;
-  middleMiddle: string;
-  bottomMiddle: string;
-};
-
-const textanimation = {
-  inactive: {
-    opacity: 0,
-    translateX: "-5vh",
-  },
-  active: {
-    opacity: 1,
-    translateX: "0vh",
-  },
-};
-
-const staggerChildrenAnimation = {
-  active: {
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.2,
-    },
-  },
-};
+import { staggerChildrenAnimation, textanimation } from "@/app/data/animations";
+import { ProjectData } from "@/app/data/types";
 
 const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
   const [animationState, setAnimationState] = useState("inactive");

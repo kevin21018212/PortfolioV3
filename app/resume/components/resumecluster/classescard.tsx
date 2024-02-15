@@ -1,20 +1,9 @@
 import { motion } from "framer-motion";
 import styles from "../../css/resumecluster/classescard.module.css";
+import { descriptionVariants } from "@/app/data/animations";
+import { ClassesCardProps } from "@/app/data/types";
 
-interface ClassesCardProps {
-  category: {
-    name: string;
-    description: string;
-    courses: string[];
-  };
-}
-
-const ClassesCard: React.FC<ClassesCardProps> = ({ category }) => {
-  const descriptionVariants = {
-    hidden: { height: "10%" },
-    visible: { height: "80%" },
-  };
-
+const ClassesCard = ({ category }: ClassesCardProps) => {
   return (
     <motion.div className={styles.card}>
       <motion.div

@@ -17,7 +17,8 @@ p {
   font-family: "Monument Grotesk Medium", sans-serif;
   color: #f2f2f2;
   letter-spacing: 1.5px;
-  font-size: 1.15vw;
+  font-size: 1.25vw;
+  margin: 2.5% 0;
 }
 
 h1 {
@@ -36,14 +37,16 @@ h2 {
   font-family: "Monument Grotesk Black", sans-serif;
   font-size: 4vw;
   margin-bottom: 0;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.5rem;
   color: #f2f2f2;
   text-transform: uppercase;
+  padding-left: 2.5%;
+  margin-top: 0;
 }
 
 h3 {
   font-family: "Monument Grotesk Bold", sans-serif;
-  color: #262626;
+  color: #f2f2f2;
   margin: 2.5% 0;
   font-size: 3.5vw;
 }
@@ -57,9 +60,18 @@ h4 {
 }
 
 h5 {
-  font-family: "Monument Extended Bold", sans-serif;
+  font-family: "Neue Montreal Bold", sans-serif;
   margin: 2.5% 0%;
-  font-size: 2.5vw;
+  letter-spacing: 3px;
+  font-size: 2.25vw;
+  color: #f2f2f2;
+}
+
+h6 {
+  font-family: "Monument Extended ", sans-serif;
+  font-size: 1.5vw;
+  margin: 0%;
+  letter-spacing: 1px;
   color: #f2f2f2;
 }
 
@@ -76,4 +88,29 @@ h5 {
   display: flex;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.textGradient {
+  background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Media Query for Screens up to 800px (Mobile) */
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 2vw;
+  }
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 2vh;
+  }
+  h6 {
+  }
+  p {
+    font-size: 2vw;
+    padding: 0;
+  }
 }
