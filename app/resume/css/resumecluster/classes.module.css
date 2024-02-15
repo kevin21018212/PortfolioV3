@@ -1,23 +1,29 @@
 .classescontainer {
-  height: 90vh;
+  height: 100vh;
   background: #f2f2f2;
   position: relative;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+.classestitle h1 {
+  color: black;
+  margin: 0%;
+  font-size: 12vw;
+}
 
 .classestitle {
-  height: 20%;
+  height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5%;
+  padding: 5% 2.5%;
   margin: 0%;
 }
 
 .cardcontainer {
   height: 60%;
-  padding: 2%;
+  padding: 2.5%;
+  margin-bottom: 10%;
   display: flex;
   justify-content: center;
 }
@@ -35,10 +41,5 @@
     height: 20vh;
     padding: 2.5%;
     margin: 0%;
-  }
-  .classestitle h1 {
-    color: black;
-    margin: 0%;
-    font-size: 12vw;
   }
 }

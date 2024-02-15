@@ -1,12 +1,19 @@
 .spacerContainer {
-  height: 100%;
+  height: 97.5%;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 2.5%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.spacerContainer h3 {
+  color: #000;
+  margin: 0 2.5%;
+  font-size: 4vw;
+}
+
+/*Button Section*/
 .spacerContainerButton {
   height: 100%;
   background-color: #f2f2f2;
@@ -27,7 +34,8 @@
   position: relative;
 }
 
-.toggleButton::before {
+.toggleButton::before,
+.toggleButton::after {
   content: "";
   position: absolute;
   width: 0;
@@ -40,10 +48,12 @@
 
 .toggleButton.upArrow::before {
   border-bottom-color: #000;
+  top: 75%;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .toggleButton.downArrow::before {
   border-bottom-color: #000;
+  top: 35%;
   transform: translate(-50%, -50%) rotate(0deg);
 }

@@ -25,8 +25,7 @@ const NewProjectsMobile = () => {
               <div className={styles.info}>
                 <div className={styles.image}></div>
                 <div className={styles.about}>
-                  <h3>{project.projectTag}</h3>
-                  <p>{project.projectTech}</p>
+                  <h5>{project.projectTech}</h5>
                 </div>
               </div>
             </div>

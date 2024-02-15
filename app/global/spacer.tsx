@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types"; // Import PropTypes for type validation
-import styles from "./SpacerContainer.module.css"; // Adjust the path as per your project structure
+import styles from "./spacer.module.css"; // Adjust the path as per your project structure
 import { spacerContainerProps } from "../data/types";
 
 const SpacerContainer = ({
@@ -25,7 +25,7 @@ const SpacerContainer = ({
   return (
     <div className={styles.spacerContainer}>
       <h1>{title}</h1>
-      <h4>tag</h4>
+      <h3>{tag}</h3>
     </div>
   );
 };

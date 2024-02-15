@@ -17,7 +17,7 @@ const ResumeWork = () => {
             <div className={styles.workdisplay}>
               {jobData.map((job, index) => (
                 <div key={index} className={styles.jobtext}>
-                  <h5>{job.title}</h5>
+                  <h6>{job.title}</h6>
                   {job.description.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}

@@ -17,8 +17,8 @@ p {
   font-family: "Monument Grotesk Medium", sans-serif;
   color: #f2f2f2;
   letter-spacing: 1.5px;
-  font-size: 1.25vw;
-  margin: 2.5% 0;
+  font-size: 1.75vw;
+  margin: 2.5% 0 0 0;
 }
 
 h1 {
@@ -29,7 +29,6 @@ h1 {
   line-height: 1.2;
   font-size: 8vw;
   color: #0a0a0a;
-  margin: 0;
   letter-spacing: 10px;
 }
 
@@ -61,16 +60,16 @@ h4 {
 
 h5 {
   font-family: "Neue Montreal Bold", sans-serif;
-  margin: 2.5% 0%;
+  margin: 2.5% 0% 0% 0%;
   letter-spacing: 3px;
-  font-size: 2.25vw;
+  font-size: 2.5vw;
   color: #f2f2f2;
 }
 
 h6 {
   font-family: "Monument Extended ", sans-serif;
-  font-size: 1.5vw;
-  margin: 0%;
+  font-size: 2vw;
+  margin: 5% 0% 0% 0%;
   letter-spacing: 1px;
   color: #f2f2f2;
 }
@@ -88,31 +87,47 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 /* Media Query for Screens up to 800px (Mobile) */
 @media screen and (max-width: 850px) {
   h1 {
-    font-size: 2vw;
+    font-size: 10vw;
+    letter-spacing: 2px;
   }
   h2 {
-    font-size: 2vw;
+    font-size: 5.5vw;
   }
 
   h3 {
-    font-size: 2vw;
+    font-size: 4.5vw;
   }
 
   h4 {
-    font-size: 2vw;
+    font-size: 4vw;
   }
 
   h5 {
-    font-size: 2vh;
+    font-size: 3.5vw;
   }
   h6 {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   p {
-    font-size: 2vw;
-    padding: 0;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h4 {
+    font-size: 5.5vw;
+  }
+  h5 {
+    font-size: 4.5vw;
+  }
+  h6 {
+    font-size: 4vw;
+  }
+  p {
+    font-size: 3.5vw;
   }
 }
