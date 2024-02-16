@@ -28,7 +28,7 @@ const SkillSlider = () => {
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
-        perPage: isDesktop ? 2.25 : 4.5,
+        perPage: 2.5,
         width: "100%",
         height: "50vh",
         gap: "1vw",

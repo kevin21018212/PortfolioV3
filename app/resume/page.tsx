@@ -1,5 +1,4 @@
 "use client";
-
 import ResumeClasses from "./components/resumecluster/classes";
 import ResumeWork from "./components/resumecluster/work";
 import SkillSlider from "./components/skills/skillslider";
@@ -8,14 +7,19 @@ import styles from "./resume.module.css";
 const ResumePage = () => {
   return (
     <div className={styles.resumeContainer}>
-      <div className={styles.header}>
-        <div>
-          <h2>ALWAYS LEARNING, ALWAYS MAKING, ALWAYS CREATING</h2>
+      <div className={styles.headerContainer}>
+        <div className={styles.heading}>
+          <h2>
+            Coding is only a tool of expression. Beauty can only be found in the
+            art
+          </h2>
+        </div>
+        <div className={styles.subHeading}>
           <h4>
-            I am always looking for{" "}
-            <strong className="textGradient">new opportinunites</strong>
+            Below you can see some of my tools or
+            <strong className="textGradient"> download resume </strong>
+            for a more formal look at my talents
           </h4>
-          <p></p>
         </div>
       </div>
       <div className={styles.skillSlider}>

@@ -2,8 +2,10 @@
   height: 90vh;
   display: flex;
   flex-direction: column;
-  padding: 0% 2.5%;
+  align-items: center;
+  padding: 2.5vw;
 }
+
 .landingContainer h1 {
   color: #f2f2f2;
   font-size: 6vw;
@@ -12,7 +14,7 @@
 .top,
 .middle,
 .bottom {
-  height: 20vh;
+  height: 25vh;
   margin: 0%;
   display: flex;
 }
@@ -20,45 +22,48 @@
   margin: 5cqmax 0%;
 }
 
+/*Top Section*/
 .topText {
-  width: 45vw;
+  width: 50vw;
   display: flex;
   align-items: center;
 }
 
 .topImage {
-  width: 35vw;
-  margin-left: 10%;
+  width: 40vw;
+  margin-left: 5vw;
   background: url(../../../public/landing2.jpeg);
   border-radius: 30px;
 }
 
+/*Middle Section*/
 .middleTextLeft {
   width: 20vw;
   display: flex;
   align-items: center;
 }
 .middleImage {
-  width: 22.5vw;
-  margin: 0% 2.5%;
+  width: 25vw;
+  margin: 0% 2.5vw;
   background: url(../../../public/landing1.jpeg);
   border-radius: 30px;
 }
 .middleTextRight {
-  width: 42.5vw;
+  width: 45vw;
   display: flex;
   align-items: center;
 }
 
+/*Bottom */
 .bottomText {
-  width: 40vw;
+  width: 45vw;
   display: flex;
   align-items: center;
 }
 
 .bottomImage {
   width: 45vw;
-  margin-right: 4%;
+  margin-right: 5vw;
   border-radius: 30px;
   background: url(../../../public/landing3.png);
   background-position-y: center;

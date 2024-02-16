@@ -35,9 +35,9 @@ h1 {
 
 h2 {
   font-family: "Monument Grotesk Black", sans-serif;
-  font-size: 4vw;
+  font-size: 5vw;
   margin-bottom: 0;
-  letter-spacing: 0.5rem;
+  letter-spacing: 4px;
   color: #f2f2f2;
   text-transform: uppercase;
   padding-left: 2.5%;
@@ -118,7 +118,7 @@ h6 {
     font-size: 3.5vw;
   }
   h6 {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   p {
     font-size: 2.5vw;
@@ -127,10 +127,10 @@ h6 {
 
 @media screen and (max-width: 600px) {
   h5 {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
   h6 {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   p {
     font-size: 3vw;
