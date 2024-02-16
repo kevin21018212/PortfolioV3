@@ -8,7 +8,7 @@ import styles from "./resume.module.css";
 const ResumePage = () => {
   return (
     <div className={styles.resumeContainer}>
-      <div className={styles.headerContainer}>
+      <div className={styles.header}>
         <div>
           <h2>ALWAYS LEARNING, ALWAYS MAKING, ALWAYS CREATING</h2>
           <h4>
@@ -18,10 +18,13 @@ const ResumePage = () => {
           <p></p>
         </div>
       </div>
-      );
-      <SkillSlider />
-      <div className={styles.clustercontainer}>
+      <div className={styles.skillSlider}>
+        <SkillSlider />
+      </div>
+      <div className={styles.work}>
         <ResumeWork />
+      </div>
+      <div className={styles.classes}>
         <ResumeClasses />
       </div>
     </div>

@@ -1,6 +1,5 @@
 .workcontainer {
-  height: 150vh;
-  padding-top: 5%;
+  height: 100%;
 }
 .workinfo {
   height: 120vh;
@@ -92,12 +91,18 @@
 
 @media screen and (max-width: 600px) {
   .workdisplay {
-    width: 100vw;
+    width: 95vw;
     height: 35%;
-    margin-left: -115%;
+    margin-left: -65vw;
   }
   .worktext {
     height: 7.5%;
+  }
+  .workimg {
+    width: 65%;
+  }
+  .workbox {
+    width: 35%;
   }
   .aboutdisplay {
     width: 100%;

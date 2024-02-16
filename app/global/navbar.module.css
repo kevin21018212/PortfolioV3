@@ -35,13 +35,14 @@
   margin-bottom: 20%;
 }
 
-.link,
 .firstLink,
+.secondLink,
+.thirdLink,
 .lastLink,
 .emptyLink {
   width: 25vh;
   margin-left: -25%;
-  padding-left: 35%;
+  padding-left: 30%;
   box-sizing: border-box;
   background-color: #ff3333;
   transform: skew(-10deg) rotate(20deg);
@@ -50,11 +51,16 @@
 }
 
 .firstLink {
-  padding-left: 45%;
+  padding-left: 35%;
+}
+.lastLink {
+  padding-left: 25%;
 }
 
-.link:hover,
-.firstLink:hover {
+.firstLink:hover,
+.secondLink:hover,
+.thirdLink:hover,
+.lastLink:hover {
   background-color: #f26e50;
   transform: skew(-8deg) translateX(-1vh) rotate(20deg) scale(1.1);
   padding-left: 35%;
@@ -65,7 +71,8 @@
   padding-left: 50%;
 }
 
-.link a,
+.secondLink a,
+.thirdLink a,
 .firstLink a,
 .lastLink a {
   color: var(--primary-color);
@@ -78,23 +85,5 @@
   }
   .navbar p {
     font-size: 2vh;
-  }
-}
-
-@media only screen and (min-width: 2561px) {
-  .link,
-  .first-link {
-    width: 190%;
-    padding-left: 50%;
-    margin-left: -50px;
-    transform: skew(-10deg) rotate(25deg);
-    transition: transform 0.5s ease;
-  }
-  .first-link {
-    padding-left: 60%;
-  }
-
-  .red-rectangle {
-    height: 4vh;
   }
 }

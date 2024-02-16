@@ -11,17 +11,17 @@ const NavBar = () => {
             <p>HOME</p>
           </Link>
         </div>
-        <div className={styles.link}>
+        <div className={styles.secondLink}>
           <Link href="/projects">
             <p>WORKS</p>
           </Link>
         </div>
-        <div className={styles.link}>
+        <div className={styles.thirdLink}>
           <Link href="/resume">
             <p>RESUME</p>
           </Link>
         </div>
-        <div className={styles.link}>
+        <div className={styles.lastLink}>
           <Link href="/contact">
             <p>CONTACT</p>
           </Link>

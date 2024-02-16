@@ -1,5 +1,4 @@
 .classescontainer {
-  height: 100vh;
   background: #f2f2f2;
   position: relative;
   overflow: hidden;
@@ -35,9 +34,7 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-  .classescontainer {
-    height: 200vh;
-  }
+
   .classestitle {
     height: 20vh;
     padding: 2.5%;
