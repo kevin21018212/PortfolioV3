@@ -25,9 +25,10 @@ h1 {
   font-family: "GT America Expanded Black", sans-serif;
   letter-spacing: 4px;
   margin: 0;
+
   text-transform: uppercase;
   line-height: 1.2;
-  font-size: 8vw;
+  font-size: 7vw;
   color: #0a0a0a;
   letter-spacing: 10px;
 }
@@ -69,7 +70,8 @@ h5 {
 h6 {
   font-family: "Monument Extended ", sans-serif;
   font-size: 2vw;
-  margin: 5% 0% 0% 0%;
+  margin: 0;
+  margin-top: 2.5%;
   letter-spacing: 1px;
   color: #f2f2f2;
 }
@@ -89,10 +91,16 @@ h6 {
 }
 
 /* Media Query for Screens up to 800px (Mobile) */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   h1 {
-    font-size: 10vw;
+    font-size: 9vw;
     letter-spacing: 2px;
+  }
+  h2 {
+    font-size: 8vw;
+  }
+  h3 {
+    font-size: 6vw;
   }
   h2 {
     font-size: 5.5vw;
@@ -110,24 +118,21 @@ h6 {
     font-size: 3.5vw;
   }
   h6 {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   p {
     font-size: 2.5vw;
   }
 }
 
-@media screen and (max-width: 450px) {
-  h4 {
-    font-size: 5.5vw;
-  }
+@media screen and (max-width: 600px) {
   h5 {
-    font-size: 4.5vw;
+    font-size: 5vw;
   }
   h6 {
     font-size: 4vw;
   }
   p {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 }

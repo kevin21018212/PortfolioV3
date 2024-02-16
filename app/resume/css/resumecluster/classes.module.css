@@ -30,9 +30,10 @@
 
 @media screen and (max-width: 800px) {
   .cardcontainer {
-    height: 175vh;
+    height: 180vh;
     align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
   }
   .classescontainer {
     height: 200vh;
@@ -40,6 +41,5 @@
   .classestitle {
     height: 20vh;
     padding: 2.5%;
-    margin: 0%;
   }
 }

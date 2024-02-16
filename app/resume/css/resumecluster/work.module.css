@@ -12,17 +12,13 @@
   background-size: cover;
   display: flex;
   flex-direction: column-reverse;
+
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .worktext {
   height: 10%;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-}
-.worktext h2 {
-  color: #131313;
+  overflow: hidden;
 }
 
 /* Non-image */
@@ -39,7 +35,7 @@
   width: 70vw;
   margin-left: -30%;
   margin-top: 15%;
-  padding: 0% 5% 5%5%;
+  padding: 0% 10% 5% 10%;
   display: flex;
   flex-direction: column;
   background-color: #131313;
@@ -69,19 +65,19 @@
 .aboutdisplay {
   width: 100%;
   height: 35vh;
-  margin-top: -10%;
+  margin-top: -5%;
   display: flex;
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .workdisplay {
-    height: 65%;
-    padding-left: 10%;
-    margin-left: -110%;
+    width: 75vw;
+    height: 50%;
+    margin-left: -70%;
   }
   .workimg {
-    width: 55%;
+    width: 50%;
   }
   .workbox {
     width: 45%;
@@ -89,15 +85,23 @@
 
   .aboutdisplay {
     width: 100%;
-    height: 22.5vh;
-    margin-top: -20%;
+    height: 25vh;
+    margin-top: -5%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .workdisplay {
-    width: 95vw;
-    height: 55%;
-    margin-left: -125%;
+    width: 100vw;
+    height: 35%;
+    margin-left: -115%;
+  }
+  .worktext {
+    height: 7.5%;
+  }
+  .aboutdisplay {
+    width: 100%;
+    height: 20vh;
+    margin-top: 10%;
   }
 }

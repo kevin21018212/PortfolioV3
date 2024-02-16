@@ -5,7 +5,7 @@ import { spacerContainerProps } from "../data/types";
 
 const SpacerContainer = ({
   title,
-  tag = "",
+  tag,
   handleToggleProject = null,
   isProjectOpen = false,
 }: spacerContainerProps) => {
@@ -22,10 +22,18 @@ const SpacerContainer = ({
       </div>
     );
   }
+  if (tag) {
+    return (
+      <div className={styles.spacerContainer}>
+        <h1>{title}</h1>
+        <h3>{tag}</h3>
+      </div>
+    );
+  }
+
   return (
-    <div className={styles.spacerContainer}>
+    <div className={styles.spacerContainerSimple}>
       <h1>{title}</h1>
-      <h3>{tag}</h3>
     </div>
   );
 };

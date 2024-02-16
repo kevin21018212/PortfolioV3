@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../css/resumecluster/work.module.css";
 import AboutDisplay from "./about";
 import { jobData } from "@/app/data/smallData";
+import SpacerContainer from "@/app/global/spacer";
 
 const ResumeWork = () => {
   return (
@@ -10,7 +11,12 @@ const ResumeWork = () => {
         <div className={styles.workinfo}>
           <div className={styles.workimg}>
             <div className={styles.worktext}>
-              <h2>EXPERIENCE</h2>
+              <SpacerContainer
+                title={"Work"}
+                tag={null}
+                handleToggleProject={null}
+                isProjectOpen={false}
+              />
             </div>
           </div>
           <div className={styles.workbox}>

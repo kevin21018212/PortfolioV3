@@ -9,6 +9,7 @@
   width: 50%;
   text-align: left;
   padding-right: 5%;
+  height: fit-content;
 }
 .text p {
   letter-spacing: 2px;

@@ -10,7 +10,6 @@
   height: 10%;
   width: 100%;
   padding-left: 2.5%;
-  padding-top: 2.5%;
   background-color: #ffffff;
   overflow: hidden;
 }
@@ -26,10 +25,29 @@
   color: black;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .card {
     width: 85%;
-    height: 45vh;
+    height: 55vh;
     margin-bottom: 2.5vh;
+  }
+  .description p {
+    font-size: 2.5vw;
+  }
+  .description h6 {
+    font-size: 5vw;
+    margin-top: -2.5%;
+    padding-top: 2.5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .description h6 {
+    font-size: 6vw;
+    margin-top: 2.5%;
+    padding: 0%;
+  }
+  .description p {
+    font-size: 3.5vw;
   }
 }

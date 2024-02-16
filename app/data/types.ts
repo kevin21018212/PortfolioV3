@@ -25,7 +25,7 @@ export type ClassesCardProps = {
 type handleToggleProject = () => void;
 export type spacerContainerProps = {
   title: string;
-  tag: string;
+  tag: string | null;
   handleToggleProject: handleToggleProject | null;
   isProjectOpen: boolean;
 };

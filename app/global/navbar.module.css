@@ -7,8 +7,9 @@
   flex-direction: column;
   background-color: transparent;
   margin: 0;
-  overflow-x: hidden;
+
   z-index: 2;
+  overflow: hidden;
 }
 
 .navbar p {
@@ -40,7 +41,7 @@
 .emptyLink {
   width: 25vh;
   margin-left: -25%;
-  padding-left: 30%;
+  padding-left: 35%;
   box-sizing: border-box;
   background-color: #ff3333;
   transform: skew(-10deg) rotate(20deg);
@@ -49,13 +50,13 @@
 }
 
 .firstLink {
-  padding-left: 40%;
+  padding-left: 45%;
 }
 
 .link:hover,
 .firstLink:hover {
   background-color: #f26e50;
-  transform: skew(-8deg) translateX(-1vw) rotate(20deg) scale(1.1);
+  transform: skew(-8deg) translateX(-1vh) rotate(20deg) scale(1.1);
   padding-left: 35%;
   padding-bottom: 5.5%;
 }

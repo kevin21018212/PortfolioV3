@@ -14,16 +14,16 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
   return (
     <div className={styles.aboutdisplay}>
       <div className={styles.abouttext}>
-        <h4>Extra</h4>
+        <h5>Extra</h5>
         {items.map((item, index) => (
-          <motion.p
+          <motion.h6
             key={index}
             whileHover={{ scale: 1.1 }}
             onMouseEnter={() => setHoveredItem(item)}
             onMouseLeave={() => setHoveredItem(null)}
           >
             {item}
-          </motion.p>
+          </motion.h6>
         ))}
       </div>
       <motion.div

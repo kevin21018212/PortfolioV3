@@ -1,16 +1,25 @@
 .spacerContainer {
-  height: 97.5%;
+  height: 100%;
   background-color: #f2f2f2;
   display: flex;
-  flex-direction: column;
   padding: 2.5%;
+  flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .spacerContainer h3 {
   color: #000;
-  margin: 0 2.5%;
-  font-size: 4vw;
+  margin: 0 5%;
+}
+
+.spacerContainerSimple {
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 2.5%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 /*Button Section*/
