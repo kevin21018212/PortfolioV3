@@ -2,7 +2,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 15vh;
+  width: 12.5vh;
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -22,7 +22,7 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 15vh 5vh 0;
+  border-width: 0 15vh 4vh 0;
   border-color: transparent #ff3333 transparent transparent;
 }
 
@@ -42,7 +42,7 @@
 .emptyLink {
   width: 25vh;
   margin-left: -25%;
-  padding-left: 30%;
+  padding-left: 2.5vw;
   box-sizing: border-box;
   background-color: #ff3333;
   transform: skew(-10deg) rotate(20deg);
@@ -51,10 +51,10 @@
 }
 
 .firstLink {
-  padding-left: 35%;
+  padding-left: 3.5vw;
 }
 .lastLink {
-  padding-left: 25%;
+  padding-left: 2.5vw;
 }
 
 .firstLink:hover,
@@ -63,14 +63,16 @@
 .lastLink:hover {
   background-color: #f26e50;
   transform: skew(-8deg) translateX(-1vh) rotate(20deg) scale(1.1);
-  padding-left: 35%;
+  padding-left: 3vw;
   padding-bottom: 5.5%;
 }
 
 .firstLink:hover {
-  padding-left: 50%;
+  padding-left: 4vw;
 }
-
+.lastLink:hover {
+  padding-left: 3vw;
+}
 .secondLink a,
 .thirdLink a,
 .firstLink a,
@@ -85,5 +87,32 @@
   }
   .navbar p {
     font-size: 2vh;
+  }
+  .firstLink,
+  .secondLink,
+  .thirdLink,
+  .lastLink,
+  .emptyLink {
+    padding-left: 4.5vh;
+  }
+
+  .firstLink {
+    padding-left: 5vh;
+  }
+  .lastLink {
+    padding-left: 4vh;
+  }
+  .firstLink:hover,
+  .secondLink:hover,
+  .thirdLink:hover,
+  .lastLink:hover {
+    padding-left: 4vh;
+  }
+
+  .firstLink:hover {
+    padding-left: 4.5vh;
+  }
+  .lastLink:hover {
+    padding-left: 3.5vh;
   }
 }

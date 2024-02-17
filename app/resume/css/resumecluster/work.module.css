@@ -34,7 +34,7 @@
   width: 70vw;
   margin-left: -30%;
   margin-top: 15%;
-  padding: 0% 2.5% 5% 2.5%;
+  padding: 2.5% 5%;
   display: flex;
   flex-direction: column;
   background-color: #131313;
@@ -73,7 +73,7 @@
   .workdisplay {
     width: 75vw;
     height: 50%;
-    padding: 5% 7.5%;
+    padding: 0% 7.5%;
     margin-left: -70%;
   }
   .workimg {

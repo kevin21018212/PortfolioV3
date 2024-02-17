@@ -126,11 +126,14 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  h5 {
+  h2 {
     font-size: 4vw;
   }
+  h5 {
+    font-size: 4.5vw;
+  }
   h6 {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
   p {
     font-size: 3vw;

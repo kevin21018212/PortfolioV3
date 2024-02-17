@@ -11,13 +11,24 @@ import SkillFilterToggle from "./skillfiltertoggle";
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>(allTags);
-
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
-  const tags = isDesktop ? mobileTags : allTags.concat(mobileTags);
+  const [height, setHeight] = useState<string>("40vh");
+  const [perPage, setPerPage] = useState<number>(2.5); // Initial value
+  const [tags, setTags] = useState<any>(mobileTags);
 
   useEffect(() => {
-    setIsDesktop(window.innerWidth <= 800);
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setPerPage(windowWidth <= 600 ? 1.75 : windowWidth <= 1200 ? 2.5 : 4.5);
+      if (windowWidth >= 1200) {
+        setTags(mobileTags.concat(allTags));
+        setHeight("50vh");
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const filteredSkills = skillsData.filter((skill) =>
@@ -25,12 +36,13 @@ const SkillSlider = () => {
       ? true
       : selectedTags.some((tag) => skill.tags.includes(tag))
   );
+
   useEffect(() => {
     if (splideRef.current) {
       const splideInstance = new Splide(splideRef.current, {
-        perPage: 2.5,
+        perPage, // Use the state variable for perPage
         width: "100%",
-        height: "50vh",
+        height,
         gap: "1vw",
         type: "loop",
         drag: "free",
@@ -45,7 +57,7 @@ const SkillSlider = () => {
         splideInstance.destroy();
       }
     }
-  }, [filteredSkills]);
+  }, [filteredSkills, perPage]);
 
   return (
     <div className={styles.sliderContainer}>
