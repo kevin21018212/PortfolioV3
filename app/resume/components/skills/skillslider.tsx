@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import Splide from "@splidejs/splide";
-import "@splidejs/splide/dist/css/splide.min.css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
 import styles from "../../css/skills/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData, { allTags, mobileTags } from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
+import { useResizeLogic } from "@/app/data/functions";
+import { splideConfig } from "@/app/data/smallData";
 
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);
@@ -15,21 +15,7 @@ const SkillSlider = () => {
   const [perPage, setPerPage] = useState<number>(2.5); // Initial value
   const [tags, setTags] = useState<any>(mobileTags);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const windowWidth = window.innerWidth;
-      setPerPage(windowWidth <= 600 ? 1.75 : windowWidth <= 1200 ? 2.5 : 4.5);
-      if (windowWidth >= 1200) {
-        setTags(mobileTags.concat(allTags));
-        setHeight("50vh");
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  useResizeLogic(setPerPage, setTags, setHeight, allTags, mobileTags);
 
   const filteredSkills = skillsData.filter((skill) =>
     selectedTags.length === 0
@@ -39,14 +25,10 @@ const SkillSlider = () => {
 
   useEffect(() => {
     if (splideRef.current) {
-      const splideInstance = new Splide(splideRef.current, {
-        perPage, // Use the state variable for perPage
-        width: "100%",
-        height,
-        gap: "1vw",
-        type: "loop",
-        drag: "free",
-      });
+      const splideInstance = new Splide(
+        splideRef.current,
+        splideConfig(perPage, height)
+      );
 
       splideRef.current.splide = splideInstance;
 
@@ -57,7 +39,7 @@ const SkillSlider = () => {
         splideInstance.destroy();
       }
     }
-  }, [filteredSkills, perPage]);
+  }, [filteredSkills, perPage, height]);
 
   return (
     <div className={styles.sliderContainer}>
