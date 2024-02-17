@@ -6,6 +6,15 @@ export const circles = [
   { id: "circle5" },
 ];
 
+export const splideConfig = (perPage: number, height: string): any => ({
+  perPage,
+  width: "100%",
+  height,
+  gap: "1vw",
+  type: "loop",
+  drag: "free",
+});
+
 export const jobData = [
   {
     title: "John Deere | 2022 - Present",
