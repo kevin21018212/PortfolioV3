@@ -7,10 +7,13 @@ import ProjectInfo from "./projectinfo";
 import { circles } from "@/app/data/smallData";
 import { Project } from "@/app/data/types";
 import SpacerContainer from "@/app/global/spacer";
+import { projectData } from "@/app/data/projectdata";
 
 const NewProjects = () => {
-  const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
-  const [projectData, setProjectData] = useState<any>(null);
+  const [selectedCircle, setSelectedCircle] = useState<number>(0);
+  console.log(selectedCircle);
+
+  const [useprojectData, setProjectData] = useState<any>();
 
   const [isProjectOpen, setIsProjectOpen] = useState(false);
 
@@ -23,11 +26,14 @@ const NewProjects = () => {
     setIsProjectOpen(!isProjectOpen);
   };
 
-  const handleCircleClick = (circleId: string) => {
-    const selectedProject = projectData.find(
-      (project: Project) => project.id === circleId
-    );
-    setProjectData(selectedProject || null);
+  const handleCircleClick = (circleId: number) => {
+    if (circleId != null || circleId != 0) {
+      const selectedProject = projectData.find(
+        (project) => project.id === circleId
+      ) as Project;
+      console.log(selectedProject);
+      setProjectData(selectedProject);
+    }
   };
 
   const handleOpen = () => {
@@ -59,12 +65,13 @@ const NewProjects = () => {
               className={`${styles.circle} ${
                 selectedCircle === circle.id ? styles.selected : ""
               }`}
-              id={circle.id}
-              onClick={() => handleCircleClick(circle.id)}
+              onClick={() => {
+                handleCircleClick(circle.id);
+              }}
             ></motion.div>
           ))}
         </div>
-        <ProjectInfo projectData={projectData} />
+        <ProjectInfo projectData={useprojectData} />
       </motion.div>
     </div>
   );
