@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import Splide from "@splidejs/splide";
+import "@splidejs/splide/dist/css/splide.min.css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
 import styles from "../../css/skills/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData, { allTags, mobileTags } from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
-import { useResizeLogic } from "@/app/data/functions";
 import { splideConfig } from "@/app/data/smallData";
 
 const SkillSlider = () => {
@@ -15,7 +16,21 @@ const SkillSlider = () => {
   const [perPage, setPerPage] = useState<number>(2.5); // Initial value
   const [tags, setTags] = useState<any>(mobileTags);
 
-  useResizeLogic(setPerPage, setTags, setHeight, allTags, mobileTags);
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setPerPage(windowWidth <= 600 ? 1.5 : windowWidth <= 1200 ? 2.5 : 4);
+      if (windowWidth >= 1200) {
+        setTags(mobileTags.concat(allTags));
+        setHeight("55vh");
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const filteredSkills = skillsData.filter((skill) =>
     selectedTags.length === 0
@@ -39,7 +54,7 @@ const SkillSlider = () => {
         splideInstance.destroy();
       }
     }
-  }, [filteredSkills, perPage, height]);
+  }, [filteredSkills, perPage]);
 
   return (
     <div className={styles.sliderContainer}>

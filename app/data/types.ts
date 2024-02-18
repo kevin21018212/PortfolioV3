@@ -1,5 +1,5 @@
 export type Project = {
-  id: string;
+  id: number;
   projectNumber: string;
   projectTitle: string;
   projectTag: string;

@@ -2,7 +2,7 @@ import { Project } from "./types";
 
 export const projectData: Project[] = [
   {
-    id: "circle1",
+    id: 1,
     projectNumber: "Project 001",
     projectTitle: "Portfolio",
     projectTag: "Showcase of self",
@@ -13,7 +13,7 @@ export const projectData: Project[] = [
     linkUrl: "",
   },
   {
-    id: "circle2",
+    id: 2,
     projectNumber: "Project 002",
     projectTitle: "DASH",
     projectTag: "Orginization",
@@ -24,7 +24,7 @@ export const projectData: Project[] = [
     linkUrl: "",
   },
   {
-    id: "circle3",
+    id: 3,
     projectNumber: "Project 003",
     projectTitle: "Goal Tracker",
     projectTag: "Vizualize, Focus, and Balance",
@@ -35,7 +35,7 @@ export const projectData: Project[] = [
     linkUrl: "",
   },
   {
-    id: "circle4",
+    id: 4,
     projectNumber: "Project 004",
     projectTitle: "Kev.FM",
     projectTag: "Data Into Art",
@@ -46,7 +46,7 @@ export const projectData: Project[] = [
     linkUrl: "",
   },
   {
-    id: "circle5",
+    id: 5,
     projectNumber: "Project 005",
     projectTitle: "D.REW",
     projectTag: "Gateway to identity",

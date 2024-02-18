@@ -1,10 +1,4 @@
-export const circles = [
-  { id: "circle1" },
-  { id: "circle2" },
-  { id: "circle3" },
-  { id: "circle4" },
-  { id: "circle5" },
-];
+export const circles = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
 export const splideConfig = (perPage: number, height: string): any => ({
   perPage,
