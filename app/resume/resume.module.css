@@ -18,7 +18,7 @@
   height: 100vh;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1050px) {
   .classes {
     height: 200vh;
   }

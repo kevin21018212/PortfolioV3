@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1150) {
         setScreenSize("mobile");
       } else {
         setScreenSize("desktop");

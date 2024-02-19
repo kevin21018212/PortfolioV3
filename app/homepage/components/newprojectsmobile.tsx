@@ -23,7 +23,10 @@ const NewProjectsMobile = () => {
                 <p>{project.description}</p>
               </div>
               <div className={styles.info}>
-                <div className={styles.image}></div>
+                <motion.div
+                  whileHover={{ scale: 1.1, borderRadius: "0px" }}
+                  className={styles.image}
+                ></motion.div>
                 <div className={styles.about}>
                   <h5>{project.projectTech}</h5>
                 </div>

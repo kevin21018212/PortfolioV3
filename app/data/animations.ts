@@ -19,6 +19,6 @@ export const staggerChildrenAnimation = {
 };
 
 export const descriptionVariants = {
-  hidden: { height: "10%" },
-  visible: { height: "80%" },
+  hidden: { height: "12.5%" },
+  visible: { height: "82.5%" },
 };

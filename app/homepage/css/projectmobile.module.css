@@ -21,6 +21,7 @@
 }
 
 .image {
+  border-radius: 25px;
   height: 50%;
   background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
 }

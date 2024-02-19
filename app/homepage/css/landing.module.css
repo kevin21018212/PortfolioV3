@@ -4,6 +4,11 @@
   flex-direction: column;
   align-items: center;
   padding: 2.5vw;
+  background: linear-gradient(rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)),
+    url("../../../public/background/HandH.png");
+  background-blend-mode: overlay; /* Blend the background image with the color */
+  background-size: cover; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image */
 }
 
 .landingContainer h1 {
