@@ -12,7 +12,7 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
   const items = ["Outdoor", "Travel", "Fashion", "Art", "Music"];
 
   return (
-    <div className={styles.aboutdisplay}>
+    <motion.div className={styles.aboutdisplay}>
       <div className={styles.abouttext}>
         <h5>Extra</h5>
         {items.map((item, index) => (
@@ -41,7 +41,7 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
         }}
         transition={{ duration: 0.5 }}
       ></motion.div>
-    </div>
+    </motion.div>
   );
 };
 

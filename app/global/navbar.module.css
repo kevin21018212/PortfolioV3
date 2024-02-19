@@ -51,7 +51,7 @@
 }
 
 .firstLink {
-  padding-left: 3.5vw;
+  padding-left: 3vw;
 }
 .lastLink {
   padding-left: 2.5vw;
@@ -81,7 +81,7 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
   .navbar {
     width: 12.5vh;
   }
@@ -102,17 +102,18 @@
   .lastLink {
     padding-left: 4vh;
   }
+
   .firstLink:hover,
   .secondLink:hover,
   .thirdLink:hover,
   .lastLink:hover {
-    padding-left: 4vh;
+    padding-left: 4.5vh;
   }
 
   .firstLink:hover {
-    padding-left: 4.5vh;
+    padding-left: 5vh;
   }
   .lastLink:hover {
-    padding-left: 3.5vh;
+    padding-left: 4vh;
   }
 }

@@ -10,7 +10,7 @@ const SkillCard = ({ title, skillName, experience }: SkillCardProps) => {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.1, zIndex: 50 }}
+      whileHover={{ scale: 1.1 }}
       className={styles.skillcardContainer}
       style={cardStyle}
     >

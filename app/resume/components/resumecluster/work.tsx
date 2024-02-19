@@ -3,24 +3,25 @@ import styles from "../../css/resumecluster/work.module.css";
 import AboutDisplay from "./about";
 import { jobData } from "@/app/data/smallData";
 import SpacerContainer from "@/app/global/spacer";
+import { motion } from "framer-motion";
 
 const ResumeWork = () => {
   return (
     <>
       <div className={styles.workcontainer}>
-        <div className={styles.workinfo}>
-          <div className={styles.workimg}>
-            <div className={styles.worktext}>
+        <motion.div className={styles.workinfo}>
+          <motion.div className={styles.workimg}>
+            <motion.div className={styles.worktext}>
               <SpacerContainer
                 title={"Work"}
                 tag={null}
                 handleToggleProject={null}
                 isProjectOpen={false}
               />
-            </div>
-          </div>
-          <div className={styles.workbox}>
-            <div className={styles.workdisplay}>
+            </motion.div>
+          </motion.div>
+          <motion.div className={styles.workbox}>
+            <motion.div className={styles.workdisplay}>
               {jobData.map((job, index) => (
                 <div key={index} className={styles.jobtext}>
                   <h6>{job.title}</h6>
@@ -29,9 +30,9 @@ const ResumeWork = () => {
                   ))}
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
         <div className={styles.aboutdisplay}>
           <AboutDisplay />
         </div>

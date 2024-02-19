@@ -11,13 +11,13 @@
   background-size: cover;
   display: flex;
   flex-direction: column-reverse;
-
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
 }
 
 .worktext {
   height: 10%;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 }
 
 /* Non-image */
@@ -39,7 +39,7 @@
   flex-direction: column;
   background-color: #131313;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 }
 
 .jobtext p {
@@ -93,7 +93,7 @@
 @media screen and (max-width: 600px) {
   .workdisplay {
     width: 95vw;
-    height: 35%;
+    height: 60vh;
     margin-left: -65vw;
   }
   .worktext {
@@ -107,7 +107,7 @@
   }
   .aboutdisplay {
     width: 100%;
-    height: 20vh;
+    height: 40vw;
     margin-top: 10%;
   }
 }

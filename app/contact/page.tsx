@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const words = [
@@ -24,7 +25,7 @@ const ContactPage = () => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   return (
-    <div className="pageContainer">
+    <motion.div className="pageContainer">
       {words.map((word, index) => (
         <a
           key={index}
@@ -48,7 +49,7 @@ const ContactPage = () => {
           </Marquee>
         </a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
