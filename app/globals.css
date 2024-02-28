@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #181818;
+  background-color: #000000;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
@@ -38,7 +38,7 @@ h2 {
   font-size: 5vw;
   margin-bottom: 0;
   letter-spacing: 4px;
-  color: #f2f2f2;
+  color: #f5f7fa;
   text-transform: uppercase;
   padding-left: 2.5%;
   margin-top: 0;
@@ -46,14 +46,14 @@ h2 {
 
 h3 {
   font-family: "Monument Grotesk Bold", sans-serif;
-  color: #f2f2f2;
+  color: #f5f7fa;
   margin: 2.5% 0;
   font-size: 3.5vw;
 }
 
 h4 {
   font-family: "Monument Grotesk Medium", sans-serif;
-  color: #f2f2f2;
+  color: #f5f7fa;
   font-size: 3vw;
   margin: 1% 0% 0% 5%;
   letter-spacing: 0.025em;

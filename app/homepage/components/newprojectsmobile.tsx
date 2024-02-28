@@ -1,8 +1,6 @@
 import React from "react";
-import { animate, motion } from "framer-motion";
-
+import { motion } from "framer-motion";
 import styles from "../css/projectmobile.module.css";
-import { Project } from "next/dist/build/swc";
 import { projectData } from "@/app/data/projectdata";
 import SpacerContainer from "@/app/global/spacer";
 

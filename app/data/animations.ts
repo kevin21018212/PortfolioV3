@@ -22,3 +22,5 @@ export const descriptionVariants = {
   hidden: { height: "12.5%" },
   visible: { height: "82.5%" },
 };
+
+

@@ -4,9 +4,7 @@ import { useState } from "react";
 import styles from "../../css/resumecluster/about.module.css";
 import { getImagePath } from "@/app/data/functions";
 
-interface AboutDisplayProps {}
-
-const AboutDisplay: React.FC<AboutDisplayProps> = () => {
+const AboutDisplay = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const items = ["Outdoor", "Travel", "Fashion", "Art", "Music"];
@@ -36,7 +34,6 @@ const AboutDisplay: React.FC<AboutDisplayProps> = () => {
         animate={{
           backgroundImage: `url(${getImagePath(hoveredItem)})`,
           backgroundSize: "cover",
-
           backgroundPosition: "center",
         }}
         transition={{ duration: 0.5 }}

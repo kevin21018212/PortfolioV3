@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { hexColorOptions } from "./smallData";
 
 export const getImagePath = (item: string | null): string => {
@@ -14,5 +13,7 @@ export const getRandomGradient = () => {
       hexColorOptions[Math.floor(Math.random() * hexColorOptions.length)];
   } while (randomColor2 === randomColor1);
 
-  return `linear-gradient(45deg, ${randomColor1}, ${randomColor2})`;
+  const randomDegree = Math.floor(Math.random() * 361);
+
+  return `linear-gradient(${randomDegree}deg, ${randomColor1}, ${randomColor2})`;
 };
