@@ -1,5 +1,7 @@
 "use client";
 
+import { boxVariants } from "@/app/data/animations";
+import { motion } from "framer-motion";
 import styles from "../css/landing.module.css";
 
 const Landing = () => {
@@ -7,8 +9,20 @@ const Landing = () => {
     <div className={styles.landingContainer}>
       <div className={styles.liquidGradient}></div>
       <div className={styles.textBox}></div>
-      <div className={styles.infoBox}></div>
-      <div className={styles.symbolBox}></div>
+      {/* Animate infoBox */}
+      <motion.div
+        className={styles.infoBox}
+        variants={boxVariants}
+        initial="hidden"
+        animate="visible"
+      ></motion.div>
+      {/* Animate symbolBox */}
+      <motion.div
+        className={styles.symbolBox}
+        variants={boxVariants}
+        initial="hidden"
+        animate="visible"
+      ></motion.div>
     </div>
   );
 };
