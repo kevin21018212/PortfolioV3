@@ -2,7 +2,10 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import styles from "../css/projectinfo.module.css";
-import { staggerChildrenAnimation, textanimation } from "@/app/data/animations";
+import {
+  staggerChildrenAnimation,
+  textanimation,
+} from "@/app/data/motion/animations";
 import { Project } from "@/app/data/types";
 
 const ProjectInfo = ({ projectData }: { projectData: Project }) => {

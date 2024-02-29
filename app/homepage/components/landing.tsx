@@ -1,6 +1,6 @@
 "use client";
 
-import { boxVariants } from "@/app/data/animations";
+import { boxVariants } from "@/app/data/motion/animations";
 import { motion } from "framer-motion";
 import styles from "../css/landing.module.css";
 
