@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "../../css/resumecluster/classescard.module.css";
-import { descriptionVariants } from "@/app/data/animations";
+import { descriptionVariants } from "@/app/data/motion/animations";
 import { ClassesCardProps } from "@/app/data/types";
 
 const ClassesCard = ({ category }: ClassesCardProps) => {

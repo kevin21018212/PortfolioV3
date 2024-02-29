@@ -32,6 +32,16 @@
   color: #f2f2f2;
 }
 
+/*Hover text*/
+.hoverText {
+  transition: 0.35s font-weight, 0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
 @media screen and (max-width: 600px) {
   .info {
     width: 60%;

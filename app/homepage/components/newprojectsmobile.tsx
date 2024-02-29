@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import styles from "../css/projectmobile.module.css";
 import { projectData } from "@/app/data/projectdata";
 import SpacerContainer from "@/app/global/spacer";
+import ScrambleText from "@/app/data/motion/Scramble";
 
 const NewProjectsMobile = () => {
   return (
@@ -26,7 +27,9 @@ const NewProjectsMobile = () => {
                   className={styles.image}
                 ></motion.div>
                 <div className={styles.about}>
-                  <h5>{project.projectTech}</h5>
+                  <h5>
+                    <ScrambleText>{project.projectTech}</ScrambleText>
+                  </h5>
                 </div>
               </div>
             </div>
