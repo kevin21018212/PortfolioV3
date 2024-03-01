@@ -57,7 +57,7 @@ const ProjectInfo = ({ projectData }: { projectData: Project }) => {
           </motion.div>
           <div className={styles.projectsContentRight}></div>
         </>
-      )}
+      )} 
     </div>
   );
 };
