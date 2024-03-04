@@ -4,7 +4,9 @@ import styles from "../css/projectmobile.module.css";
 import { projectData } from "@/app/data/projectdata";
 import SpacerContainer from "@/app/global/spacer";
 import ScrambleText from "@/app/data/motion/Scramble";
-
+import Paragraph from "@/motion/Character.jsx";
+import Word from "@/motion/Word.jsx";
+import Character from "@/motion/Character.jsx";
 const NewProjectsMobile = () => {
   return (
     <div className={styles.projectsComponent}>
@@ -18,9 +20,10 @@ const NewProjectsMobile = () => {
               isProjectOpen={false}
             />
             <div className={styles.description}>
-              <div className={styles.text}>
-                <p>{project.description}</p>
-              </div>
+              <div style={{ height: "40vh" }}></div>
+              <Paragraph paragraph={project.description} />
+              <div style={{ height: "40vh" }}></div>
+
               <div className={styles.info}>
                 <motion.div
                   whileHover={{ scale: 1.1, borderRadius: "0px" }}
