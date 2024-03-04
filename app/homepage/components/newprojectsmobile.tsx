@@ -4,9 +4,8 @@ import styles from "../css/projectmobile.module.css";
 import { projectData } from "@/app/data/projectdata";
 import SpacerContainer from "@/app/global/spacer";
 import ScrambleText from "@/app/data/motion/Scramble";
-import Paragraph from "@/motion/Character.jsx";
-import Word from "@/motion/Word.jsx";
-import Character from "@/motion/Character.jsx";
+import Paragraph from "@/motion/Paragraph";
+
 const NewProjectsMobile = () => {
   return (
     <div className={styles.projectsComponent}>
