@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import styles from "../../css/resumecluster/about.module.css";
+import styles from "@/app/styles/resume/resumecluster/about.module.css";
 import { getImagePath } from "@/app/data/functions";
 
 const AboutDisplay = () => {

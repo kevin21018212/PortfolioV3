@@ -3,7 +3,7 @@ import Splide from "@splidejs/splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
-import styles from "../../css/skills/skillslider.module.css";
+import styles from "@/app/styles/resume/skills/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData, { allTags, mobileTags } from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";

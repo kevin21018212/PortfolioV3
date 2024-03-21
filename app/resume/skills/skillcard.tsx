@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "../../css/skills/skillcard.module.css";
+import styles from "@/app/styles/resume/skills/skillcard.module.css";
 import { getRandomGradient } from "@/app/data/functions";
 import { SkillCardProps } from "@/app/data/types";
 

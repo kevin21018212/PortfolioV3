@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "../css/projectmobile.module.css";
+import styles from "@/app/styles/homepage/projectmobile.module.css";
 import { projectData } from "@/app/data/projectdata";
 import SpacerContainer from "@/app/global/spacer";
 import ScrambleText from "@/app/data/motion/Scramble";

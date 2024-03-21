@@ -23,27 +23,41 @@ export const descriptionVariants = {
   visible: { height: "82.5%" },
 };
 
-export const boxVariants = {
+export const outerBoxVariants = {
   hidden: {
     width: 0,
     height: 0,
     opacity: 0,
-    backgroundColor: "transparent", // Set background color to transparent
     transition: {
-      duration: 0.75,
+      duration: 1,
     },
   },
   visible: {
     width: "100%",
     height: "100%",
     opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+export const innerBoxVariants = {
+  hidden: {
+    width: 0,
+    backgroundColor: "transparent",
+    transition: {
+      delay: 1,
+      duration: 0.5,
+    },
+  },
+  visible: {
+    width: "100%",
+    opacity: 1,
     backgroundColor: "#131313",
     transition: {
+      delay: 1,
       duration: 0.75,
-      backgroundColor: {
-        delay: 5.5,
-        duration: 5,
-      },
     },
   },
 };

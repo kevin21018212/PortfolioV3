@@ -1,8 +1,9 @@
 "use client";
-import ResumeClasses from "./components/resumecluster/classes";
-import ResumeWork from "./components/resumecluster/work";
-import SkillSlider from "./components/skills/skillslider";
+
 import styles from "./resume.module.css";
+import ResumeClasses from "./resumecluster/classes";
+import ResumeWork from "./resumecluster/work";
+import SkillSlider from "./skills/skillslider";
 
 const ResumePage = () => {
   return (
@@ -17,7 +18,7 @@ const ResumePage = () => {
         <div className={styles.subHeading}>
           <h4>
             Below you can see some of my tools or
-            <strong className="textGradient"> download resume </strong>
+            <strong className="simpleGradient"> download resume </strong>
             for a more formal look at my talents
           </h4>
         </div>

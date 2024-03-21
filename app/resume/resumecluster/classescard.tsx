@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "../../css/resumecluster/classescard.module.css";
+import styles from "@/app/styles/resume/resumecluster/classescard.module.css";
 import { descriptionVariants } from "@/app/data/motion/animations";
 import { ClassesCardProps } from "@/app/data/types";
 

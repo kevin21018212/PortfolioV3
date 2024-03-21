@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../css/resumecluster/work.module.css";
+import styles from "@/app/styles/resume/resumecluster/work.module.css";
 import AboutDisplay from "./about";
 import { jobData } from "@/app/data/smallData";
 import SpacerContainer from "@/app/global/spacer";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../css/skills/skillfiltertoggle.module.css";
+import styles from "@/app/styles/resume//skills/skillfiltertoggle.module.css";
 import { SkillFilterToggleProps } from "@/app/data/types";
 import { motion } from "framer-motion";
 

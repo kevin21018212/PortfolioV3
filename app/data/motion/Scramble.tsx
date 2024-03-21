@@ -12,28 +12,6 @@ const ScrambleText: React.FC<any> = ({ children }) => {
 
   const [text, setText] = useState(TARGET_TEXT);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            scramble(); // Start scrambling when text comes into view
-          } else {
-            stopScramble(); // Stop scrambling when text goes out of view
-          }
-        });
-      },
-      { threshold: 0.5 } // Trigger when 50% of the element is in view
-    );
-
-    observer.observe(document.getElementById("scramble-text")!);
-
-    return () => {
-      observer.disconnect(); // Disconnect the observer when component unmounts
-      stopScramble(); // Stop scrambling when component unmounts
-    };
-  }, []); // Empty dependency array to run only once on mount
-
   const scramble = () => {
     let pos = 0;
 

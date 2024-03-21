@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import styles from "../css/projectinfo.module.css";
+import styles from "@/app/styles/homepage/projectinfo.module.css";
 import {
   staggerChildrenAnimation,
   textanimation,
@@ -57,7 +57,7 @@ const ProjectInfo = ({ projectData }: { projectData: Project }) => {
           </motion.div>
           <div className={styles.projectsContentRight}></div>
         </>
-      )} 
+      )}
     </div>
   );
 };

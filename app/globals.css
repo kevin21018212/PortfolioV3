@@ -1,9 +1,6 @@
 /* Media Queries */
 @import url("./fonts.css"); /* Include the file where you defined the font-face rules */
 
-@media screen and (max-width: 600px) {
-}
-
 body {
   background-color: #000000;
   height: 100vh;
@@ -25,10 +22,9 @@ h1 {
   font-family: "GT America Expanded Black", sans-serif;
   letter-spacing: 4px;
   margin: 0;
-
   text-transform: uppercase;
   line-height: 1.2;
-  font-size: 7vw;
+  font-size: 6vw;
   color: #0a0a0a;
   letter-spacing: 10px;
 }
@@ -93,7 +89,7 @@ h6 {
 /* Media Query for Screens up to 800px (Mobile) */
 @media screen and (max-width: 900px) {
   h1 {
-    font-size: 9vw;
+    font-size: 8vw;
     letter-spacing: 2px;
   }
   h2 {
@@ -138,4 +134,35 @@ h6 {
   p {
     font-size: 3vw;
   }
+}
+
+html {
+  /*colors*/
+  --boxBackground: #131313;
+  --primary: #ff1f00;
+
+  --textPrimary: #f0f0f0;
+  --textSecondary: #e4e4e4;
+  /*Text*/
+  --mediumSeperated: "Monument Grotesk Regular", sans-serif;
+
+  /*Shadow Stylign*/
+  --buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  --boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
+  /*Gradient Styling*/
+  --complexGradient: radial-gradient(
+      at 14.2% 15.2%,
+      #ff0033 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 45.3% 10.7%, #ff7a00 0px, transparent 50%),
+    radial-gradient(at 87% 83%, #ff0033 0px, transparent 50%),
+    radial-gradient(at 45.7% 44.3%, #ff7a00 0px, transparent 50%),
+    radial-gradient(at 85.9% 43.1%, #ff4a00 0px, transparent 50%),
+    radial-gradient(at 19.3% 76.5%, #ff4d00 0px, transparent 50%);
+
+  --simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 }

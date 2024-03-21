@@ -17,13 +17,13 @@
 .image {
   border-radius: 25px;
   height: 50%;
-  background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
+  background: var(--simpleGradient);
 }
 .about h5 {
-  font-family: "Monument Grotesk Regular", sans-serif;
+  font-family: var(--mediumSeperated);
 }
 .about h3 {
-  color: #f2f2f2;
+  color: var(--textPrimary);
 }
 
 /*Hover text*/
@@ -43,6 +43,5 @@
 
   .image {
     height: 40%;
-    background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
   }
 }

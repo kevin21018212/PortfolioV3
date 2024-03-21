@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "../../css/resumecluster/classes.module.css";
+import styles from "@/app/styles/resume/resumecluster/classes.module.css";
 import ClassesCard from "./classescard";
 import courseCategories from "@/app/data/coursecategories";
 

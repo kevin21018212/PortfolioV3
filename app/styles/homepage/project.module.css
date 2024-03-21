@@ -8,8 +8,8 @@
 .projectsContainer {
   display: flex;
   height: 0vh;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-  background-color: #181818;
+  box-shadow: var(--boxShadow);
+  background-color: var(--boxBackground);
 }
 
 /* Circle and Circle Container */
@@ -19,8 +19,8 @@
   align-items: center;
   justify-content: center;
   width: 10%;
-  background: -webkit-linear-gradient(45deg, #2b76d8, #f277b0);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background: var(--simpleGradient);
+  box-shadow: var(--buttonShadow);
   overflow-y: hidden;
 }
 
@@ -29,13 +29,13 @@
   height: 2.25vw;
   border-radius: 50%;
   background-color: transparent;
-  border: 2px solid #0a0a0a;
+  border: 2px solid var(--boxBackground);
   transition: background-color 0.5s ease;
   margin-top: 25px;
 }
 
 .circle:hover {
-  background-color: #0a0a0a;
+  background-color: var(--boxBackground);
 }
 
 .projectsComponent h1 {
