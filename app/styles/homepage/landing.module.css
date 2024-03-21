@@ -47,29 +47,3 @@
 }
 
 /* Top left corner border */
-.infoBox::before,
-.symbolBox::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border-top: 2px solid var(--primary);
-  border-left: 2px solid var(--primary);
-  z-index: 2;
-}
-
-/* Bottom right corner border */
-.infoBox::after,
-.symbolBox::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 15px;
-  height: 15px;
-  border-bottom: 2px solid var(--primary);
-  border-right: 2px solid var(--primary);
-  z-index: 1;
-}

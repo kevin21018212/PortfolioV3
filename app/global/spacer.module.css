@@ -1,6 +1,6 @@
 .spacerContainer {
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--textSecondary);
   display: flex;
   padding: 2.5%;
   flex-direction: column;
@@ -14,22 +14,22 @@
 
 .spacerContainerSimple {
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--textSecondary);
   display: flex;
   align-items: center;
   overflow: hidden;
   padding-left: 2.5%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: var(--arrowShadow);
 }
 
 /*Button Section*/
 .spacerContainerButton {
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--textSecondary);
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: var(--arrowShadow);
 }
 
 .toggleButton {

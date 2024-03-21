@@ -22,7 +22,7 @@
 
 .aboutimg {
   width: 60%;
-  background-color: #131313;
+  background-color: var(--boxBackground);
 }
 @media screen and (max-width: 900px) {
   .aboutdisplay {
