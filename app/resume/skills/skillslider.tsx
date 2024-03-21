@@ -57,36 +57,38 @@ const SkillSlider = () => {
   }, [filteredSkills, perPage]);
 
   return (
-    <div className={styles.sliderContainer}>
+    <>
       <div className={styles.toggleContainer}>
         <SkillFilterToggle tags={tags} onToggle={setSelectedTags} />
       </div>
-      <div className={styles.sliderTrack}>
-        <div
-          className={`splide ${
-            filteredSkills.length === 0 ? "is-overflow" : ""
-          }`}
-          ref={splideRef}
-        >
-          <div className="splide__track">
-            <ul className="splide__list" style={{ justifyContent: "center" }}>
-              {filteredSkills.map((skill, index) => (
-                <SplideSlide key={index}>
-                  <div className={styles.splide__slide}>
-                    <SkillCard
-                      title={skill.title}
-                      skillName={skill.skillName}
-                      experience={skill.experience}
-                    />
-                  </div>
-                </SplideSlide>
-              ))}
-            </ul>
+      <div className={styles.sliderContainer}>
+        <div className={styles.sliderTrack}>
+          <div
+            className={`splide ${
+              filteredSkills.length === 0 ? "is-overflow" : ""
+            }`}
+            ref={splideRef}
+          >
+            <div className="splide__track">
+              <ul className="splide__list" style={{ justifyContent: "center" }}>
+                {filteredSkills.map((skill, index) => (
+                  <SplideSlide key={index}>
+                    <div className={styles.splide__slide}>
+                      <SkillCard
+                        title={skill.title}
+                        skillName={skill.skillName}
+                        experience={skill.experience}
+                      />
+                    </div>
+                  </SplideSlide>
+                ))}
+              </ul>
+            </div>
           </div>
+          <div className={styles.navigation}></div>
         </div>
-        <div className={styles.navigation}></div>
       </div>
-    </div>
+    </>
   );
 };
 

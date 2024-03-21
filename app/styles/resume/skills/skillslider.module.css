@@ -1,22 +1,23 @@
 /* skillslider.module.css */
-
-.sliderContainer {
-  height: auto;
-  margin-top: 5vw;
-  display: flex;
-  width: 90vw;
-  flex-direction: column;
-}
-
 .toggleContainer {
   display: flex;
   justify-self: flex-start;
   width: 85vw;
   padding-left: 2.5%;
+  margin-top: 5vw;
+}
+
+.sliderContainer {
+  height: auto;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sliderTrack {
-  width: 100vw;
+  width: 90vw;
 }
 
 .splide__slide {

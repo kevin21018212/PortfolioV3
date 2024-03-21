@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./resume.module.css";
 import ResumeClasses from "./resumecluster/classes";
 import ResumeWork from "./resumecluster/work";
