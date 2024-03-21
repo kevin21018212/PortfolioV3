@@ -35,9 +35,9 @@ export const jobData = [
 ];
 
 export const hexColorOptions = [
-  "#f277B0", // Pink
-  "#152FBF", // Purple
-  "#2B76D9", // Blue
-  "#0DF205", // Lime
-  "#F26E50", // Salmon
+  "#F0F0F0",
+  "#FF1F00",
+  "#525252",
+  "#FF7A00",
+  "#9B8BFF",
 ];

@@ -11,7 +11,7 @@ const SpacerContainer = ({
   if (handleToggleProject != null) {
     return (
       <div className={styles.spacerContainerButton}>
-        <h1 className={styles.projectNumber}>title</h1>
+        <h1 className={styles.projectNumber}>{title}</h1>
         <button
           onClick={handleToggleProject}
           className={`${styles.toggleButton} ${

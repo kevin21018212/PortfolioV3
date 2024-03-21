@@ -3,6 +3,7 @@
   display: flex;
   margin: 1%;
   width: 100%;
+  z-index: 50;
 }
 
 /* Image for Project */
