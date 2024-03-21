@@ -52,6 +52,7 @@
 
 .firstLink {
   padding-left: 3vw;
+  padding-left: 3vw;
 }
 .lastLink {
   padding-left: 2.5vw;
@@ -82,38 +83,43 @@
 }
 
 @media only screen and (max-width: 1050px) {
-  .navbar {
-    width: 12.5vh;
-  }
-  .navbar p {
-    font-size: 2vh;
-  }
-  .firstLink,
-  .secondLink,
-  .thirdLink,
-  .lastLink,
-  .emptyLink {
-    padding-left: 4.5vh;
-  }
+  @media only screen and (max-width: 1050px) {
+    .navbar {
+      width: 12.5vh;
+    }
+    .navbar p {
+      font-size: 2vh;
+    }
+    .firstLink,
+    .secondLink,
+    .thirdLink,
+    .lastLink,
+    .emptyLink {
+      padding-left: 4.5vh;
+    }
 
-  .firstLink {
-    padding-left: 5vh;
-  }
-  .lastLink {
-    padding-left: 4vh;
-  }
+    .firstLink {
+      padding-left: 5vh;
+    }
+    .lastLink {
+      padding-left: 4vh;
+    }
 
-  .firstLink:hover,
-  .secondLink:hover,
-  .thirdLink:hover,
-  .lastLink:hover {
-    padding-left: 4.5vh;
-  }
+    .firstLink:hover,
+    .secondLink:hover,
+    .thirdLink:hover,
+    .lastLink:hover {
+      padding-left: 4.5vh;
+      padding-left: 4.5vh;
+    }
 
-  .firstLink:hover {
-    padding-left: 5vh;
-  }
-  .lastLink:hover {
-    padding-left: 4vh;
+    .firstLink:hover {
+      padding-left: 5vh;
+      padding-left: 5vh;
+    }
+    .lastLink:hover {
+      padding-left: 4vh;
+      padding-left: 4vh;
+    }
   }
 }
