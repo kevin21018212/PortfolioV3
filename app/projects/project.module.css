@@ -1,34 +1,3 @@
-.projectContainer {
-  height: fit-content;
-  color: white;
-}
-.titleSection {
-  height: 30%;
-}
-.title {
-  text-align: left;
-}
-.line {
-  height: 1px;
-  background: white;
-}
-.more {
-  display: flex;
-}
-.date {
-  flex-grow: 1;
-}
-.tags {
-  flex-grow: 3;
-}
-
-.imageSection {
-  height: 45%;
-}
-.infoSection {
-  height: 25%;
-}
-.description,
-.link {
-  text-align: left;
+.spacer {
+  height: 50vh;
 }

@@ -29,7 +29,7 @@ export const outerBoxVariants = {
     height: 0,
     opacity: 0,
     transition: {
-      duration: 1,
+      duration: 0.75,
     },
   },
   visible: {
@@ -37,7 +37,7 @@ export const outerBoxVariants = {
     height: "100%",
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.75,
     },
   },
 };
@@ -57,7 +57,7 @@ export const innerBoxVariants = {
     backgroundColor: "#131313",
     transition: {
       delay: 1,
-      duration: 0.75,
+      duration: 0.5,
     },
   },
 };

@@ -49,7 +49,7 @@ const ProjectInfo = ({ projectData }: { projectData: Project }) => {
           >
             <motion.div className={styles.idea} variants={textanimation}>
               <motion.h3>IDEA</motion.h3>
-              <motion.p className="s">{projectData.description}</motion.p>
+              <motion.p>{projectData.description}</motion.p>
             </motion.div>
             <motion.h6 className={styles.projectTech} variants={textanimation}>
               {projectData.projectTech}

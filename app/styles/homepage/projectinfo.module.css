@@ -46,6 +46,8 @@
   margin-top: 20vh;
   font-size: 2.5vw;
   letter-spacing: 5px;
+}
+.middleLeft h1 {
   color: #f2f2f2;
 }
 
@@ -59,13 +61,16 @@
 }
 
 .idea {
-  margin-top: 18vh;
+  margin-top: 10vh;
   height: 55%;
-  width: 50%;
+  width: 70%;
   overflow: hidden;
 }
 .idea h3 {
   color: #f2f2f2;
+}
+.idea p {
+  font-size: 1.5vw;
 }
 
 .bottomMiddle {

@@ -26,7 +26,7 @@ export const projectData: Project[] = [
   {
     id: 3,
     projectNumber: "Project 003",
-    projectTitle: "Goal Tracker",
+    projectTitle: "Kevents",
     projectTag: "Vizualize, Focus, and Balance",
     description:
       "Immerse yourself in a fusion of data and art, where music becomes a sensory journey. Goal Tracker is not just an app; it's a personalized roadmap to success. Visualize your aspirations, focus your efforts, and achieve a harmonious balance in life. Dive into a world of data-driven motivation, where your goals come to life through captivating visualizations.",
