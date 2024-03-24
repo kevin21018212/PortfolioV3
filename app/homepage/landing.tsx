@@ -6,10 +6,19 @@ import {
   innerBoxVariants,
   outerBoxVariants,
 } from "@/app/data/motion/animations";
+import ShaderArtBackground from "../data/liquidgradient";
+
 const Landing = () => {
   return (
     <div className={styles.landingContainer}>
-      <div className={styles.liquidGradient}></div>
+      <div className={styles.liquidGradient}>
+        {" "}
+        {/* <ShaderArtBackground
+          width="50%"
+          height="300px"
+          style={{ backgroundColor: "gray" }}
+        /> */}
+      </div>
 
       <div className={styles.textBox}>
         <h1>Developer</h1>

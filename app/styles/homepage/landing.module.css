@@ -1,5 +1,5 @@
 .landingContainer {
-  height: 85vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: repeat(16, 1fr); /* 14 columns */
   grid-template-rows: repeat(16, 1fr); /* 16 rows */

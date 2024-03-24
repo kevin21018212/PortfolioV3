@@ -70,7 +70,9 @@ const NewProjects = () => {
             ></motion.div>
           ))}
         </div>
-        <ProjectInfo projectData={useprojectData} />
+        <div className={styles.projectInfoContainer}>
+          <ProjectInfo projectData={useprojectData} />
+        </div>
       </motion.div>
     </div>
   );

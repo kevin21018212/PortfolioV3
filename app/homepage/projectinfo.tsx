@@ -20,7 +20,7 @@ const ProjectInfo = ({ projectData }: { projectData: Project }) => {
   }, [projectData]);
 
   return (
-    <div className={styles.projectsContent}>
+    <div>
       {projectData && (
         <>
           <motion.div
@@ -28,34 +28,25 @@ const ProjectInfo = ({ projectData }: { projectData: Project }) => {
             initial="inactive"
             animate={animationState}
             exit="inactive"
-            className={styles.projectsContentLeft}
+            className={styles.projectsContent}
           >
-            <motion.p className={styles.topLeft} variants={textanimation}>
-              {projectData.projectNumber}
-            </motion.p>
+            <motion.div className={styles.topLeft} variants={textanimation}>
+              <motion.p> {projectData.projectNumber}</motion.p>
+            </motion.div>
             <motion.div className={styles.middleLeft} variants={textanimation}>
               <h1>{projectData.projectTitle}</h1>
+              <p>{projectData.projectTag}</p>
             </motion.div>
-            <motion.p className={styles.bottomLeft} variants={textanimation}>
-              {projectData.projectTag}
-            </motion.p>
-          </motion.div>
-          <motion.div
-            variants={staggerChildrenAnimation}
-            initial="inactive"
-            animate={animationState}
-            exit="inactive"
-            className={styles.projectsContentMiddle}
-          >
-            <motion.div className={styles.idea} variants={textanimation}>
+
+            <motion.div className={styles.middleRight} variants={textanimation}>
               <motion.h3>IDEA</motion.h3>
-              <motion.p>{projectData.description}</motion.p>
+              <p> {projectData.description}</p>
             </motion.div>
-            <motion.h6 className={styles.projectTech} variants={textanimation}>
-              {projectData.projectTech}
-            </motion.h6>
+
+            <motion.div className={styles.bottomRight} variants={textanimation}>
+              <p> {projectData.projectTech}</p>
+            </motion.div>
           </motion.div>
-          <div className={styles.projectsContentRight}></div>
         </>
       )}
     </div>

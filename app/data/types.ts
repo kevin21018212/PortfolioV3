@@ -7,13 +7,14 @@ export type Project = {
   projectTech: string;
   imageUrl: string | null;
   linkUrl: string | null;
-} | null;
+};
 export type SkillData = {
   title: string;
   skillName: string;
   experience: string;
   tags: string[];
 };
+
 
 export type ClassesCardProps = {
   category: {
