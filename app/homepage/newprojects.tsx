@@ -1,7 +1,7 @@
 "use client";
 import { animate, motion } from "framer-motion";
 import { useState } from "react";
-import styles from "@/app/styles/homepage/project.module.css";
+import styles from "@/app/styles/homepage/project.module.scss";
 import ProjectInfo from "./projectinfo";
 import { circles } from "@/app/data/smallData";
 import { Project } from "@/app/data/types";

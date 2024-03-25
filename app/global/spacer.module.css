@@ -69,6 +69,6 @@
 
 .toggleButton.downArrow::before {
   border-bottom-color: #000;
-  top: 40%;
+  top: 0%;
   transform: translate(-50%, -50%) rotate(0deg);
 }

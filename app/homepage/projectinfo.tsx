@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import styles from "@/app/styles/homepage/projectinfo.module.css";
+import styles from "@/app/styles/homepage/projectinfo.module.scss";
 import {
   staggerChildrenAnimation,
   textanimation,

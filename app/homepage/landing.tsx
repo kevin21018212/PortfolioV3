@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "@/app/styles/homepage/landing.module.css";
+import styles from "@/app/styles/homepage/landing.module.scss";
 import {
   innerBoxVariants,
   outerBoxVariants,

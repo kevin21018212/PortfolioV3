@@ -5,10 +5,6 @@
   padding: 5%;
 }
 
-.text p {
-  letter-spacing: 2px;
-}
-
 /*Right Side*/
 .info {
   width: 50%;
@@ -19,11 +15,15 @@
   height: 50%;
   background: var(--simpleGradient);
 }
-.about h5 {
-  font-family: var(--mediumSeperated);
-}
-.about h3 {
-  color: var(--textPrimary);
+
+.about {
+  h5 {
+    font-family: var(--mediumSeperated);
+  }
+
+  h3 {
+    color: var(--textPrimary);
+  }
 }
 
 /*Hover text*/
@@ -36,9 +36,8 @@
   color: rgb(238, 242, 255);
 }
 
-/*Hover text*/
 .hoverText {
-  transition: 0.35s font-weight, 0.35s color;
+  transition: font-weight 0.35s, color 0.35s; // Combine transitions
 }
 
 .hoverText:hover {
