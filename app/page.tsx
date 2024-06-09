@@ -27,10 +27,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="pageContainer">
-      <div className={styles.landingcontainer}>
+    <div className={styles.pageContainer}>
+      <div className={styles.landingContainer}>
         <Landing />
-        <div className={styles.projectcontainer}>
+        <div className={styles.projectContainer}>
           {screenSize === "mobile" ? <NewProjectsMobile /> : <NewProjects />}
         </div>
       </div>

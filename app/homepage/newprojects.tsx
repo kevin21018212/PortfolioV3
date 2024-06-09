@@ -12,7 +12,7 @@ const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<number>(0);
   console.log(selectedCircle);
 
-  const [useprojectData, setProjectData] = useState<any>();
+  const [useprojectData, setProjectData] = useState<Project>();
 
   const [isProjectOpen, setIsProjectOpen] = useState(false);
 
@@ -26,7 +26,8 @@ const NewProjects = () => {
   };
 
   const handleCircleClick = (circleId: number) => {
-    if (circleId != null || circleId != 0) {
+    setSelectedCircle(circleId); // Update the selected circle
+    if (circleId != null || circleId !== 0) {
       const selectedProject = projectData.find(
         (project) => project.id === circleId
       ) as Project;
@@ -36,9 +37,9 @@ const NewProjects = () => {
   };
 
   const handleOpen = () => {
-    animate(`.${styles.projectsContainer}`, { height: "65vh", opacity: 1 });
+    animate(`.${styles.projectsContainer}`, { height: "50vh", opacity: 1 });
     animate(`.${styles.projectsComponent}`, {
-      transform: "translateY(-65vh)",
+      transform: "translateY(-50vh)",
     });
   };
 

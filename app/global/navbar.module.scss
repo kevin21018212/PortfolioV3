@@ -9,9 +9,9 @@
   flex-direction: column;
   background-color: transparent;
   margin: 0;
-
   z-index: 999;
   overflow: hidden;
+  @extend .flex-column;
 }
 
 .navbar p {
@@ -28,13 +28,12 @@
   border-color: transparent $primaryColor transparent transparent;
 }
 
-/*Links*/
-
 .linksContainer {
   display: flex;
   flex-direction: column;
   margin-top: -15%;
   margin-bottom: 20%;
+  @extend .flex-column;
 }
 
 .firstLink,
@@ -53,7 +52,6 @@
 }
 
 .firstLink {
-  padding-left: 3vw;
   padding-left: 3vw;
 }
 .lastLink {
@@ -76,6 +74,7 @@
 .lastLink:hover {
   padding-left: 2.5vw;
 }
+
 .secondLink a,
 .thirdLink a,
 .firstLink a,
@@ -85,43 +84,42 @@
 }
 
 @media only screen and (max-width: 1050px) {
-  @media only screen and (max-width: 1050px) {
-    .navbar {
-      width: 12.5vh;
-    }
-    .navbar p {
-      font-size: 2vh;
-    }
-    .firstLink,
-    .secondLink,
-    .thirdLink,
-    .lastLink,
-    .emptyLink {
-      padding-left: 4.5vh;
-    }
+  .navbar {
+    width: 12.5vh;
+  }
 
-    .firstLink {
-      padding-left: 5vh;
-    }
-    .lastLink {
-      padding-left: 4vh;
-    }
+  .navbar p {
+    font-size: 2vh;
+  }
 
-    .firstLink:hover,
-    .secondLink:hover,
-    .thirdLink:hover,
-    .lastLink:hover {
-      padding-left: 4.5vh;
-      padding-left: 4.5vh;
-    }
+  .firstLink,
+  .secondLink,
+  .thirdLink,
+  .lastLink,
+  .emptyLink {
+    padding-left: 4.5vh;
+  }
 
-    .firstLink:hover {
-      padding-left: 5vh;
-      padding-left: 5vh;
-    }
-    .lastLink:hover {
-      padding-left: 4vh;
-      padding-left: 4vh;
-    }
+  .firstLink {
+    padding-left: 5vh;
+  }
+
+  .lastLink {
+    padding-left: 4vh;
+  }
+
+  .firstLink:hover,
+  .secondLink:hover,
+  .thirdLink:hover,
+  .lastLink:hover {
+    padding-left: 4.5vh;
+  }
+
+  .firstLink:hover {
+    padding-left: 5vh;
+  }
+
+  .lastLink:hover {
+    padding-left: 4vh;
   }
 }

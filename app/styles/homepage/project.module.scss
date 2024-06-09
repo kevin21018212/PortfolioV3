@@ -1,4 +1,5 @@
 @import "../../common.module.scss";
+
 /* Projects Component */
 .projectsComponent {
   z-index: 50;
@@ -22,6 +23,7 @@
   background: $simpleGradient;
   box-shadow: $buttonShadow;
   overflow-y: hidden;
+
   .circle {
     width: 2.25vw;
     height: 2.25vw;
@@ -30,7 +32,12 @@
     transition: background-color 0.5s ease;
     margin-top: 25px;
     background-color: transparent;
-    .circle:hover {
+
+    &.selected {
+      background-color: $boxBackground;
+    }
+
+    &:hover {
       background-color: $boxBackground;
     }
   }
@@ -38,6 +45,6 @@
 
 .projectInfoContainer {
   width: 90vw;
-  max-height: 70vh;
+  max-height: 50vh;
   overflow: hidden;
 }

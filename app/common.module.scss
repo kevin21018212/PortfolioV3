@@ -1,3 +1,4 @@
+@import "./fonts.scss";
 /* Variables */
 $primaryColor: #ff1f00;
 $primary-hover-color: #429635;
@@ -10,9 +11,35 @@ $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
 
 /* Typography */
+
 .title {
   font-size: 4.75vw;
   letter-spacing: 15px;
+}
+
+.heading {
+  font-family: "Monument Grotesk Black", sans-serif;
+  font-size: 10rem;
+  letter-spacing: 10px;
+}
+.subHeading {
+  font-family: "Monument Grotesk Mono", sans-serif;
+  font-size: 2rem;
+}
+
+.tag {
+  font-family: "Monument Grotesk Mono SemCond", sans-serif;
+  font-size: 2rem;
+}
+
+.description {
+  font-family: "Neue Montreal Book", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.seperated {
+  font-family: "Monument Grotesk Regular", sans-serif;
+  font-size: 2rem;
 }
 
 /*Shadows*/

@@ -6,8 +6,10 @@
   display: flex;
   padding: 2.5%;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: $boxShadow;
+  @extend .flexColumnCenter;
 }
+
 .spacerContainer h3 {
   color: #000;
   margin: 0 5%;
@@ -20,7 +22,8 @@
   align-items: center;
   overflow: hidden;
   padding-left: 2.5%;
-  box-shadow: var(--arrowShadow);
+  box-shadow: $arrowShadow;
+  @extend .flex-horizontal;
 }
 
 /* Button Section */
@@ -30,10 +33,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: var(--arrowShadow);
+  @extend .flex-horizontal;
 }
 .spacerContainerButton h1 {
-  padding-left: 2.5%;
   width: 80%;
   @extend .title;
 }
@@ -44,6 +46,7 @@
   justify-content: center;
   width: 20%;
   height: 100%;
+  @extend .flexCenter;
 }
 
 .textContainer {
@@ -52,6 +55,9 @@
   justify-content: flex-start;
   width: 80%;
   height: 100%;
+  @extend .flex-horizontal;
+  padding: 2.5%;
+  padding-left: 1%;
 }
 
 .toggleButton {
@@ -66,4 +72,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @extend .flexCenter;
 }

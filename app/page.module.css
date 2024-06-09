@@ -1,8 +1,17 @@
-.landingcontainer {
-  height: 90vh;
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landingContainer {
+  flex: 1; /* Take up all available space */
   margin: 0;
 }
-.projectcontainer {
+
+.projectContainer {
   height: 10vh;
   margin: 0;
+  align-self: flex-end;
 }
