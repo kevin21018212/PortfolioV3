@@ -17,8 +17,8 @@
 
 /* Circle and Circle Container */
 .circlesContainer {
-  // @include flex-column-center;
-  width: 10vw;
+  @extend .flexColumnCenter;
+  width: 200px;
   background: $simpleGradient;
   box-shadow: $buttonShadow;
   overflow-y: hidden;

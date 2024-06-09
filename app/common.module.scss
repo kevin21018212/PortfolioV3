@@ -1,17 +1,14 @@
 /* Variables */
 $primaryColor: #ff1f00;
 $primary-hover-color: #429635;
-$secondary-color: #6200ea;
-$secondary-hover-color: #3700b3;
-$danger-color: #d9534f;
-$danger-hover-color: #c9302c;
-$input-border-color: #ccc;
-$input-focus-color: #6200ea;
-$input-focus-shadow-color: rgba(98, 0, 234, 0.5);
+$secondaryColor: #ff7a00;
+$secondaryHoverColor: #fe8819;
+$accentcolor: #9b9bff;
+$accentSecondaryColor: #a8cecf;
 $boxBackground: #131313;
-
 $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
+
 /* Typography */
 .title {
   font-size: 4.75vw;
@@ -19,29 +16,15 @@ $textSecondary: #e4e4e4;
 }
 
 /*Shadows*/
-
 $boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-.bg-shadow-round {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.bg-shadow {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.bgShadowWhite {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
+$arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 
 /*Gradients*/
 $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 
 /* Containers */
-
 .container {
   margin: 0 auto;
   padding: 1rem;
@@ -57,14 +40,12 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 
 .gridDisplayContainer {
   @extend .container;
-  @extend .bgShadowWhite;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
 /* Flex Utilities */
-
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -80,6 +61,7 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
   display: flex;
   align-items: center;
 }
+
 .flexColumnCenter {
   display: flex;
   flex-direction: column;
@@ -95,7 +77,6 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 }
 
 /* Misc */
-
 .image {
   width: 100%;
   height: auto;
@@ -109,6 +90,7 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
   top: 15px;
   right: 15px;
 }
+
 .actionButtons {
   position: absolute;
   bottom: 10px;
@@ -118,7 +100,7 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 
 .link {
   font-size: 16px;
-  color: $secondary-color;
+  color: $secondaryColor;
   text-decoration: none;
   &:hover {
     background-color: $primary-hover-color;
@@ -149,20 +131,21 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
   background-color: #f44336;
   color: #fff;
 }
+
 .closeButton {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 30px;
   height: 30px;
-  background-color: $danger-color;
+  background-color: $secondaryColor;
   color: white;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   @extend .flexCenter;
 
-  & {
-    background-color: $danger-hover-color;
+  &:hover {
+    background-color: $secondaryHoverColor;
   }
 }
