@@ -1,5 +1,4 @@
-@import "/app/mixin.scss";
-// styles.scss
+@import "../../common.module.scss";
 .landingContainer {
   height: 90vh;
   display: grid;
@@ -11,16 +10,20 @@
 .liquidGradient {
   grid-column: 1 / span 5;
   grid-row: 2 / span 14;
-  background-image: var(--complexGradient);
+  background-image: url("../../../public/landing1.jpeg");
+  background-size: cover;
 }
 
 .textBox {
-  grid-column: 4 / span 11;
-  grid-row: 5 / span 7;
-  background-color: var(--boxBackground);
-  @include flex-column-center;
+  grid-column: 5 / span 9;
+  grid-row: 5 / span 6;
+  background-color: $boxBackground;
+  @extend .flexCenter;
+  flex-direction: column;
   h1 {
-    color: var(--textPrimary);
+    @extend .title;
+    color: $textPrimary;
+    text-align: center;
   }
 }
 
@@ -48,8 +51,8 @@
     left: 0;
     width: 15px;
     height: 15px;
-    border-top: 2px solid red;
-    border-left: 2px solid red;
+    border-top: 2px solid $primaryColor;
+    border-left: 2px solid $primaryColor;
     z-index: 2;
   }
 
@@ -61,8 +64,8 @@
     right: 0;
     width: 15px;
     height: 15px;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
+    border-bottom: 2px solid $primaryColor;
+    border-right: 2px solid $primaryColor;
   }
 }
 

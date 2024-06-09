@@ -1,3 +1,5 @@
+@import "../common.module.scss";
+
 .navbar {
   position: fixed;
   right: 0px;
@@ -23,7 +25,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 15vh 4vh 0;
-  border-color: transparent var(--primary) transparent transparent;
+  border-color: transparent $primaryColor transparent transparent;
 }
 
 /*Links*/
@@ -44,7 +46,7 @@
   margin-left: -25%;
   padding-left: 2.5vw;
   box-sizing: border-box;
-  background-color: var(--primary);
+  background-color: $primaryColor;
   transform: skew(-10deg) rotate(20deg);
   transition: transform 0.5s ease;
   min-height: 2vh;
@@ -55,7 +57,7 @@
   padding-left: 3vw;
 }
 .lastLink {
-  padding-left: 2.5vw;
+  padding-left: 2vw;
 }
 
 .firstLink:hover,
@@ -72,13 +74,13 @@
   padding-left: 4vw;
 }
 .lastLink:hover {
-  padding-left: 3vw;
+  padding-left: 2.5vw;
 }
 .secondLink a,
 .thirdLink a,
 .firstLink a,
 .lastLink a {
-  color: var(--primary-color);
+  color: $textSecondary;
   text-decoration: none;
 }
 

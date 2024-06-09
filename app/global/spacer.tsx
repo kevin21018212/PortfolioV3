@@ -1,5 +1,7 @@
 import React from "react";
-import styles from "./spacer.module.css";
+import styles from "./spacer.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { spacerContainerProps } from "../data/types";
 
 const SpacerContainer = ({
@@ -11,13 +13,17 @@ const SpacerContainer = ({
   if (handleToggleProject != null) {
     return (
       <div className={styles.spacerContainerButton}>
-        <h1 className={styles.projectNumber}>{title}</h1>
-        <button
-          onClick={handleToggleProject}
-          className={`${styles.toggleButton} ${
-            isProjectOpen ? styles.upArrow : styles.downArrow
-          }`}
-        ></button>
+        <div className={styles.textContainer}>
+          <h1 className={styles.projectNumber}>{title}</h1>
+        </div>
+        <div className={styles.toggleButtonContainer}>
+          <button onClick={handleToggleProject} className={styles.toggleButton}>
+            <FontAwesomeIcon
+              icon={isProjectOpen ? faChevronUp : faChevronDown}
+              size="5x"
+            />
+          </button>
+        </div>
       </div>
     );
   }

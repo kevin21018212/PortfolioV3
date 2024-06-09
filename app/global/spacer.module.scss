@@ -1,6 +1,8 @@
+@import "../common.module.scss";
+
 .spacerContainer {
   height: 100%;
-  background-color: var(--textSecondary);
+  background-color: $textSecondary;
   display: flex;
   padding: 2.5%;
   flex-direction: column;
@@ -13,7 +15,7 @@
 
 .spacerContainerSimple {
   height: 100%;
-  background-color: var(--textSecondary);
+  background-color: $textSecondary;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -21,11 +23,10 @@
   box-shadow: var(--arrowShadow);
 }
 
-/*Button Section*/
+/* Button Section */
 .spacerContainerButton {
   height: 100%;
-
-  background-color: var(--textSecondary);
+  background-color: $textSecondary;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,42 +34,36 @@
 }
 .spacerContainerButton h1 {
   padding-left: 2.5%;
-  font-size: 5vw;
-  letter-spacing: 1.5vw;
   width: 80%;
+  @extend .title;
+}
+
+.toggleButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 100%;
 }
 
 .toggleButton {
   background: transparent;
   border: none;
   cursor: pointer;
-  width: 20%;
+  width: 100%;
   height: 100%;
   padding: 0;
   transition: transform 0.5s;
   position: relative;
-}
-
-.toggleButton::before,
-.toggleButton::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 2.5vw solid transparent;
-  transition: transform 0.5s;
-  top: 40%;
-  transform: translate(-50%, -50%);
-}
-
-.toggleButton.upArrow::before {
-  border-bottom-color: #000;
-  top: 70%;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-.toggleButton.downArrow::before {
-  border-bottom-color: #000;
-  top: 0%;
-  transform: translate(-50%, -50%) rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

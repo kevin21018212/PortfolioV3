@@ -1,4 +1,4 @@
-@import "/app/mixin.scss";
+@import "../../common.module.scss";
 /* Projects Component */
 .projectsComponent {
   z-index: 50;
@@ -10,28 +10,28 @@
 .projectsContainer {
   display: flex;
   height: 0vh;
-  box-shadow: var(--boxShadow);
-  background-color: var(--boxBackground);
+  box-shadow: $boxShadow;
+  background-color: $boxBackground;
   z-index: 50;
 }
 
 /* Circle and Circle Container */
 .circlesContainer {
-  @include flex-column-center;
+  // @include flex-column-center;
   width: 10vw;
-  background: var(--simpleGradient);
-  box-shadow: var(--buttonShadow);
+  background: $simpleGradient;
+  box-shadow: $buttonShadow;
   overflow-y: hidden;
   .circle {
     width: 2.25vw;
     height: 2.25vw;
     border-radius: 50%;
-    border: 2px solid var(--boxBackground);
+    border: 2px solid $boxBackground;
     transition: background-color 0.5s ease;
     margin-top: 25px;
     background-color: transparent;
     .circle:hover {
-      background-color: var(--boxBackground);
+      background-color: $boxBackground;
     }
   }
 }

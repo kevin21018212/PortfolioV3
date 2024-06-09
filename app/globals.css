@@ -14,7 +14,7 @@ p {
   font-family: "Monument Grotesk Medium", sans-serif;
   color: #f2f2f2;
   letter-spacing: 1.5px;
-  font-size: 1.75vw;
+  font-size: 1.25rem; /* Changed from vw to rem */
   margin: 2.5% 0 0 0;
 }
 
@@ -24,14 +24,14 @@ h1 {
   margin: 0;
   text-transform: uppercase;
   line-height: 1.2;
-  font-size: 6vw;
+  font-size: 4rem; /* Changed from vw to rem */
   color: #0a0a0a;
   letter-spacing: 10px;
 }
 
 h2 {
   font-family: "Monument Grotesk Black", sans-serif;
-  font-size: 5vw;
+  font-size: 3.5rem; /* Changed from vw to rem */
   margin-bottom: 0;
   letter-spacing: 4px;
   color: #f5f7fa;
@@ -44,13 +44,13 @@ h3 {
   font-family: "Monument Grotesk Bold", sans-serif;
   color: #f5f7fa;
   margin: 2.5% 0;
-  font-size: 3.5vw;
+  font-size: 2.5rem; /* Changed from vw to rem */
 }
 
 h4 {
   font-family: "Monument Grotesk Medium", sans-serif;
   color: #f5f7fa;
-  font-size: 3vw;
+  font-size: 2rem; /* Changed from vw to rem */
   margin: 1% 0% 0% 5%;
   letter-spacing: 0.025em;
 }
@@ -59,13 +59,13 @@ h5 {
   font-family: "Neue Montreal Bold", sans-serif;
   margin: 2.5% 0% 0% 0%;
   letter-spacing: 3px;
-  font-size: 2.5vw;
+  font-size: 1.75rem; /* Changed from vw to rem */
   color: #f2f2f2;
 }
 
 h6 {
-  font-family: "Monument Extended ", sans-serif;
-  font-size: 2vw;
+  font-family: "Monument Extended", sans-serif;
+  font-size: 1.5rem; /* Changed from vw to rem */
   margin: 0;
   margin-top: 2.5%;
   letter-spacing: 1px;
@@ -138,21 +138,15 @@ h6 {
 
 html {
   /*colors*/
-  --boxBackground: #131313;
-  --primary: #ff1f00;
-
-  --textPrimary: #f0f0f0;
-  --textSecondary: #e4e4e4;
 
   /*Text*/
   --mediumSeperated: "Monument Grotesk Regular", sans-serif;
 
   /*Shadow Stylign*/
-  --buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
-    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
   --arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  --boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
   --topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
   /*Gradient Styling*/
 
@@ -166,6 +160,4 @@ html {
     radial-gradient(at 45.7% 44.3%, #ff7a00 0px, transparent 50%),
     radial-gradient(at 85.9% 43.1%, #ff4a00 0px, transparent 50%),
     radial-gradient(at 19.3% 76.5%, #ff4d00 0px, transparent 50%);
-
-  --simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 }
