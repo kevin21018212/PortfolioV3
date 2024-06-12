@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/app/styles/resume/resumecluster/work.module.css";
+import styles from "@/app/styles/resume/resumecluster/work.module.scss";
 import AboutDisplay from "./about";
 import { jobData } from "@/app/data/smallData";
 import SpacerContainer from "@/app/global/spacer";
@@ -24,7 +24,7 @@ const ResumeWork = () => {
             <motion.div className={styles.workdisplay}>
               {jobData.map((job, index) => (
                 <div key={index} className={styles.jobtext}>
-                  <h6>{job.title}</h6>
+                  <h5>{job.title}</h5>
                   {job.description.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}

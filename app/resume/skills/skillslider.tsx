@@ -3,7 +3,7 @@ import Splide from "@splidejs/splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
-import styles from "@/app/styles/resume/skills/skillslider.module.css";
+import styles from "@/app/styles/resume/skills/skillslider.module.scss";
 import SkillCard from "./skillcard";
 import skillsData, { allTags, mobileTags } from "@/app/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
@@ -23,6 +23,9 @@ const SkillSlider = () => {
       if (windowWidth >= 1200) {
         setTags(mobileTags.concat(allTags));
         setHeight("55vh");
+      } else {
+        setTags(mobileTags);
+        setHeight("40vh");
       }
     };
 
@@ -40,6 +43,10 @@ const SkillSlider = () => {
 
   useEffect(() => {
     if (splideRef.current) {
+      if (splideRef.current.splide) {
+        splideRef.current.splide.destroy();
+      }
+
       const splideInstance = new Splide(
         splideRef.current,
         splideConfig(perPage, height)
@@ -49,12 +56,9 @@ const SkillSlider = () => {
 
       if (filteredSkills.length > 0) {
         splideInstance.mount();
-        splideInstance.refresh();
-      } else {
-        splideInstance.destroy();
       }
     }
-  }, [filteredSkills, perPage]);
+  }, [selectedTags, perPage, height]);
 
   return (
     <>

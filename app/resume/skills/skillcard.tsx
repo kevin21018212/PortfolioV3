@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "@/app/styles/resume/skills/skillcard.module.css";
+import styles from "@/app/styles/resume/skills/skillcard.module.scss";
 import { getRandomGradient, getRandomMeshGradient } from "@/app/data/functions";
 import { SkillCardProps } from "@/app/data/types";
 
@@ -9,11 +9,7 @@ const SkillCard = ({ title, skillName, experience }: SkillCardProps) => {
   };
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.1 }}
-      className={styles.skillcardContainer}
-      style={cardStyle}
-    >
+    <motion.div className={styles.skillcardContainer} style={cardStyle}>
       <div className={styles.card}>
         <div className={styles.text}>
           <h5>{title}</h5>
