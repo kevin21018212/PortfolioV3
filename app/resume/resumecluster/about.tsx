@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import styles from "@/app/styles/resume/resumecluster/about.module.css";
+import styles from "@/app/styles/resume/resumecluster/about.module.scss"; // Ensure the correct extension
 import { getImagePath } from "@/app/data/functions";
 
 const AboutDisplay = () => {
@@ -12,7 +12,7 @@ const AboutDisplay = () => {
   return (
     <motion.div className={styles.aboutdisplay}>
       <div className={styles.abouttext}>
-        <h5>Extra</h5>
+        <h3>Extra</h3>
         {items.map((item, index) => (
           <motion.h6
             key={index}

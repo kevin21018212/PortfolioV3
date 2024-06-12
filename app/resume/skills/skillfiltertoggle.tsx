@@ -17,9 +17,8 @@ const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
   return (
     <div className={styles.filterToggleContainer}>
       {tags.map((tag) => (
-        <div>
+        <div key={tag}>
           <motion.button
-            key={tag}
             onClick={() => toggleTag(tag)}
             className={selectedTags.includes(tag) ? styles.selected : ""}
           >

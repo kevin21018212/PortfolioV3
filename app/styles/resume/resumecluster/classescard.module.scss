@@ -1,12 +1,14 @@
+@import "/app/common.module.scss"; // Import the common SCSS file
+
 .card {
   width: 35%;
-  background: var(--simpleGradient);
+  background: $simpleGradient;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 1%;
   overflow-x: hidden;
-  box-shadow: var(--boxShadow);
+  height: 75%;
 }
 .description {
   height: 10%;
@@ -18,14 +20,16 @@
 }
 .description p {
   margin-left: 2.5%;
-  font-size: 1.25vw;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   color: black;
 }
 
-.description h6 {
+.description h4 {
   font-family: "Monument Grotesk Regular", sans-serif;
   color: black;
+  margin-left: 0;
+  margin-top: 25px;
 }
 
 @media screen and (max-width: 900px) {
@@ -37,15 +41,16 @@
   .description p {
     font-size: 2.5vw;
   }
-  .description h6 {
+  .description h4 {
     font-size: 5vw;
     margin-top: 0;
+
     padding-top: 0.5%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .description h6 {
+  .description h4 {
     font-size: 6vw;
     margin: 5% 0%;
     padding: 0%;

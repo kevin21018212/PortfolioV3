@@ -1,0 +1,42 @@
+@import "/app/common.module.scss"; // Import the common SCSS file
+
+.classescontainer {
+  background: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $boxShadow;
+  height: 100%;
+
+  .classestitle {
+    height: 15%;
+    @extend .flexCenter;
+    padding: 5% 2.5%;
+    margin: 0%;
+
+    h1 {
+      color: black;
+      margin: 0%;
+      font-size: 12vw;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .classestitle {
+      height: 20vh;
+      padding: 2.5%;
+    }
+  }
+}
+.cardcontainer {
+  height: 60%;
+  padding: 2.5%;
+  margin-bottom: 10%;
+  @extend .flexCenter;
+
+  @media screen and (max-width: 800px) {
+    height: 180vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

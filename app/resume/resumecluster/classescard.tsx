@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "@/app/styles/resume/resumecluster/classescard.module.css";
+import styles from "@/app/styles/resume/resumecluster/classescard.module.scss";
 import { descriptionVariants } from "@/app/data/motion/animations";
 import { ClassesCardProps } from "@/app/data/types";
 
@@ -12,7 +12,7 @@ const ClassesCard = ({ category }: ClassesCardProps) => {
         initial="hidden"
         whileHover="visible"
       >
-        <h6>{category.name}</h6>
+        <h4>{category.name}</h4>
         {category.courses.map((course, index) => (
           <p key={index}>{course}</p>
         ))}

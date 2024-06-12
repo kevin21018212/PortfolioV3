@@ -1,3 +1,5 @@
+@import "/app/common.module.scss";
+
 .filterToggleContainer {
   display: flex;
   flex-wrap: wrap;
@@ -28,11 +30,7 @@
     }
 
     &.selected {
-      background-color: radial-gradient(
-        at 14.2% 15.2%,
-        #ff0033 0px,
-        transparent 50%
-      );
+      background-color: $primaryColor;
 
       p {
         color: #26221b;
