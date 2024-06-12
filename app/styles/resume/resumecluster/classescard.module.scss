@@ -10,26 +10,28 @@
   overflow-x: hidden;
   height: 75%;
 }
+
 .description {
   height: 10%;
   width: 100%;
   padding-left: 2.5%;
-  background-color: #ffffff;
+  background-color: $textPrimary;
   overflow: hidden;
-  box-shadow: var(--buttonShadow);
-}
-.description p {
-  margin-left: 2.5%;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  color: black;
-}
+  box-shadow: $buttonShadow;
 
-.description h4 {
-  font-family: "Monument Grotesk Regular", sans-serif;
-  color: black;
-  margin-left: 0;
-  margin-top: 25px;
+  p {
+    margin-left: 2.5%;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: black;
+  }
+
+  h4 {
+    font-family: "Monument Grotesk Regular", sans-serif;
+    color: black;
+    margin-left: 0;
+    margin-top: 25px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -38,13 +40,14 @@
     height: 55vh;
     margin-bottom: 2.5vh;
   }
+
   .description p {
     font-size: 2.5vw;
   }
+
   .description h4 {
     font-size: 5vw;
     margin-top: 0;
-
     padding-top: 0.5%;
   }
 }
@@ -55,6 +58,7 @@
     margin: 5% 0%;
     padding: 0%;
   }
+
   .description p {
     font-size: 3.5vw;
   }

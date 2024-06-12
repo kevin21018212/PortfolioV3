@@ -64,7 +64,7 @@
 
 .left {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .description h1 {
   color: #010101;

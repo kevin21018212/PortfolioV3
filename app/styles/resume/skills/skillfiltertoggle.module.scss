@@ -9,13 +9,13 @@
     position: relative;
     padding: 1.5vh 2vw;
     background-color: transparent;
-    color: #fff;
-    border: 2px solid #525252;
+    color: $textPrimary;
+    border: 2px solid $textPrimary;
     border-radius: 30px;
     transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
-    box-shadow: var(--buttonShadow);
+    box-shadow: $buttonShadow;
 
     p {
       font-size: 1.25vw;
@@ -25,13 +25,13 @@
       width: 20px;
       height: 20px;
       border-radius: 30px;
-      background-color: #fff;
+      background-color: $textPrimary;
       margin-right: 15px;
     }
 
     &.selected {
       background-color: $primaryColor;
-
+      border: none;
       p {
         color: #26221b;
       }

@@ -1,4 +1,5 @@
-/* skillslider.module.css */
+@import "/app/common.module.scss";
+
 .toggleContainer {
   display: flex;
   justify-self: flex-start;
@@ -8,16 +9,14 @@
 }
 
 .sliderContainer {
+  @extend .flexColumnCenter;
   height: auto;
-  display: flex;
   width: 100vw;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .sliderTrack {
-  width: 90vw;
+  width: 100vw;
+  padding: 0%;
 }
 
 .splide__slide {
