@@ -1,4 +1,4 @@
-@import "/app/common.module.scss"; // Import the common SCSS file
+@import '/app/common.module.scss'; // Import the common SCSS file
 
 .card {
   width: 35%;
@@ -9,6 +9,8 @@
   margin: 1%;
   overflow-x: hidden;
   height: 75%;
+  box-shadow: $boxShadow;
+  border-radius: 10px;
 }
 
 .description {
@@ -21,13 +23,13 @@
 
   p {
     margin-left: 2.5%;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    font-size: 1.15vw;
+    letter-spacing: 0.5px;
     color: black;
   }
 
-  h4 {
-    font-family: "Monument Grotesk Regular", sans-serif;
+  h5 {
+    font-family: 'Monument Grotesk Regular', sans-serif;
     color: black;
     margin-left: 0;
     margin-top: 25px;

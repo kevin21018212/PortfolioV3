@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 .skillcardContainer {
   width: 95%;
@@ -15,8 +15,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+
   box-shadow: $boxShadow;
+  .text {
+    width: 90%;
+    text-align: center;
+
+    color: $textPrimary;
+  }
 }
 
 /* Sizing for iPhone */

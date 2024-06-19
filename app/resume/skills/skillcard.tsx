@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import styles from "@/app/styles/resume/skills/skillcard.module.scss";
-import { getRandomGradient, getRandomMeshGradient } from "@/app/data/functions";
-import { SkillCardProps } from "@/app/data/types";
+import {motion} from 'framer-motion';
+import styles from '@/app/styles/resume/skills/skillcard.module.scss';
+import {getRandomGradient, getRandomMeshGradient} from '@/app/data/functions';
+import {SkillCardProps} from '@/app/data/types';
 
-const SkillCard = ({ title, skillName, experience }: SkillCardProps) => {
+const SkillCard = ({title, skillName, experience}: SkillCardProps) => {
   const cardStyle = {
     backgroundImage: getRandomMeshGradient(),
   };

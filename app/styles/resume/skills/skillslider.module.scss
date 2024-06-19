@@ -1,11 +1,12 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 .toggleContainer {
   display: flex;
   justify-self: flex-start;
-  width: 85vw;
-  padding-left: 2.5%;
-  margin-top: 5vw;
+  width: 90vw;
+  padding-left: 1%;
+  padding-top: 1%;
+  margin: 2vw 0;
 }
 
 .sliderContainer {
@@ -20,7 +21,7 @@
 }
 
 .splide__slide {
-  height: 80%;
+  height: 85%;
   padding-top: 10%;
 }
 

@@ -1,18 +1,13 @@
-import { motion } from "framer-motion";
-import styles from "@/app/styles/resume/resumecluster/classescard.module.scss";
-import { descriptionVariants } from "@/app/data/motion/animations";
-import { ClassesCardProps } from "@/app/data/types";
+import {motion} from 'framer-motion';
+import styles from '@/app/styles/resume/resumecluster/classescard.module.scss';
+import {descriptionVariants} from '@/app/data/motion/animations';
+import {ClassesCardProps} from '@/app/data/types';
 
-const ClassesCard = ({ category }: ClassesCardProps) => {
+const ClassesCard = ({category}: ClassesCardProps) => {
   return (
     <motion.div className={styles.card}>
-      <motion.div
-        className={styles.description}
-        variants={descriptionVariants}
-        initial="hidden"
-        whileHover="visible"
-      >
-        <h4>{category.name}</h4>
+      <motion.div className={styles.description} variants={descriptionVariants} initial='hidden' whileHover='visible'>
+        <h5>{category.name}</h5>
         {category.courses.map((course, index) => (
           <p key={index}>{course}</p>
         ))}
