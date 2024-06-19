@@ -3,7 +3,7 @@
 import {motion} from 'framer-motion';
 import styles from '@/app/styles/homepage/landing.module.scss';
 import {boxVariants} from '@/app/data/motion/animations';
-import ShaderArtBackground from '../data/liquidgradient';
+import {FaGithub, FaLinkedin} from 'react-icons/fa';
 
 const Landing = () => {
   return (
@@ -18,27 +18,15 @@ const Landing = () => {
 
       {/* Animate infoBox */}
 
-      <motion.div
-        initial={{scale: 0}}
-        animate={{scale: 1}}
-        transition={{
-          type: 'spring',
-          stiffness: 260,
-          damping: 20,
-        }}
-        className={styles.symbolBox}></motion.div>
+      <motion.div initial='hidden' animate='visible' whileHover='hover' variants={boxVariants} className={styles.symbolBox}>
+        <FaGithub size={100} color='#F0F0F0' />
+      </motion.div>
 
       {/* Animate symbolBox */}
 
-      <motion.div
-        className={styles.infoBox}
-        initial={{scale: 0}}
-        animate={{scale: 1}}
-        transition={{
-          type: 'spring',
-          stiffness: 260,
-          damping: 20,
-        }}></motion.div>
+      <motion.div initial='hidden' animate='visible' whileHover='hover' variants={boxVariants} className={styles.infoBox}>
+        <FaLinkedin size={100} color='#F0F0F0' />
+      </motion.div>
     </div>
   );
 };

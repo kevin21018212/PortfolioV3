@@ -35,6 +35,7 @@
   height: 100%;
   z-index: 0;
   @extend .boxBackground;
+  @extend .flexCenter;
 }
 
 .symbolBox {
@@ -44,4 +45,5 @@
   height: 100%;
   z-index: 0;
   @extend .boxBackground;
+  @extend .flexCenter;
 }

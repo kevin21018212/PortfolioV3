@@ -29,12 +29,20 @@ export const boxVariants = {
   },
   visible: {
     scale: 1,
+    type: 'spring',
     transition: {
-      type: 'spring',
-      stiffness: 25,
-      damping: 2,
-      mass: 3,
-      duration: 2,
+      stiffness: 15,
+      damping: 1,
+      mass: 1,
+      duration: 0.35,
+    },
+  },
+  hover: {
+    scale: 1.1,
+    backgroundColor: '#ef5e04',
+    transition: {
+      ease: 'linear',
+      duration: 0.25,
     },
   },
 };
