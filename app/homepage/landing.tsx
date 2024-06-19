@@ -1,12 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import styles from "@/app/styles/homepage/landing.module.scss";
-import {
-  innerBoxVariants,
-  outerBoxVariants,
-} from "@/app/data/motion/animations";
-import ShaderArtBackground from "../data/liquidgradient";
+import {motion} from 'framer-motion';
+import styles from '@/app/styles/homepage/landing.module.scss';
+import {boxVariants} from '@/app/data/motion/animations';
+import ShaderArtBackground from '../data/liquidgradient';
 
 const Landing = () => {
   return (
@@ -20,33 +17,28 @@ const Landing = () => {
       </div>
 
       {/* Animate infoBox */}
+
+      <motion.div
+        initial={{scale: 0}}
+        animate={{scale: 1}}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20,
+        }}
+        className={styles.symbolBox}></motion.div>
+
+      {/* Animate symbolBox */}
+
       <motion.div
         className={styles.infoBox}
-        variants={outerBoxVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div
-          variants={innerBoxVariants}
-          initial="hidden"
-          animate="visible"
-          className={styles.boxInfo}
-        ></motion.div>
-      </motion.div>
-      {/* Animate symbolBox */}
-      <motion.div
-        className={styles.symbolBox}
-        variants={outerBoxVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div
-          className={styles.boxInfo}
-          variants={innerBoxVariants}
-          initial="hidden"
-          animate="visible"
-        ></motion.div>
-      </motion.div>
+        initial={{scale: 0}}
+        animate={{scale: 1}}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20,
+        }}></motion.div>
     </div>
   );
 };

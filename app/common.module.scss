@@ -1,55 +1,59 @@
-@import "./fonts.scss";
+@import './fonts.scss';
 /* Variables */
-$primaryColor: #ff1f00;
+$primaryColor: #ef5e04;
 $primary-hover-color: #429635;
 $secondaryColor: #ff7a00;
 $secondaryHoverColor: #fe8819;
-$accentcolor: #9b9bff;
-$accentSecondaryColor: #a8cecf;
-$boxBackground: #131313;
+$accentcolor: #efd404;
+$highlightColor: #f89aa5;
+$boxBackground: #1f282e;
 $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
 
 /* Typography */
 
 .title {
-  font-size: 4.75vw;
+  font-size: 4.25vw;
   letter-spacing: 15px;
 }
 
 .heading {
-  font-family: "Monument Grotesk Black", sans-serif;
-  font-size: 10rem;
+  font-family: 'Monument Grotesk Black', sans-serif;
+  font-size: 6.5vw;
   letter-spacing: 10px;
 }
 .subHeading {
-  font-family: "Monument Grotesk Mono", sans-serif;
-  font-size: 2rem;
+  font-family: 'Monument Grotesk Mono', sans-serif;
+  font-size: 2vw;
+  color: $textSecondary;
 }
 
 .tag {
-  font-family: "Monument Grotesk Mono SemCond", sans-serif;
-  font-size: 2rem;
+  font-family: 'Monument Grotesk Mono SemCond', sans-serif;
+  font-size: 2vw;
+  color: $textPrimary;
 }
 
 .description {
-  font-family: "Neue Montreal Book", sans-serif;
-  font-size: 1.75rem;
+  font-family: 'Neue Montreal Book', sans-serif;
+  font-size: 1.5vw;
   font-weight: 400;
+  color: $textSecondary;
 }
 .seperated {
-  font-family: "Monument Grotesk Regular", sans-serif;
-  font-size: 2rem;
+  font-family: 'Monument Grotesk Regular', sans-serif;
+  font-size: 2vw;
 }
 
 /*Shadows*/
+
 $boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 $arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 
 /*Gradients*/
-$simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
+$simpleGradient: linear-gradient(45deg, $accentcolor, $primaryColor, $accentcolor);
 
 /* Containers */
 .container {
@@ -101,6 +105,12 @@ $simpleGradient: linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 8px;
+}
+
+.boxBackground {
+  background-color: #1f282e;
+  box-shadow: $boxShadow;
+  border-radius: 10px;
 }
 
 /* Misc */

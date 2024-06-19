@@ -1,4 +1,4 @@
-@import "../common.module.scss";
+@import '../common.module.scss';
 
 .navbar {
   position: fixed;
@@ -11,13 +11,15 @@
   margin: 0;
   z-index: 999;
   overflow: hidden;
+
   @extend .flex-column;
 }
 
 .navbar p {
-  font-family: "Neue Montreal", sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   font-size: 2vh;
   margin: 7.5% 2.5%;
+  user-select: none;
 }
 
 .redTriangle {
@@ -26,6 +28,7 @@
   border-style: solid;
   border-width: 0 15vh 4vh 0;
   border-color: transparent $primaryColor transparent transparent;
+  user-select: none;
 }
 
 .linksContainer {

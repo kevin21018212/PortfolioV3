@@ -1,4 +1,4 @@
-@import "../common.module.scss";
+@import '../common.module.scss';
 
 .spacerContainer {
   height: 100%;
@@ -38,6 +38,7 @@
 .spacerContainerButton h1 {
   width: 80%;
   @extend .title;
+  user-select: none;
 }
 
 .toggleButtonContainer {

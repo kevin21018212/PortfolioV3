@@ -1,18 +1,17 @@
-@import "../../common.module.scss";
+@import '../../common.module.scss';
 
 /* Projects Component */
 .projectsComponent {
   z-index: 50;
   position: relative;
-  height: 10vh;
+  height: 12.5vh;
 }
 
 /* Projects Info Container */
 .projectsContainer {
   display: flex;
   height: 0vh;
-  box-shadow: $boxShadow;
-  background-color: $boxBackground;
+  @extend .boxBackground;
   z-index: 50;
 }
 
@@ -23,6 +22,7 @@
   background: $simpleGradient;
   box-shadow: $buttonShadow;
   overflow-y: hidden;
+  user-select: none;
 
   .circle {
     width: 2.25vw;
