@@ -1,3 +1,4 @@
+@import '/app/common.module.scss';
 .resumeContainer {
   height: auto;
   width: 100vw;
@@ -5,8 +6,15 @@
 }
 
 .headerContainer {
-  width: 70%;
+  width: 80vw;
   margin: 2% 0%;
+
+  .heading {
+    color: $textPrimary;
+  }
+  .subHeading {
+    color: $textSecondary;
+  }
 }
 
 .work {
