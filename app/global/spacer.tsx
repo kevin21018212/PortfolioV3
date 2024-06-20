@@ -20,7 +20,7 @@ const SpacerContainer = ({
           <button onClick={handleToggleProject} className={styles.toggleButton}>
             <FontAwesomeIcon
               icon={isProjectOpen ? faChevronUp : faChevronDown}
-              size="5x"
+              size="8x"
             />
           </button>
         </div>

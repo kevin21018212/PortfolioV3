@@ -1,5 +1,7 @@
-@import './fonts.scss';
+@import "./fonts.scss";
+
 /* Variables */
+/* Colors */
 $primaryColor: #ef5e04;
 $primary-hover-color: #429635;
 $secondaryColor: #ff7a00;
@@ -10,50 +12,55 @@ $boxBackground: #1f282e;
 $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
 
-/* Typography */
+/* Shadows */
+$boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+$arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 
+/* Gradients */
+$simpleGradient: linear-gradient(
+  45deg,
+  $accentcolor,
+  $primaryColor,
+  $accentcolor
+);
+
+/* Typography */
 .title {
   font-size: 4.25vw;
   letter-spacing: 15px;
 }
 
 .heading {
-  font-family: 'Monument Grotesk Black', sans-serif;
+  font-family: "Monument Grotesk Black", sans-serif;
   font-size: 6.5vw;
   letter-spacing: 10px;
 }
+
 .subHeading {
-  font-family: 'Monument Grotesk Mono', sans-serif;
+  font-family: "Monument Grotesk Mono", sans-serif;
   font-size: 2vw;
   color: $textSecondary;
 }
 
 .tag {
-  font-family: 'Monument Grotesk Mono SemCond', sans-serif;
+  font-family: "Monument Grotesk Mono SemCond", sans-serif;
   font-size: 2vw;
   color: $textPrimary;
 }
 
 .description {
-  font-family: 'Neue Montreal Book', sans-serif;
+  font-family: "Neue Montreal Book", sans-serif;
   font-size: 1.5vw;
   font-weight: 400;
   color: $textSecondary;
 }
+
 .seperated {
-  font-family: 'Monument Grotesk Regular', sans-serif;
+  font-family: "Monument Grotesk Regular", sans-serif;
   font-size: 2vw;
 }
-
-/*Shadows*/
-
-$boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-$buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-$arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-$topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
-
-/*Gradients*/
-$simpleGradient: linear-gradient(45deg, $accentcolor, $primaryColor, $accentcolor);
 
 /* Containers */
 .container {
@@ -107,13 +114,14 @@ $simpleGradient: linear-gradient(45deg, $accentcolor, $primaryColor, $accentcolo
   gap: 8px;
 }
 
+/* Box Styles */
 .boxBackground {
-  background-color: #1f282e;
+  background-color: $boxBackground;
   box-shadow: $boxShadow;
   border-radius: 10px;
 }
 
-/* Misc */
+/* Miscellaneous */
 .image {
   width: 100%;
   height: auto;
@@ -139,50 +147,8 @@ $simpleGradient: linear-gradient(45deg, $accentcolor, $primaryColor, $accentcolo
   font-size: 16px;
   color: $secondaryColor;
   text-decoration: none;
+
   &:hover {
     background-color: $primary-hover-color;
-  }
-}
-
-/* Buttons */
-.required {
-  color: red;
-  margin-left: 4px;
-}
-
-.saveButton,
-.deleteButton {
-  padding: 8px 16px;
-  margin-right: 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.saveButton {
-  background-color: #2196f3;
-  color: #fff;
-}
-
-.deleteButton {
-  background-color: #f44336;
-  color: #fff;
-}
-
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  background-color: $secondaryColor;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  @extend .flexCenter;
-
-  &:hover {
-    background-color: $secondaryHoverColor;
   }
 }

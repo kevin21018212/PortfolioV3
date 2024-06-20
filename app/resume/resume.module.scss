@@ -1,4 +1,6 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
+
+/* Container Styles */
 .resumeContainer {
   height: auto;
   width: 100vw;
@@ -7,11 +9,12 @@
 
 .headerContainer {
   width: 80vw;
-  margin: 2% 0%;
+  margin: 2% 0;
 
   .heading {
     color: $textPrimary;
   }
+
   .subHeading {
     color: $textSecondary;
   }
@@ -26,24 +29,30 @@
   height: 120vh;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 1050px) {
   .classes {
     height: 200vh;
   }
+
   .heading {
     width: 90%;
   }
+
   .subHeading {
     width: 100%;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .classes {
     height: 200vh;
   }
+
   .heading {
     width: 80%;
   }
+
   .subHeading {
     width: 70%;
   }

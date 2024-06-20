@@ -1,13 +1,29 @@
-@import '../common.module.scss';
+@import "../common.module.scss";
 
-.spacerContainer {
+/* Common Styles */
+.spacerBase {
   height: 100%;
   background-color: $textSecondary;
   display: flex;
-  padding: 2.5%;
-  flex-direction: column;
   box-shadow: $boxShadow;
+}
+
+.flexColumn {
+  flex-direction: column;
   @extend .flexColumnCenter;
+}
+
+.flexRow {
+  flex-direction: row;
+  align-items: center;
+  @extend .flex-horizontal;
+}
+
+/* Spacer Containers */
+.spacerContainer {
+  @extend .spacerBase;
+  @extend .flexColumn;
+  padding: 2.5%;
 }
 
 .spacerContainer h3 {
@@ -16,25 +32,19 @@
 }
 
 .spacerContainerSimple {
-  height: 100%;
-  background-color: $textSecondary;
-  display: flex;
-  align-items: center;
+  @extend .spacerBase;
+  @extend .flex-horizontal;
   overflow: hidden;
   padding-left: 2.5%;
   box-shadow: $arrowShadow;
-  @extend .flex-horizontal;
 }
 
 /* Button Section */
 .spacerContainerButton {
-  height: 100%;
-  background-color: $textSecondary;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  @extend .flex-horizontal;
+  @extend .spacerBase;
+  @extend .flexRow;
 }
+
 .spacerContainerButton h1 {
   width: 80%;
   @extend .title;
@@ -42,25 +52,19 @@
 }
 
 .toggleButtonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 20%;
   height: 100%;
   @extend .flexCenter;
 }
 
 .textContainer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   width: 80%;
   height: 100%;
+  padding: 2.5% 0 2.5% 1%;
   @extend .flex-horizontal;
-  padding: 2.5%;
-  padding-left: 1%;
 }
 
+/* Toggle Button */
 .toggleButton {
   background: transparent;
   border: none;
@@ -70,8 +74,5 @@
   padding: 0;
   transition: transform 0.5s;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   @extend .flexCenter;
 }
