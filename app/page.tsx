@@ -6,24 +6,15 @@ import NewProjects from "./homepage/newprojects";
 import NewProjectsMobile from "./homepage/newprojectsmobile";
 
 export default function Home() {
-  const [screenSize, setScreenSize] = useState("desktop"); // "desktop" or "mobile"
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1150) {
-        setScreenSize("mobile");
-      } else {
-        setScreenSize("desktop");
-      }
-    };
+    const handleResize = () => setIsMobile(window.innerWidth <= 1150);
 
     handleResize();
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -31,7 +22,7 @@ export default function Home() {
       <div className={styles.landingContainer}>
         <Landing />
         <div className={styles.projectContainer}>
-          {screenSize === "mobile" ? <NewProjectsMobile /> : <NewProjects />}
+          {isMobile ? <NewProjectsMobile /> : <NewProjects />}
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 export const textanimation = {
   inactive: {
     opacity: 0,
-    translateX: '-5vh',
+    translateX: "-5vh",
   },
   active: {
     opacity: 1,
-    translateX: '0vh',
+    translateX: "0vh",
   },
 };
 
@@ -19,8 +19,8 @@ export const staggerChildrenAnimation = {
 };
 
 export const descriptionVariants = {
-  hidden: {height: '7.5vh'},
-  visible: {height: '82.5%'},
+  hidden: { height: "12.5%" },
+  visible: { height: "82.5%" },
 };
 
 export const boxVariants = {
@@ -29,7 +29,7 @@ export const boxVariants = {
   },
   visible: {
     scale: 1,
-    type: 'spring',
+    type: "spring",
     transition: {
       stiffness: 15,
       damping: 1,
@@ -39,9 +39,9 @@ export const boxVariants = {
   },
   hover: {
     scale: 1.1,
-    backgroundColor: '#ef5e04',
+    backgroundColor: "#ef5e04",
     transition: {
-      ease: 'linear',
+      ease: "linear",
       duration: 0.25,
     },
   },
