@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "@/app/styles/resume/resumecluster/classes.module.scss";
 import ClassesCard from "./classescard";
-import courseCategories from "@/app/data/coursecategories";
+import courseCategories from "@/app/utils/data/coursecategories";
 
 const ResumeClasses = () => {
   return (

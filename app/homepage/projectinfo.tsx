@@ -2,11 +2,9 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import styles from "@/app/styles/homepage/projectinfo.module.scss";
-import {
-  staggerChildrenAnimation,
-  textanimation,
-} from "@/app/data/motion/animations";
-import { Project } from "@/app/data/types";
+
+import { Project } from "@/app/utils/data/types";
+import { staggerChildrenAnimation, textanimation } from "../utils/framer";
 
 const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
   const [animationState, setAnimationState] = useState("inactive");

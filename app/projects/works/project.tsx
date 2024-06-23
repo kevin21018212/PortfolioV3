@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "@/app/styles/project/project.module.css";
 import Descriptions from "./description";
 import Titles from "./title";
-import { projectData } from "@/app/data/projectdata";
+import { projectData } from "@/app/utils/data/projectdata";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);

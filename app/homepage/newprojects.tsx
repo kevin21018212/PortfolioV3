@@ -3,10 +3,10 @@ import { animate, motion } from "framer-motion";
 import { useState } from "react";
 import styles from "@/app/styles/homepage/project.module.scss";
 import ProjectInfo from "./projectinfo";
-import { circles } from "@/app/data/smallData";
-import { Project } from "@/app/data/types";
+import { circles } from "@/app/utils/data/smallData";
+import { Project } from "@/app/utils/data/types";
 import SpacerContainer from "@/app/global/spacer";
-import { projectData } from "@/app/data/projectdata";
+import { projectData } from "@/app/utils/data/projectdata";
 
 const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<number>(0);

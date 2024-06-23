@@ -1,6 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useRef } from "react";
-import styles from "./scroll.module.css";
+import styles from "./scroll.module.scss";
 
 export default function Paragraph({ paragraph }) {
   const container = useRef(null);

@@ -1,4 +1,4 @@
-import { hexColorOptions } from "./smallData";
+import { hexColorOptions } from "./data/smallData";
 import easyMeshGradient from "easy-mesh-gradient";
 
 export const getImagePath = (item: string | null): string => {

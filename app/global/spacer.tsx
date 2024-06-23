@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./spacer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { spacerContainerProps } from "../data/types";
+import { spacerContainerProps } from "../utils/data/types";
 
 const SpacerContainer = ({
   title,

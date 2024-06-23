@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/app/styles/project/project.module.css";
-import { Project } from "@/app/data/types";
-import { projectData } from "@/app/data/projectdata";
+import { Project } from "@/app/utils/data/types";
+import { projectData } from "@/app/utils/data/projectdata";
 
 type DescriptionProps = {
   data: any;
