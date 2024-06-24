@@ -1,18 +1,13 @@
 import React from "react";
 import styles from "@/styles/project/project.module.css";
 import { Project } from "@/utils/data/types";
-import { projectData } from "@/utils/data/projectdata";
 
 type DescriptionProps = {
-  data: any;
-  selectedProject: any;
+  data: Project[];
+  selectedProject: number | null;
 };
 
 const Descriptions = ({ data, selectedProject }: DescriptionProps) => {
-  const crop = (string: string, maxLength: number) => {
-    return string.substring(0, maxLength);
-  };
-
   return (
     <div className={styles.descriptions}>
       {data.map((project: Project, index: number) => {

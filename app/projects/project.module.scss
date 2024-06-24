@@ -1,0 +1,37 @@
+@import "/app/common.module.scss";
+.pageContainer {
+  @extend .flexColumnCenter;
+
+  width: 90vw;
+  padding: 5vw;
+  height: auto;
+  gap: 2vw 0;
+}
+.spacer {
+  height: 50vh;
+}
+.featuredProject {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  padding-left: 10vw;
+}
+
+.projectContainer {
+  height: 60vh;
+  width: 85vw;
+  margin: 2.5vh 0;
+  display: flex;
+}
+
+.nav {
+  height: 75vh;
+  width: 100vw;
+}

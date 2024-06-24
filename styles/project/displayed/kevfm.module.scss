@@ -1,0 +1,119 @@
+@import "/app/common.module.scss";
+.frame {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 2vw;
+}
+
+.leftSection {
+  width: 30%;
+  @extend .flexCenter;
+}
+
+.rightSection {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.topSection {
+  display: flex;
+  height: 50%;
+  gap: 1vw;
+}
+
+.bottomSection {
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @extend .flexColumnCenter;
+  background: #15706c;
+  border-radius: 50px;
+}
+
+.circleContainer {
+  position: absolute;
+  width: 15vw;
+  height: 25vh;
+  background: $background;
+  border-radius: 50%;
+  top: 5%;
+  @extend .flexCenter;
+}
+
+.circle {
+  width: 90%;
+  height: 90%;
+  background: none;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  background-color: #e8f89f;
+}
+
+.bottom {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: #90c693;
+  border-radius: 0px 0px 30px 30px;
+  bottom: 0;
+  @extend .flexCenter;
+}
+
+.kevFm {
+  @extend .title;
+  color: $textPrimary;
+  font-size: 3.75vw;
+}
+
+/*Right*/
+
+.descriptionContainer {
+  width: 45%;
+  height: auto;
+  @extend .flexColumn;
+  padding: 2.5%;
+  background: #90c693;
+  border-radius: 50px;
+  .about {
+    @extend .subHeading;
+  }
+
+  .description {
+    @extend .description;
+    font-size: 1.25vw;
+  }
+}
+
+.imageCenterContainer {
+  width: 50%;
+  @extend .flexCenter;
+  background: #082c2c;
+  border-radius: 50px;
+}
+
+.projectContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: #15706c;
+  border-radius: 30px;
+}
+
+.corner {
+  width: 30%;
+  height: 100%;
+  background: #e8f89f;
+  border-radius: 30px 180px 0px 30px;
+}

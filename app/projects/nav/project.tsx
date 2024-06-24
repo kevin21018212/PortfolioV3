@@ -6,7 +6,7 @@ import Titles from "./title";
 import { projectData } from "@/utils/data/projectdata";
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   return (
     <div className={styles.container}>
@@ -15,4 +15,5 @@ const Projects = () => {
     </div>
   );
 };
+
 export default Projects;

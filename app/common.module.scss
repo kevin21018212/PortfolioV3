@@ -9,6 +9,7 @@ $secondaryHoverColor: #fe8819;
 $accentcolor: #efd404;
 $highlightColor: #f89aa5;
 $boxBackground: #1f282e;
+$background: #101518;
 $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
 
@@ -84,7 +85,7 @@ $simpleGradient: linear-gradient(
 }
 
 /* Flex Utilities */
-.flex-column {
+.flexColumn {
   display: flex;
   flex-direction: column;
 }
