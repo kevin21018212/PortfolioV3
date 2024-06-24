@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "@/app/styles/resume/skills/skillfiltertoggle.module.scss";
-import { SkillFilterToggleProps } from "@/app/utils/data/types";
+import styles from "@/styles/resume/skills/skillfiltertoggle.module.scss";
+import { SkillFilterToggleProps } from "@/utils/data/types";
 import { motion } from "framer-motion";
 
 const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {

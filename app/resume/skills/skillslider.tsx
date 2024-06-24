@@ -3,11 +3,11 @@ import Splide from "@splidejs/splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { SplideSlide } from "@splidejs/react-splide";
-import styles from "@/app/styles/resume/skills/skillslider.module.scss";
+import styles from "@/styles/resume/skills/skillslider.module.scss";
 import SkillCard from "./skillcard";
-import skillsData, { allTags, mobileTags } from "@/app/utils/data/skilldata";
+import skillsData, { allTags, mobileTags } from "@/utils/data/skilldata";
 import SkillFilterToggle from "./skillfiltertoggle";
-import { splideConfig } from "@/app/utils/data/smallData";
+import { splideConfig } from "@/utils/data/smallData";
 
 const SkillSlider = () => {
   const splideRef = useRef<any | null>(null);

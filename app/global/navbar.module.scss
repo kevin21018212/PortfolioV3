@@ -55,7 +55,7 @@
 }
 
 .firstLink {
-  padding-left: 2.25vw;
+  padding-left: 2.5vw;
 }
 .lastLink {
   padding-left: 2vw;
@@ -65,7 +65,7 @@
 .secondLink:hover,
 .thirdLink:hover,
 .lastLink:hover {
-  background-color: $primaryColor;
+  background-color: $primary-hover-color;
   transform: skew(-8deg) translateX(-1vw) rotate(15deg) scale(1.1);
   padding-left: 3vw;
   padding-bottom: 5.5%;
@@ -75,7 +75,7 @@
   padding-left: 4vw;
 }
 .lastLink:hover {
-  padding-left: 2.5vw;
+  padding-left: 3vw;
 }
 
 .secondLink a,

@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import styles from "@/app/styles/resume/resumecluster/about.module.scss"; // Ensure the correct extension
-import { getImagePath } from "@/app/utils/functions";
+import styles from "@/styles/resume/resumecluster/about.module.scss"; // Ensure the correct extension
+import { getImagePath } from "@/utils/functions";
 
 const AboutDisplay = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);

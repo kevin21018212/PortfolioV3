@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
-import styles from "@/app/styles/project/project.module.css";
+import styles from "@/styles/project/project.module.css";
 import {
   useScroll,
   motion,
   useTransform,
   useMotionTemplate,
 } from "framer-motion";
-import { Project } from "@/app/utils/data/types";
+import { Project } from "@/utils/data/types";
 
 type TitlesProps = {
   data: any;

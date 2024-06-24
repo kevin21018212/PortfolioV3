@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "@/app/styles/homepage/projectmobile.module.scss";
-import { projectData } from "@/app/utils/data/projectdata";
+import styles from "@/styles/homepage/projectmobile.module.scss";
+import { projectData } from "@/utils/data/projectdata";
 import SpacerContainer from "@/app/global/spacer";
-import ScrambleText from "@/app/utils/animations/Scramble";
-import Paragraph from "@/app/utils/animations/Paragraph";
+import ScrambleText from "@/utils/animations/Scramble";
+import Paragraph from "@/utils/animations/Paragraph";
 
 const NewProjectsMobile = () => {
   return (

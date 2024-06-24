@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "@/app/styles/resume/resumecluster/work.module.scss";
+import styles from "@/styles/resume/resumecluster/work.module.scss";
 import AboutDisplay from "./about";
-import { jobData } from "@/app/utils/data/smallData";
+import { jobData } from "@/utils/data/smallData";
 import SpacerContainer from "@/app/global/spacer";
 import { motion } from "framer-motion";
 

@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "@/app/styles/homepage/landing.module.scss";
+import styles from "@/styles/homepage/landing.module.scss";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { boxVariants } from "../utils/framer";
+import { boxVariants } from "../../utils/framer";
 
 const Landing = () => {
   return (

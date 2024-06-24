@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import styles from "@/app/styles/homepage/projectinfo.module.scss";
+import styles from "@/styles/homepage/projectinfo.module.scss";
 
-import { Project } from "@/app/utils/data/types";
-import { staggerChildrenAnimation, textanimation } from "../utils/framer";
+import { Project } from "@/utils/data/types";
+import { staggerChildrenAnimation, textanimation } from "../../utils/framer";
 
 const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
   const [animationState, setAnimationState] = useState("inactive");
