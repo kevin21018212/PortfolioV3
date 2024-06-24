@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 /* Container Styles */
 .resumeContainer {
@@ -17,6 +17,14 @@
 
   .subHeading {
     color: $textSecondary;
+  }
+  .simpleGradient {
+    background: $simpleGradient;
+
+    background-clip: text; /* For modern browsers */
+    color: transparent;
+    text-decoration: none;
+    padding: 5px;
   }
 }
 

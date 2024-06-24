@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 .frame {
   display: flex;
@@ -21,7 +21,7 @@
 .imageContainer {
   height: 70%;
   width: 100%;
-  background: url("../../../public/project/waves.jpg");
+  background: url('../../../public/project/waves.jpg');
   background-size: cover;
   background-position: bottom;
   border-radius: 100px 0 0 0;
@@ -106,7 +106,7 @@
       border-radius: 20px;
       h3 {
         @extend .seperated;
-        font-size: 1vw;
+        font-size: 0.9vw;
         letter-spacing: 2px;
       }
     }
@@ -142,7 +142,7 @@
       h2 {
         transform: rotate(90deg);
         @extend .title;
-        font-size: 3.25vw;
+        font-size: 5.25vh;
         text-wrap: nowrap;
         letter-spacing: 4px;
         color: $textPrimary;
