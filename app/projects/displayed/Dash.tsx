@@ -1,44 +1,119 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import styles from "@/styles/project/displayed/dash.module.scss";
 import { projectData } from "@/utils/data/projectdata";
+import {
+  bounceVariants,
+  containerVariants,
+  textAnimation,
+} from "@/utils/framer";
 
 const Dash = () => {
   const project = projectData[1];
+
+  const [ref, inView] = useInView({ triggerOnce: true });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
-    <div className={styles.frame}>
-      <div className={styles.leftSection}>
-        <div className={styles.imageContainer}></div>
-        <div className={styles.titleContainer}>
+    <motion.div
+      ref={ref}
+      className={styles.frame}
+      initial="hidden"
+      animate={controls}
+      variants={containerVariants}
+      transition={{ duration: 1 }}
+    >
+      <motion.div
+        className={styles.leftSection}
+        variants={containerVariants}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className={styles.imageContainer}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        ></motion.div>
+        <motion.div
+          className={styles.titleContainer}
+          variants={containerVariants}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
           <h1 className={styles.dash}>{project.projectTitle}</h1>
           <h2 className={styles.taskTracking}>{project.projectTag}</h2>
-        </div>
-      </div>
-      <div className={styles.rightSection}>
-        <div className={styles.mainContent}>
-          <div className={styles.mainContentLeft}>
-            <div className={styles.descriptionContainer}>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className={styles.rightSection}
+        variants={containerVariants}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className={styles.mainContent}
+          variants={containerVariants}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className={styles.mainContentLeft}
+            variants={bounceVariants}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <motion.div
+              className={styles.descriptionContainer}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
               <p className={styles.description}>{project.description}</p>
-            </div>
-            <div className={styles.tagContainer}>
+            </motion.div>
+            <motion.div
+              className={styles.tagContainer}
+              variants={bounceVariants}
+              transition={{ delay: 0.6, duration: 0.6 }}
+            >
               {project.projectTech.split(" ").map((tech, index) => (
-                <div key={index} className={styles.tag}>
+                <motion.div
+                  key={index}
+                  className={styles.tag}
+                  initial="hidden"
+                  animate="visible"
+                  variants={textAnimation}
+                >
                   <h3>{tech}</h3>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
-          <div className={styles.mainContentRight}>
-            <div className={styles.top}>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className={styles.mainContentRight}
+            variants={containerVariants}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div
+              className={styles.top}
+              variants={containerVariants}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
               <div className={styles.symbolContainer}></div>
               <div className={styles.project001}>
                 <h2>{project.projectNumber}</h2>
               </div>
-            </div>
+            </motion.div>
             <div className={styles.bottom}></div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

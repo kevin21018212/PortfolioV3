@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "@/styles/homepage/projectinfo.module.scss";
 
 import { Project } from "@/utils/data/types";
-import { staggerChildrenAnimation, textanimation } from "../../utils/framer";
+import { staggerChildrenAnimation, textAnimation } from "../../utils/framer";
 
 const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
   const [animationState, setAnimationState] = useState("inactive");
@@ -29,12 +29,12 @@ const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
             className={styles.projectsContent}
           >
             <div className={styles.left}>
-              <motion.div className={styles.topLeft} variants={textanimation}>
+              <motion.div className={styles.topLeft} variants={textAnimation}>
                 <motion.p>{projectData.projectNumber}</motion.p>
               </motion.div>
               <motion.div
                 className={styles.middleLeft}
-                variants={textanimation}
+                variants={textAnimation}
               >
                 <h1>{projectData.projectTitle}</h1>
                 <p>{projectData.projectTag}</p>
@@ -43,14 +43,14 @@ const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
             <div className={styles.right}>
               <motion.div
                 className={styles.middleRight}
-                variants={textanimation}
+                variants={textAnimation}
               >
                 <motion.h3>IDEA</motion.h3>
                 <p>{projectData.description}</p>
               </motion.div>
               <motion.div
                 className={styles.bottomRight}
-                variants={textanimation}
+                variants={textAnimation}
               >
                 <p>{projectData.projectTech}</p>
               </motion.div>

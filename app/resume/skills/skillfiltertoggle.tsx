@@ -16,19 +16,57 @@ const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
 
   return (
     <div className={styles.filterToggleContainer}>
-      {tags.map((tag) => (
-        <div key={tag}>
-          <motion.button
-            onClick={() => toggleTag(tag)}
-            className={selectedTags.includes(tag) ? styles.selected : ""}
+      {tags.map((tag) => {
+        const isSelected = selectedTags.includes(tag);
+        return (
+          <motion.div
+            key={tag}
+            className={styles.buttonWrapper}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+              delay: 0.1 * tags.indexOf(tag),
+            }}
           >
-            <div className={styles.circle}></div>
-            <div className={styles.tag}>
-              <p>{tag}</p>
-            </div>
-          </motion.button>
-        </div>
-      ))}
+            <motion.button
+              onClick={() => toggleTag(tag)}
+              className={isSelected ? styles.selected : ""}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{
+                scale: 0.95,
+                rotate: [0, 5, -5, 0],
+                transition: { duration: 0.2 },
+              }}
+              layout
+              animate={{
+                backgroundColor: isSelected ? "#ef5e04" : "transparent",
+                color: isSelected ? "#26221b" : "#fff",
+                borderColor: isSelected ? "transparent" : "#fff",
+              }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <motion.div
+                className={styles.circle}
+                layout
+                animate={{
+                  backgroundColor: isSelected ? "#26221b" : "#fff",
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              ></motion.div>
+              <motion.div
+                className={styles.tag}
+                layout
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <p>{tag}</p>
+              </motion.div>
+            </motion.button>
+          </motion.div>
+        );
+      })}
     </div>
   );
 };

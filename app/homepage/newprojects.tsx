@@ -10,7 +10,6 @@ import { projectData } from "@/utils/data/projectdata";
 
 const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<number>(0);
-  console.log(selectedCircle);
 
   const [useprojectData, setProjectData] = useState<Project>();
 
@@ -60,13 +59,19 @@ const NewProjects = () => {
         <div className={styles.circlesContainer}>
           {circles.map((circle) => (
             <motion.div
-              whileHover={{ scale: 1.2 }}
               key={circle.id}
               className={`${styles.circle} ${
                 selectedCircle === circle.id ? styles.selected : ""
               }`}
               onClick={() => {
                 handleCircleClick(circle.id);
+              }}
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+              animate={{
+                backgroundColor:
+                  selectedCircle === circle.id ? "#1f282e" : "transparent",
+                transition: { duration: 0.3 },
               }}
             ></motion.div>
           ))}

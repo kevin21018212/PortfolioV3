@@ -1,5 +1,7 @@
+// animations.ts
+
 // Enhanced text animation with added bounce effect and easing
-export const textanimation = {
+export const textAnimation = {
   inactive: {
     opacity: 0,
     x: "-5vh",
@@ -100,5 +102,51 @@ export const boxVariants = {
       ease: "linear",
       duration: 0.25,
     },
+  },
+};
+
+export const bounceVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 20,
+      delay: 0.3,
+    },
+  },
+};
+
+export const circleVariants = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: {
+    scale: [0, 1.5, 1],
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 20,
+    },
+  },
+};
+
+export const titleVariants = {
+  hidden: { x: -100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+};
+
+export const descriptionTextVariants = {
+  hidden: { x: 100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+};
+
+export const cornerVariants = {
+  hidden: { rotate: 0, opacity: 0 },
+  visible: {
+    rotate: 360,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 300, damping: 20 },
   },
 };

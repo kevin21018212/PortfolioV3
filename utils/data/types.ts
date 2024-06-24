@@ -15,7 +15,6 @@ export type SkillData = {
   tags: string[];
 };
 
-
 export type ClassesCardProps = {
   category: {
     name: string;
@@ -36,6 +35,7 @@ export type SkillCardProps = {
   title: string;
   skillName: string;
   experience: string;
+  index: any;
 };
 
 export type SkillFilterToggleProps = {
