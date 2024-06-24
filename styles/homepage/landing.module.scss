@@ -14,13 +14,19 @@
   background-size: cover;
 }
 
+.mainBox {
+  grid-column: 4 / span 10;
+  grid-row: 4 / span 8;
+  @extend .flexCenter;
+}
 .textBox {
-  grid-column: 5 / span 9;
-  grid-row: 4 / span 7;
-  padding: 5%;
+  padding: 5% 10%;
+
+  width: 90%;
   @extend .boxBackground;
   @extend .flexCenter;
   flex-direction: column;
+  z-index: 50;
   h1 {
     @extend .title;
     color: $textPrimary;

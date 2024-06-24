@@ -13,7 +13,7 @@
   width: 45%;
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
-  @extend .flex-column;
+  @extend .flexColumn;
   justify-content: flex-end;
   box-shadow: $buttonShadow;
 }
@@ -27,7 +27,7 @@
 /* Non-image */
 .workbox {
   width: 60%;
-  @extend .flex-column;
+  @extend .flexColumn;
   justify-content: center;
   margin-bottom: 10%;
 }
@@ -37,7 +37,7 @@
   width: 80%;
   margin-left: -25%;
   padding: 2.5% 0% 2.5% 5%;
-  @extend .flex-column;
+  @extend .flexColumn;
   justify-content: center;
   @extend .boxBackground;
 }

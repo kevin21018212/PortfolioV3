@@ -21,7 +21,9 @@
 .imageContainer {
   height: 70%;
   width: 100%;
-  background: #d9d9d9;
+  background: url("../../../public/project/waves.jpg");
+  background-size: cover;
+  background-position: bottom;
   border-radius: 100px 0 0 0;
   box-shadow: $boxShadow;
 
@@ -71,8 +73,8 @@
   align-items: flex-start;
   padding: 1.5%;
   .descriptionContainer {
-    width: 60%;
-    height: 65%;
+    width: 70%;
+    height: 80%;
 
     border-radius: 0 30px 0 30px;
     @extend .flexCenter;
@@ -86,24 +88,26 @@
   }
 
   .tagContainer {
-    width: 60%;
-    height: 35%;
-    @extend .flexCenter;
+    width: 70%;
+    height: 20%;
+    margin-top: 2.5%;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1vw;
 
     .tag {
-      width: 45%;
-      height: 25%;
+      width: 32%;
+      margin: 1.5% 0.5%;
+
       display: flex;
       justify-content: center;
       align-items: center;
       background: #8cdc9e;
+      box-shadow: $buttonShadow;
       border-radius: 20px;
       h3 {
         @extend .seperated;
-        font-size: 1.5vw;
+        font-size: 1vw;
+        letter-spacing: 2px;
       }
     }
   }

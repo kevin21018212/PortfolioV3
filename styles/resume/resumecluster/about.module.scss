@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 .aboutdisplay {
   align-self: flex-end;
@@ -10,7 +10,7 @@
   .abouttext {
     width: 40%;
     padding: 1.5%;
-    @extend .flex-column;
+    @extend .flexColumn;
     justify-content: flex-start;
     background: $simpleGradient;
     h4 {

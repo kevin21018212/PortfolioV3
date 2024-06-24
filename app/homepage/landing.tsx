@@ -4,19 +4,29 @@ import { motion } from "framer-motion";
 import styles from "@/styles/homepage/landing.module.scss";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { boxVariants } from "../../utils/framer";
+import { boxVariants, containerVariants } from "../../utils/framer";
+import Magnetic from "@/utils/animations/magnet";
 
 const Landing = () => {
   return (
     <div className={styles.landingContainer}>
       <div className={styles.liquidGradient}></div>
 
-      <div className={styles.textBox}>
-        <h1>Developer</h1>
-        <h1>Programmer</h1>
-        <h1>Designer</h1>
+      <div className={styles.mainBox}>
+        <Magnetic>
+          <motion.div
+            className={styles.textBox}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={containerVariants}
+          >
+            <h1>Developer</h1>
+            <h1>Programmer</h1>
+            <h1>Designer</h1>
+          </motion.div>
+        </Magnetic>
       </div>
-
       {/* Animate infoBox */}
 
       <motion.div

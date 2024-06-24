@@ -46,14 +46,14 @@
   height: 25vh;
   background: $background;
   border-radius: 50%;
-  top: 5%;
+  top: 2.5%;
   @extend .flexCenter;
 }
 
 .circle {
   width: 90%;
   height: 90%;
-  background: none;
+  background: url("../../../public/project/jungle.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -116,4 +116,5 @@
   height: 100%;
   background: #e8f89f;
   border-radius: 30px 180px 0px 30px;
+  box-shadow: $boxShadow;
 }
