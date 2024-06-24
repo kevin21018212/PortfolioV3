@@ -1,0 +1,128 @@
+@import "/app/common.module.scss"; // Import the common SCSS file
+
+.workcontainer {
+  height: 100%;
+}
+
+.workinfo {
+  height: 125vh;
+  display: flex;
+}
+
+.workimg {
+  width: 45%;
+  background: url(../../../public/deereimg.jpeg);
+  background-size: cover;
+  @extend .flex-column;
+  justify-content: flex-end;
+  box-shadow: $buttonShadow;
+}
+
+.worktext {
+  height: 12.5%;
+  overflow: hidden;
+  box-shadow: $topShadow;
+}
+
+/* Non-image */
+.workbox {
+  width: 60%;
+  @extend .flex-column;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+/* Display For Jobs */
+.workdisplay {
+  width: 80%;
+  margin-left: -25%;
+  padding: 2.5% 0% 2.5% 5%;
+  @extend .flex-column;
+  justify-content: center;
+  @extend .boxBackground;
+}
+
+.jobtext {
+  p {
+    font-family: "MDNichrome Thin", sans-serif;
+    color: $textSecondary;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+    &:nth-child(2) {
+      padding-left: 5%;
+    }
+
+    &:nth-child(3) {
+      padding-left: 10%;
+    }
+
+    &:nth-child(4) {
+      padding-left: 15%;
+    }
+  }
+
+  h5 {
+    font-family: "Monument Grotesk Regular", sans-serif;
+    color: $textPrimary;
+  }
+}
+
+/* About Display */
+.aboutdisplay {
+  width: 100%;
+  height: 32.5vh;
+  @extend .flex-horizontal;
+
+  justify-content: flex-end;
+  margin-top: -5%;
+  padding-bottom: 15vh;
+}
+
+@media screen and (max-width: 900px) {
+  .workdisplay {
+    width: 75vw;
+    height: 50%;
+    padding: 0 7.5%;
+    margin-left: -70%;
+  }
+
+  .workimg {
+    width: 50%;
+  }
+
+  .workbox {
+    width: 45%;
+  }
+
+  .aboutdisplay {
+    width: 100%;
+    height: 25vh;
+    margin-top: -5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .workdisplay {
+    width: 95vw;
+    height: 60vh;
+    margin-left: -65vw;
+  }
+
+  .worktext {
+    height: 7.5%;
+  }
+
+  .workimg {
+    width: 65%;
+  }
+
+  .workbox {
+    width: 35%;
+  }
+
+  .aboutdisplay {
+    width: 100%;
+    height: 40vw;
+    margin-top: 10%;
+  }
+}

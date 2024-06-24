@@ -1,0 +1,86 @@
+/* styles.module.css */
+
+.container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.container h1 {
+  font-size: 5vw;
+}
+
+.titles {
+  width: 100%;
+  border-top: 1px solid rgba(183, 171, 152, 0.25);
+}
+
+.title {
+  border-bottom: 1px solid rgba(183, 171, 152, 0.25);
+  cursor: default;
+  position: relative;
+}
+
+.wrapper {
+  display: inline-block;
+  padding-left: 5%;
+}
+
+.wrapper h1 {
+  display: inline-block;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 7.5vw;
+  margin: 0px;
+  position: relative;
+}
+
+.wrapper h1:nth-of-type(2) {
+  display: block;
+  position: absolute;
+  color: #1c1c1c;
+  top: 0;
+}
+
+.descriptions {
+  position: absolute;
+  top: 3px;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.description {
+  background-color: #ec4e39;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  clip-path: inset(50% 0 50%);
+  transition: clip-path 0.4s;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+}
+.description h1 {
+  color: #010101;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 7.5vw;
+  margin: 0px;
+  padding-right: 10%;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+.description h6 {
+  color: #010101;
+
+  font-weight: 700;
+}

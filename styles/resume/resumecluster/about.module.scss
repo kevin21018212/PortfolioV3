@@ -1,0 +1,58 @@
+@import '/app/common.module.scss';
+
+.aboutdisplay {
+  align-self: flex-end;
+  display: flex;
+  width: 45%;
+  height: 100%;
+  box-shadow: $boxShadow;
+
+  .abouttext {
+    width: 40%;
+    padding: 1.5%;
+    @extend .flex-column;
+    justify-content: flex-start;
+    background: $simpleGradient;
+    h4 {
+      color: $textPrimary;
+    }
+    p {
+      margin: 1.5% 0% 0% 10%;
+    }
+  }
+
+  .aboutimg {
+    width: 60%;
+    background-color: $boxBackground;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 60%;
+
+    .abouttext,
+    .aboutimg {
+      width: 50%;
+    }
+
+    .abouttext p {
+      padding-left: 5%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 80%;
+
+    .abouttext {
+      padding-top: 2.5%;
+      width: 45%;
+    }
+
+    .aboutimg {
+      width: 55%;
+    }
+
+    .abouttext p {
+      padding-left: 5%;
+    }
+  }
+}

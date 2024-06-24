@@ -21,9 +21,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/public/*": ["./public/*"],
-
-      "@/motion/*": ["./app/data/motion/*"]
+      "@/public/*": ["./public/*"]
     }
   },
   "include": [
@@ -31,9 +29,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/data/motion/ScrollText.jsx",
-    "app/data/motion/Character.jsx",
-    "app/data/motion/HoverBox.jsx"
-, "app/data/functions.js", "app/data/functions.js"  ],
+    "utils/data/motion/ScrollText.jsx",
+    "utils/data/motion/Character.jsx",
+    "utils/data/motion/HoverBox.jsxx.jsx",
+    "utils/data/functions.js",
+    "utils/data/functions.js"
+  ],
   "exclude": ["node_modules"]
 }

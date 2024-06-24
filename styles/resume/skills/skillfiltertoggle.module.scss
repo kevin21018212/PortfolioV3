@@ -1,0 +1,68 @@
+@import '/app/common.module.scss';
+
+.filterToggleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75vw;
+
+  button {
+    position: relative;
+    padding: 1.5vh 2vw;
+    background-color: transparent;
+    color: $textPrimary;
+    border: 2px solid $textPrimary;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: $buttonShadow;
+
+    p {
+      font-size: 1.25vw;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 30px;
+      background-color: $textPrimary;
+      margin-right: 15px;
+    }
+
+    &.selected {
+      background-color: $primaryColor;
+      border: none;
+      p {
+        color: #26221b;
+      }
+
+      .circle {
+        background-color: #26221b;
+        border-color: #26221b;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .filterToggleContainer {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 95%;
+
+    button {
+      flex-grow: 1;
+    }
+
+    .tag p {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tag p {
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,56 @@
+/*Left Side*/
+.description {
+  display: flex;
+  height: 40vh;
+  padding: 5%;
+}
+
+/*Right Side*/
+.info {
+  width: 50%;
+}
+
+.image {
+  border-radius: 25px;
+  height: 50%;
+  background: var(--simpleGradient);
+}
+
+.about {
+  h5 {
+    font-family: var(--mediumSeperated);
+  }
+
+  h3 {
+    color: var(--textPrimary);
+  }
+}
+
+/*Hover text*/
+.hoverText {
+  transition: 0.35s font-weight, 0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+.hoverText {
+  transition: font-weight 0.35s, color 0.35s; // Combine transitions
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+@media screen and (max-width: 600px) {
+  .info {
+    width: 60%;
+  }
+
+  .image {
+    height: 40%;
+  }
+}

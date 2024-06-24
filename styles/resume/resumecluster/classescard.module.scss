@@ -1,0 +1,73 @@
+@import "/app/common.module.scss"; // Import the common SCSS file
+
+.card {
+  width: 35%;
+  background: $simpleGradient;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 1%;
+  overflow: hidden; // Changed from overflow-x to overflow
+  height: 75%;
+  box-shadow: $boxShadow;
+  border-radius: 10px;
+}
+
+.description {
+  width: 100%;
+  background-color: $textPrimary;
+  box-shadow: $buttonShadow;
+  transition: height 0.3s ease;
+
+  .title {
+    padding-left: 2.5%;
+
+    display: flex;
+    align-items: center;
+    color: black;
+    h5 {
+      font-size: 2vw;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+
+    p {
+      margin-left: 2.5%;
+      font-size: 1.15vw;
+      letter-spacing: 0.5px;
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 85%;
+    height: 55vh;
+    margin-bottom: 2.5vh;
+  }
+
+  .description .content p {
+    font-size: 2.5vw;
+  }
+
+  .description .title {
+    font-size: 5vw;
+    margin-top: 0;
+    padding-top: 0.5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .description .title {
+    font-size: 6vw;
+    margin: 5% 0%;
+    padding: 0%;
+  }
+
+  .description .content p {
+    font-size: 3.5vw;
+  }
+}
