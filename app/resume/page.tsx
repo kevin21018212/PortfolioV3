@@ -72,7 +72,17 @@ const SubHeading = () => (
   <motion.div className={styles.subHeading} variants={childVariants}>
     <h4>
       Below you can see some of my tools or
-      <strong className={styles.simpleGradient}> download resume </strong>
+      <motion.a
+        href="/resume.pdf"
+        className={styles.simpleGradient}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {"  "}
+        download resume{" "}
+      </motion.a>
       for a more formal look at my talents
     </h4>
   </motion.div>
