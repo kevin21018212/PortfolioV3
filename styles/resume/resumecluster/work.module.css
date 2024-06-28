@@ -1,0 +1,113 @@
+.workcontainer {
+  height: 100%;
+}
+.workinfo {
+  height: 120vh;
+  display: flex;
+}
+.workimg {
+  width: 40%;
+  background: url(../../../../public/deereimg.jpeg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: var(--buttonShadow);
+}
+
+.worktext {
+  height: 10%;
+  overflow: hidden;
+  box-shadow: var(--topShadow);
+}
+
+/* Non-image */
+.workbox {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+
+/* Display For Jobs */
+.workdisplay {
+  width: 70vw;
+  margin-left: -30%;
+  margin-top: 15%;
+  padding: 2.5% 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #131313;
+  justify-content: center;
+  box-shadow: var(--boxShadow);
+}
+
+.jobtext p {
+  font-family: "MDNichrome Thin", sans-serif;
+}
+.jobtext h5 {
+  font-family: "Monument Grotesk Regular", sans-serif;
+}
+
+.jobtext p:nth-child(2) {
+  padding-left: 5%;
+}
+
+.jobtext p:nth-child(3) {
+  padding-left: 10%;
+}
+.jobtext p:nth-child(4) {
+  padding-left: 15%;
+}
+
+/* About Display */
+.aboutdisplay {
+  width: 100%;
+  height: 35vh;
+  margin-top: -12.5%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 900px) {
+  .workdisplay {
+    width: 75vw;
+    height: 50%;
+    padding: 0% 7.5%;
+    margin-left: -70%;
+  }
+  .workimg {
+    width: 50%;
+  }
+  .workbox {
+    width: 45%;
+  }
+
+  .aboutdisplay {
+    width: 100%;
+    height: 25vh;
+    margin-top: -5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .workdisplay {
+    width: 95vw;
+    height: 60vh;
+    margin-left: -65vw;
+  }
+  .worktext {
+    height: 7.5%;
+  }
+  .workimg {
+    width: 65%;
+  }
+  .workbox {
+    width: 35%;
+  }
+  .aboutdisplay {
+    width: 100%;
+    height: 40vw;
+    margin-top: 10%;
+  }
+}
