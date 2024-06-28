@@ -4,47 +4,78 @@ import styles from "./resume.module.scss";
 import ResumeClasses from "./resumecluster/classes";
 import ResumeWork from "./resumecluster/work";
 import SkillSlider from "./skills/skillslider";
+import { motion } from "framer-motion";
+
+// Animation variants for the main container and its children
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 const ResumePage = () => {
   return (
-    <div className={styles.resumeContainer}>
+    <motion.div
+      className={styles.resumeContainer}
+      initial="hidden"
+      whileInView="visible"
+      variants={containerVariants}
+    >
       <Header />
-      <div className={styles.skillSlider}>
+      <motion.div className={styles.skillSlider}>
         <SkillSlider />
-      </div>
-      <div className={styles.work}>
+      </motion.div>
+      <motion.div className={styles.work}>
         <ResumeWork />
-      </div>
-      <div className={styles.classes}>
+      </motion.div>
+      <motion.div className={styles.classes}>
         <ResumeClasses />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
 const Header = () => (
-  <div className={styles.headerContainer}>
+  <motion.div
+    className={styles.headerContainer}
+    initial="hidden"
+    whileInView="visible"
+    variants={containerVariants}
+  >
     <Heading />
     <SubHeading />
-  </div>
+  </motion.div>
 );
 
 const Heading = () => (
-  <div className={styles.heading}>
+  <motion.div className={styles.heading} variants={childVariants}>
     <h2>
       Coding is only a tool of expression. Beauty can only be found in the art
     </h2>
-  </div>
+  </motion.div>
 );
 
 const SubHeading = () => (
-  <div className={styles.subHeading}>
+  <motion.div className={styles.subHeading} variants={childVariants}>
     <h4>
       Below you can see some of my tools or
       <strong className={styles.simpleGradient}> download resume </strong>
       for a more formal look at my talents
     </h4>
-  </div>
+  </motion.div>
 );
 
 export default ResumePage;
