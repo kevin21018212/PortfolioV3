@@ -1,12 +1,13 @@
 @import "/app/common.module.scss";
+
 .pageContainer {
   @extend .flexColumnCenter;
-
   width: 90vw;
   padding: 0 5vw;
   height: auto;
   gap: 2vw 0;
 }
+
 .spacer {
   height: 50vh;
 }

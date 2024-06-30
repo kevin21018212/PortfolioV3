@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./project.module.scss";
-
+import styles from "./projectPage.module.scss";
 import Dash from "./displayed/Dash";
 import Projects from "./nav/project";
 import KevFm from "./displayed/KevFm";

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/project/project.module.css";
+import styles from "@/styles/project/project.module.scss";
 import { Project } from "@/utils/data/types";
 
 type DescriptionProps = {
