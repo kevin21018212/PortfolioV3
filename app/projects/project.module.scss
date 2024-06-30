@@ -3,17 +3,36 @@
   @extend .flexColumnCenter;
 
   width: 90vw;
-  padding: 5vw;
+  padding: 0 5vw;
   height: auto;
   gap: 2vw 0;
 }
 .spacer {
   height: 50vh;
 }
-.featuredProject {
-  height: 60vh;
+.updatesSection {
+  height: 75vh;
+  width: 100vw;
+}
+
+.title {
   width: 100%;
+  padding: 2.5vh 0;
+  color: $textPrimary;
+}
+
+.content {
   display: flex;
+  width: 90%;
+  padding: 0% 5%;
+  .leftColumn {
+    width: 30%;
+  }
+
+  .rightColumn {
+    width: 70%;
+    @extend .flexCenter;
+  }
 }
 
 .projects {
@@ -25,7 +44,7 @@
 }
 
 .projectContainer {
-  height: 60vh;
+  height: 65vh;
   width: 85vw;
   margin: 2.5vw 0;
   display: flex;

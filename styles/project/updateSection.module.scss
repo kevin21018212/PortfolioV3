@@ -1,0 +1,25 @@
+@import "/app/common.module.scss";
+.updateSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw 2vh;
+}
+.commitCard {
+  width: 18vw;
+  height: 18vh;
+  padding: 0vw 1vw;
+  border-radius: 5px;
+  background-color: $boxBackground;
+  @extend .boxBackground;
+  text-overflow: wrap;
+}
+
+.commitCard h3 {
+  font-size: 2vw;
+  color: $textPrimary;
+}
+
+.commitCard p {
+  margin: 0;
+  color: $textSecondary;
+}
