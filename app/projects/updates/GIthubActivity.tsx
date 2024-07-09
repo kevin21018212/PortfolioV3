@@ -19,7 +19,7 @@ const GitHubActivity: React.FC = () => {
 
   useEffect(() => {
     if (!username || !accessToken) {
-      setError('GitHub username or access token is missing.');
+      console.log('GitHub username or access token is missing.');
       return;
     }
 
@@ -81,8 +81,9 @@ const GitHubActivity: React.FC = () => {
             delay: 0.1 * index,
           }}>
           <h3>{commit.repoName}</h3>
-          <p>{commit.commitDate}</p>
-          <p>{commit.commitMessage}</p>
+          <p>
+            {commit.commitDate} - {commit.commitMessage}
+          </p>
         </motion.div>
       ))}
     </div>

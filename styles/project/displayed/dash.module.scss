@@ -8,13 +8,13 @@
 }
 
 .leftSection {
-  width: 40%;
+  width: 35%;
   @extend .flexColumnCenter;
   gap: 1vw;
 }
 
 .rightSection {
-  width: 60%;
+  width: 65%;
 }
 
 /*Left Section*/
@@ -48,14 +48,14 @@
   .dash {
     @extend .heading;
     color: $textPrimary;
-    font-size: 6.5vw;
+    font-size: 5.5vw;
     margin-left: 5%;
   }
 
   .taskTracking {
     @extend .subHeading;
-    margin-top: -3%;
-    margin-left: 5%;
+    margin-top: -2vh;
+    margin-left: 2.5vw;
   }
 }
 
@@ -69,53 +69,67 @@
 }
 
 .mainContentLeft {
-  width: 60%;
-  @extend .flexColumnCenter;
-  align-items: flex-start;
+  width: 70%;
+  @extend .flexCenter;
   padding: 1.5%;
-  .descriptionContainer {
-    width: 85%;
-    height: 75%;
 
-    border-radius: 0 30px 0 30px;
-    @extend .flexCenter;
-    border: 2px solid #f0f0f0;
+  .info {
+    width: 60%;
+    height: 100%;
+    .descriptionContainer {
+      height: 75%;
+      border-radius: 0 30px 0 30px;
+      @extend .flexCenter;
+      border: 2px solid #f0f0f0;
 
-    .description {
-      @extend .description;
-      font-size: 1.25vw;
-      padding: 2%;
+      .description {
+        @extend .description;
+        font-size: 1.25vw;
+        padding: 2%;
+      }
     }
-  }
 
-  .tagContainer {
-    width: 85%;
-    height: 25%;
-    margin-top: 2.5%;
-    display: flex;
-    flex-wrap: wrap;
-
-    .tag {
-      width: 32%;
-      margin: 1.5% 0.5%;
-
+    .tagContainer {
+      height: 25%;
+      margin-top: 2.5%;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #8cdc9e;
-      box-shadow: $buttonShadow;
-      border-radius: 20px;
-      h3 {
-        @extend .seperated;
-        font-size: 0.9vw;
-        letter-spacing: 2px;
+      flex-wrap: wrap;
+
+      .tag {
+        width: 32%;
+        margin: 1.5% 0.5%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #8cdc9e;
+        box-shadow: $buttonShadow;
+        border-radius: 20px;
+        h3 {
+          @extend .seperated;
+          font-size: 0.9vw;
+          letter-spacing: 2px;
+        }
       }
     }
   }
 }
+.images {
+  width: 40%;
+  height: 100%;
+  @extend .flexColumnCenter;
+  justify-content: space-between;
+  .imageBox {
+    height: 30%;
+    width: 80%;
+    border-radius: 30px;
+    box-shadow: $boxShadow;
+    background: #f2e582;
+  }
+}
 
 .mainContentRight {
-  width: 40%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -129,7 +143,9 @@
     @extend .flexCenter;
     padding: 0% 5%;
     .symbolContainer {
-      width: 70%;
+      @extend .flexColumnCenter;
+      justify-content: space-between;
+      width: 50%;
       height: 90%;
       border: 3px solid #ffffff;
       border-radius: 20px;
@@ -143,7 +159,7 @@
       h2 {
         transform: rotate(90deg);
         @extend .title;
-        font-size: 5.25vh;
+        font-size: 6vh;
         text-wrap: nowrap;
         letter-spacing: 4px;
         color: $textPrimary;

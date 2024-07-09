@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./projectPage.module.scss";
-import Dash from "./displayed/Dash";
-import Projects from "./nav/project";
-import KevFm from "./displayed/KevFm";
-import GitHubActivity from "./updates/GIthubActivity";
+import React from 'react';
+import styles from './projectPage.module.scss';
+import Dash from './displayed/Dash';
+import Projects from './nav/project';
+import KevFm from './displayed/KevFm';
+import GitHubActivity from './updates/GIthubActivity';
 
 const ProjectsPage: React.FC = () => {
   return (

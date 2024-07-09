@@ -1,25 +1,27 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 .updateSection {
-  display: flex;
+  @extend .flexCenter;
   flex-wrap: wrap;
-  gap: 1vw 2vh;
+  gap: 1vw 1vw;
+  padding: 1vh 1vw;
 }
 .commitCard {
-  width: 18vw;
-  height: 16vh;
+  width: 15vw;
+  height: 15vh;
   padding: 1vw;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: $boxBackground;
   @extend .boxBackground;
   text-overflow: wrap;
 }
 
 .commitCard h3 {
-  font-size: 2vw;
+  font-size: 1.75vw;
   color: $textPrimary;
 }
 
 .commitCard p {
   margin: 0;
+  font-size: 1.25vw;
   color: $textSecondary;
 }
