@@ -19,12 +19,12 @@
     color: $textSecondary;
   }
   .simpleGradient {
-    background: $simpleGradient;
-
-    background-clip: text; /* For modern browsers */
-    color: transparent;
-    text-decoration: none;
-    padding: 5px;
+    background: linear-gradient(90deg, $primaryColor, $secondaryColor);
+    display: inline-block; // Ensure it scales properly
+    transition: color 0.3s ease-out; // Optional, for color transition
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1.5%;
   }
 }
 

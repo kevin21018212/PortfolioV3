@@ -34,7 +34,10 @@ export const staggerChildrenAnimation = {
 
 // Description variants with smoother transitions
 export const descriptionVariants = {
-  hidden: { height: "12.5%", opacity: 0 },
+  hidden: {
+    height: "12.5%",
+    opacity: 0,
+  },
   visible: {
     height: "82.5%",
     opacity: 1,
@@ -46,6 +49,7 @@ export const descriptionVariants = {
   },
 };
 
+// Container variants for scaling and fading
 export const containerVariants = {
   hidden: {
     opacity: 0,
@@ -64,6 +68,7 @@ export const containerVariants = {
   },
 };
 
+// Box variants for entry, exit, and hover animations
 export const boxVariants = {
   hidden: {
     opacity: 0,
@@ -105,8 +110,12 @@ export const boxVariants = {
   },
 };
 
+// Bounce variants for visibility transitions
 export const bounceVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
   visible: {
     opacity: 1,
     y: 0,
@@ -119,8 +128,12 @@ export const bounceVariants = {
   },
 };
 
+// Circle variants for scaling and opacity transitions
 export const circleVariants = {
-  hidden: { scale: 0, opacity: 0 },
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
   visible: {
     scale: [0, 1.5, 1],
     opacity: 1,
@@ -132,21 +145,49 @@ export const circleVariants = {
   },
 };
 
+// Title variants for slide-in effect
 export const titleVariants = {
-  hidden: { x: -100, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
 };
 
+// Description text variants for slide-in effect
 export const descriptionTextVariants = {
-  hidden: { x: 100, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+  hidden: {
+    x: 100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
 };
 
+// Corner variants for rotation and opacity transitions
 export const cornerVariants = {
-  hidden: { rotate: 0, opacity: 0 },
+  hidden: {
+    rotate: 0,
+    opacity: 0,
+  },
   visible: {
     rotate: 360,
     opacity: 1,
-    transition: { type: "spring", stiffness: 300, damping: 20 },
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    },
   },
 };

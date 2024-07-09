@@ -1,15 +1,25 @@
 import React from "react";
-
-import styles from "./project.module.scss";
-
+import styles from "./projectPage.module.scss";
 import Dash from "./displayed/Dash";
 import Projects from "./nav/project";
 import KevFm from "./displayed/KevFm";
+import GitHubActivity from "./updates/GIthubActivity";
 
-const ProjectsPage = () => {
+const ProjectsPage: React.FC = () => {
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.featuredProject}></div>
+      <div className={styles.updatesSection}>
+        <div className={styles.title}>
+          <h2>Recent Updates</h2>
+        </div>
+        <div className={styles.content}>
+          <div className={styles.leftColumn}></div>
+          <div className={styles.rightColumn}>
+            <GitHubActivity />
+          </div>
+        </div>
+      </div>
+
       <div className={styles.nav}>
         <Projects />
       </div>
