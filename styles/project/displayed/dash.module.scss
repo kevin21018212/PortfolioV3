@@ -71,7 +71,7 @@
 .mainContentLeft {
   width: 70%;
   @extend .flexCenter;
-  padding: 1.5%;
+  padding: 2%;
 
   .info {
     width: 60%;
@@ -144,7 +144,7 @@
     padding: 0% 5%;
     .symbolContainer {
       @extend .flexColumnCenter;
-      justify-content: space-between;
+      gap: 5vw;
       width: 50%;
       height: 90%;
       border: 3px solid #ffffff;

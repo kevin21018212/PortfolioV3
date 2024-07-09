@@ -62,8 +62,8 @@ const Dash = () => {
           <motion.div className={styles.mainContentRight} variants={containerVariants} transition={{duration: 0.6}}>
             <motion.div className={styles.top} variants={containerVariants} transition={{delay: 0.8, duration: 0.6}}>
               <div className={styles.symbolContainer}>
-                <FaHourglassHalf size={100} color='#F0F0F0' />
-                <FaUserCircle size={100} color='#F0F0F0' />
+                <FaHourglassHalf size={80} color='#F0F0F0' />
+                <FaUserCircle size={80} color='#F0F0F0' />
               </div>
               <div className={styles.project001}>
                 <h2>{project.projectNumber}</h2>

@@ -48,10 +48,10 @@ export const projectData: Project[] = [
   {
     id: 5,
     projectNumber: 'Project 005',
-    projectTitle: 'D.REW',
-    projectTag: 'Gateway to identity',
+    projectTitle: 'KevBot',
+    projectTag: 'Mini Me',
     description:
-      "D.REW invites you on a sensory journey through emotive melodies and evocative stories. It's more than music; it's an exploration of identity and emotion. Experience the power of sound and narrative as they intertwine to create a gateway to self-discovery. Each note resonates with a piece of your story, and each rhythm connects you with your inner self.",
+      'AI is the forfront of technology. KevBot is designed as a expirment to create a digital version of myself. I wanted to see if I could create a bot that could interface with the Twitter. ',
     projectTech: 'ART',
     imageUrl: '',
     linkUrl: '',
