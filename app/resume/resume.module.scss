@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 /* Container Styles */
 .resumeContainer {
@@ -26,6 +26,9 @@
     -webkit-text-fill-color: transparent;
     margin-right: 1.5%;
   }
+}
+.skillSlider {
+  margin: 0% 0.5%;
 }
 
 .work {

@@ -25,7 +25,7 @@ const ContactPage = () => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   return (
-    <motion.div className="pageContainer">
+    <motion.div className={styles.pageContainer}>
       {words.map((word, index) => (
         <a
           key={index}

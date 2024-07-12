@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import styles from "../project.module.scss";
+import styles from "@/styles/project/project.module.scss";
 import Descriptions from "./description";
 import Titles from "./title";
 import { projectData } from "@/utils/data/projectdata";
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   return (
     <div className={styles.container}>
@@ -15,4 +15,5 @@ const Projects = () => {
     </div>
   );
 };
+
 export default Projects;
