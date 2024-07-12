@@ -1,37 +1,57 @@
-'use client';
+"use client";
 
-import {motion} from 'framer-motion';
-import styles from '@/styles/homepage/landing.module.scss';
-import {FaGithub, FaLinkedin} from 'react-icons/fa';
-import {boxVariants, containerVariants} from '../../utils/framer';
-
-import {useState} from 'react';
-import useMousePosition from '@/utils/animations/useMousePosition';
+import { motion } from "framer-motion";
+import styles from "@/styles/homepage/landing.module.scss";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { boxVariants, containerVariants } from "../../utils/framer";
+import * as reactSpring from "@react-spring/three";
+import * as drei from "@react-three/drei";
+import * as fiber from "@react-three/fiber";
+import { useState } from "react";
+import useMousePosition from "@/utils/animations/useMousePosition";
+import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 
 const Landing: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const {x, y} = useMousePosition();
+  const { x, y } = useMousePosition();
   const size = isHovered ? 400 : 50;
 
   return (
     <div className={styles.landingContainer}>
-      <div className={styles.liquidGradient}></div>
+      <div className={styles.liquidGradient}>
+        <ShaderGradientCanvas
+          importedFiber={{ ...fiber, ...drei, ...reactSpring }}
+          style={{
+            zIndex: -1,
+            borderRadius: "0px 20px 20px 0px",
+          }}
+        >
+          <ShaderGradient
+            control="query"
+            urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=off&bgColor1=%23000000&bgColor2=%23000000&brightness=3&cAzimuthAngle=170&cDistance=10&cPolarAngle=50&cameraZoom=1&color1=%23efd404&color2=%23ef5e04&color3=%23ff7a00&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=45&frameRate=10&gizmoHelper=hide&grain=off&lightType=env&pixelDensity=0.5&positionX=-1&positionY=1&positionZ=-0.5&range=disabled&rangeEnd=40&rangeStart=0&reflection=0&rotationX=45&rotationY=0&rotationZ=0&shader=defaults&type=waterPlane&uAmplitude=0&uDensity=1.2&uFrequency=0&uSpeed=0.3&uStrength=5&uTime=0&wireframe=false"
+          />
+        </ShaderGradientCanvas>
+      </div>
 
       <div className={styles.textBox}>
         <motion.div
           className={styles.mask}
           animate={{
-            WebkitMaskPosition: `${x != null ? x - size / 2 : 0}px ${y != null ? y - size / 2 : 0}px`,
+            WebkitMaskPosition: `${x != null ? x - size / 2 : 0}px ${
+              y != null ? y - size / 2 : 0
+            }px`,
             WebkitMaskSize: `${size}px`,
           }}
-          transition={{type: 'tween', ease: 'backOut', duration: 0.5}}>
+          transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+        >
           <h1
             onMouseEnter={() => {
               setIsHovered(true);
             }}
             onMouseLeave={() => {
               setIsHovered(false);
-            }}>
+            }}
+          >
             Designer
             <br /> Developer <br />
             Programmer
@@ -45,14 +65,34 @@ const Landing: React.FC = () => {
           </h1>
         </div>
       </div>
-      <motion.div initial='hidden' animate='visible' whileHover='hover' variants={boxVariants} className={styles.symbolBox}>
-        <a href='https://github.com/kevin21018212' target='_blank' rel='noopener noreferrer'>
-          <FaGithub size={100} color='#F0F0F0' />
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+        variants={boxVariants}
+        className={styles.symbolBox}
+      >
+        <a
+          href="https://github.com/kevin21018212"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub size={100} color="#F0F0F0" />
         </a>
       </motion.div>
-      <motion.div initial='hidden' animate='visible' whileHover='hover' variants={boxVariants} className={styles.infoBox}>
-        <a href='https://www.linkedin.com/in/matthew-bennett-592102252/' target='_blank' rel='noopener noreferrer'>
-          <FaLinkedin size={100} color='#F0F0F0' />
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+        variants={boxVariants}
+        className={styles.infoBox}
+      >
+        <a
+          href="https://www.linkedin.com/in/matthew-bennett-592102252/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin size={100} color="#F0F0F0" />
         </a>
       </motion.div>
     </div>
