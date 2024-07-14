@@ -68,11 +68,8 @@
 .toggleButton {
   background: transparent;
   border: none;
-  cursor: pointer;
   width: 100%;
   height: 100%;
-  padding: 0;
   transition: transform 0.5s;
-  position: relative;
   @extend .flexCenter;
 }
