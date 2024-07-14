@@ -12,7 +12,7 @@ const useMousePosition = (): MousePosition => {
   });
 
   const updateMousePosition = (e: MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+    setMousePosition({ x: e.clientX + 20, y: e.clientY });
   };
 
   useEffect(() => {

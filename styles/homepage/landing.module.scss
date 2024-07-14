@@ -1,6 +1,7 @@
 @import "@/app/common.module.scss";
 .landingContainer {
   height: 87.5vh;
+
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
@@ -52,7 +53,14 @@
   @extend .flexCenter;
 }
 
-.mask,
+.mask {
+  width: 95vw;
+  height: 100%;
+  @extend .flexColumnCenter;
+  margin-left: -6vw;
+  padding-left: 5vw;
+}
+
 .body {
   width: 100%;
   height: 100%;
