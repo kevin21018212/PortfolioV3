@@ -126,3 +126,53 @@
     padding-left: 4vw;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    width: 22.5vw;
+  }
+
+  .navbar p {
+    font-size: 4vw;
+  }
+
+  .redTriangle {
+    border-width: 0 25vw 7.5vw 0;
+  }
+
+  .linksContainer {
+    margin-top: -20%;
+  }
+
+  .firstLink,
+  .secondLink,
+  .thirdLink,
+  .lastLink,
+  .emptyLink {
+    width: 30vw;
+    padding-left: 6vw;
+  }
+
+  .firstLink {
+    padding-left: 7vw;
+  }
+
+  .lastLink {
+    padding-left: 5vw;
+  }
+
+  .firstLink:hover,
+  .secondLink:hover,
+  .thirdLink:hover,
+  .lastLink:hover {
+    padding-left: 6vw;
+  }
+
+  .firstLink:hover {
+    padding-left: 7.5vw;
+  }
+
+  .lastLink:hover {
+    padding-left: 6vw;
+  }
+}
