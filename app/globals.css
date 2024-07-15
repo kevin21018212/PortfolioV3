@@ -78,7 +78,7 @@ h6 {
 /* Media Query for Screens up to 800px (Mobile) */
 @media screen and (max-width: 900px) {
   h1 {
-    font-size: 8vw;
+    font-size: 10vw;
     letter-spacing: 2px;
   }
   h2 {

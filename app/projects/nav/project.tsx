@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "../project.module.scss";
+import styles from "@/styles/project/project.module.scss";
 import Descriptions from "./description";
 import Titles from "./title";
 import { projectData } from "@/utils/data/projectdata";
