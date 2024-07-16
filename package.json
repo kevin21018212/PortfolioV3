@@ -38,4 +38,8 @@
   "devDependencies": {
     "@types/three": "^0.162.0"
   }
+    "overrides": {
+    "three": "^0.162.0"
+  }
+  
 }
