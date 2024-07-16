@@ -8,7 +8,7 @@ import { boxVariants } from "../../utils/framer";
 import * as reactSpring from "@react-spring/three";
 import * as drei from "@react-three/drei";
 import * as fiber from "@react-three/fiber";
-import useMousePosition from "@/utils/animations/useMousePosition";
+
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 
 // ShaderGradientBackground Component
