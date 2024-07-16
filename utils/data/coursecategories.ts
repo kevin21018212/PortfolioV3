@@ -1,5 +1,3 @@
-import { Linear } from "gsap";
-
 const courseCategories = [
   {
     name: " Software Engineering",
