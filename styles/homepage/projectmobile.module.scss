@@ -1,20 +1,19 @@
 @import '@/app/common.module.scss';
 
 .projectsComponent {
-  overflow: visible;
-
+  width: 100vw;
+  overflow-x: hidden;
   height: 350vh;
 }
 
 .projectContent {
-  width: 100%;
   height: 50vh;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 }
 
 .about {
@@ -43,6 +42,7 @@
 }
 
 .description {
-  width: 100%;
+  width: 100vw;
+
   margin-bottom: 2.5vh;
 }

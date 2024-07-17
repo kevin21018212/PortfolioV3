@@ -130,21 +130,3 @@ h6 {
     font-size: 4vw;
   }
 }
-
-html {
-  /*colors*/
-
-  /*Text*/
-  --mediumSeperated: 'Monument Grotesk Regular', sans-serif;
-
-  /*Shadow Stylign*/
-  --buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  --arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-  --topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
-  /*Gradient Styling*/
-
-  --complexGradient: radial-gradient(at 14.2% 15.2%, #ff0033 0px, transparent 50%), radial-gradient(at 45.3% 10.7%, #ff7a00 0px, transparent 50%),
-    radial-gradient(at 87% 83%, #ff0033 0px, transparent 50%), radial-gradient(at 45.7% 44.3%, #ff7a00 0px, transparent 50%),
-    radial-gradient(at 85.9% 43.1%, #ff4a00 0px, transparent 50%), radial-gradient(at 19.3% 76.5%, #ff4d00 0px, transparent 50%);
-}
