@@ -1,14 +1,14 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 .paragraph {
   display: flex;
   flex-wrap: wrap;
   @extend .seperated;
   letter-spacing: 1.5px;
   line-height: 0.5;
-  font-size: 3vw;
-  width: 50%;
+  font-size: 4.5vw;
+  width: 90%;
   text-align: left;
-  padding-right: 2.5%;
+  padding: 0% 5%;
 
   .word {
     position: relative;
