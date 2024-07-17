@@ -28,6 +28,8 @@
 /* Sizing for Iphone */
 @media screen and (max-width: 800px) {
   .toggleContainer {
-    width: 100vw;
+    width: 97vw;
+    display: flex;
+    justify-content: center;
   }
 }

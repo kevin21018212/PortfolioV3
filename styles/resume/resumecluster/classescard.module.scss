@@ -1,4 +1,4 @@
-@import "/app/common.module.scss"; // Import the common SCSS file
+@import '/app/common.module.scss'; // Import the common SCSS file
 
 .card {
   width: 35%;
@@ -26,6 +26,7 @@
     align-items: center;
     color: black;
     .h5 {
+      @extend .subHeading;
       font-size: 3vw;
     }
   }
@@ -62,9 +63,12 @@
 
 @media screen and (max-width: 600px) {
   .description .title {
-    font-size: 6vw;
-    margin: 5% 0%;
-    padding: 0%;
+    margin: 0%;
+  }
+  .title {
+    h5 {
+      font-size: 2.75vh;
+    }
   }
 
   .description .content p {

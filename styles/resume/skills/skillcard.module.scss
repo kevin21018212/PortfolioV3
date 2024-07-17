@@ -29,5 +29,12 @@
 @media screen and (max-width: 800px) {
   .skillcardContainer {
     width: 98%;
+    .card {
+      .text {
+        h5 {
+          font-size: 8vw;
+        }
+      }
+    }
   }
 }
