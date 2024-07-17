@@ -1,7 +1,6 @@
-@import "@/app/common.module.scss";
+@import '@/app/common.module.scss';
 .landingContainer {
-  height: 87.5vh;
-
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
@@ -16,21 +15,25 @@
 .textBox {
   grid-column: 5 / span 9;
   grid-row: 4 / span 7;
-  @extend .flexCenter;
+  @extend .flexColumnCenter;
   @extend .boxBackground;
   @extend .flexCenter;
-  flex-direction: column;
+  text-align: center;
+  .tags {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   h1 {
     @extend .title;
     color: $textPrimary;
-    text-align: center;
-    padding: 5%;
     font-size: 4.25vw;
-    span {
-      font-size: 3vw;
-      color: $textSecondary;
-      font-weight: 100;
-    }
+  }
+  h4 {
+    @extend .seperated;
+    color: $textSecondary;
+    font-size: 3vw;
+    margin: 1.5vh 2.5vw;
   }
 }
 
@@ -52,27 +55,4 @@
   z-index: 0;
   @extend .boxBackground;
   @extend .flexCenter;
-}
-
-.mask {
-  width: 95vw;
-  height: 100%;
-  @extend .flexColumnCenter;
-  margin-left: -6vw;
-  padding-left: 5vw;
-}
-
-.body {
-  width: 100%;
-  height: 100%;
-  @extend .flexColumnCenter;
-}
-
-.mask {
-  mask-image: url("../../public/mask.svg");
-  mask-repeat: no-repeat;
-  mask-size: 40px;
-  background: $primaryColor;
-  position: absolute;
-  color: black;
 }
