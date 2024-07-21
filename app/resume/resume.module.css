@@ -1,0 +1,42 @@
+.resumeContainer {
+  height: auto;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.headerContainer {
+  width: 90vw;
+  margin: 2.5%;
+}
+
+.work {
+  height: 150vh;
+  padding-top: 5%;
+}
+
+.classes {
+  height: 120vh;
+}
+
+@media only screen and (max-width: 1050px) {
+  .classes {
+    height: 200vh;
+  }
+  .heading {
+    width: 90%;
+  }
+  .subHeading {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .classes {
+    height: 200vh;
+  }
+  .heading {
+    width: 80%;
+  }
+  .subHeading {
+    width: 70%;
+  }
+}
