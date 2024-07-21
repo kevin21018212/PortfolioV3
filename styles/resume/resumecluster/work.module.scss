@@ -77,34 +77,18 @@
   padding-bottom: 10vh;
 }
 
-@media screen and (max-width: 900px) {
-  .workdisplay {
-    width: 75vw;
-    height: 50%;
-    padding: 0 7.5%;
-    margin-left: -70%;
-  }
-
-  .workimg {
-    width: 50%;
-  }
-
-  .workbox {
-    width: 45%;
-  }
-
-  .aboutdisplay {
-    width: 100%;
-    height: 25vh;
-    margin-top: -5%;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .workdisplay {
-    width: 95vw;
-    height: 60vh;
+    width: 92.5vw;
+    height: 67.5vh;
     margin-left: -65vw;
+    padding-left: 5vw;
+    padding-right: 2.5vw;
+    .jobtext {
+      p {
+        font-size: 4.5vw;
+      }
+    }
   }
 
   .worktext {

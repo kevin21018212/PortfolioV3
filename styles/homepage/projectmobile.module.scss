@@ -1,60 +1,48 @@
-@import "@/app/common.module.scss";
-/*Left Side*/
-.description {
-  display: flex;
+@import '@/app/common.module.scss';
 
-  padding: 2.5% 0% 2.5% 2.5%;
+.projectsComponent {
+  width: 100vw;
+  overflow-x: hidden;
+  height: 350vh;
 }
 
-/*Right Side*/
+.projectContent {
+  height: 50vh;
+}
+
 .info {
-  width: 50%;
-}
-
-.image {
-  border-radius: 25px;
-  height: 50%;
-  background: $simpleGradient;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
 .about {
-  padding-top: 2.5vh;
+  display: flex;
+  align-items: center;
+  height: 25vh;
+  padding-left: 4vw;
   h5 {
     font-family: var(--mediumSeperated);
     color: $textPrimary;
   }
 
-  h3 {
-    color: $textPrimary;
+  .text {
+    width: 50%;
+    @extend .flexCenter;
+    padding: 2.5vh 0;
+    text-align: center;
   }
-}
-
-/*Hover text*/
-.hoverText {
-  margin-top: 2.5%;
-  transition: 0.35s font-weight, 0.35s color;
-}
-
-.hoverText:hover {
-  font-weight: 900;
-  color: rgb(238, 242, 255);
-}
-
-.hoverText {
-  transition: font-weight 0.35s, color 0.35s; // Combine transitions
-}
-
-.hoverText:hover {
-  font-weight: 900;
-  color: rgb(238, 242, 255);
-}
-
-@media screen and (max-width: 600px) {
-  .info {
-    width: 60%;
-  }
-
   .image {
-    height: 40%;
+    margin: 0vh 2.5vw;
+    border-radius: 25px;
+    width: 50%;
+    height: 85%;
+    background: $simpleGradient;
   }
+}
+
+.description {
+  width: 100vw;
+
+  margin-bottom: 2.5vh;
 }

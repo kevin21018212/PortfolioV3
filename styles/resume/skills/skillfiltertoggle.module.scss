@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 .filterToggleContainer {
   display: flex;
@@ -48,25 +48,19 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .filterToggleContainer {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 95%;
-
-    button {
-      flex-grow: 1;
-    }
-
-    .tag p {
-      font-size: 2.5vw;
-    }
-  }
-}
-
 @media screen and (max-width: 600px) {
-  .tag p {
-    font-size: 3vw;
+  .filterToggleContainer {
+    gap: 1.5vw;
+    button {
+      padding: 1vh 1.5vw;
+      .circle {
+        margin-top: -1%;
+        margin-right: -2.5%;
+        margin-left: 2.5%;
+      }
+      p {
+        font-size: 4.25vw;
+      }
+    }
   }
 }
