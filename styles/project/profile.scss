@@ -30,7 +30,7 @@
     @extend .flexCenter;
     h6 {
       @extend .subHeading;
-      font-size: 2vw;
+      font-size: 2.5vh;
       padding-left: 2.5%;
       color: $textPrimary;
     }
@@ -50,14 +50,14 @@
 
 .cardBody {
   @extend .flexColumn;
-
   height: 100%;
+  width: 100%;
+  padding: 2.5%;
 }
 
 .cardInfo {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .infoBox {
@@ -90,6 +90,8 @@
 .githubInfo {
   margin-top: 0;
   padding: 2.5%;
+  width: 100%;
+
   h4 {
     @extend .subHeading;
     margin: 0;
@@ -97,23 +99,40 @@
   }
   ul {
     list-style-type: none;
-    padding: 0 2.5%;
+    padding: 0;
     color: $textPrimary;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 2.5%;
   }
   li {
-    margin: 2% 3%;
+    background: $primaryColor;
     @extend .tag;
-    font-size: 1.5vw;
-  }
-  li a {
-    color: $secondaryColor;
-    font-weight: bold;
-    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(33.33% - 10px);
+    box-shadow: $boxShadow;
 
     &:hover {
-      text-decoration: underline;
+      background: $primaryColor;
+      transform: translateY(-5px);
+    }
+    a {
+      color: $textPrimary;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .githubInfo {
+    li {
+      width: 35%;
     }
   }
 }

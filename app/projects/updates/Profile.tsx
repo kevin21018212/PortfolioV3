@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./ProfilePage.module.scss";
+import styles from "@/styles/profile.module.css";
 
 interface Commit {
   repoName: string;
@@ -16,10 +16,9 @@ interface Repo {
   updated_at: string;
 }
 
-const ProfilePage: React.FC = () => {
+const Profile: React.FC = () => {
   const [commits, setCommits] = useState<Commit[]>([]);
   const [repos, setRepos] = useState<Repo[]>([]);
-
   const [error, setError] = useState<string | null>(null);
 
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
@@ -117,7 +116,7 @@ const ProfilePage: React.FC = () => {
             <div className={styles.infoBox}>
               <div className={styles.infoLabel}>Recent Commits</div>
               <div className={styles.infoValue}>{commits.length}</div>
-            </div>{" "}
+            </div>
             <div className={styles.infoBox}>
               <div className={styles.infoLabel}>Leetcodes Complete</div>
               <div className={styles.infoValue}>45</div>
@@ -146,4 +145,4 @@ const ProfilePage: React.FC = () => {
   );
 };
 
-export default ProfilePage;
+export default Profile;

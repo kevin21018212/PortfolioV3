@@ -4,8 +4,7 @@ import Dash from "./displayed/Dash";
 import Projects from "./nav/project";
 import KevFm from "./displayed/KevFm";
 import GitHubActivity from "./updates/GIthubActivity";
-import ProfilePage from "./updates/Profile";
-
+import Profile from "./updates/Profile";
 const ProjectsPage: React.FC = () => {
   return (
     <div className={styles.pageContainer}>
@@ -15,7 +14,7 @@ const ProjectsPage: React.FC = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.leftColumn}>
-            <ProfilePage />
+            <Profile />
           </div>
           <div className={styles.rightColumn}>
             <GitHubActivity />

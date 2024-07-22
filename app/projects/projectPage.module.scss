@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 .pageContainer {
   @extend .flexColumnCenter;
@@ -57,4 +57,20 @@
 .nav {
   height: 75vh;
   width: 100vw;
+}
+@media screen and (max-width: 600px) {
+  .updatesSection {
+    height: auto;
+  }
+  .content {
+    height: auto;
+    flex-direction: column;
+    .leftColumn {
+      height: 60vh;
+    }
+    .leftColumn,
+    .rightColumn {
+      width: 100%;
+    }
+  }
 }

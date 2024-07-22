@@ -65,3 +65,42 @@
 .commitButton:hover {
   background-color: $secondaryHoverColor;
 }
+
+@media screen and (max-width: 600px) {
+  .updateSection {
+    @extend .flexCenter;
+    flex-wrap: wrap;
+    gap: 2vw 2vw;
+    padding: 1vh 1vw;
+  }
+  .commitCard {
+    width: 42.5vw;
+    height: 20vh;
+    border-radius: 15px;
+  }
+  .cardTop {
+    height: 15vh;
+    padding: 1vh 1vw 0 3vw;
+  }
+  .cardBottom {
+    height: 5vh;
+    display: flex;
+    .buttonSpacer {
+      margin-right: -3.5%;
+    }
+    .bottomButton {
+      width: 45%;
+      .commitButton {
+        margin-top: 2%;
+        height: 4vh;
+      }
+    }
+  }
+  .commitCard h3 {
+    font-size: 3vh;
+  }
+
+  .commitCard p {
+    font-size: 2vh;
+  }
+}
