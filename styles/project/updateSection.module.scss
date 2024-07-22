@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 .updateSection {
   @extend .flexCenter;
   flex-wrap: wrap;
@@ -6,13 +6,16 @@
   padding: 1vh 1vw;
 }
 .commitCard {
-  width: 15vw;
-  height: 15vh;
+  width: 16vw;
+  height: 16svh;
   padding: 1vw;
   border-radius: 15px;
   background-color: $boxBackground;
   @extend .boxBackground;
   text-overflow: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Ensure the button stays at the bottom
 }
 
 .commitCard h3 {
@@ -24,4 +27,22 @@
   margin: 0;
   font-size: 1.25vw;
   color: $textSecondary;
+}
+
+.commitButton {
+  align-self: flex-end;
+  background-color: $secondaryColor;
+  border: none;
+  border-radius: 50%;
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.commitButton:hover {
+  background-color: $secondaryHoverColor;
 }

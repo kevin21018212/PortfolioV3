@@ -1,0 +1,119 @@
+@import "/app/common.module.scss";
+
+.cardContainer {
+  @extend .flexCenter;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.card {
+  background: $boxBackground;
+  border-radius: 15px;
+  @extend .boxBackground;
+  width: 90%;
+  height: 95%;
+}
+
+.cardHeader {
+  border-radius: 15px 15px 0 0;
+  background: $primaryColor;
+  height: 30%;
+  display: flex;
+  align-items: flex-end;
+
+  .cardTitle {
+    width: 60%;
+    background: $boxBackground;
+    height: 30%;
+    border-top-left-radius: 25px;
+    @extend .flexCenter;
+    h6 {
+      @extend .subHeading;
+      font-size: 2vw;
+      padding-left: 2.5%;
+      color: $textPrimary;
+    }
+  }
+  .titleSpacer {
+    .titleInner {
+      width: 100%;
+      height: 100%;
+      border-bottom-right-radius: 30px;
+      background: $primaryColor;
+    }
+    background-color: $boxBackground;
+    height: 30%;
+    width: 40%;
+  }
+}
+
+.cardBody {
+  @extend .flexColumn;
+
+  height: 100%;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.infoBox {
+  background: $secondaryColor;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px;
+  color: $textPrimary;
+  width: 35%;
+  height: 8vh;
+  box-shadow: $boxShadow;
+
+  &:hover {
+    background: $secondaryHoverColor;
+    transform: translateY(-5px);
+  }
+
+  .infoLabel {
+    color: $textSecondary;
+    font-size: 0.9em;
+  }
+
+  .infoValue {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: $textPrimary;
+  }
+}
+
+.githubInfo {
+  margin-top: 0;
+  padding: 2.5%;
+  h4 {
+    @extend .subHeading;
+    margin: 0;
+    color: $textPrimary;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0 2.5%;
+    color: $textPrimary;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    margin: 2% 3%;
+    @extend .tag;
+    font-size: 1.5vw;
+  }
+  li a {
+    color: $secondaryColor;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

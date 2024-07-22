@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 .frame {
   display: flex;
   width: 100%;
@@ -26,7 +26,7 @@
     .circle {
       width: 90%;
       height: 90%;
-      background: url('../../../public/project/jungle.jpg');
+      background: url("../../../public/project/jungle.jpg");
       background-size: cover;
       background-position: center;
       border-radius: 50%;
@@ -85,6 +85,7 @@
   border-radius: 50px;
   .about {
     @extend .subHeading;
+    font-size: 2vw;
   }
 
   .description {

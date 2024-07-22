@@ -28,6 +28,7 @@
   align-self: flex-start;
   p {
     @extend .tag;
+    font-size: 2vw;
   }
 }
 
@@ -45,6 +46,7 @@
     margin-left: 25px;
     margin-top: -10px;
     @extend .subHeading;
+    font-size: 2vw;
   }
 }
 

@@ -1,8 +1,8 @@
-// GitHubActivity.tsx
-'use client';
-import {useState, useEffect} from 'react';
-import styles from '@/styles/project/updateSection.module.scss';
-import {motion} from 'framer-motion';
+"use client";
+import { useState, useEffect } from "react";
+import styles from "@/styles/project/updateSection.module.scss";
+import { motion } from "framer-motion";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 interface Commit {
   repoName: string;
@@ -19,43 +19,51 @@ const GitHubActivity: React.FC = () => {
 
   useEffect(() => {
     if (!username || !accessToken) {
-      console.log('GitHub username or access token is missing.');
+      console.log("GitHub username or access token is missing.");
       return;
     }
 
     const fetchContributions = async () => {
       try {
-        const response = await fetch(`https://api.github.com/users/${username}/events`, {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        });
+        const response = await fetch(
+          `https://api.github.com/users/${username}/events`,
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
 
         if (!response.ok) {
-          throw new Error(`Error fetching GitHub events: ${response.statusText}`);
+          throw new Error(
+            `Error fetching GitHub events: ${response.statusText}`
+          );
         }
 
         const events = await response.json();
         if (!Array.isArray(events)) {
-          throw new Error('Unexpected response format from GitHub API');
+          throw new Error("Unexpected response format from GitHub API");
         }
 
-        const pushes = events.filter((event: any) => event.type === 'PushEvent');
+        const pushes = events.filter(
+          (event: any) => event.type === "PushEvent"
+        );
 
         const recentCommits = pushes.slice(0, 9).map((push: any) => {
-          const {repo, payload} = push;
+          const { repo, payload } = push;
           const commitDate = new Date(push.created_at).toLocaleDateString();
           return {
-            repoName: repo.name.split('/')[1], // Get the part after the slash
+            repoName: repo.name.split("/")[1], // Get the part after the slash
             commitMessage: payload.commits[0].message,
             commitDate: commitDate,
           };
         });
 
-        console.log('recentCommits', recentCommits);
+        console.log("recentCommits", recentCommits);
         setCommits(recentCommits);
-      } catch (error) {
-        console.error('Error fetching GitHub pushes:', error);
+      } catch (error: any) {
+        console.error("Error fetching GitHub pushes:", error);
+        setError(error.message);
       }
     };
 
@@ -72,18 +80,24 @@ const GitHubActivity: React.FC = () => {
         <motion.div
           key={index}
           className={styles.commitCard}
-          initial={{opacity: 0, y: 50}}
-          animate={{opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: 'spring',
+            type: "spring",
             stiffness: 300,
             damping: 20,
             delay: 0.1 * index,
-          }}>
-          <h3>{commit.repoName}</h3>
-          <p>
-            {commit.commitDate} - {commit.commitMessage}
-          </p>
+          }}
+        >
+          <div>
+            <h3>{commit.repoName}</h3>
+            <p>
+              {commit.commitDate} - {commit.commitMessage}
+            </p>
+          </div>
+          <button className={styles.commitButton}>
+            <FaArrowAltCircleRight />
+          </button>
         </motion.div>
       ))}
     </div>
