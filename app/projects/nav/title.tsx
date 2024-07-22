@@ -30,7 +30,7 @@ const Titles = ({ data, setSelectedProject }: TitlesProps) => {
 };
 
 const Title = ({ data, setSelectedProject }: TitlesProps) => {
-  const { projectTitle, id } = data;
+  const { projectTitle, id, linkUrl } = data;
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -42,7 +42,13 @@ const Title = ({ data, setSelectedProject }: TitlesProps) => {
   const clip = useMotionTemplate`inset(0 ${clipProgress}% 0 0)`;
 
   return (
-    <div ref={container} className={styles.title}>
+    <div
+      ref={container}
+      className={styles.title}
+      onClick={() => {
+        window.location.href = linkUrl;
+      }}
+    >
       <div
         className={styles.wrapper}
         onMouseOver={() => {
