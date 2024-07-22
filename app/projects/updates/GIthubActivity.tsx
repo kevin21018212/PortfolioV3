@@ -8,6 +8,7 @@ interface Commit {
   repoName: string;
   commitMessage: string;
   commitDate: string;
+  commitUrl: string; // Add this line to include commit URL
 }
 
 const GitHubActivity: React.FC = () => {
@@ -52,10 +53,14 @@ const GitHubActivity: React.FC = () => {
         const recentCommits = pushes.slice(0, 9).map((push: any) => {
           const { repo, payload } = push;
           const commitDate = new Date(push.created_at).toLocaleDateString();
+          const commitUrl = payload.commits[0].url
+            .replace("api.", "")
+            .replace("repos/", "");
           return {
             repoName: repo.name.split("/")[1], // Get the part after the slash
             commitMessage: payload.commits[0].message,
             commitDate: commitDate,
+            commitUrl: commitUrl, // Add the commit URL here
           };
         });
 
@@ -89,15 +94,23 @@ const GitHubActivity: React.FC = () => {
             delay: 0.1 * index,
           }}
         >
-          <div>
+          <div className={styles.cardTop}>
             <h3>{commit.repoName}</h3>
             <p>
               {commit.commitDate} - {commit.commitMessage}
             </p>
           </div>
-          <button className={styles.commitButton}>
-            <FaArrowAltCircleRight />
-          </button>
+          <div className={styles.cardBottom}>
+            <div className={styles.buttonSpacer}></div>
+            <div className={styles.bottomButton}>
+              <button
+                className={styles.commitButton}
+                onClick={() => window.open(commit.commitUrl, "_blank")}
+              >
+                <FaArrowAltCircleRight size={"85%"} />
+              </button>
+            </div>
+          </div>
         </motion.div>
       ))}
     </div>

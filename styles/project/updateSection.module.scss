@@ -7,15 +7,48 @@
 }
 .commitCard {
   width: 16vw;
-  height: 16svh;
-  padding: 1vw;
+  height: 16vh;
   border-radius: 15px;
-  background-color: $boxBackground;
-  @extend .boxBackground;
+
   text-overflow: wrap;
   display: flex;
   flex-direction: column;
   justify-content: space-between; // Ensure the button stays at the bottom
+}
+
+.cardTop {
+  background-color: $boxBackground;
+  height: 12vh;
+  padding: 1vh 0.25vw 0 1vw;
+  border-radius: 15px 15px 15px 0;
+}
+.cardBottom {
+  height: 5vh;
+  display: flex;
+  .buttonSpacer {
+    width: 65%;
+
+    margin-right: -1.5%;
+    background-color: $boxBackground;
+    border-radius: 0px 0px 20px 15px;
+  }
+  .bottomButton {
+    width: 40%;
+    @extend .flexCenter;
+    border-top-left-radius: 15px;
+    margin-top: -1.5%;
+    background-color: $background;
+    .commitButton {
+      margin-top: 1.5%;
+      background-color: $secondaryColor;
+      border: none;
+      border-radius: 10px;
+      width: 85%;
+      height: 3.5vh;
+      @extend .flexCenter;
+      cursor: pointer;
+    }
+  }
 }
 
 .commitCard h3 {
@@ -25,22 +58,8 @@
 
 .commitCard p {
   margin: 0;
-  font-size: 1.25vw;
+  font-size: 1vw;
   color: $textSecondary;
-}
-
-.commitButton {
-  align-self: flex-end;
-  background-color: $secondaryColor;
-  border: none;
-  border-radius: 50%;
-  width: 4vw;
-  height: 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .commitButton:hover {
