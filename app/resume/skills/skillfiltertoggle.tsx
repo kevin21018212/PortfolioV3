@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "@/styles/resume/skills/skillfiltertoggle.module.scss";
 import { SkillFilterToggleProps } from "@/utils/data/dataType";
 import { motion } from "framer-motion";
+import { staggerDivVariant } from "@/utils/framer";
 
 const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
   const [selectedTags, setSelectedTags] = useState<string[]>(tags);
@@ -16,20 +17,16 @@ const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
 
   return (
     <div className={styles.filterToggleContainer}>
-      {tags.map((tag) => {
+      {tags.map((tag, index) => {
         const isSelected = selectedTags.includes(tag);
         return (
           <motion.div
             key={tag}
             className={styles.buttonWrapper}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 20,
-              delay: 0.1 * tags.indexOf(tag),
-            }}
+            custom={index}
+            variants={staggerDivVariant}
+            initial="hidden"
+            animate="visible"
           >
             <motion.button
               onClick={() => toggleTag(tag)}

@@ -80,3 +80,35 @@ export function getRandomMeshGradient() {
 
   return gradientString;
 }
+
+const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
+
+export const fetchGitHubEvents = async () => {
+  const response = await fetch(
+    `https://api.github.com/users/${username}/events`,
+    {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    }
+  );
+  if (!response.ok)
+    throw new Error(`Error fetching GitHub events: ${response.statusText}`);
+  const events = await response.json();
+  if (!Array.isArray(events))
+    throw new Error("Unexpected response format from GitHub API");
+  return events;
+};
+
+export const fetchGitHubRepos = async () => {
+  const response = await fetch(
+    `https://api.github.com/users/${username}/repos`,
+    {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    }
+  );
+  if (!response.ok)
+    throw new Error(
+      `Error fetching GitHub repositories: ${response.statusText}`
+    );
+  return await response.json();
+};

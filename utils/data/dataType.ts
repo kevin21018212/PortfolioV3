@@ -42,3 +42,17 @@ export type SkillFilterToggleProps = {
   tags: string[];
   onToggle: (selectedTags: string[]) => void;
 };
+export interface Commit {
+  repoName: string;
+  commitMessage: string;
+  commitDate: string;
+  commitUrl: string;
+}
+
+export interface Repo {
+  id: number;
+  name: string;
+  html_url: string;
+  languages_url: string;
+  updated_at: string;
+}

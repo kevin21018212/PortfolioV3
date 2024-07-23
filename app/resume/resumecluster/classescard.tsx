@@ -7,7 +7,7 @@ const descriptionVariants = {
   visible: { height: "82.5%" },
 };
 
-const titleVariants = {
+const slideTextVariant = {
   hidden: { height: "100%" },
   visible: { height: "15%" },
 };
@@ -32,7 +32,7 @@ const ClassesCard = ({ category }: ClassesCardProps) => {
         variants={descriptionVariants}
         transition={{ duration: 0.3 }}
       >
-        <motion.div className={styles.title} variants={titleVariants}>
+        <motion.div className={styles.title} variants={slideTextVariant}>
           <h5>{category.name}</h5>
         </motion.div>
         <motion.div className={styles.content} variants={contentVariants}>

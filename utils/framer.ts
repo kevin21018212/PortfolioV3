@@ -21,7 +21,7 @@ export const textAnimation = {
 };
 
 // Stagger children with an oscillating effect
-export const staggerChildrenAnimation = {
+export const staggerText = {
   active: {
     transition: {
       delayChildren: 0.3,
@@ -145,23 +145,8 @@ export const circleVariants = {
   },
 };
 
-// Title variants for slide-in effect
-export const titleVariants = {
-  hidden: {
-    x: -100,
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
-
 // Description text variants for slide-in effect
-export const descriptionTextVariants = {
+export const slideTextVariant = {
   hidden: {
     x: 100,
     opacity: 0,
@@ -176,7 +161,7 @@ export const descriptionTextVariants = {
 };
 
 // Corner variants for rotation and opacity transitions
-export const cornerVariants = {
+export const cornerVariant = {
   hidden: {
     rotate: 0,
     opacity: 0,
@@ -190,4 +175,22 @@ export const cornerVariants = {
       damping: 20,
     },
   },
+};
+
+//Variants for delaying the children
+export const staggerDivVariant = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+      delay: 0.1 * index,
+    },
+  }),
 };

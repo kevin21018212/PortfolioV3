@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/homepage/projectinfo.module.scss";
 
-import { staggerChildrenAnimation, textAnimation } from "../../utils/framer";
+import { staggerText, textAnimation } from "../../utils/framer";
 import { Project } from "@/utils/data/dataType";
 
 const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
@@ -22,7 +22,7 @@ const ProjectInfo = ({ projectData }: { projectData: Project | undefined }) => {
       {projectData && (
         <>
           <motion.div
-            variants={staggerChildrenAnimation}
+            variants={staggerText}
             initial="inactive"
             animate={animationState}
             exit="inactive"
