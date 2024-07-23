@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import styles from "@/styles/homepage/landing.module.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -12,13 +12,10 @@ import * as fiber from "@react-three/fiber";
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 
 // ShaderGradientBackground Component
-const ShaderGradientBackground: React.FC<{ importedFiber: any }> = ({
-  importedFiber,
-}) => {
+const ShaderGradientBackground: React.FC = () => {
   return (
     <div className={styles.liquidGradient}>
       <ShaderGradientCanvas
-        importedFiber={importedFiber}
         style={{
           zIndex: -10,
           borderRadius: "0px 20px 20px 0px",
@@ -89,11 +86,9 @@ const IconBox: React.FC = () => {
 
 // Landing Component
 const Landing: React.FC = () => {
-  const importedFiberProps = { ...fiber, ...drei, ...reactSpring };
-
   return (
     <div className={styles.landingContainer}>
-      <ShaderGradientBackground importedFiber={importedFiberProps} />
+      <ShaderGradientBackground />
       <TextBox />
       <IconBox />
     </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "@/styles/profile.module.css";
+import styles from "@/styles/project/profile.module.scss";
 
 interface Commit {
   repoName: string;
