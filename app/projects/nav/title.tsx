@@ -6,7 +6,7 @@ import {
   useTransform,
   useMotionTemplate,
 } from "framer-motion";
-import { Project } from "@/utils/data/types";
+import { Project } from "@/utils/data/dataType";
 
 type TitlesProps = {
   data: any;

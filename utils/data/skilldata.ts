@@ -1,4 +1,4 @@
-import { SkillData } from "./types";
+import { SkillData } from "./dataType";
 
 export const allTags = [
   "Web Development",

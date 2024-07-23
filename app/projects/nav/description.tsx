@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/project/project.module.scss";
-import { Project } from "@/utils/data/types";
+import { Project } from "@/utils/data/dataType";
 
 type DescriptionProps = {
   data: Project[];

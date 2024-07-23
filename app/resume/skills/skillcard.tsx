@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import styles from "@/styles/resume/skills/skillcard.module.scss";
-import { SkillCardProps } from "@/utils/data/types";
+import { SkillCardProps } from "@/utils/data/dataType";
 import { getRandomMeshGradient } from "@/utils/functions";
 
 const SkillCard = ({ title, skillName, experience, index }: SkillCardProps) => {

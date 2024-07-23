@@ -4,9 +4,10 @@ import { useState } from "react";
 import styles from "@/styles/homepage/project.module.scss";
 import ProjectInfo from "./projectinfo";
 import { circles } from "@/utils/data/smallData";
-import { Project } from "@/utils/data/types";
+
 import SpacerContainer from "@/app/global/spacer";
 import { projectData } from "@/utils/data/projectdata";
+import { Project } from "@/utils/data/dataType";
 
 const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<number>(0);

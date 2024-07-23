@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "@/styles/resume/resumecluster/classescard.module.scss";
-import { ClassesCardProps } from "@/utils/data/types";
+import { ClassesCardProps } from "@/utils/data/dataType";
 
 const descriptionVariants = {
   hidden: { height: "15%" },
