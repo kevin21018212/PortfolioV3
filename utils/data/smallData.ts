@@ -36,8 +36,8 @@ export const jobData = [
 
 export const hexColorOptions = [
   "#F0F0F0",
-  "#FF1F00",
+  "#d14a03",
   "#525252",
   "#FF7A00",
-  "#9B8BFF",
+  "#f89aa5",
 ];

@@ -19,27 +19,6 @@ export const getRandomGradient = () => {
   return `linear-gradient(${randomDegree}deg, ${randomColor1}, ${randomColor2})`;
 };
 
-interface Point {
-  x: number;
-  y: number;
-  h: number;
-  s: number;
-  l: number;
-  scale: number;
-}
-
-interface GradientOptions {
-  points?: Point[];
-  easing?: (t: number) => number;
-  easingStops?: number;
-  seed?: string;
-  pointCount?: number;
-  scaleRange?: number[];
-  hueRange?: number[];
-  saturationRange?: number[];
-  lightnessRange?: number[];
-}
-
 export function getRandomMeshGradient() {
   const randomNumber = Math.floor(Math.random() * 5) + 1;
 
@@ -81,10 +60,10 @@ export function getRandomMeshGradient() {
   return gradientString;
 }
 
-const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
-const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
-
-export const fetchGitHubEvents = async () => {
+export const fetchGitHubEvents = async (
+  username: string,
+  accessToken: string
+) => {
   const response = await fetch(
     `https://api.github.com/users/${username}/events`,
     {
@@ -99,7 +78,10 @@ export const fetchGitHubEvents = async () => {
   return events;
 };
 
-export const fetchGitHubRepos = async () => {
+export const fetchGitHubRepos = async (
+  username: string,
+  accessToken: string
+) => {
   const response = await fetch(
     `https://api.github.com/users/${username}/repos`,
     {
