@@ -1,4 +1,4 @@
-@import '@/app/common.module.scss';
+@import "@/app/common.module.scss";
 .landingContainer {
   height: 100%;
   display: grid;
@@ -15,26 +15,6 @@
 .textBox {
   grid-column: 5 / span 9;
   grid-row: 4 / span 7;
-  @extend .flexColumnCenter;
-  @extend .boxBackground;
-  @extend .flexCenter;
-  text-align: center;
-  .tags {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  h1 {
-    @extend .title;
-    color: $textPrimary;
-    font-size: 4.25vw;
-  }
-  h4 {
-    @extend .seperated;
-    color: $textSecondary;
-    font-size: 3vw;
-    margin: 1.5vh 2.5vw;
-  }
 }
 
 .infoBox {

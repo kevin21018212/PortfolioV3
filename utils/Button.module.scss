@@ -1,0 +1,63 @@
+@import "@/app/common.module.scss";
+
+.button {
+  width: 100%;
+  height: 100%;
+
+  @extend .boxBackground;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  transition: box-shadow 0.3s;
+}
+
+.primaryText {
+  top: 0;
+  position: relative;
+
+  text-align: center; /* Center text */
+  width: 100%; /* Ensure it takes full width */
+  z-index: 1; /* Ensure it is above the background initially */
+  @extend .title;
+  color: $textPrimary;
+  font-size: 4.25vw;
+}
+
+.secondaryText {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 0; /* Ensure it is below the primary text initially */
+  h4 {
+    @extend .seperated;
+    color: $background;
+    font-size: 4.5vw;
+    margin: 1.5vh 2.5vw;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  @extend .boxBackground;
+  @extend .flexColumnCenter;
+  transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.programmerText {
+  color: black;
+  position: relative;
+  z-index: 1; /* Ensure it is above the background */
+}

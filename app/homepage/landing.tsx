@@ -5,11 +5,9 @@ import { motion } from "framer-motion";
 import styles from "@/styles/homepage/landing.module.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { boxVariants } from "../../utils/framer";
-import * as reactSpring from "@react-spring/three";
-import * as drei from "@react-three/drei";
-import * as fiber from "@react-three/fiber";
 
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
+import SpecialButton from "@/utils/specialButton";
 
 // ShaderGradientBackground Component
 const ShaderGradientBackground: React.FC = () => {
@@ -34,14 +32,7 @@ const ShaderGradientBackground: React.FC = () => {
 const TextBox: React.FC = () => {
   return (
     <div className={styles.textBox}>
-      <h1>
-        Hi I'm Matthew <br />
-      </h1>
-      <div className={styles.tags}>
-        <h4>Designer</h4>
-        <h4>Developer</h4>
-        <h4>Creator</h4>
-      </div>
+      <SpecialButton />
     </div>
   );
 };

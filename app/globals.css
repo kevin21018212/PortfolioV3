@@ -1,5 +1,5 @@
 /* Media Queries */
-@import url('./fonts.css'); /* Include the file where you defined the font-face rules */
+@import url("./fonts.css"); /* Include the file where you defined the font-face rules */
 
 body {
   background-color: #101518;
@@ -9,7 +9,15 @@ body {
   padding: 0;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 
+a {
+  color: inherit;
+  text-decoration: none !important;
+  transition: box-shadow 0.3s;
+}
 p {
   margin: 10px;
   font-size: 1.5vw;
@@ -17,7 +25,7 @@ p {
 }
 
 h1 {
-  font-family: 'GT America Expanded Black', sans-serif;
+  font-family: "GT America Expanded Black", sans-serif;
   letter-spacing: 4px;
   margin: 0;
   text-transform: uppercase;
@@ -28,7 +36,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Monument Grotesk Black', sans-serif;
+  font-family: "Monument Grotesk Black", sans-serif;
   font-size: 4.5vw;
   margin-bottom: 0;
   letter-spacing: 4px;
@@ -39,14 +47,14 @@ h2 {
 }
 
 h3 {
-  font-family: 'Monument Grotesk Bold', sans-serif;
+  font-family: "Monument Grotesk Bold", sans-serif;
 
   margin: 2.5% 0;
   font-size: 3.5vw;
 }
 
 h4 {
-  font-family: 'Monument Grotesk Medium', sans-serif;
+  font-family: "Monument Grotesk Medium", sans-serif;
   font-weight: 500;
   font-size: 3vw;
   margin: 1% 0% 0% 5%;
@@ -54,14 +62,14 @@ h4 {
 }
 
 h5 {
-  font-family: 'Neue Montreal Bold', sans-serif;
+  font-family: "Neue Montreal Bold", sans-serif;
   margin: 2.5% 0% 0% 0%;
   letter-spacing: 3px;
   font-size: 2vw;
 }
 
 h6 {
-  font-family: 'Monument Extended ', sans-serif;
+  font-family: "Monument Extended ", sans-serif;
   font-size: 1.75vw;
   margin: 0;
   margin-top: 2.5%;
