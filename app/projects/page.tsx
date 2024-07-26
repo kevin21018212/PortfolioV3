@@ -9,6 +9,7 @@ import Profile from "./updates/Profile";
 import { Commit, Repo } from "@/utils/data/dataType";
 import GitHubActivity from "./updates/GIthubActivity";
 import { fetchGitHubEvents, fetchGitHubRepos } from "@/utils/functions";
+import Project from "./displayed/Project";
 
 const ProjectsPage: React.FC = () => {
   const [commits, setCommits] = useState<Commit[]>([]);
@@ -82,12 +83,9 @@ const ProjectsPage: React.FC = () => {
         <Projects />
       </div>
       <div className={styles.projects}>
-        <div className={styles.projectContainer}>
-          <Dash />
-        </div>
-        <div className={styles.projectContainer}>
-          <KevFm />
-        </div>
+        <Project />
+
+        <KevFm />
       </div>
     </div>
   );

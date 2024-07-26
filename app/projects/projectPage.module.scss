@@ -2,8 +2,7 @@
 
 .pageContainer {
   @extend .flexColumnCenter;
-  width: 90vw;
-  padding: 0 5vw;
+  width: 100vw;
   height: auto;
   gap: 2vw 0;
 }
@@ -29,7 +28,7 @@
 
 .content {
   display: flex;
-  width: 90%;
+  width: 95%;
   height: 65vh;
   .leftColumn {
     width: 35%;
@@ -44,14 +43,7 @@
 .projects {
   @extend .flexColumnCenter;
   width: 100vw;
-  padding-top: 10vh;
-}
-
-.projectContainer {
-  height: 65vh;
-  width: 80vw;
-  margin: 2.5vw 0;
-  display: flex;
+  border: 1px dotted red;
 }
 
 .nav {

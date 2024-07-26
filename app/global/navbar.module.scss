@@ -1,4 +1,4 @@
-@import '../common.module.scss';
+@import "../common.module.scss";
 
 .navbar {
   position: fixed;
@@ -16,7 +16,7 @@
 }
 
 .navbar p {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   font-size: 1.25vw;
   margin: 7.5% 2.5%;
   user-select: none;
@@ -46,7 +46,7 @@
 .emptyLink {
   width: 12.5vw;
   margin-left: -15%;
-  padding-left: 2vw;
+  padding-left: 4.5vw;
   box-sizing: border-box;
   background-color: $primaryColor;
   transform: skew(-10deg) rotate(15deg);
@@ -55,10 +55,10 @@
 }
 
 .firstLink {
-  padding-left: 2.5vw;
+  padding-left: 5vw;
 }
 .lastLink {
-  padding-left: 2vw;
+  padding-left: 4vw;
 }
 
 .firstLink:hover,
@@ -67,15 +67,15 @@
 .lastLink:hover {
   background-color: $primary-hover-color;
   transform: skew(-8deg) translateX(-1vw) rotate(15deg) scale(1.1);
-  padding-left: 3vw;
+  padding-left: 5.5vw;
   padding-bottom: 5.5%;
 }
 
 .firstLink:hover {
-  padding-left: 4vw;
+  padding-left: 6vw;
 }
 .lastLink:hover {
-  padding-left: 3vw;
+  padding-left: 5vw;
 }
 
 .secondLink a,
