@@ -9,6 +9,9 @@ import Profile from "./updates/Profile";
 import { Commit, Repo } from "@/utils/data/dataType";
 import GitHubActivity from "./updates/GIthubActivity";
 import { fetchGitHubEvents, fetchGitHubRepos } from "@/utils/functions";
+
+import { projectData } from "@/utils/data/projectdata";
+
 import Project from "./displayed/Project";
 
 const ProjectsPage: React.FC = () => {
@@ -83,9 +86,9 @@ const ProjectsPage: React.FC = () => {
         <Projects />
       </div>
       <div className={styles.projects}>
-        <Project />
-
-        <KevFm />
+        {projectData.map((item: any, index: number) => (
+          <Project key={index} project={item} />
+        ))}
       </div>
     </div>
   );

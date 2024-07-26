@@ -53,22 +53,21 @@ $maingd: $simpleGradient;
 }
 
 .bottomSection {
-  display: flex;
   height: 35vh;
-  width: 100%;
-  background-color: $bg1;
-  border-radius: 30px;
-  box-shadow: $boxShadow;
+  width: 55vw;
+  gap: 1vw;
 
-  .left {
-    width: 30%;
+  display: flex;
+
+  .one {
+    width: 20%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 20px;
     background: $maingd;
-    box-shadow: $boxShadow;
   }
-  .right {
-    width: 70%;
+  .two,
+  .three {
+    width: 40%;
     height: 100%;
   }
 }
@@ -101,6 +100,7 @@ $maingd: $simpleGradient;
   width: 100%;
   height: 100%;
   @extend .flexColumn;
+  border-radius: 30px;
 
   justify-content: space-evenly;
   .tag {
@@ -121,7 +121,60 @@ $maingd: $simpleGradient;
 .bottomRightContent {
   width: 100%;
   height: 100%;
-  @extend .flexCenter;
+  background-color: $bg1;
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
+}
+
+.leftContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+
+  .topContent,
+  .bottomContent {
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topContent {
+    width: 80%;
+    height: 100%;
+    text-orientation: sideways-right;
+    background-color: $bg1;
+    justify-content: flex-end;
+
+    align-items: flex-end;
+    padding-left: 5%;
+
+    h1 {
+      @extend .title;
+      font-size: 4.25vw;
+      color: $textSecondary;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 2.5%;
+    }
+  }
+
+  .bottomContent {
+    width: 20%;
+    height: 100%;
+    padding-top: 5%;
+    text-orientation: upright;
+    background: $simpleGradient;
+    justify-content: flex-start;
+    align-items: center;
+    h4 {
+      @extend .seperated;
+      font-size: 4vw;
+      padding: 0;
+      margin: 0;
+    }
+  }
 }

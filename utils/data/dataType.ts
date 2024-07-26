@@ -5,7 +5,8 @@ export type Project = {
   projectTag: string;
   description: string;
   projectTech: string;
-  imageUrl: string;
+  img1: string;
+  img2: string;
   linkUrl: string;
 };
 export type SkillData = {

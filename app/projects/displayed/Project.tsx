@@ -10,11 +10,9 @@ import {
   textAnimation,
   boxVariants,
 } from "@/utils/framer";
-import { projectData } from "@/utils/data/projectdata";
 import { FaArrowAltCircleRight, FaArrowAltCircleUp } from "react-icons/fa";
 
-const Project = () => {
-  const project = projectData[3];
+const Project = ({ project }: any) => {
   const [ref, inView] = useInView({ triggerOnce: true });
   const controls = useAnimation();
 
@@ -39,7 +37,16 @@ const Project = () => {
         className={styles.leftSection}
         variants={containerVariants}
         transition={{ duration: 0.6 }}
-      ></motion.div>
+      >
+        <div className={styles.leftContent}>
+          <div className={styles.topContent}>
+            <h1>{project.projectTitle}</h1>
+          </div>
+          <div className={styles.bottomContent}>
+            <h4>00{project.id}</h4>
+          </div>
+        </div>
+      </motion.div>
 
       <motion.div
         className={styles.rightSection}
@@ -77,27 +84,35 @@ const Project = () => {
           transition={{ delay: 0.8 }}
         >
           <div className={styles.bottomSection}>
-            <div className={styles.left}>
+            <div className={styles.one}>
               <div className={styles.bottomLeftContent}>
-                {project.projectTech.split(" ").map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.tag}
-                    initial="hidden"
-                    animate="visible"
-                    variants={textAnimation}
-                  >
-                    <h3>{tech}</h3>
-                  </motion.div>
-                ))}
+                {project.projectTech
+                  .split(" ")
+                  .map((tech: string, index: number) => (
+                    <motion.div
+                      key={index}
+                      className={styles.tag}
+                      initial="hidden"
+                      animate="visible"
+                      variants={textAnimation}
+                    >
+                      <h3>{tech}</h3>
+                    </motion.div>
+                  ))}
               </div>
+            </div>{" "}
+            <div className={styles.two}>
+              <div
+                className={styles.bottomRightContent}
+                style={{ backgroundImage: `url(${project.img1})` }}
+              ></div>
             </div>
-          </div>
-          <div className={styles.right}>
-            <div
-              className={styles.bottomRightContent}
-              style={{ backgroundImage: `url(${project.imageUrl})` }}
-            ></div>
+            <div className={styles.three}>
+              <div
+                className={styles.bottomRightContent}
+                style={{ backgroundImage: `url(${project.img2})` }}
+              ></div>
+            </div>
           </div>
         </motion.div>
       </motion.div>

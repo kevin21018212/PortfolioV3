@@ -9,7 +9,8 @@ export const projectData: Project[] = [
     description:
       "This portfolio is intended to be a window into not only my talents but also my creativity. I wanted to create a space to showcase my work that was not only informative but also visually appealing. I love exploring flow between design and function, as function is only as good as the design that supports it.",
     projectTech: "GITHUB NEXTJS SCSS FRAMER MOTION",
-    imageUrl: "",
+    img1: "",
+    img2: "",
     linkUrl: "https://portfolio-v3-jet.vercel.app/",
   },
   {
@@ -20,7 +21,8 @@ export const projectData: Project[] = [
     description:
       "The hardest part about creation is organization. DASH is designed as a fluid and formless project management tool that helps users interface with their goals in a playfull manner. With a simple and intuitive interface, you can easily manage your projects, set deadlines, and track your progress. Engage and complete your goals in a playful enviorment that supports you and your goals with Dash.",
     projectTech: "AUTH POSTGRES NEXTJS MUI CI/CD INSIGHTS",
-    imageUrl: "",
+    img1: "",
+    img2: "",
     linkUrl: "https://dash-delta-indol.vercel.app/",
   },
   {
@@ -31,7 +33,8 @@ export const projectData: Project[] = [
     description:
       "Immerse yourself in a fusion of data and art, where music becomes a sensory journey. Goal Tracker is not just an app; it's a personalized roadmap to success. Visualize your aspirations, focus your efforts, and achieve a harmonious balance in life. Dive into a world of data-driven motivation, where your goals come to life through captivating visualizations.",
     projectTech: "DATABASE OKTA NEXTJS AWS",
-    imageUrl: "",
+    img1: "",
+    img2: "",
     linkUrl: "https://kevents.vercel.app/",
   },
   {
@@ -42,7 +45,8 @@ export const projectData: Project[] = [
     description:
       "Welcome to the heart of Kev.FM, where the magic of data transforms into art. Discover a world of soundscapes and visual narratives that merge seamlessly. Explore a unique fusion of technology and creativity, where each piece of data is a brushstroke, and each interaction is a musical journey. Join us on this sonic adventure!",
     projectTech: "API ROUTING SSF NEXTJS HOOKS",
-    imageUrl: "",
+    img1: "",
+    img2: "",
     linkUrl: "https://kev-fm.vercel.app/",
   },
   {
@@ -53,7 +57,8 @@ export const projectData: Project[] = [
     description:
       "AI is the forfront of technology. KevBot is designed as a expirment to create a digital version of myself. I wanted to see if I could create a bot that could interface with the Twitter. ",
     projectTech: "ART",
-    imageUrl: "",
+    img1: "",
+    img2: "",
     linkUrl: "",
   },
 ];
