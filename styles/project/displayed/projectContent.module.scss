@@ -1,0 +1,121 @@
+@import "/app/common.module.scss";
+$bg1: $boxBackground;
+$bg2: #082c2c;
+$main: $primaryColor;
+$maingd: $simpleGradient;
+.topLeftContent {
+  width: 100%;
+  height: 80%;
+  padding: 5%;
+  background-color: $bg1;
+  box-shadow: $boxShadow;
+  border-radius: 30px;
+
+  .about {
+    @extend .subHeading;
+    font-size: 2vw;
+    text-align: left;
+  }
+
+  .description {
+    @extend .description;
+    margin-top: 0.5vw;
+    font-size: 1.1vw;
+  }
+}
+
+.topRightContent {
+  width: 100%;
+  height: 100%;
+  @extend .flexCenter;
+  background-color: $bg1;
+  box-shadow: $boxShadow;
+  border-radius: 30px;
+}
+
+.bottomLeftContent {
+  width: 100%;
+  height: 100%;
+  @extend .flexColumn;
+  border-radius: 30px;
+  justify-content: space-evenly;
+  background: $maingd;
+  .tag {
+    margin: 1%;
+    padding: 2.5%;
+    width: 85%;
+    @extend .flexCenter;
+    background: $bg2;
+    box-shadow: $buttonShadow;
+    border-radius: 20px;
+
+    h3 {
+      @extend .seperated;
+      font-size: 0.9vw;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.bottomRightContent {
+  width: 100%;
+  height: 100%;
+  background-color: $bg1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.leftContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background-color: $bg1;
+  box-shadow: $boxShadow;
+  border-radius: 30px;
+
+  .topContent,
+  .bottomContent {
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topContent {
+    width: 80%;
+    height: 100%;
+    text-orientation: sideways-right;
+    background-color: $bg1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 5%;
+
+    h1 {
+      @extend .title;
+      font-size: 4.25vw;
+      color: $textSecondary;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 2.5%;
+    }
+  }
+
+  .bottomContent {
+    width: 20%;
+    height: 100%;
+    padding-top: 5%;
+    text-orientation: upright;
+    background: $simpleGradient;
+    justify-content: flex-start;
+    align-items: center;
+
+    h4 {
+      @extend .seperated;
+      font-size: 4vw;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

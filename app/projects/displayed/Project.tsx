@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "@/styles/project/displayed/project.module.scss";
+import contentStyles from "@/styles/project/displayed/projectContent.module.scss";
 import {
   containerVariants,
   slideTextVariant,
@@ -38,11 +39,11 @@ const Project = ({ project }: any) => {
         variants={containerVariants}
         transition={{ duration: 0.6 }}
       >
-        <div className={styles.leftContent}>
-          <div className={styles.topContent}>
+        <div className={contentStyles.leftContent}>
+          <div className={contentStyles.topContent}>
             <h1>{project.projectTitle}</h1>
           </div>
-          <div className={styles.bottomContent}>
+          <div className={contentStyles.bottomContent}>
             <h4>00{project.id}</h4>
           </div>
         </div>
@@ -61,13 +62,13 @@ const Project = ({ project }: any) => {
           transition={{ delay: 0.6 }}
         >
           <div className={styles.left}>
-            <div className={styles.topLeftContent}>
-              <h2 className={styles.about}>About</h2>
-              <p className={styles.description}>{project.description}</p>
+            <div className={contentStyles.topLeftContent}>
+              <h2 className={contentStyles.about}>About</h2>
+              <p className={contentStyles.description}>{project.description}</p>
             </div>
           </div>
           <div className={styles.right}>
-            <div className={styles.topRightContent}>
+            <div className={contentStyles.topRightContent}>
               <FaArrowAltCircleUp
                 onClick={() => window.open(project.linkUrl, "_blank")}
                 size={"50%"}
@@ -85,13 +86,13 @@ const Project = ({ project }: any) => {
         >
           <div className={styles.bottomSection}>
             <div className={styles.one}>
-              <div className={styles.bottomLeftContent}>
+              <div className={contentStyles.bottomLeftContent}>
                 {project.projectTech
                   .split(" ")
                   .map((tech: string, index: number) => (
                     <motion.div
                       key={index}
-                      className={styles.tag}
+                      className={contentStyles.tag}
                       initial="hidden"
                       animate="visible"
                       variants={textAnimation}
@@ -103,13 +104,13 @@ const Project = ({ project }: any) => {
             </div>{" "}
             <div className={styles.two}>
               <div
-                className={styles.bottomRightContent}
+                className={contentStyles.bottomRightContent}
                 style={{ backgroundImage: `url(${project.img1})` }}
               ></div>
             </div>
             <div className={styles.three}>
               <div
-                className={styles.bottomRightContent}
+                className={contentStyles.bottomRightContent}
                 style={{ backgroundImage: `url(${project.img2})` }}
               ></div>
             </div>

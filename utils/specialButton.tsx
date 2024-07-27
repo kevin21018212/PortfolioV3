@@ -14,6 +14,8 @@ const SpecialButton = () => {
       className={styles.button}
       onClick={handleClick}
       onTap={handleClick}
+      onHoverStart={() => setIsClicked(true)}
+      onHoverEnd={() => setIsClicked(false)}
       initial={{ boxShadow: "none" }}
     >
       <motion.h1
@@ -32,7 +34,7 @@ const SpecialButton = () => {
         className={styles.secondaryText}
         initial={{ top: "100%" }}
         animate={{ top: isClicked ? 0 : "100%" }}
-        transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
+        transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}
       >
         <motion.div
           className={styles.background}

@@ -22,7 +22,7 @@ export const projectData: Project[] = [
       "The hardest part about creation is organization. DASH is designed as a fluid and formless project management tool that helps users interface with their goals in a playfull manner. With a simple and intuitive interface, you can easily manage your projects, set deadlines, and track your progress. Engage and complete your goals in a playful enviorment that supports you and your goals with Dash.",
     projectTech: "AUTH POSTGRES NEXTJS MUI CI/CD INSIGHTS",
     img1: "",
-    img2: "",
+    img2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhgM4pfGqiKLDOg_TWq3Xl08KO8R4se6AGWQ&s",
     linkUrl: "https://dash-delta-indol.vercel.app/",
   },
   {
@@ -46,7 +46,7 @@ export const projectData: Project[] = [
       "Welcome to the heart of Kev.FM, where the magic of data transforms into art. Discover a world of soundscapes and visual narratives that merge seamlessly. Explore a unique fusion of technology and creativity, where each piece of data is a brushstroke, and each interaction is a musical journey. Join us on this sonic adventure!",
     projectTech: "API ROUTING SSF NEXTJS HOOKS",
     img1: "",
-    img2: "",
+    img2: "https://storage.googleapis.com/pr-newsroom-wp/1/2023/01/AppleCompetition-FTRHeader_V2-1440x733.png",
     linkUrl: "https://kev-fm.vercel.app/",
   },
   {
