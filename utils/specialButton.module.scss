@@ -29,10 +29,12 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+
   h4 {
-    @extend .seperated;
+    @extend .subHeading;
+    font-weight: 600;
     color: $background;
-    font-size: 4.5vw;
+    font-size: 4.25vw;
     margin: 1.5vh 2.5vw;
   }
 }

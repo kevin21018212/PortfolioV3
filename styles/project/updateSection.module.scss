@@ -2,18 +2,17 @@
 .updateSection {
   @extend .flexCenter;
   flex-wrap: wrap;
-  gap: 1vw 1vw;
+  gap: 1vh 1vw;
   padding: 1vh 1vw;
 }
 .commitCard {
   width: 16vw;
   height: 16vh;
   border-radius: 15px;
-
   text-overflow: wrap;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // Ensure the button stays at the bottom
+  justify-content: space-between;
 }
 
 .cardTop {

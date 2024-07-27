@@ -32,11 +32,10 @@
 }
 
 .linksContainer {
-  display: flex;
-  flex-direction: column;
   margin-top: -45%;
   margin-bottom: 20%;
   @extend .flexColumn;
+  align-items: center;
 }
 
 .firstLink,

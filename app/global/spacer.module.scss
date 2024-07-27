@@ -1,11 +1,11 @@
-@import '../common.module.scss';
+@import "../common.module.scss";
 
 /* Common Styles */
 .spacerBase {
   height: 100%;
   background-color: $textSecondary;
   display: flex;
-  box-shadow: $boxShadow;
+  box-shadow: $shadowHeavy;
 }
 
 .flexColumn {
@@ -23,6 +23,7 @@
 .spacerContainer {
   @extend .spacerBase;
   @extend .flexColumn;
+  align-items: center;
   padding: 2.5%;
 }
 

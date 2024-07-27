@@ -1,4 +1,4 @@
-@import '/app/common.module.scss'; // Import the common SCSS file
+@import "/app/common.module.scss"; // Import the common SCSS file
 
 .workcontainer {
   height: 100%;
@@ -14,11 +14,13 @@
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
   @extend .flexColumn;
+  align-items: center;
   justify-content: flex-end;
   box-shadow: $buttonShadow;
 }
 
 .worktext {
+  width: 100%;
   height: 12.5%;
   overflow: hidden;
   box-shadow: $topShadow;
@@ -27,27 +29,25 @@
 /* Non-image */
 .workbox {
   width: 60%;
-  @extend .flexColumn;
-  justify-content: center;
+  @extend .flexColumnCenter;
   margin-bottom: 10%;
 }
 
 /* Display For Jobs */
 .workdisplay {
-  width: 80%;
-  margin-left: -25%;
-  padding: 2.5% 0% 2.5% 5%;
-  @extend .flexColumn;
-  justify-content: center;
+  width: 90%;
+  margin-left: -60%;
+  padding: 2.5% 0% 5% 5%;
   @extend .boxBackground;
 }
 
 .jobtext {
   p {
-    font-family: 'MDNichrome Thin', sans-serif;
+    font-family: "MDNichrome Thin", sans-serif;
     color: $textSecondary;
     font-size: 1.5vw;
     margin-bottom: 0.5vw;
+
     &:nth-child(2) {
       padding-left: 5%;
     }
@@ -62,7 +62,7 @@
   }
 
   h5 {
-    font-family: 'Monument Grotesk Regular', sans-serif;
+    font-family: "Monument Grotesk Regular", sans-serif;
     color: $textPrimary;
   }
 }

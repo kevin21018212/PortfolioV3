@@ -2,27 +2,23 @@
 
 .pageContainer {
   @extend .flexColumnCenter;
-  width: 100vw;
+  width: 95vw;
   height: auto;
-  gap: 2vw 0;
+  padding: 2.5vh 2.5vw;
 }
 
-.spacer {
-  height: 50vh;
-}
 .updatesSection {
   height: 80vh;
-  width: 100vw;
+  width: 95vw;
+
   @extend .flexColumnCenter;
 }
 
 .title {
   height: 15vh;
   width: 100%;
-
   display: flex;
   align-items: center;
-
   color: $textPrimary;
 }
 
@@ -43,12 +39,12 @@
 .projects {
   @extend .flexColumnCenter;
   width: 100vw;
+  padding-top: 5%;
 }
 
 .nav {
   height: 75vh;
   width: 100vw;
-  margin-left: -10%;
 }
 @media screen and (max-width: 600px) {
   .updatesSection {

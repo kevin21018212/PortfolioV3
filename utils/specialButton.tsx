@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import styles from "./Button.module.scss";
+import styles from "./specialButton.module.scss";
 
 const SpecialButton = () => {
   const [isClicked, setIsClicked] = useState(false);

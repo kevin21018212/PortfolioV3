@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styles from "@/styles/project/project.module.scss";
+import styles from "@/styles/project/nav.module.scss";
 import {
   useScroll,
   motion,

@@ -1,8 +1,7 @@
-@import '@/app/common.module.scss';
+@import "@/app/common.module.scss";
 .landingContainerMobile {
   height: 90vh;
   width: 100vw;
-
   @extend .flexColumnCenter;
 }
 

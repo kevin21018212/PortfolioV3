@@ -12,7 +12,7 @@ $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
 
 /* Shadows */
-$boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$shadowHeavy: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 $arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
@@ -27,6 +27,7 @@ $simpleGradient: linear-gradient(
 
 /* Typography */
 .title {
+  font-family: "GT America Expanded Black", sans-serif;
   letter-spacing: 15px;
 }
 
@@ -62,11 +63,6 @@ $simpleGradient: linear-gradient(
 }
 
 /* Containers */
-.container {
-  margin: 0 auto;
-  padding: 1rem;
-  gap: 2rem;
-}
 
 .pageContainer {
   @extend .flexColumnCenter;
@@ -75,18 +71,10 @@ $simpleGradient: linear-gradient(
   gap: 2rem;
 }
 
-.gridDisplayContainer {
-  @extend .container;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 /* Flex Utilities */
 .flexColumn {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .flexCenter {
@@ -107,17 +95,13 @@ $simpleGradient: linear-gradient(
   justify-content: center;
 }
 
-/* Grid Utilities */
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 8px;
-}
+$outerBorder: 30px;
+$innerBorder: 20px;
 
 /* Box Styles */
 .boxBackground {
   background-color: $boxBackground;
-  box-shadow: $boxShadow;
+  box-shadow: $shadowHeavy;
   border-radius: 10px;
 }
 
@@ -127,28 +111,4 @@ $simpleGradient: linear-gradient(
   height: auto;
   border-radius: 4px;
   margin-top: 16px;
-}
-
-.editIcon {
-  position: absolute;
-  cursor: pointer;
-  top: 15px;
-  right: 15px;
-}
-
-.actionButtons {
-  position: absolute;
-  bottom: 10px;
-  z-index: 10;
-  right: 10px;
-}
-
-.link {
-  font-size: 16px;
-  color: $secondaryColor;
-  text-decoration: none;
-
-  &:hover {
-    background-color: $primary-hover-color;
-  }
 }

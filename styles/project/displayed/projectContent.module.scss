@@ -8,19 +8,19 @@ $maingd: $simpleGradient;
   height: 80%;
   padding: 5%;
   background-color: $bg1;
-  box-shadow: $boxShadow;
+  box-shadow: $shadowHeavy;
   border-radius: 30px;
 
   .about {
     @extend .subHeading;
-    font-size: 2vw;
+    font-size: 3vw;
     text-align: left;
   }
 
   .description {
     @extend .description;
     margin-top: 0.5vw;
-    font-size: 1.1vw;
+    font-size: 1.25vw;
   }
 }
 
@@ -29,7 +29,7 @@ $maingd: $simpleGradient;
   height: 100%;
   @extend .flexCenter;
   background-color: $bg1;
-  box-shadow: $boxShadow;
+  box-shadow: $shadowHeavy;
   border-radius: 30px;
 }
 
@@ -37,6 +37,7 @@ $maingd: $simpleGradient;
   width: 100%;
   height: 100%;
   @extend .flexColumn;
+  align-items: center;
   border-radius: 30px;
   justify-content: space-evenly;
   background: $maingd;
@@ -51,7 +52,7 @@ $maingd: $simpleGradient;
 
     h3 {
       @extend .seperated;
-      font-size: 0.9vw;
+      font-size: 1vw;
       letter-spacing: 2px;
     }
   }
@@ -72,7 +73,7 @@ $maingd: $simpleGradient;
   display: flex;
   overflow: hidden;
   background-color: $bg1;
-  box-shadow: $boxShadow;
+  box-shadow: $shadowHeavy;
   border-radius: 30px;
 
   .topContent,
@@ -112,10 +113,11 @@ $maingd: $simpleGradient;
     align-items: center;
 
     h4 {
-      @extend .seperated;
+      @extend .subHeading;
       font-size: 4vw;
       padding: 0;
       margin: 0;
+      color: $textSecondary;
     }
   }
 }

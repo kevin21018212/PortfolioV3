@@ -1,4 +1,4 @@
-@import '/app/common.module.scss'; // Import the common SCSS file
+@import "/app/common.module.scss"; // Import the common SCSS file
 
 .card {
   width: 35%;
@@ -9,7 +9,7 @@
   margin: 1%;
   overflow: hidden; // Changed from overflow-x to overflow
   height: 75%;
-  box-shadow: $boxShadow;
+  box-shadow: $shadowHeavy;
   border-radius: 10px;
 }
 
