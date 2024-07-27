@@ -2,28 +2,21 @@
 
 .card {
   width: 35%;
-  background: $simpleGradient;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 1%;
-  overflow: hidden; // Changed from overflow-x to overflow
   height: 75%;
-  box-shadow: $shadowHeavy;
-  border-radius: 10px;
+  margin: 1%;
+
+  @include flexColumn(flex-end, none);
+  @include boxBg($roundMiddle, $simpleGradient, $shadowLight);
 }
 
 .description {
   width: 100%;
-  background-color: $textPrimary;
-  box-shadow: $buttonShadow;
+  @include boxBg(0 0 $roundMiddle $roundMiddle, $boxBgInverse, none);
   transition: height 0.3s ease;
 
   .title {
     padding-left: 2.5%;
 
-    display: flex;
-    align-items: center;
     color: black;
     .h5 {
       @extend .subHeading;

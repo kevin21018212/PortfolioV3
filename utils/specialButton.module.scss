@@ -4,13 +4,13 @@
   width: 100%;
   height: 100%;
 
-  @extend .boxBackground;
+  @include boxBg($roundOuter);
   position: relative;
   cursor: pointer;
   overflow: hidden;
   text-decoration: none;
 
-  @extend .flexCenter;
+  @include flexCenter(center);
   transition: box-shadow 0.3s;
 }
 
@@ -29,12 +29,13 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  text-align: center;
 
   h4 {
     @extend .subHeading;
     font-weight: 600;
     color: $background;
-    font-size: 4.25vw;
+    font-size: 5vw;
     margin: 1.5vh 2.5vw;
   }
 }
@@ -42,8 +43,8 @@
 .background {
   width: 100%;
   height: 100%;
-  @extend .boxBackground;
-  @extend .flexColumnCenter;
+  @include boxBg($roundOuter);
+  @include flexColumn(center, center);
   transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
   position: absolute;
   top: 0;

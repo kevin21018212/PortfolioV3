@@ -1,16 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./projectPage.module.scss";
-import Dash from "./displayed/Dash";
 import Projects from "./nav/project";
-import KevFm from "./displayed/KevFm";
-
-import Profile from "./updates/Profile";
 import { Commit, Repo } from "@/utils/data/dataType";
-import GitHubActivity from "./updates/GIthubActivity";
 import { fetchGitHubEvents, fetchGitHubRepos } from "@/utils/functions";
 import { projectData } from "@/utils/data/projectdata";
 import Project from "./displayed/Project";
+import { GitHubActivity, Profile } from "./updates";
 
 const ProjectsPage: React.FC = () => {
   const [commits, setCommits] = useState<Commit[]>([]);

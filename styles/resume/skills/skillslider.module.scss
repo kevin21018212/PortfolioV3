@@ -1,8 +1,7 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 .toggleContainer {
-  display: flex;
-  justify-self: flex-start;
+  @include flexCenter(flex-start);
   width: 90vw;
   padding-left: 1%;
   padding-top: 1%;
@@ -10,7 +9,7 @@
 }
 
 .sliderContainer {
-  @extend .flexColumnCenter;
+  @include flexColumn(center, center);
   height: auto;
   width: 100vw;
 }

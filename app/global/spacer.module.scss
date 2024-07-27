@@ -3,14 +3,12 @@
 /* Common Styles */
 .spacerBase {
   height: 100%;
-  background-color: $textSecondary;
   display: flex;
-  box-shadow: $shadowHeavy;
+  @include boxBg(0, $boxBgInverse);
 }
 
 .flexColumn {
-  flex-direction: column;
-  @extend .flexColumnCenter;
+  @include flexColumn(center, center);
 }
 
 .flexRow {
@@ -22,8 +20,7 @@
 /* Spacer Containers */
 .spacerContainer {
   @extend .spacerBase;
-  @extend .flexColumn;
-  align-items: center;
+  @include flexColumn(none, center);
   padding: 2.5%;
 }
 
@@ -55,7 +52,7 @@
 .toggleButtonContainer {
   width: 20%;
   height: 100%;
-  @extend .flexCenter;
+  @include flexCenter();
 }
 
 .textContainer {
@@ -72,5 +69,5 @@
   width: 100%;
   height: 100%;
   transition: transform 0.5s;
-  @extend .flexCenter;
+  @include flexCenter();
 }

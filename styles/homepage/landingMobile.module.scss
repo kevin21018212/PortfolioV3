@@ -2,7 +2,7 @@
 .landingContainerMobile {
   height: 90vh;
   width: 100vw;
-  @extend .flexColumnCenter;
+  @include flexColumn(center, center);
 }
 
 .liquidGradient {
@@ -23,8 +23,8 @@
   width: 90%;
   height: 35vh;
   margin: 5vh;
-  @extend .flexColumnCenter;
-  @extend .boxBackground;
+  @include flexColumn(center, center);
+  @include boxBg(10px);
 
   h1 {
     @extend .title;
@@ -52,18 +52,11 @@
   gap: 5vw;
 }
 
-.infoBox {
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  @extend .boxBackground;
-  @extend .flexCenter;
-}
-
+.infoBox,
 .symbolBox {
   width: 100%;
   height: 100%;
   z-index: 0;
-  @extend .boxBackground;
-  @extend .flexCenter;
+  @include boxBg(10px);
+  @include flexCenter();
 }

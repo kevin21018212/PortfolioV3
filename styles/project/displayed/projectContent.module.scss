@@ -1,5 +1,5 @@
 @import "/app/common.module.scss";
-$bg1: $boxBackground;
+$bg1: $boxBg;
 $bg2: #082c2c;
 $main: $primaryColor;
 $maingd: $simpleGradient;
@@ -7,9 +7,7 @@ $maingd: $simpleGradient;
   width: 100%;
   height: 80%;
   padding: 5%;
-  background-color: $bg1;
-  box-shadow: $shadowHeavy;
-  border-radius: 30px;
+  @include boxBg($roundOuter, $bg1);
 
   .about {
     @extend .subHeading;
@@ -27,27 +25,22 @@ $maingd: $simpleGradient;
 .topRightContent {
   width: 100%;
   height: 100%;
-  @extend .flexCenter;
-  background-color: $bg1;
-  box-shadow: $shadowHeavy;
-  border-radius: 30px;
+  @include flexCenter();
+  @include boxBg($roundOuter, $bg1);
 }
 
 .bottomLeftContent {
   width: 100%;
   height: 100%;
-  @extend .flexColumn;
-  align-items: center;
-  border-radius: 30px;
-  justify-content: space-evenly;
-  background: $maingd;
+  @include flexColumn(space-evenly, center);
+  @include boxBg($roundOuter, $simpleGradient);
   .tag {
     margin: 1%;
     padding: 2.5%;
     width: 85%;
-    @extend .flexCenter;
+    @include flexCenter();
     background: $bg2;
-    box-shadow: $buttonShadow;
+    box-shadow: $shadowLight;
     border-radius: 20px;
 
     h3 {
@@ -61,27 +54,20 @@ $maingd: $simpleGradient;
 .bottomRightContent {
   width: 100%;
   height: 100%;
-  background-color: $bg1;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
+  @include boxBg($roundOuter, $bg1);
 }
 
 .leftContent {
   width: 100%;
   height: 100%;
   display: flex;
+  @include boxBg($roundOuter, $bg1);
   overflow: hidden;
-  background-color: $bg1;
-  box-shadow: $shadowHeavy;
-  border-radius: 30px;
 
   .topContent,
   .bottomContent {
     writing-mode: vertical-rl;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
   }
 
   .topContent {
@@ -107,11 +93,11 @@ $maingd: $simpleGradient;
     width: 20%;
     height: 100%;
     padding-top: 5%;
-    text-orientation: upright;
+
     background: $simpleGradient;
     justify-content: flex-start;
     align-items: center;
-
+    text-orientation: upright;
     h4 {
       @extend .subHeading;
       font-size: 4vw;

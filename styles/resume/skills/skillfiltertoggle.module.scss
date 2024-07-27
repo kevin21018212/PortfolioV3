@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 .filterToggleContainer {
   display: flex;
@@ -11,14 +11,12 @@
 
   button {
     position: relative;
-    padding: 1.5vh 2vw;
-    background-color: transparent;
-    color: $textPrimary;
-    border: 2px solid #fff; /* White border when not selected */
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    box-shadow: $buttonShadow;
+    padding: 1vh 1.5vw;
+    @include boxBg($roundOuter, transparent, $shadowLight);
+    border: 2px solid $textSecondary;
+
+    @include flexCenter();
+
     cursor: pointer;
 
     p {
@@ -52,7 +50,6 @@
   .filterToggleContainer {
     gap: 1.5vw;
     button {
-      padding: 1vh 1.5vw;
       .circle {
         margin-top: -1%;
         margin-right: -2.5%;

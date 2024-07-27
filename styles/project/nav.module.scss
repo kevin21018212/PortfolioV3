@@ -1,3 +1,4 @@
+@import "/app/common.module.scss";
 /* styles.module.css */
 
 .container {
@@ -52,10 +53,8 @@
 }
 
 .description {
-  background-color: #ef5e04;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: $primaryColor;
+  @include flexCenter(space-between);
   padding-left: 5%;
   padding-right: 5%;
   clip-path: inset(50% 0 50%);
@@ -63,11 +62,10 @@
 }
 
 .left {
-  display: flex;
-  justify-content: flex-start;
+  @include flexCenter(flex-start);
 }
 .description h1 {
-  color: #010101;
+  color: $background;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 7.5vw;
@@ -76,11 +74,9 @@
 }
 
 .right {
-  display: flex;
-  justify-content: flex-end;
+  @include flexCenter(flex-end);
 }
 .description h6 {
-  color: #010101;
-
+  color: $background;
   font-weight: 700;
 }

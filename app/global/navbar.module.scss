@@ -12,7 +12,7 @@
   z-index: 999;
   overflow: hidden;
 
-  @extend .flexColumn;
+  @include flexColumn();
 }
 
 .navbar p {
@@ -34,7 +34,7 @@
 .linksContainer {
   margin-top: -45%;
   margin-bottom: 20%;
-  @extend .flexColumn;
+  @include flexColumn();
   align-items: center;
 }
 

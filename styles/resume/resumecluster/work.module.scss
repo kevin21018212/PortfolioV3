@@ -13,10 +13,9 @@
   width: 45%;
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
-  @extend .flexColumn;
-  align-items: center;
-  justify-content: flex-end;
-  box-shadow: $buttonShadow;
+  @include flexColumn(flex-end, flex-end);
+
+  box-shadow: $shadowLight;
 }
 
 .worktext {
@@ -29,35 +28,24 @@
 /* Non-image */
 .workbox {
   width: 60%;
-  @extend .flexColumnCenter;
   margin-bottom: 10%;
+  @include flexColumn(center, center);
 }
 
 /* Display For Jobs */
 .workdisplay {
   width: 90%;
-  margin-left: -60%;
-  padding: 2.5% 0% 5% 5%;
-  @extend .boxBackground;
+  margin-left: -40%;
+  padding: 2.5% 5%;
+  @include boxBg($roundMiddle);
 }
 
 .jobtext {
   p {
-    font-family: "MDNichrome Thin", sans-serif;
-    color: $textSecondary;
-    font-size: 1.5vw;
-    margin-bottom: 0.5vw;
-
-    &:nth-child(2) {
-      padding-left: 5%;
-    }
-
-    &:nth-child(3) {
-      padding-left: 10%;
-    }
-
-    &:nth-child(4) {
-      padding-left: 15%;
+    @for $i from 2 through 4 {
+      &:nth-child(#{$i}) {
+        padding-left: (5% * ($i - 1));
+      }
     }
   }
 

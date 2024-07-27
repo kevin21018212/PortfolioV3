@@ -11,6 +11,7 @@ body {
 }
 
 p {
+  font-family: "MDNichrome Thin", sans-serif;
   margin: 10px;
   font-size: 1.5vw;
   color: #e4e4e4;

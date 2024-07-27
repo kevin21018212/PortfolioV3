@@ -6,14 +6,14 @@ $secondaryColor: #ff7a00;
 $secondaryHoverColor: #fe8819;
 $accentcolor: #efd404;
 $highlightColor: #f89aa5;
-$boxBackground: #1f282e;
+$boxBg: #1f282e;
 $background: #101518;
 $textPrimary: #f0f0f0;
 $textSecondary: #e4e4e4;
 
 /* Shadows */
 $shadowHeavy: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-$buttonShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+$shadowLight: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 $arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 
@@ -62,25 +62,19 @@ $simpleGradient: linear-gradient(
   letter-spacing: 3px;
 }
 
-/* Containers */
-
-.pageContainer {
-  @extend .flexColumnCenter;
-  width: 90vw;
-  padding: 5vw;
-  gap: 2rem;
-}
-
 /* Flex Utilities */
-.flexColumn {
+
+@mixin flexColumn($justify: none, $align: none) {
   display: flex;
   flex-direction: column;
+  justify-content: $justify;
+  $align-items: $align;
 }
 
-.flexCenter {
+@mixin flexCenter($justify: center) {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: $justify;
 }
 
 .flex-horizontal {
@@ -88,21 +82,28 @@ $simpleGradient: linear-gradient(
   align-items: center;
 }
 
-.flexColumnCenter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Containers */
+
+.pageContainer {
+  @include flexColumn(center, center);
+  width: 90vw;
+  padding: 5vw;
+  gap: 2rem;
 }
 
-$outerBorder: 30px;
-$innerBorder: 20px;
+$roundOuter: 30px;
+$roundMiddle: 15px;
+$roundInner: 7.5px;
+
+$boxBgInverse: #f0f0f0;
 
 /* Box Styles */
-.boxBackground {
-  background-color: $boxBackground;
-  box-shadow: $shadowHeavy;
-  border-radius: 10px;
+@mixin boxBg($radius: 0, $bgColor: $boxBg, $shadow: $shadowHeavy) {
+  background: $bgColor;
+  box-shadow: $shadow;
+  border-radius: $radius;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Miscellaneous */

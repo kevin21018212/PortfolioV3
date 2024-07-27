@@ -4,42 +4,43 @@
   width: 85vw;
   height: 65vh;
   gap: 2vw;
-  margin: 2.5vh 0;
+  margin: 5vh 7.5vw;
 }
 
 .leftSection {
   width: 25vw;
-  @extend .flexColumnCenter;
+  @include flexColumn(center, center);
   height: 100%;
 }
 
 .rightSection {
   width: 55vw;
-  display: flex;
-  flex-direction: column;
+  @include flexColumn();
   gap: 1vw;
 }
 
 .topSection {
   display: flex;
+
   gap: 1vw;
-  height: 30vh;
+  height: 32vh;
   width: 100%;
 
   .left {
     width: 65%;
     height: 100%;
-    @extend .flexCenter;
+    @include flexCenter();
   }
 
   .right {
     width: 20vw;
-    @extend .flexCenter;
+    @include flexCenter();
   }
 }
 
 .bottomSection {
-  height: 35vh;
+  height: 32.5vh;
+
   width: 55vw;
   display: flex;
   gap: 1vw;
@@ -47,7 +48,6 @@
   .one {
     width: 20%;
     height: 100%;
-    border-radius: 20px;
   }
 
   .two,

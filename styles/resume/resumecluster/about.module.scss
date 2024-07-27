@@ -3,9 +3,7 @@
 .aboutdisplay {
   width: 40%;
   height: 100%;
-
-  box-shadow: $shadowHeavy;
-  background-color: $boxBackground;
+  @include boxBg(0);
   .abouttext {
     width: 50%;
     height: 100%;

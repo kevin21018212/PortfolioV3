@@ -1,6 +1,6 @@
 @import "/app/common.module.scss";
 .updateSection {
-  @extend .flexCenter;
+  @include flexCenter();
   flex-wrap: wrap;
   gap: 1vh 1vw;
   padding: 1vh 1vw;
@@ -16,7 +16,7 @@
 }
 
 .cardTop {
-  background-color: $boxBackground;
+  background-color: $boxBg;
   height: 12vh;
   padding: 1vh 0.25vw 0 1vw;
   border-radius: 15px 15px 15px 0;
@@ -28,12 +28,12 @@
     width: 65%;
 
     margin-right: -1.5%;
-    background-color: $boxBackground;
+    background-color: $boxBg;
     border-radius: 0px 0px 20px 15px;
   }
   .bottomButton {
     width: 40%;
-    @extend .flexCenter;
+    @include flexCenter();
     border-top-left-radius: 15px;
     margin-top: -1.5%;
     background-color: $background;
@@ -44,7 +44,7 @@
       border-radius: 10px;
       width: 85%;
       height: 3.5vh;
-      @extend .flexCenter;
+      @include flexCenter();
       cursor: pointer;
     }
   }
@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 600px) {
   .updateSection {
-    @extend .flexCenter;
+    @include flexCenter();
     flex-wrap: wrap;
     gap: 2vw 2vw;
     padding: 1vh 1vw;

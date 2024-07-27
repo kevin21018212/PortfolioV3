@@ -1,16 +1,16 @@
 @import "/app/common.module.scss"; // Import the common SCSS file
 
 .classescontainer {
-  background: $textPrimary;
+  @include boxBg(0, $boxBgInverse);
   position: relative;
   overflow: hidden;
-  box-shadow: $shadowHeavy;
+
   height: 100%;
   padding-top: 2.5%;
 
   .classestitle {
     height: 15%;
-    @extend .flexCenter;
+    @include flexCenter();
     padding: 5% 2.5%;
     margin: 0%;
     user-select: none;
@@ -34,7 +34,7 @@
   padding: 2.5%;
   padding-top: 0%;
   margin-bottom: 10%;
-  @extend .flexCenter;
+  @include flexCenter();
 
   @media screen and (max-width: 800px) {
     height: 180vh;

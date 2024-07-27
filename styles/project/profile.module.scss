@@ -1,16 +1,13 @@
 @import "/app/common.module.scss";
 
 .cardContainer {
-  @extend .flexCenter;
+  @include flexCenter();
   width: 100%;
   height: 100%;
-  border-radius: 16px;
 }
 
 .card {
-  background: $boxBackground;
-  border-radius: 15px;
-  @extend .boxBackground;
+  @include boxBg($roundMiddle);
   width: 90%;
   height: 95%;
 }
@@ -24,10 +21,10 @@
 
   .cardTitle {
     width: 60%;
-    background: $boxBackground;
+    background: $boxBg;
     height: 30%;
     border-top-left-radius: 25px;
-    @extend .flexCenter;
+    @include flexCenter();
     h6 {
       @extend .subHeading;
       font-size: 2.5vh;
@@ -39,18 +36,17 @@
     .titleInner {
       width: 100%;
       height: 100%;
-      border-bottom-right-radius: 30px;
+      border-bottom-right-radius: $roundOuter;
       background: $primaryColor;
     }
-    background-color: $boxBackground;
+    background-color: $boxBg;
     height: 30%;
     width: 40%;
   }
 }
 
 .cardBody {
-  @extend .flexColumn;
-  align-items: center;
+  @include flexColumn(none, center);
   height: 100%;
   width: 100%;
   padding: 2.5%;
@@ -62,14 +58,13 @@
 }
 
 .infoBox {
-  background: $secondaryColor;
-  border-radius: 10px;
   padding: 15px;
   margin: 5px;
   color: $textPrimary;
   width: 35%;
   height: 8vh;
-  box-shadow: $shadowHeavy;
+
+  @include boxBg($roundInner, $boxBgInverse);
 
   &:hover {
     background: $secondaryHoverColor;

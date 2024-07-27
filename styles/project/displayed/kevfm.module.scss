@@ -10,7 +10,7 @@
 
 .leftSection {
   width: 32.5%;
-  @extend .flexColumnCenter;
+  @include flexColumn(center, center);
   border: 1px dotted red;
   background: #15706c;
   border-radius: 50px;
@@ -23,7 +23,7 @@
     background: $background;
     border-radius: 50%;
     margin: 2.5vh 0;
-    @extend .flexCenter;
+    @include flexCenter();
 
     .circle {
       width: 90%;
@@ -46,14 +46,13 @@
     background: #90c693;
     border-radius: 0px 0px 30px 30px;
     bottom: 0;
-    @extend .flexCenter;
+    @include flexCenter();
   }
 }
 
 .rightSection {
   width: 68.5%;
-  display: flex;
-  flex-direction: column;
+  @extend .flexColumn;
   gap: 1vw;
 }
 
@@ -64,10 +63,9 @@
 }
 
 .bottomSection {
-  display: flex;
   height: 50%;
-  align-items: center;
-  justify-content: space-between;
+  gap: 1vw;
+  @include flexCenter(space-between);
 }
 
 .kevFm {
@@ -99,16 +97,16 @@
 
 .imageCenterContainer {
   width: 50%;
-  @extend .flexCenter;
+  @include flexCenter();
   background: #082c2c;
   border-radius: 50px;
 }
 
 .projectContainer {
-  display: flex;
+  @include flexCenter();
   width: 100%;
   height: 100%;
-  align-items: center;
+
   background-color: #15706c;
   border-radius: 30px;
 }

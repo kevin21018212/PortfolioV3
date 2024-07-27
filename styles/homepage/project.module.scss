@@ -10,34 +10,31 @@
 /* Projects Info Container */
 .projectsContainer {
   display: flex;
+  overflow: hidden;
   height: 0vh;
-  @extend .boxBackground;
+  @include boxBg();
 }
 
 /* Circle and Circle Container */
 .circlesContainer {
-  @extend .flexColumnCenter;
-  width: 200px;
-  background: $simpleGradient;
-  box-shadow: $buttonShadow;
-  overflow-y: hidden;
+  @include flexColumn(center, center);
+  @include boxBg(0, $simpleGradient, $shadowLight);
   user-select: none;
-
+  padding: 0 2.5%;
   .circle {
     width: 2.25vw;
     height: 2.25vw;
-    border-radius: 50%;
-    border: 2px solid $boxBackground;
-    transition: background-color 0.5s ease;
     margin-top: 25px;
-    background-color: transparent;
+    border: 2px solid $boxBg;
+    transition: background-color 0.5s ease;
 
+    @include boxBg(50%, transparent, $shadowLight);
     &.selected {
-      background-color: $boxBackground;
+      background-color: $boxBg;
     }
 
     &:hover {
-      background-color: $boxBackground;
+      background-color: $boxBg;
     }
   }
 }
@@ -45,5 +42,4 @@
 .projectInfoContainer {
   width: 90vw;
   max-height: 50vh;
-  overflow: hidden;
 }

@@ -1,8 +1,7 @@
-@import '@/app/common.module.scss';
+@import "@/app/common.module.scss";
 
 .projectsComponent {
   width: 100vw;
-  overflow-x: hidden;
   height: 350vh;
 }
 
@@ -11,14 +10,12 @@
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
   width: 100vw;
+  @include flexColumn();
 }
 
 .about {
-  display: flex;
-  align-items: center;
+  @include flexCenter();
   height: 25vh;
   padding-left: 4vw;
   h5 {
@@ -28,21 +25,19 @@
 
   .text {
     width: 50%;
-    @extend .flexCenter;
+    @include flexCenter();
     padding: 2.5vh 0;
     text-align: center;
   }
   .image {
     margin: 0vh 2.5vw;
-    border-radius: 25px;
     width: 50%;
     height: 85%;
-    background: $simpleGradient;
+    @include boxBg($roundOuter, $simpleGradient, none);
   }
 }
 
 .description {
   width: 100vw;
-
   margin-bottom: 2.5vh;
 }

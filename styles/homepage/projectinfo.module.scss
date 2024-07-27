@@ -8,19 +8,15 @@
   user-select: none;
 }
 
-.left {
+.left,
+.right {
   width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexColumn(space-between);
   text-align: left;
+  padding: 0 1vw;
 }
 .right {
   width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-right: 1vw;
   text-align: right;
 }
 
@@ -33,8 +29,7 @@
 }
 
 .middleLeft {
-  @extend .flexColumnCenter;
-  align-items: flex-start;
+  @include flexColumn(center, flex-start);
   flex: 1;
   h1 {
     @extend .heading;
@@ -53,8 +48,7 @@
 .middleRight {
   margin-top: 5vh;
   height: 70%;
-  @extend .flexColumnCenter;
-  align-items: flex-end;
+  @include flexColumn(center, flex-end);
   h3 {
     color: $textSecondary;
     margin: 0;
