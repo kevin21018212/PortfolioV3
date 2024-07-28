@@ -3,7 +3,7 @@ import styles from "@/styles/resume/resumecluster/classescard.module.scss";
 import { ClassesCardProps } from "@/utils/data/dataType";
 
 const descriptionVariants = {
-  hidden: { height: "15%" },
+  hidden: { height: "12.5%" },
   visible: { height: "82.5%" },
 };
 

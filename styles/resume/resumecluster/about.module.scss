@@ -6,9 +6,10 @@
   @include boxBg(0);
   .abouttext {
     width: 50%;
-    height: 100%;
+    height: 95%;
     background: $simpleGradient;
     text-align: left;
+    padding-top: 2.5%;
 
     h4 {
       color: $textPrimary;
