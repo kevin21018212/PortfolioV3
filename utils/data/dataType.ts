@@ -8,6 +8,7 @@ export type Project = {
   img1: string;
   img2: string;
   linkUrl: string;
+  githubUrl: string;
 };
 export type SkillData = {
   title: string;

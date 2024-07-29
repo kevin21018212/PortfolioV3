@@ -12,6 +12,7 @@ export const projectData: Project[] = [
     img1: "",
     img2: "",
     linkUrl: "https://portfolio-v3-jet.vercel.app/",
+    githubUrl: "",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const projectData: Project[] = [
     img1: "",
     img2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhgM4pfGqiKLDOg_TWq3Xl08KO8R4se6AGWQ&s",
     linkUrl: "https://dash-delta-indol.vercel.app/",
+    githubUrl: "",
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const projectData: Project[] = [
     img1: "",
     img2: "",
     linkUrl: "https://kevents.vercel.app/",
+    githubUrl: "",
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ export const projectData: Project[] = [
     img1: "",
     img2: "https://storage.googleapis.com/pr-newsroom-wp/1/2023/01/AppleCompetition-FTRHeader_V2-1440x733.png",
     linkUrl: "https://kev-fm.vercel.app/",
+    githubUrl: "",
   },
   {
     id: 5,
@@ -60,5 +64,6 @@ export const projectData: Project[] = [
     img1: "",
     img2: "",
     linkUrl: "",
+    githubUrl: "",
   },
 ];

@@ -1,5 +1,7 @@
 // animations.ts
 
+import { delay } from "framer-motion";
+
 // Enhanced text animation with added bounce effect and easing
 export const textAnimation = {
   inactive: {
@@ -52,20 +54,23 @@ export const descriptionVariants = {
 // Container variants for scaling and fading
 export const containerVariants = {
   hidden: {
-    opacity: 0,
     scale: 0.5,
+    y: 50,
+    opacity: 0,
   },
-  visible: {
-    opacity: 1,
-    y: 0,
+  visible: (i: number) => ({
     scale: 1,
+    y: 0,
+    opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 60,
-      damping: 15,
+      mass: 3,
+      stiffness: 400,
+      damping: 50,
       duration: 0.8,
+      delay: i * 0.1,
     },
-  },
+  }),
 };
 
 // Box variants for entry, exit, and hover animations
@@ -148,7 +153,7 @@ export const circleVariants = {
 // Description text variants for slide-in effect
 export const slideTextVariant = {
   hidden: {
-    x: 100,
+    x: -20,
     opacity: 0,
   },
   visible: {

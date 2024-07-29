@@ -5,8 +5,8 @@ $main: $primaryColor;
 $maingd: $simpleGradient;
 .topLeftContent {
   width: 100%;
-  height: 80%;
-  padding: 5%;
+  height: 97.5%;
+  padding-top: 2.5%;
   @include boxBg($roundOuter, $bg1);
 
   .about {
@@ -17,7 +17,8 @@ $maingd: $simpleGradient;
 
   .description {
     @extend .description;
-    margin-top: 0.5vw;
+    margin-top: 0.5vh;
+    margin-left: 1.5vw;
     font-size: 1.25vw;
   }
 }
@@ -31,18 +32,19 @@ $maingd: $simpleGradient;
 
 .bottomLeftContent {
   width: 100%;
-  height: 100%;
-  @include flexColumn(space-evenly, center);
+  height: 95%;
+  @include flexCenter(center);
+  flex-wrap: wrap;
   @include boxBg($roundOuter, $simpleGradient);
+  padding: 5% 0;
   .tag {
     margin: 1%;
-    padding: 2.5%;
-    width: 85%;
-    @include flexCenter();
-    background: $bg2;
-    box-shadow: $shadowLight;
-    border-radius: 20px;
 
+    width: 85%;
+    height: 15%;
+    @include flexCenter();
+
+    @include boxBg($roundMiddle, $bg2, $shadowLight);
     h3 {
       @extend .seperated;
       font-size: 1vw;
@@ -81,7 +83,7 @@ $maingd: $simpleGradient;
 
     h1 {
       @extend .title;
-      font-size: 4.25vw;
+      font-size: 4vw;
       color: $textSecondary;
       letter-spacing: 2px;
       line-height: 1;

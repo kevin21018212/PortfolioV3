@@ -39,7 +39,8 @@
 
 .projects {
   width: 100vw;
-  padding-top: 5%;
+  @include flexCenter(center);
+  flex-wrap: wrap;
 }
 
 .nav {
