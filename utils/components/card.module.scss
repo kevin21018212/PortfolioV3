@@ -1,0 +1,39 @@
+.cardContainer {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  perspective: 1000px;
+  z-index: 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.25s linear;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  &.hovered {
+    transform: rotateY(var(--rotate-x)) rotateX(var(--rotate-y));
+  }
+}
+
+.cardBody {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+
+  & > * {
+    transform-style: preserve-3d;
+  }
+}
+
+.cardItem {
+  width: 90%;
+  transition: transform 0.4s linear;
+}

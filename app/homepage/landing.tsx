@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "@/styles/homepage/landing.module.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { boxVariants } from "../../utils/framer";
 
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
-import SpecialButton from "@/utils/specialButton";
+import { CardContainer, CardBody, CardItem } from "@/utils/components/card";
+import BackgroundBeams from "@/utils/components/backgroundBeams";
 
 // ShaderGradientBackground Component
 const ShaderGradientBackground: React.FC = () => {
@@ -30,9 +31,65 @@ const ShaderGradientBackground: React.FC = () => {
 
 // TextBox Component
 const TextBox: React.FC = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
   return (
     <div className={styles.textBox}>
-      <SpecialButton />
+      <CardContainer>
+        <CardBody>
+          <motion.a
+            className={styles.button}
+            onClick={handleClick}
+            onTap={handleClick}
+            initial={{ boxShadow: "none" }}
+          >
+            {" "}
+            <CardItem translateZ={1000}>
+              <motion.h1
+                className={styles.primaryText}
+                initial={{ top: 0, opacity: 1, visibility: "visible" }}
+                animate={{
+                  top: isClicked ? "-100%" : 0,
+                  opacity: isClicked ? 0 : 1,
+                  visibility: isClicked ? "hidden" : "visible",
+                }}
+                transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}
+              >
+                Hi, I'm Matthew
+              </motion.h1>
+            </CardItem>
+            <motion.div
+              className={styles.secondaryText}
+              initial={{ top: "100%" }}
+              animate={{ top: isClicked ? 0 : "100%" }}
+              transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}
+            >
+              <motion.div
+                className={styles.background}
+                initial={{ backgroundColor: "transparent", scale: 0 }}
+                animate={{
+                  backgroundColor: isClicked ? "#ff7a00" : "transparent",
+                  scale: isClicked ? 1.1 : 0,
+                }}
+                transition={{ duration: 1.5, ease: [0.33, 1, 0.68, 1] }}
+              >
+                <CardItem as="h4" translateZ={20}>
+                  Programmer
+                </CardItem>
+                <CardItem as="h4" translateZ={20}>
+                  Creator
+                </CardItem>
+                <CardItem as="h4" translateZ={20}>
+                  Designer
+                </CardItem>
+              </motion.div>
+            </motion.div>
+          </motion.a>
+        </CardBody>
+      </CardContainer>
     </div>
   );
 };
@@ -78,11 +135,13 @@ const IconBox: React.FC = () => {
 // Landing Component
 const Landing: React.FC = () => {
   return (
-    <div className={styles.landingContainer}>
-      <ShaderGradientBackground />
-      <TextBox />
-      <IconBox />
-    </div>
+    <>
+      <div className={styles.landingContainer}>
+        <ShaderGradientBackground />
+        <TextBox />
+        <IconBox />
+      </div>
+    </>
   );
 };
 

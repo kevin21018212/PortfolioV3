@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  gap: 5px;
 }
 
 .liquidGradient {
@@ -15,7 +14,6 @@
 .textBox {
   grid-column: 5 / span 9;
   grid-row: 4 / span 7;
-  padding: -2.5%;
 }
 
 .infoBox {
@@ -23,7 +21,7 @@
   grid-row: 12 / span 4;
   width: 100%;
   height: 100%;
-  z-index: 0;
+
   @include boxBg(10px);
   @include flexCenter();
 }
@@ -33,7 +31,64 @@
   grid-row: 12 / span 4;
   width: 100%;
   height: 100%;
-  z-index: 0;
+
   @include boxBg(10px);
   @include flexCenter();
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+
+  @include boxBg($roundOuter);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+
+  @include flexCenter(center);
+  transition: box-shadow 0.3s;
+}
+
+.primaryText {
+  position: relative;
+  text-align: center;
+  @extend .title;
+  color: $textPrimary;
+  font-size: 4.25vw;
+}
+
+.secondaryText {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  text-align: center;
+  text-shadow: 2px 2px #ff0000;
+  transform-style: preserve-3d;
+  h4 {
+    @extend .subHeading;
+    font-weight: 600;
+    color: $background;
+    font-size: 5vw;
+    margin: 1vh 2.5vw;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  @include boxBg($roundOuter);
+  @include flexColumn(center, center);
+  transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1px;
+  .programmerText {
+    width: 100%;
+    margin: 0;
+  }
 }

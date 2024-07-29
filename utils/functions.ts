@@ -1,6 +1,7 @@
 import { hexColorOptions } from "./data/smallData";
 import easyMeshGradient from "easy-mesh-gradient";
-
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 export const getImagePath = (item: string | null): string => {
   return item ? `/about/${item}.jpg` : "";
 };
@@ -94,3 +95,7 @@ export const fetchGitHubRepos = async (
     );
   return await response.json();
 };
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
