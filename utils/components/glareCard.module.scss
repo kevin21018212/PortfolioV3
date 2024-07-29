@@ -8,6 +8,8 @@ $background: #101518;
   transition: transform 0.3s var(--easing);
   will-change: transform;
   aspect-ratio: 17 / 21;
+  width: 95%;
+  height: 100%;
 }
 
 .innerContainer {
@@ -68,7 +70,7 @@ $background: #101518;
   background: var(--pattern), var(--rainbow), var(--diagonal), var(--shade);
   position: relative;
   &::after {
-    content: "";
+    content: '';
     grid-area: inherit;
     background-repeat: inherit;
     background-attachment: inherit;
@@ -77,8 +79,7 @@ $background: #101518;
     background: inherit;
     mix-blend-mode: exclusion;
     background-size: var(--foil-size), 200% 400%, 800%, 200%;
-    background-position: center, 0% var(--bg-y),
-      calc(var(--bg-x) * -1) calc(var(--bg-y) * -1), var(--bg-x) var(--bg-y);
+    background-position: center, 0% var(--bg-y), calc(var(--bg-x) * -1) calc(var(--bg-y) * -1), var(--bg-x) var(--bg-y);
     background-blend-mode: soft-light, hue, hard-light;
   }
 }

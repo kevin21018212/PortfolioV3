@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 .toggleContainer {
   @include flexCenter(flex-start);
@@ -21,6 +21,7 @@
 
 .splide__slide {
   height: 85%;
+
   padding-top: 10%;
 }
 

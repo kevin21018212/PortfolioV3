@@ -1,4 +1,4 @@
-@import "@/app/common.module.scss";
+@import '@/app/common.module.scss';
 .landingContainerMobile {
   height: 90vh;
   width: 100vw;
@@ -20,11 +20,11 @@
 }
 
 .textBox {
-  width: 90%;
-  height: 35vh;
-  margin: 5vh;
+  width: 80%;
+  height: 50%;
   @include flexColumn(center, center);
   @include boxBg(10px);
+  margin-bottom: 2.5vh;
 
   h1 {
     @extend .title;
