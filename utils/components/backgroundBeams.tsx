@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import styles from "./BackgroundBeams.module.scss";
+import styles from "./backgroundBeams.module.scss";
 import { cn } from "../functions";
 
 interface BackgroundBeamsProps {
