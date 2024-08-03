@@ -18,9 +18,8 @@
 .title {
   height: 15vh;
   width: 100%;
-  margin-left: -5%;
+  margin-left: -2.5%;
   @include flexCenter(flex-start);
-  color: $textPrimary;
 }
 
 .content {

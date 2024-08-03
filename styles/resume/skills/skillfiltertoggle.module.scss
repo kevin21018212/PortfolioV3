@@ -11,31 +11,24 @@
 
   button {
     position: relative;
-    padding: 1vh 1.5vw;
+    padding: 2vh 1.5vw;
     @include boxBg($roundOuter, transparent, $shadowLight);
-    border: 2px solid $textSecondary;
-
+    border: 2px solid $Gray5;
     @include flexCenter();
-
     cursor: pointer;
 
-    p {
-      font-size: 1.25vw;
-    }
-
     .circle {
-      width: 20px;
-      height: 20px;
+      width: 2vw;
+      height: 2vw;
       border-radius: 30px;
-
-      margin-right: 15px;
+      margin-right: 1vw;
       transition: background-color 0.3s ease; /* Transition for circle color */
     }
 
     &.selected {
       border: none;
 
-      p {
+      h5 {
         color: #26221b;
       }
 
@@ -55,7 +48,7 @@
         margin-right: -2.5%;
         margin-left: 2.5%;
       }
-      p {
+      h6 {
         font-size: 4.25vw;
       }
     }

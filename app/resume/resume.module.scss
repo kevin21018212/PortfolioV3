@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 /* Container Styles */
 .resumeContainer {
@@ -8,15 +8,18 @@
 }
 
 .headerContainer {
-  width: 80vw;
-  margin: 2% 0;
+  width: 90vw;
+  margin: 1.5%;
 
   .heading {
-    color: $textPrimary;
+    h2 {
+      color: $Gray5;
+    }
   }
 
   .subHeading {
-    color: $textSecondary;
+    color: $Gray5;
+    margin-left: 2.5%;
   }
   .simpleGradient {
     background: linear-gradient(90deg, $primaryColor, $secondaryColor);

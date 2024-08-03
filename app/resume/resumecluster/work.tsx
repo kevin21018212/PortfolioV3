@@ -60,7 +60,7 @@ const ResumeWork = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  <h5>{job.title}</h5>
+                  <h4>{job.title}</h4>
                   {job.description.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}

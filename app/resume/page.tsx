@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import styles from './resume.module.scss';
-import ResumeClasses from './resumecluster/classes';
-import ResumeWork from './resumecluster/work';
-import SkillSlider from './skills/skillslider';
-import {motion} from 'framer-motion';
+import styles from "./resume.module.scss";
+import ResumeClasses from "./resumecluster/classes";
+import ResumeWork from "./resumecluster/work";
+import SkillSlider from "./skills/skillslider";
+import { motion } from "framer-motion";
 
 // Animation variants for the main container and its children
 const containerVariants = {
-  hidden: {opacity: 0, y: 50},
+  hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
       delayChildren: 0.3,
       staggerChildren: 0.2,
     },
@@ -22,13 +22,18 @@ const containerVariants = {
 };
 
 const childVariants = {
-  hidden: {opacity: 0, x: 50},
-  visible: {opacity: 1, x: 0, transition: {duration: 0.5, ease: 'easeOut'}},
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 const ResumePage = () => {
   return (
-    <motion.div className={styles.resumeContainer} initial='hidden' whileInView='visible' variants={containerVariants}>
+    <motion.div
+      className={styles.resumeContainer}
+      initial="hidden"
+      whileInView="visible"
+      variants={containerVariants}
+    >
       <Header />
       <motion.div className={styles.skillSlider}>
         <SkillSlider />
@@ -44,7 +49,12 @@ const ResumePage = () => {
 };
 
 const Header = () => (
-  <motion.div className={styles.headerContainer} initial='hidden' whileInView='visible' variants={containerVariants}>
+  <motion.div
+    className={styles.headerContainer}
+    initial="hidden"
+    whileInView="visible"
+    variants={containerVariants}
+  >
     <Heading />
     <SubHeading />
   </motion.div>
@@ -52,26 +62,29 @@ const Header = () => (
 
 const Heading = () => (
   <motion.div className={styles.heading} variants={childVariants}>
-    <h2>Coding is only a tool of expression. Beauty can only be found in the art</h2>
+    <h2>
+      Coding is only a tool of expression. Beauty can only be found in the art
+    </h2>
   </motion.div>
 );
 
 const SubHeading = () => (
   <motion.div className={styles.subHeading} variants={childVariants}>
-    <h4>
+    <h3>
       Below you can see some of my tools or
       <motion.a
-        href='/resume.pdf'
+        href="/resume.pdf"
         className={styles.simpleGradient}
-        whileHover={{scale: 1.1}}
-        transition={{duration: 0.3, ease: 'easeOut'}}
-        target='_blank'
-        rel='noopener noreferrer'>
-        {'  '}
-        download resume{' '}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {"  "}
+        download resume{" "}
       </motion.a>
       for a more formal look at my talents
-    </h4>
+    </h3>
   </motion.div>
 );
 

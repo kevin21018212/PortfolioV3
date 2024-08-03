@@ -16,7 +16,7 @@
 }
 
 .cardTop {
-  background-color: $boxBg;
+  background-color: $Grey1;
   height: 12vh;
   padding: 1vh 0.25vw 0 1vw;
   border-radius: 15px 15px 15px 0;
@@ -28,7 +28,7 @@
     width: 65%;
 
     margin-right: -1.5%;
-    background-color: $boxBg;
+    background-color: $Grey1;
     border-radius: 0px 0px 20px 15px;
   }
   .bottomButton {
@@ -36,7 +36,7 @@
     @include flexCenter();
     border-top-left-radius: 15px;
     margin-top: -1.5%;
-    background-color: $background;
+    background-color: $Black1;
     .commitButton {
       margin-top: 1.5%;
       background-color: $secondaryColor;
@@ -50,15 +50,13 @@
   }
 }
 
-.commitCard h3 {
-  font-size: 1.75vw;
-  color: $textPrimary;
+.commitCard h5 {
+  color: $white;
 }
 
-.commitCard p {
+.commitCard h6 {
   margin: 0;
-  font-size: 1vw;
-  color: $textSecondary;
+  color: $Gray5;
 }
 
 .commitButton:hover {

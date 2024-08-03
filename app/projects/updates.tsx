@@ -28,10 +28,10 @@ export const GitHubActivity: React.FC<GitHubActivityProps> = ({ commits }) => {
           custom={index}
         >
           <div className={gstyles.cardTop}>
-            <h3>{commit.repoName}</h3>
-            <p>
+            <h5>{commit.repoName}</h5>
+            <h6>
               {commit.commitDate} - {commit.commitMessage}
-            </p>
+            </h6>
           </div>
           <div className={gstyles.cardBottom}>
             <div className={gstyles.buttonSpacer}></div>

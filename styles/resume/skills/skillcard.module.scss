@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 .skillcardContainer {
   width: 100%;
@@ -16,9 +16,9 @@
   height: 100%;
   @include flexCenter();
   .text {
-    width: 90%;
+    width: 100%;
     text-align: center;
-    color: $textPrimary;
+    color: $Gray5;
   }
 }
 

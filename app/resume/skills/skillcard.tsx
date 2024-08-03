@@ -14,8 +14,8 @@ const SkillCard = ({ title, skillName, experience, index }: SkillCardProps) => {
       <GlareCard className={styles.card}>
         <div className={styles.innerCard} style={cardStyle}>
           <div className={styles.text}>
-            <h5>{title}</h5>
-            <h6>{skillName}</h6>
+            <h4>{title}</h4>
+            <h5>{skillName}</h5>
             <p>{experience}</p>
           </div>
         </div>

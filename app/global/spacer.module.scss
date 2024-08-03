@@ -32,8 +32,10 @@
 .spacerContainerSimple {
   @extend .spacerBase;
   @extend .flex-horizontal;
-  overflow: hidden;
-  padding-left: 2.5%;
+  h2 {
+    padding-left: 2.5%;
+    color: $Black1;
+  }
   box-shadow: $arrowShadow;
 }
 

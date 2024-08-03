@@ -1,4 +1,4 @@
-@import '../common.module.scss';
+@import "../common.module.scss";
 
 .navbar {
   position: fixed;
@@ -16,7 +16,7 @@
 }
 
 .navbar p {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   font-size: 1.25vw;
   margin: 7.5% 2.5%;
   user-select: none;
@@ -64,7 +64,7 @@
 .secondLink:hover,
 .thirdLink:hover,
 .lastLink:hover {
-  background-color: $primary-hover-color;
+  background-color: $primaryHoverColor;
   transform: skew(-8deg) translateX(-1vw) rotate(15deg) scale(1.1);
   padding-left: 5.5vw;
   padding-bottom: 5.5%;
@@ -81,7 +81,7 @@
 .thirdLink a,
 .firstLink a,
 .lastLink a {
-  color: $textSecondary;
+  color: $Gray5;
   text-decoration: none;
 }
 

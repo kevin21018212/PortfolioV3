@@ -21,7 +21,7 @@
 
   .cardTitle {
     width: 60%;
-    background: $boxBg;
+    background: $Grey1;
     height: 30%;
     border-top-left-radius: 25px;
     @include flexCenter();
@@ -29,7 +29,7 @@
       @extend .subHeading;
       font-size: 2.5vh;
       padding-left: 2.5%;
-      color: $textPrimary;
+      color: $white;
     }
   }
   .titleSpacer {
@@ -39,7 +39,7 @@
       border-bottom-right-radius: $roundOuter;
       background: $primaryColor;
     }
-    background-color: $boxBg;
+    background-color: $Grey1;
     height: 30%;
     width: 40%;
   }
@@ -60,7 +60,7 @@
 .infoBox {
   padding: 15px;
   margin: 5px;
-  color: $textPrimary;
+  color: $white;
   width: 35%;
   height: 8vh;
 
@@ -72,14 +72,14 @@
   }
 
   .infoLabel {
-    color: $textSecondary;
+    color: $Gray5;
     font-size: 0.9em;
   }
 
   .infoValue {
     font-size: 1.4em;
     font-weight: bold;
-    color: $textPrimary;
+    color: $white;
   }
 }
 
@@ -91,12 +91,12 @@
   h4 {
     @extend .subHeading;
     margin: 0;
-    color: $textPrimary;
+    color: $white;
   }
   ul {
     list-style-type: none;
     padding: 0;
-    color: $textPrimary;
+    color: $white;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -115,7 +115,7 @@
       transform: translateY(-5px);
     }
     a {
-      color: $textPrimary;
+      color: $white;
       font-weight: bold;
       text-decoration: none;
 

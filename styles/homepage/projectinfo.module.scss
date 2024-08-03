@@ -33,7 +33,7 @@
   flex: 1;
   h1 {
     @extend .heading;
-    color: $textSecondary;
+    color: $Gray5;
     margin-bottom: 0px;
     margin-top: -15px;
   }
@@ -50,7 +50,7 @@
   height: 70%;
   @include flexColumn(center, flex-end);
   h3 {
-    color: $textSecondary;
+    color: $Gray5;
     margin: 0;
   }
   p {
@@ -64,6 +64,6 @@
   flex: 1;
   p {
     @extend .seperated;
-    color: $textSecondary;
+    color: $Gray5;
   }
 }

@@ -1,4 +1,4 @@
-@import '/app/common.module.scss'; // Import the common SCSS file
+@import "/app/common.module.scss"; // Import the common SCSS file
 
 .workcontainer {
   height: 100%;
@@ -34,25 +34,21 @@
 
 /* Display For Jobs */
 .workdisplay {
-  width: 70%;
-  margin-left: -65%;
-  padding: 2.5% 5%;
+  width: 100%;
+  margin-left: -30%;
+  padding: 2.5%;
   @include flexColumn(center, flex-start);
   @include boxBg($roundMiddle);
 }
 
 .jobtext {
   p {
+    color: $Gray5;
     @for $i from 2 through 4 {
       &:nth-child(#{$i}) {
         padding-left: (5% * ($i - 1));
       }
     }
-  }
-
-  h5 {
-    font-family: 'Monument Grotesk Regular', sans-serif;
-    color: $textPrimary;
   }
 }
 
@@ -73,11 +69,6 @@
     margin-left: -65vw;
     padding-left: 5vw;
     padding-right: 2.5vw;
-    .jobtext {
-      p {
-        font-size: 4.5vw;
-      }
-    }
   }
 
   .worktext {

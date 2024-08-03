@@ -58,7 +58,7 @@ const SkillFilterToggle = ({ tags, onToggle }: SkillFilterToggleProps) => {
                 layout
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <p>{tag}</p>
+                <h5>{tag}</h5>
               </motion.div>
             </motion.button>
           </motion.div>

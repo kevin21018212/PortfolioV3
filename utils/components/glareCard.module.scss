@@ -1,4 +1,4 @@
-$background: #101518;
+$Black1: #101518;
 
 .container {
   position: relative;
@@ -36,7 +36,7 @@ $background: #101518;
   grid-area: 1 / 1;
   mix-blend-mode: soft-light;
   clip-path: inset(0 0 0 0 round 30px);
-  background-color: $background;
+  background-color: $Black1;
 }
 
 .glare {
@@ -70,7 +70,7 @@ $background: #101518;
   background: var(--pattern), var(--rainbow), var(--diagonal), var(--shade);
   position: relative;
   &::after {
-    content: '';
+    content: "";
     grid-area: inherit;
     background-repeat: inherit;
     background-attachment: inherit;
@@ -79,7 +79,8 @@ $background: #101518;
     background: inherit;
     mix-blend-mode: exclusion;
     background-size: var(--foil-size), 200% 400%, 800%, 200%;
-    background-position: center, 0% var(--bg-y), calc(var(--bg-x) * -1) calc(var(--bg-y) * -1), var(--bg-x) var(--bg-y);
+    background-position: center, 0% var(--bg-y),
+      calc(var(--bg-x) * -1) calc(var(--bg-y) * -1), var(--bg-x) var(--bg-y);
     background-blend-mode: soft-light, hue, hard-light;
   }
 }

@@ -20,7 +20,7 @@
   .circleContainer {
     width: 15vw;
     height: 25vh;
-    background: $background;
+    background: $Black1;
     border-radius: 50%;
     margin: 2.5vh 0;
     @include flexCenter();
@@ -70,7 +70,7 @@
 
 .kevFm {
   @extend .title;
-  color: $textPrimary;
+  color: $white;
   font-size: 3.75vw;
 }
 

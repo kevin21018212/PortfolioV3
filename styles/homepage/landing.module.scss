@@ -53,9 +53,6 @@
 .primaryText {
   position: relative;
   text-align: center;
-  @extend .title;
-  color: $textPrimary;
-  font-size: 4.25vw;
 }
 
 .secondaryText {
@@ -68,11 +65,11 @@
   text-align: center;
   text-shadow: 2px 2px #ff0000;
   transform-style: preserve-3d;
-  h4 {
+  h2 {
     @extend .subHeading;
     font-weight: 600;
-    color: $background;
-    font-size: 5vw;
+    color: $Black1;
+
     margin: 1vh 2.5vw;
   }
 }

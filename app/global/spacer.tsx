@@ -38,7 +38,7 @@ const SpacerContainer = ({
 
   return (
     <div className={styles.spacerContainerSimple}>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
     </div>
   );
 };

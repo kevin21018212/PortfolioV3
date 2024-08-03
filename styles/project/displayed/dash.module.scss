@@ -29,7 +29,7 @@
   box-shadow: $shadowHeavy;
   .dash {
     @extend .heading;
-    color: $textPrimary;
+    color: $white;
     font-size: 5.5vw;
     margin-left: 5%;
   }
@@ -145,7 +145,7 @@
         font-size: 6vh;
         text-wrap: nowrap;
         letter-spacing: 4px;
-        color: $textPrimary;
+        color: $white;
       }
     }
   }

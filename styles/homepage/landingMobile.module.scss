@@ -1,4 +1,4 @@
-@import '@/app/common.module.scss';
+@import "@/app/common.module.scss";
 .landingContainerMobile {
   height: 90vh;
   width: 100vw;
@@ -29,7 +29,7 @@
   h1 {
     @extend .title;
     letter-spacing: 5px;
-    color: $textPrimary;
+    color: $white;
     text-align: center;
   }
   .group {
@@ -38,7 +38,7 @@
     text-align: center;
     h3 {
       @extend .seperated;
-      color: $textSecondary;
+      color: $Gray5;
       font-size: 8vw;
       margin-top: 1;
       letter-spacing: 10px;

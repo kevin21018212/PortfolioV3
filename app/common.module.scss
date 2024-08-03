@@ -1,15 +1,16 @@
 /* Variables */
 /* Colors */
-$primaryColor: #ef5e04;
-$primary-hover-color: #d14a03;
-$secondaryColor: #ff7a00;
-$secondaryHoverColor: #fe8819;
-$accentcolor: #efd404;
-$highlightColor: #f89aa5;
-$boxBg: #1f282e;
-$background: #101518;
-$textPrimary: #f0f0f0;
-$textSecondary: #e4e4e4;
+$primaryColor: #f27127;
+$primaryHoverColor: #d66322;
+$secondaryColor: #27b3f2;
+$secondaryHoverColor: #239ad4;
+$highlightColor: #d7f227;
+$accentColor: #f2a778;
+$Grey1: #262d33;
+$Black1: #1b2126;
+$Black2: #242a30;
+$white: #f0f0f0;
+$Gray5: #e4e4e4;
 
 /* Shadows */
 $shadowHeavy: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -18,41 +19,46 @@ $arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 
 /* Gradients */
-$simpleGradient: linear-gradient(45deg, $accentcolor, $primaryColor, $accentcolor);
+$simpleGradient: linear-gradient(
+  45deg,
+  $accentColor,
+  $primaryColor,
+  $accentColor
+);
 
 /* Typography */
 .title {
-  font-family: 'GT America Expanded Black', sans-serif;
+  font-family: "GT America Expanded Black", sans-serif;
   letter-spacing: 15px;
 }
 
 .heading {
-  font-family: 'Monument Grotesk Black', sans-serif;
+  font-family: "Monument Grotesk Black", sans-serif;
   font-size: 6.5vw;
   letter-spacing: 10px;
 }
 
 .subHeading {
-  font-family: 'Monument Grotesk Mono', sans-serif;
+  font-family: "Monument Grotesk Mono", sans-serif;
 
-  color: $textSecondary;
+  color: $Gray5;
 }
 
 .tag {
-  font-family: 'Monument Grotesk Mono SemCond', sans-serif;
+  font-family: "Monument Grotesk Mono SemCond", sans-serif;
 
-  color: $textPrimary;
+  color: $white;
 }
 
 .description {
-  font-family: 'Neue Montreal Book', sans-serif;
+  font-family: "Neue Montreal Book", sans-serif;
   font-size: 1.5vw;
   font-weight: 400;
-  color: $textSecondary;
+  color: $Gray5;
 }
 
 .seperated {
-  font-family: 'Monument Grotesk Regular', sans-serif;
+  font-family: "Monument Grotesk Regular", sans-serif;
   font-size: 1.75vw;
   letter-spacing: 3px;
 }
@@ -63,7 +69,7 @@ $simpleGradient: linear-gradient(45deg, $accentcolor, $primaryColor, $accentcolo
   display: flex;
   flex-direction: column;
   justify-content: $justify;
-  align-items: $align;
+  $align-items: $align;
 }
 
 @mixin flexCenter($justify: center) {
@@ -93,7 +99,7 @@ $roundInner: 7.5px;
 $boxBgInverse: #f0f0f0;
 
 /* Box Styles */
-@mixin boxBg($radius: 0, $bgColor: $boxBg, $shadow: $shadowHeavy) {
+@mixin boxBg($radius: 0, $bgColor: $Grey1, $shadow: $shadowHeavy) {
   background: $bgColor;
   box-shadow: $shadow;
   border-radius: $radius;

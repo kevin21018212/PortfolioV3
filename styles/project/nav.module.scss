@@ -65,7 +65,7 @@
   @include flexCenter(flex-start);
 }
 .description h1 {
-  color: $background;
+  color: $Black1;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 7.5vw;
@@ -77,6 +77,6 @@
   @include flexCenter(flex-end);
 }
 .description h6 {
-  color: $background;
+  color: $Black1;
   font-weight: 700;
 }
