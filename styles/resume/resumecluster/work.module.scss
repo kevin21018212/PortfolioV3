@@ -48,6 +48,8 @@
       &:nth-child(#{$i}) {
         padding-left: (5% * ($i - 1));
       }
+
+      font-size: 1.5vw;
     }
   }
 }
@@ -59,7 +61,6 @@
   @extend .flex-horizontal;
   justify-content: flex-end;
   margin-top: -20vh;
-  padding-bottom: 10vh;
 }
 
 @media screen and (max-width: 600px) {

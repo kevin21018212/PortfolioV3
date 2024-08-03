@@ -12,9 +12,9 @@ const AboutDisplay = () => {
   return (
     <motion.div className={styles.aboutdisplay}>
       <div className={styles.abouttext}>
-        <h4>Extra</h4>
+        <h3>Extra</h3>
         {items.map((item, index) => (
-          <motion.p
+          <motion.h5
             key={index}
             whileHover={{
               scale: 1.1,
@@ -24,7 +24,7 @@ const AboutDisplay = () => {
             onMouseLeave={() => setHoveredItem(null)}
           >
             {item}
-          </motion.p>
+          </motion.h5>
         ))}
       </div>
       {hoveredItem && (

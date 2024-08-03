@@ -3,11 +3,10 @@
   @include flexCenter();
   flex-wrap: wrap;
   gap: 1vh 1vw;
-  padding: 1vh 1vw;
 }
 .commitCard {
   width: 16vw;
-  height: 16vh;
+  height: 18vh;
   border-radius: 15px;
   text-overflow: wrap;
   display: flex;
@@ -17,33 +16,33 @@
 
 .cardTop {
   background-color: $Grey1;
-  height: 12vh;
-  padding: 1vh 0.25vw 0 1vw;
+  height: 11.5vh;
+  padding: 1vh 1vw;
   border-radius: 15px 15px 15px 0;
 }
 .cardBottom {
-  height: 5vh;
+  height: 4.5vh;
   display: flex;
   .buttonSpacer {
-    width: 65%;
-
+    width: 60%;
+    height: 100%;
+    margin-top: -0.5%;
     margin-right: -1.5%;
     background-color: $Grey1;
     border-radius: 0px 0px 20px 15px;
   }
   .bottomButton {
-    width: 40%;
-    @include flexCenter();
+    width: 45%;
+    @include flexCenter(center);
     border-top-left-radius: 15px;
-    margin-top: -1.5%;
-    background-color: $Black1;
+
+    background-color: none;
     .commitButton {
-      margin-top: 1.5%;
       background-color: $secondaryColor;
       border: none;
       border-radius: 10px;
-      width: 85%;
-      height: 3.5vh;
+      height: 90%;
+      width: 90%;
       @include flexCenter();
       cursor: pointer;
     }

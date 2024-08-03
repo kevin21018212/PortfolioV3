@@ -75,13 +75,13 @@ export const TextBox: React.FC = () => {
               }}
               transition={{ duration: 1.5, ease: [0.33, 1, 0.68, 1] }}
             >
-              <CardItem as="h4" translateZ={20}>
-                Programmer
+              <CardItem as="h2" translateZ={20}>
+                Developer
               </CardItem>
-              <CardItem as="h4" translateZ={20}>
+              <CardItem as="h2" translateZ={20}>
                 Creator
               </CardItem>
-              <CardItem as="h4" translateZ={20}>
+              <CardItem as="h2" translateZ={20}>
                 Designer
               </CardItem>
             </motion.div>

@@ -66,11 +66,9 @@
   text-shadow: 2px 2px #ff0000;
   transform-style: preserve-3d;
   h2 {
-    @extend .subHeading;
     font-weight: 600;
     color: $Black1;
-
-    margin: 1vh 2.5vw;
+    margin: 0vh 2.5vw;
   }
 }
 

@@ -11,23 +11,21 @@
 
 .description {
   width: 100%;
-  @include boxBg(0 0 $roundMiddle $roundMiddle, $boxBgInverse, none);
+  @include boxBg(0 0 $roundMiddle $roundMiddle, $white, none);
   transition: height 0.3s ease;
 
   .title {
-    padding-left: 2.5%;
-
-    color: black;
+    padding: 1% 2.5% 2.5% 2.5%;
+    h4 {
+      color: $Black1;
+    }
   }
 
   .content {
     overflow: hidden;
-
     p {
       margin-left: 2.5%;
-      font-size: 1vw;
-      letter-spacing: 0.5px;
-      color: black;
+      color: $Black2;
     }
   }
 }

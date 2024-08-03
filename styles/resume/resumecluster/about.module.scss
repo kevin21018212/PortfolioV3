@@ -4,22 +4,22 @@
   width: 40%;
   height: 100%;
   @include boxBg(0);
+  display: flex;
+
   .abouttext {
     width: 50%;
-    height: 95%;
+    height: 100%;
     background: $simpleGradient;
     text-align: left;
-    padding-top: 2.5%;
-
-    h4 {
+    h3 {
       color: $white;
       padding-left: 2.5%;
-      margin: 1%;
+      margin: -1% 0;
     }
-    p {
+    h5 {
+      color: $Gray5;
       text-align: left;
       padding-left: 5%;
-      margin: 1.5%;
     }
   }
 

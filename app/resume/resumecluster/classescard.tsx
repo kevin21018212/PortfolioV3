@@ -30,7 +30,7 @@ const ClassesCard = ({ category }: ClassesCardProps) => {
         transition={{ duration: 0.3 }}
       >
         <motion.div className={styles.title} variants={titleVariant}>
-          <h5>{category.name}</h5>
+          <h4>{category.name}</h4>
         </motion.div>
         <motion.div className={styles.content} variants={contentVariants}>
           {category.courses.map((course, index) => (
