@@ -69,7 +69,7 @@ $simpleGradient: linear-gradient(
   display: flex;
   flex-direction: column;
   justify-content: $justify;
-  $align-items: $align;
+  align-items: $align;
 }
 
 @mixin flexCenter($justify: center) {

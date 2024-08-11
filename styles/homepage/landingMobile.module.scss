@@ -23,9 +23,7 @@
   width: 80%;
   height: 50%;
   @include flexColumn(center, center);
-  @include boxBg(10px);
   margin-bottom: 2.5vh;
-
   h1 {
     @extend .title;
     letter-spacing: 5px;
@@ -47,7 +45,7 @@
 }
 .LinksBox {
   display: flex;
-  width: 90%;
+  width: 75%;
   height: 20vh;
   gap: 5vw;
 }
