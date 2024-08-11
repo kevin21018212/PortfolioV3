@@ -2,7 +2,7 @@
 
 .projectsContent {
   display: flex;
-  width: 100%;
+  width: 98%;
   height: 50vh;
   padding: 1%;
   user-select: none;
@@ -10,18 +10,19 @@
 
 .left,
 .right {
-  width: 60%;
+  width: 55%;
   @include flexColumn(space-between);
   text-align: left;
 }
 .right {
   @include flexColumn(center, flex-end);
-  width: 40%;
+  width: 45%;
   text-align: right;
 }
 
 .topLeft {
   align-self: flex-start;
+  width: 100%;
   p {
     @extend .tag;
     font-size: 2vw;
@@ -35,7 +36,7 @@
     @extend .heading;
     color: $white2;
     margin-bottom: 0px;
-    margin-top: -15px;
+    margin-top: -2.5%;
     font-size: 5.5vw;
   }
   p {
@@ -48,6 +49,7 @@
 
 .middleRight {
   @include flexColumn(center, flex-end);
+  margin-left: 10%;
   h3 {
     color: $white2;
     margin: 0;
@@ -59,7 +61,8 @@
 }
 
 .bottomRight {
-  margin: 5% 0%;
+  margin: 2.5% 0%;
+  width: 120%;
   p {
     @extend .seperated;
     color: $white2;

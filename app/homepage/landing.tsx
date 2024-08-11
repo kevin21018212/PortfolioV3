@@ -8,24 +8,23 @@ import { boxVariants } from "../../utils/framer";
 
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 import { CardContainer, CardBody, CardItem } from "@/utils/components/card";
-import BackgroundBeams from "@/utils/components/backgroundBeams";
 
 // ShaderGradientBackground Component
-const ShaderGradientBackground: React.FC = () => {
+export const ShaderGradientBackground: React.FC<{ importedFiber?: any }> = ({
+  importedFiber,
+}) => {
   return (
-    <div className={styles.liquidGradient}>
-      <ShaderGradientCanvas
-        style={{
-          zIndex: -10,
-          borderRadius: "0px 20px 20px 0px",
-        }}
-      >
-        <ShaderGradient
-          control="query"
-          urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=off&bgColor1=%23000000&bgColor2=%23000000&brightness=3&cAzimuthAngle=170&cDistance=10&cPolarAngle=50&cameraZoom=1&color1=%23efd404&color2=%23ef5e04&color3=%23ff7a00&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=45&frameRate=10&gizmoHelper=hide&grain=off&lightType=env&pixelDensity=0.5&positionX=-1&positionY=1&positionZ=-0.5&range=disabled&rangeEnd=40&rangeStart=0&reflection=0&rotationX=45&rotationY=0&rotationZ=0&shader=defaults&type=waterPlane&uAmplitude=0&uDensity=1.2&uFrequency=0&uSpeed=0.3&uStrength=5&uTime=0&wireframe=false"
-        />
-      </ShaderGradientCanvas>
-    </div>
+    <ShaderGradientCanvas
+      importedFiber={importedFiber}
+      style={{
+        borderRadius: "0px 20px 20px 0px",
+      }}
+    >
+      <ShaderGradient
+        control="query"
+        urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=off&bgColor1=%23000000&bgColor2=%23000000&brightness=3&cAzimuthAngle=170&cDistance=10&cPolarAngle=50&cameraZoom=1&color1=%2327b3f2&color2=%23f27127&color3=%23d66322&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=45&frameRate=10&gizmoHelper=hide&grain=off&lightType=env&pixelDensity=0.5&positionX=-1&positionY=1&positionZ=-0.5&range=disabled&rangeEnd=40&rangeStart=0&reflection=0&rotationX=45&rotationY=0&rotationZ=0&shader=defaults&type=waterPlane&uAmplitude=0&uDensity=1.2&uFrequency=0&uSpeed=0.3&uStrength=5&uTime=0&wireframe=false"
+      />
+    </ShaderGradientCanvas>
   );
 };
 
@@ -45,7 +44,6 @@ export const TextBox: React.FC = () => {
           onTap={handleClick}
           initial={{ boxShadow: "none" }}
         >
-          {" "}
           <CardItem translateZ={1000}>
             <motion.h2
               className={styles.primaryText}
@@ -93,7 +91,7 @@ export const TextBox: React.FC = () => {
 };
 
 // IconBox Component
-const IconBox: React.FC = () => {
+export const IconBox: React.FC = () => {
   return (
     <>
       <motion.div
@@ -135,11 +133,15 @@ const Landing: React.FC = () => {
   return (
     <>
       <div className={styles.landingContainer}>
-        <ShaderGradientBackground />
+        <div className={styles.gradientBox}>
+          <ShaderGradientBackground />
+        </div>
         <div className={styles.textBox}>
           <TextBox />
         </div>
-        <IconBox />
+        <div className={styles.iconBox}>
+          <IconBox />
+        </div>
       </div>
     </>
   );

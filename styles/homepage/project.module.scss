@@ -20,10 +20,10 @@
   @include flexColumn(center, center);
   @include boxBg(0, $simpleGradient, $shadowLight);
   user-select: none;
-  padding: 0 2.5%;
+  width: 10vw;
   .circle {
-    width: 2.25vw;
-    height: 2.25vw;
+    width: 3vw;
+    height: 3vw;
     margin-top: 25px;
     border: 2px solid $bgBlack;
     transition: background-color 0.5s ease;
