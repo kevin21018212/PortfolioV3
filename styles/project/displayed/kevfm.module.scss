@@ -20,7 +20,7 @@
   .circleContainer {
     width: 15vw;
     height: 25vh;
-    background: $Black1;
+    background: $bgBlack;
     border-radius: 50%;
     margin: 2.5vh 0;
     @include flexCenter();

@@ -6,11 +6,11 @@ $secondaryColor: #27b3f2;
 $secondaryHoverColor: #239ad4;
 $highlightColor: #d7f227;
 $accentColor: #f2a778;
-$Grey1: #262d33;
-$Black1: #1b2126;
-$Black2: #242a30;
-$white: #f0f0f0;
-$Gray5: #e4e4e4;
+$gray: #262d33;
+$bgBlack: #1b2126;
+$Black: #242a30;
+$white2: #f0f0f0;
+$white: #fbfbfb;
 
 /* Shadows */
 $shadowHeavy: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -21,9 +21,9 @@ $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 /* Gradients */
 $simpleGradient: linear-gradient(
   45deg,
+  $secondaryColor,
   $accentColor,
-  $primaryColor,
-  $accentColor
+  $primaryColor
 );
 
 /* Typography */
@@ -41,7 +41,7 @@ $simpleGradient: linear-gradient(
 .subHeading {
   font-family: "Monument Grotesk Mono", sans-serif;
 
-  color: $Gray5;
+  color: $white2;
 }
 
 .tag {
@@ -54,7 +54,7 @@ $simpleGradient: linear-gradient(
   font-family: "Neue Montreal Book", sans-serif;
   font-size: 1.5vw;
   font-weight: 400;
-  color: $Gray5;
+  color: $white2;
 }
 
 .seperated {
@@ -99,7 +99,7 @@ $roundInner: 7.5px;
 $boxBgInverse: #f0f0f0;
 
 /* Box Styles */
-@mixin boxBg($radius: 0, $bgColor: $Grey1, $shadow: $shadowHeavy) {
+@mixin boxBg($radius: 0, $bgColor: $gray, $shadow: $shadowHeavy) {
   background: $bgColor;
   box-shadow: $shadow;
   border-radius: $radius;

@@ -13,7 +13,7 @@
     position: relative;
     padding: 2vh 1.5vw;
     @include boxBg($roundOuter, transparent, $shadowLight);
-    border: 2px solid $Gray5;
+    border: 2px solid $white2;
     @include flexCenter();
     cursor: pointer;
 

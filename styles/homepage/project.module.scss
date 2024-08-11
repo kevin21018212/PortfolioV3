@@ -25,16 +25,16 @@
     width: 2.25vw;
     height: 2.25vw;
     margin-top: 25px;
-    border: 2px solid $Grey1;
+    border: 2px solid $bgBlack;
     transition: background-color 0.5s ease;
 
     @include boxBg(50%, transparent, $shadowLight);
     &.selected {
-      background-color: $Grey1;
+      background-color: $bgBlack;
     }
 
     &:hover {
-      background-color: $Grey1;
+      background-color: $bgBlack;
     }
   }
 }
@@ -42,4 +42,5 @@
 .projectInfoContainer {
   width: 90vw;
   max-height: 50vh;
+  background: $bgBlack;
 }

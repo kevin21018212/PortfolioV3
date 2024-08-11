@@ -21,7 +21,7 @@
 
   .cardTitle {
     width: 60%;
-    background: $Grey1;
+    background: $gray;
     height: 30%;
     border-top-left-radius: 25px;
     @include flexCenter();
@@ -39,7 +39,7 @@
       border-bottom-right-radius: $roundOuter;
       background: $primaryColor;
     }
-    background-color: $Grey1;
+    background-color: $gray;
     height: 30%;
     width: 40%;
   }
@@ -72,7 +72,7 @@
   }
 
   .infoLabel {
-    color: $Gray5;
+    color: $white2;
     font-size: 0.9em;
   }
 

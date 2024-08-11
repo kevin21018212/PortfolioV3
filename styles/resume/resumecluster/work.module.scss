@@ -43,7 +43,7 @@
 
 .jobtext {
   p {
-    color: $Gray5;
+    color: $white2;
     @for $i from 2 through 4 {
       &:nth-child(#{$i}) {
         padding-left: (5% * ($i - 1));

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import styles from "./glareCard.module.scss";
-import { cn, getRandomMeshGradient } from "../functions";
+import { cn } from "../functions";
 
 export const GlareCard = ({
   children,

@@ -1,4 +1,4 @@
-$Black1: #101518;
+$bgBlack: #1b2126;
 
 .container {
   position: relative;
@@ -36,7 +36,7 @@ $Black1: #101518;
   grid-area: 1 / 1;
   mix-blend-mode: soft-light;
   clip-path: inset(0 0 0 0 round 30px);
-  background-color: $Black1;
+  background-color: $bgBlack;
 }
 
 .glare {

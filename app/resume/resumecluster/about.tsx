@@ -18,7 +18,7 @@ const AboutDisplay = () => {
             key={index}
             whileHover={{
               scale: 1.1,
-              color: "#f39c12",
+              color: "#D7F227",
             }}
             onMouseEnter={() => setHoveredItem(item)}
             onMouseLeave={() => setHoveredItem(null)}

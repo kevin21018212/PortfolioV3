@@ -71,7 +71,7 @@ const NewProjects = () => {
               whileTap={{ scale: 0.9 }}
               animate={{
                 backgroundColor:
-                  selectedCircle === circle.id ? "#1f282e" : "transparent",
+                  selectedCircle === circle.id ? "#1b2126" : "transparent",
                 transition: { duration: 0.3 },
               }}
             ></motion.div>
