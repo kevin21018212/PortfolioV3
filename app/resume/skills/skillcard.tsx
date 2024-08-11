@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+
 import styles from "@/styles/resume/skills/skillcard.module.scss";
 import { SkillCardProps } from "@/utils/data/dataType";
 import { getRandomMeshGradient } from "@/utils/functions";

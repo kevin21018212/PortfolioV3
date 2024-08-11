@@ -1,5 +1,3 @@
-import { generateMeshGradient } from "meshgrad";
-
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 export const getImagePath = (item: string | null): string => {
@@ -7,54 +5,33 @@ export const getImagePath = (item: string | null): string => {
 };
 
 export function getRandomMeshGradient(): string {
-  const primaryColor = "#f27127";
-  const primaryHoverColor = "#d66322";
-  const secondaryColor = "#27b3f2";
-  const secondaryHoverColor = "#239ad4";
+  const colors = [
+    { base: "#f27127", hover: "#d66322" },
+    { base: "#27b3f2", hover: "#239ad4" },
+  ];
   const additionalColors = ["#544E9D", "#F2A778"];
 
-  const colors = [
-    { base: primaryColor, hover: primaryHoverColor },
-    { base: secondaryColor, hover: secondaryHoverColor },
-  ];
+  const primaryIndex = Math.floor(Math.random() * colors.length);
+  const secondaryIndex = 1 - primaryIndex;
 
-  // Randomly select primary or primaryHover
-  const primaryIndex = Math.floor(Math.random() * 2);
-  const primary = colors[primaryIndex].base;
-  const primaryHover = colors[primaryIndex].hover;
+  const primaryColor =
+    Math.random() < 0.5
+      ? colors[primaryIndex].base
+      : colors[primaryIndex].hover;
+  const secondaryColor =
+    Math.random() < 0.5
+      ? colors[secondaryIndex].base
+      : colors[secondaryIndex].hover;
 
-  // Select the secondary color set that is not the primary
-  const secondaryIndex = (primaryIndex + 1) % 2;
-  const secondary = colors[secondaryIndex].base;
-  const secondaryHover = colors[secondaryIndex].hover;
-
-  // Randomly choose to use hover colors or base colors
-  const usePrimaryHover = Math.random() < 0.5;
-  const useSecondaryHover = Math.random() < 0.5;
-
-  const primaryColorChoice = usePrimaryHover ? primaryHover : primary;
-  const secondaryColorChoice = useSecondaryHover ? secondaryHover : secondary;
-
-  // Randomly decide whether to include an additional color
-  const includeAdditionalColor = Math.random() < 0.5;
-  const additionalColor = includeAdditionalColor
-    ? additionalColors[Math.floor(Math.random() * additionalColors.length)]
-    : null;
-
-  // Random degree for the gradient
-  const degree = Math.floor(Math.random() * 360);
-
-  // Construct the gradient string
-  const gradientColors = [primaryColorChoice, secondaryColorChoice];
-  if (additionalColor) {
-    gradientColors.push(additionalColor);
+  const gradientColors = [primaryColor, secondaryColor];
+  if (Math.random() < 0.5) {
+    gradientColors.push(
+      additionalColors[Math.floor(Math.random() * additionalColors.length)]
+    );
   }
 
-  const gradientString = `linear-gradient(${degree}deg, ${gradientColors.join(
-    ", "
-  )})`;
-
-  return gradientString;
+  const degree = Math.floor(Math.random() * 360);
+  return `linear-gradient(${degree}deg, ${gradientColors.join(", ")})`;
 }
 
 export const fetchGitHubEvents = async (

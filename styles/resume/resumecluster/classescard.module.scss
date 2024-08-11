@@ -4,7 +4,7 @@
   width: 35%;
   height: 75%;
   margin: 1%;
-
+  overflow-y: hidden;
   @include flexColumn(flex-end, none);
   @include boxBg($roundMiddle, $simpleGradient, $shadowLight);
 }
@@ -22,7 +22,7 @@
   }
 
   .content {
-    overflow: hidden;
+    padding-right: 1rem; // Add some padding for better readability
     p {
       margin-left: 2.5%;
       color: $Black;

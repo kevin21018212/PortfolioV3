@@ -1,21 +1,16 @@
 import { motion } from "framer-motion";
 import styles from "@/styles/resume/resumecluster/classescard.module.scss";
 import { ClassesCardProps } from "@/utils/data/dataType";
-import { slideTextVariant } from "@/utils/framer";
+import { textAnimation } from "@/utils/framer";
 
 const descriptionVariants = {
   hidden: { height: "12.5%" },
-  visible: { height: "82.5%" },
-};
-
-const titleVariant = {
-  hidden: { height: "100%" },
-  visible: { height: "7.5%" },
+  visible: { height: "90%" },
 };
 
 const contentVariants = {
-  hidden: { height: "0%" },
-  visible: { height: "85%" },
+  hidden: { display: "none" },
+  visible: { display: "block" },
 };
 
 const ClassesCard = ({ category }: ClassesCardProps) => {
@@ -27,14 +22,18 @@ const ClassesCard = ({ category }: ClassesCardProps) => {
         whileHover="visible"
         animate="hidden"
         variants={descriptionVariants}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
-        <motion.div className={styles.title} variants={titleVariant}>
+        <div className={styles.title}>
           <h4>{category.name}</h4>
-        </motion.div>
-        <motion.div className={styles.content} variants={contentVariants}>
+        </div>
+        <motion.div
+          className={styles.content}
+          variants={contentVariants}
+          transition={{ duration: 1 }}
+        >
           {category.courses.map((course, index) => (
-            <motion.p key={index} variants={slideTextVariant}>
+            <motion.p key={index} variants={textAnimation}>
               {course}
             </motion.p>
           ))}

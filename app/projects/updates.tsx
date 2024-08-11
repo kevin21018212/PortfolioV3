@@ -39,7 +39,7 @@ export const GitHubActivity: React.FC<GitHubActivityProps> = ({ commits }) => {
               <motion.button
                 className={gstyles.commitButton}
                 onClick={() => window.open(commit.commitUrl, "_blank")}
-                variants={boxVariants}
+                variants={boxVariants("#239ad4")}
                 whileHover="hover"
                 whileTap={{ scale: 0.9 }}
               >

@@ -1,14 +1,5 @@
 export const circles = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
-export const splideConfig = (perPage: number, height: string): any => ({
-  perPage,
-  width: "100%",
-  height,
-  gap: "1vw",
-  type: "loop",
-  drag: "free",
-});
-
 export const jobData = [
   {
     title: "John Deere | 2022 - Present",
@@ -32,12 +23,4 @@ export const jobData = [
       "Specialized in loss/spill prevention, VBA integration.",
     ],
   },
-];
-
-export const hexColorOptions = [
-  "#e4e4e4",
-  "#f27127",
-  "#f2a778",
-  "#27b3f2",
-  "#544E9D",
 ];

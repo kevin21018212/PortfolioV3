@@ -1,8 +1,26 @@
-// animations.ts
+// Utility function to create spring transition
+const springTransition = (
+  stiffness: number,
+  damping: number,
+  duration?: number,
+  delay?: number
+) => ({
+  type: "spring",
+  stiffness,
+  damping,
+  duration,
+  delay,
+});
 
-import { delay } from "framer-motion";
+// Utility function to create tween transition
+const tweenTransition = (duration: number, ease?: any, delay?: number) => ({
+  type: "tween",
+  duration,
+  ease,
+  delay,
+});
 
-// Enhanced text animation with added bounce effect and easing
+// Text animation with bounce and easing
 export const textAnimation = {
   inactive: {
     opacity: 0,
@@ -12,29 +30,25 @@ export const textAnimation = {
     opacity: 1,
     x: "0vh",
     transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 10,
+      ...springTransition(100, 10, 0.8),
       bounce: 0.3,
       ease: [0.43, 0.13, 0.23, 0.96],
-      duration: 0.8,
     },
   },
 };
 
-// Stagger children with an oscillating effect
+// Stagger children with oscillating effect
 export const staggerText = {
   active: {
     transition: {
       delayChildren: 0.3,
       staggerChildren: 0.2,
-      type: "spring",
-      stiffness: 80,
+      ...springTransition(80, 20),
     },
   },
 };
 
-// Description variants with smoother transitions
+// Description with smoother transitions
 export const descriptionVariants = {
   hidden: {
     height: "12.5%",
@@ -43,15 +57,11 @@ export const descriptionVariants = {
   visible: {
     height: "82.5%",
     opacity: 1,
-    transition: {
-      type: "tween",
-      ease: "anticipate",
-      duration: 0.6,
-    },
+    transition: tweenTransition(0.6, "anticipate"),
   },
 };
 
-// Container variants for scaling and fading
+// Container with scaling and fading
 export const containerVariants = {
   hidden: {
     scale: 0.5,
@@ -63,18 +73,14 @@ export const containerVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
+      ...springTransition(400, 50, 0.8, i * 0.1),
       mass: 3,
-      stiffness: 400,
-      damping: 50,
-      duration: 0.8,
-      delay: i * 0.1,
     },
   }),
 };
 
-// Box variants for entry, exit, and hover animations
-export const boxVariants = {
+// Box variants for entry, exit, and hover
+export const boxVariants = (hoverColor = "#ef5e04") => ({
   hidden: {
     opacity: 0,
     y: 100,
@@ -84,38 +90,23 @@ export const boxVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-      duration: 0.5,
-      bounce: 0.4,
-    },
+    transition: springTransition(300, 20, 0.5),
   },
   exit: {
     opacity: 0,
     y: -100,
     scale: 0.5,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-      duration: 0.5,
-      bounce: 0.4,
-    },
+    transition: springTransition(300, 20, 0.5),
   },
   hover: {
     scale: 1.1,
-    backgroundColor: "#ef5e04",
+    backgroundColor: hoverColor,
     rotate: 5,
-    transition: {
-      ease: "linear",
-      duration: 0.25,
-    },
+    transition: tweenTransition(0.25, "linear"),
   },
-};
+});
 
-// Bounce variants for visibility transitions
+// Bounce variants
 export const bounceVariants = {
   hidden: {
     opacity: 0,
@@ -124,16 +115,11 @@ export const bounceVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 500,
-      damping: 20,
-      delay: 0.3,
-    },
+    transition: springTransition(500, 20, undefined, 0.3),
   },
 };
 
-// Circle variants for scaling and opacity transitions
+// Circle variants for scaling and opacity
 export const circleVariants = {
   hidden: {
     scale: 0,
@@ -142,15 +128,11 @@ export const circleVariants = {
   visible: {
     scale: [0, 1.5, 1],
     opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 500,
-      damping: 20,
-    },
+    transition: springTransition(500, 20),
   },
 };
 
-// Description text variants for slide-in effect
+// Slide text variants
 export const slideTextVariant = {
   hidden: {
     x: -20,
@@ -159,13 +141,11 @@ export const slideTextVariant = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 0.6,
-    },
+    transition: tweenTransition(0.6),
   },
 };
 
-// Corner variants for rotation and opacity transitions
+// Corner variants for rotation and opacity
 export const cornerVariant = {
   hidden: {
     rotate: 0,
@@ -174,15 +154,11 @@ export const cornerVariant = {
   visible: {
     rotate: 360,
     opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-    },
+    transition: springTransition(300, 20),
   },
 };
 
-//Variants for delaying the children
+// Staggered div variants
 export const staggerDivVariant = {
   hidden: {
     opacity: 0,
@@ -191,11 +167,6 @@ export const staggerDivVariant = {
   visible: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-      delay: 0.1 * index,
-    },
+    transition: springTransition(300, 20, undefined, 0.1 * index),
   }),
 };

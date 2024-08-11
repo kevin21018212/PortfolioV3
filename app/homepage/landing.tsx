@@ -100,7 +100,7 @@ const IconBox: React.FC = () => {
         initial="hidden"
         animate="visible"
         whileHover="hover"
-        variants={boxVariants}
+        variants={boxVariants()}
         className={styles.symbolBox}
       >
         <a
@@ -115,7 +115,7 @@ const IconBox: React.FC = () => {
         initial="hidden"
         animate="visible"
         whileHover="hover"
-        variants={boxVariants}
+        variants={boxVariants()}
         className={styles.infoBox}
       >
         <a
