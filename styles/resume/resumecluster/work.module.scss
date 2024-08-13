@@ -5,7 +5,7 @@
 }
 
 .workinfo {
-  height: 125vh;
+  height: 150vh;
   display: flex;
 }
 
@@ -34,7 +34,7 @@
 
 /* Display For Jobs */
 .workdisplay {
-  width: 55vw;
+  width: 60vw;
   margin-left: -50%;
   padding: 2.5%;
   padding-right: 0%;
@@ -43,6 +43,14 @@
 }
 
 .jobtext {
+  h5 {
+    color: $white;
+    margin: 0.5%;
+  }
+
+  h6 {
+    color: $white2;
+  }
   p {
     color: $white2;
     @for $i from 2 through 4 {
@@ -50,8 +58,12 @@
         padding-left: (5% * ($i - 1));
       }
 
-      font-size: 1.5vw;
+      font-size: 1.25vw;
+      margin: 1%;
     }
+  }
+  .project {
+    padding-left: 2.5%;
   }
 }
 

@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "./navbar.module.scss";
+import Link from 'next/link';
+import styles from './navbar.module.scss';
 
 const NavBar = () => {
   return (
@@ -7,22 +7,22 @@ const NavBar = () => {
       <div className={styles.redTriangle}></div>
       <div className={styles.linksContainer}>
         <div className={styles.firstLink}>
-          <Link href="/">
+          <Link href='/'>
             <p>HOME</p>
           </Link>
         </div>
         <div className={styles.secondLink}>
-          <Link href="/projects">
-            <p>WORKS</p>
+          <Link href='/projects'>
+            <p>PROJECT</p>
           </Link>
         </div>
         <div className={styles.thirdLink}>
-          <Link href="/resume">
+          <Link href='/resume'>
             <p>RESUME</p>
           </Link>
         </div>
         <div className={styles.lastLink}>
-          <Link href="/contact">
+          <Link href='/contact'>
             <p>CONTACT</p>
           </Link>
         </div>
