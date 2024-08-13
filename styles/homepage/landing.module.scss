@@ -1,4 +1,4 @@
-@import "@/app/common.module.scss";
+@import '@/app/common.module.scss';
 .landingContainer {
   height: 100%;
   display: grid;
@@ -20,8 +20,8 @@
   grid-column: 10 / span 7;
   grid-row: 12 / span 4;
   display: flex;
-  gap: 4vw;
-  padding-right: 10%;
+  gap: 5vw;
+  padding: 0 10%;
 }
 
 .symbolBox,

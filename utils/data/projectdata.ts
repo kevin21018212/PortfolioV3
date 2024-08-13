@@ -30,7 +30,7 @@ export const projectData: Project[] = [
   {
     id: 3,
     projectNumber: 'Project 003',
-    projectTitle: 'KevConnect',
+    projectTitle: 'Kevitter',
     projectTag: 'The Walled Garden',
     description:
       "Social media apps are so busy, I feel like everytime I use one I get bombarded with a endless stream of people and things I don't care about. Inspired by Bereal, KevConnect is a closed ecosystem social media experice. Being invite only, the only users on the platform are the people I regurally Interact with. It's designed to give the benifits of a social media platform without all the clutter and noise. KevConnect is built using AWS, Okta, and Next.js to create a secure and fast platform that is designed to be used by a small group of people. ",

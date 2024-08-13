@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 $bg1: $gray;
 $bg2: #082c2c;
@@ -12,7 +12,7 @@ $maingd: $simpleGradient;
 }
 
 .textBlock {
-  font-size: 1.25vw;
+  font-size: 1vw;
   margin: 0 1.5vw;
   @extend .description;
 }
@@ -86,7 +86,7 @@ $maingd: $simpleGradient;
 
     h1 {
       @extend .title;
-      font-size: 4vw;
+      font-size: 3.5vw;
       letter-spacing: 2px;
       line-height: 1;
       margin-bottom: 2.5%;

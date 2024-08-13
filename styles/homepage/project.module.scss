@@ -1,4 +1,4 @@
-@import "@/app/common.module.scss";
+@import '@/app/common.module.scss';
 
 /* Projects Component */
 .projectsComponent {
@@ -20,11 +20,11 @@
   @include flexColumn(center, center);
   @include boxBg(0, $simpleGradient, $shadowLight);
   user-select: none;
-  width: 10vw;
+  width: 8vw;
   .circle {
-    width: 3vw;
-    height: 3vw;
-    margin-top: 25px;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-top: 2.5vh;
     border: 2px solid $bgBlack;
     transition: background-color 0.5s ease;
 
@@ -40,7 +40,7 @@
 }
 
 .projectInfoContainer {
-  width: 90vw;
+  width: 92vw;
   max-height: 50vh;
   background: $bgBlack;
 }

@@ -1,4 +1,4 @@
-@import "/app/common.module.scss";
+@import '/app/common.module.scss';
 
 .pageContainer {
   @include flexColumn();
@@ -43,7 +43,7 @@
 }
 
 .nav {
-  height: 75vh;
+  height: 80vh;
   width: 100%;
   padding: 0;
 }
