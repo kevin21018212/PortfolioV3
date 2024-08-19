@@ -14,14 +14,14 @@
 
 .iconBox {
   display: flex;
-  width: 75%;
-  height: 25%;
+  width: 85%;
+  height: 20%;
   gap: 5vw;
 }
 
 .textBox {
-  width: 80%;
-  height: 50%;
+  width: 90%;
+  height: 40%;
   @include flexColumn(center, center);
   margin-bottom: 2.5vh;
   h1 {

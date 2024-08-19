@@ -3,6 +3,7 @@
 import styles from "./resume.module.scss";
 import ResumeClasses from "./resumecluster/classes";
 import ResumeWork from "./resumecluster/work";
+import WorkMobile from "./resumecluster/workMobile";
 import SkillSlider from "./skills/skillslider";
 import { motion } from "framer-motion";
 
@@ -28,18 +29,13 @@ const childVariants = {
 
 const ResumePage = () => {
   return (
-    <motion.div
-      className={styles.resumeContainer}
-      initial="hidden"
-      whileInView="visible"
-      variants={containerVariants}
-    >
+    <motion.div className={styles.resumeContainer} initial="hidden" whileInView="visible" variants={containerVariants}>
       <Header />
       <motion.div className={styles.skillSlider}>
         <SkillSlider />
       </motion.div>
       <motion.div className={styles.work}>
-        <ResumeWork />
+        <WorkMobile />
       </motion.div>
       <motion.div className={styles.classes}>
         <ResumeClasses />
@@ -49,12 +45,7 @@ const ResumePage = () => {
 };
 
 const Header = () => (
-  <motion.div
-    className={styles.headerContainer}
-    initial="hidden"
-    whileInView="visible"
-    variants={containerVariants}
-  >
+  <motion.div className={styles.headerContainer} initial="hidden" whileInView="visible" variants={containerVariants}>
     <Heading />
     <SubHeading />
   </motion.div>
@@ -62,9 +53,7 @@ const Header = () => (
 
 const Heading = () => (
   <motion.div className={styles.heading} variants={childVariants}>
-    <h2>
-      Coding is only a tool of expression. Beauty can only be found in the art
-    </h2>
+    <h2>Coding is only a tool of expression. Beauty can only be found in the art</h2>
   </motion.div>
 );
 

@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 /* Container Styles */
 .resumeContainer {
@@ -60,13 +60,17 @@
 
 @media only screen and (max-width: 600px) {
   .classes {
-    height: 225vh;
+    height: 170vh;
+  }
+  .work {
+    height: 135vh;
   }
   .headerContainer {
-    width: 100vw;
+    width: 95vw;
     padding: 1%;
+
     .heading {
-      width: 80%;
+      width: 90%;
     }
 
     .subHeading {

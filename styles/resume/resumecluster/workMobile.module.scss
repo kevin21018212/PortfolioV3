@@ -5,39 +5,23 @@
 }
 
 .workinfo {
-  height: 150vh;
-  display: flex;
+  height: 100vh;
+  @include flexColumn(center, center);
 }
 
 .workimg {
-  width: 45%;
+  z-index: -10;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
-  @include flexColumn(flex-end, flex-end);
-
-  box-shadow: $shadowLight;
-}
-
-.worktext {
-  width: 100%;
-  height: 12.5%;
-  overflow: hidden;
-  box-shadow: $topShadow;
-}
-
-/* Non-image */
-.workbox {
-  width: 60%;
-  margin-bottom: 10%;
-  @include flexColumn(center, center);
 }
 
 /* Display For Jobs */
 .workdisplay {
-  width: 60vw;
-  margin-left: -50%;
+  width: 90vw;
   padding: 2.5%;
-  padding-right: 0%;
   @include flexColumn(center, flex-start);
   @include boxBg($roundMiddle);
 }
@@ -58,7 +42,8 @@
         padding-left: (5% * ($i - 1));
       }
 
-      font-size: 1.25vw;
+      font-size: 3.25vw;
+      letter-spacing: 1px;
       margin: 1%;
     }
   }
@@ -69,10 +54,6 @@
 
 /* About Display */
 .aboutdisplay {
-  margin-left: 60vw;
-  width: 40vw;
+  width: 100vw;
   height: 35vh;
-  @extend .flex-horizontal;
-  justify-content: flex-end;
-  margin-top: -20vh;
 }

@@ -43,14 +43,8 @@
   .filterToggleContainer {
     gap: 1.5vw;
     button {
-      .circle {
-        margin-top: -1%;
-        margin-right: -2.5%;
-        margin-left: 2.5%;
-      }
-      h6 {
-        font-size: 4.25vw;
-      }
+      @include boxBg($roundMiddle, transparent, $shadowLight);
+      padding: 2vh 2vw;
     }
   }
 }
