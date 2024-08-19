@@ -46,3 +46,15 @@
     width: 20vw;
   }
 }
+@media screen and (max-width: 600px) {
+  .rightSection {
+    display: none;
+  }
+  .frame {
+    height: 50vh;
+    margin: 1vh 2vw;
+  }
+  .leftSection {
+    width: 100vw;
+  }
+}
