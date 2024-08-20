@@ -41,7 +41,11 @@
 
 @media screen and (max-width: 600px) {
   .filterToggleContainer {
-    gap: 1.5vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1vw;
     button {
       @include boxBg($roundMiddle, transparent, $shadowLight);
       padding: 2vh 2vw;
