@@ -4,12 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { spacerContainerProps } from "../../utils/data/dataType";
 
-const SpacerContainer = ({
-  title,
-  tag,
-  handleToggleProject = null,
-  isProjectOpen = false,
-}: spacerContainerProps) => {
+const SpacerContainer = ({ title, tag, handleToggleProject = null, isProjectOpen = false }: spacerContainerProps) => {
   if (handleToggleProject != null) {
     return (
       <div className={styles.spacerContainerButton}>
@@ -18,10 +13,7 @@ const SpacerContainer = ({
         </div>
         <div className={styles.toggleButtonContainer}>
           <button onClick={handleToggleProject} className={styles.toggleButton}>
-            <FontAwesomeIcon
-              icon={isProjectOpen ? faChevronUp : faChevronDown}
-              size="6x"
-            />
+            <FontAwesomeIcon icon={isProjectOpen ? faChevronUp : faChevronDown} size="6x" />
           </button>
         </div>
       </div>

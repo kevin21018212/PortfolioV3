@@ -5,7 +5,7 @@
 }
 
 .workinfo {
-  height: 100vh;
+  height: 125vh;
   @include flexColumn(center, center);
 }
 
@@ -13,7 +13,7 @@
   z-index: -10;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
 }

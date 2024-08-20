@@ -22,9 +22,13 @@
   }
 
   @media screen and (max-width: 800px) {
-    .classestitle {
-      height: 20vh;
-      padding: 2.5%;
+    .classescontainer {
+      display: flex;
+      justify-content: center;
+      .classestitle {
+        height: 18vh;
+        margin: 2.5vw;
+      }
     }
   }
 }
@@ -33,11 +37,11 @@
   height: 65%;
   padding: 2.5%;
   padding-top: 0%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   @include flexCenter();
 
   @media screen and (max-width: 800px) {
-    height: 180vh;
+    height: 150vh;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
