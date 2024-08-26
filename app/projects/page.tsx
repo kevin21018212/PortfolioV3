@@ -11,6 +11,7 @@ import { GitHubActivity, Profile } from "./updates";
 const ProjectsPage: React.FC = () => {
   const [commits, setCommits] = useState<Commit[]>([]);
   const [repos, setRepos] = useState<Repo[]>([]);
+  const [totalCommits, setTotalCommits] = useState<number>(0);
 
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || "";
   const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN || "";
@@ -23,20 +24,25 @@ const ProjectsPage: React.FC = () => {
           fetchGitHubRepos(username, accessToken),
         ]);
 
-        const pushes = events.filter(
-          (event: any) => event.type === "PushEvent"
-        );
+        const currentYear = new Date().getFullYear();
+        let totalCommitsInYear = 0;
+
+        const pushes = events.filter((event: any) => event.type === "PushEvent");
 
         const recentCommits = pushes.slice(0, 9).map((push: any) => {
           const { repo, payload } = push;
-          const commitDate = new Date(push.created_at).toLocaleDateString();
-          const commitUrl = payload.commits[0].url
-            .replace("api.", "")
-            .replace("repos/", "");
+          const commitDate = new Date(push.created_at);
+          const commitUrl = payload.commits[0].url.replace("api.", "").replace("repos/", "");
+
+          // Count commits for the current year
+          if (commitDate.getFullYear() === currentYear) {
+            totalCommitsInYear += payload.commits.length;
+          }
+
           return {
             repoName: repo.name.split("/")[1],
             commitMessage: payload.commits[0].message,
-            commitDate: commitDate,
+            commitDate: commitDate.toLocaleDateString(),
             commitUrl: commitUrl,
           };
         });
@@ -44,14 +50,13 @@ const ProjectsPage: React.FC = () => {
         setCommits(recentCommits);
 
         const sortedRepos = reposData
-          .sort(
-            (a: any, b: any) =>
-              new Date(b.updated_at).getTime() -
-              new Date(a.updated_at).getTime()
-          )
+          .sort((a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
           .slice(0, 6);
 
         setRepos(sortedRepos);
+
+        // Update total commits in the year
+        setTotalCommits(totalCommitsInYear);
       } catch (error: any) {
         console.error("Error fetching GitHub data:", error);
       }
@@ -68,7 +73,7 @@ const ProjectsPage: React.FC = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.leftColumn}>
-            <Profile username={username} repos={repos} />
+            <Profile username={username} repos={repos} totalCommits={totalCommits} />
           </div>
           <div className={styles.rightColumn}>
             <GitHubActivity commits={commits} />
