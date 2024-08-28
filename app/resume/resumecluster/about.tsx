@@ -7,7 +7,7 @@ import { getImagePath } from "@/utils/functions";
 const AboutDisplay = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-  const items = ["Outdoor", "Travel", "Fashion", "Art", "Music"];
+  const items = ["outdoor", "travel", "fashion", "art", "music"];
 
   return (
     <motion.div className={styles.aboutdisplay}>

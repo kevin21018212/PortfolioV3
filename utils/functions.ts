@@ -1,8 +1,9 @@
 import { ClassValue, clsx } from "clsx";
 import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
+
 export const getImagePath = (item: string | null): string => {
-  return item ? `/public/about/${item}.jpg` : "";
+  return item ? `/about/${item}.jpg` : "";
 };
 
 export function getRandomMeshGradient(): string {

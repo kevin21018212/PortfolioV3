@@ -5,7 +5,7 @@
 }
 
 .workinfo {
-  height: 180vh;
+  height: 150vh;
   display: flex;
 }
 
@@ -14,7 +14,6 @@
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
   @include flexColumn(flex-end, flex-end);
-
   box-shadow: $shadowLight;
 }
 
