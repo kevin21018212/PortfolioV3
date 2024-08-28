@@ -1,5 +1,6 @@
 "use client";
 
+import { useIsMobile } from "@/utils/functions";
 import styles from "./resume.module.scss";
 import ResumeClasses from "./resumecluster/classes";
 import ResumeWork from "./resumecluster/work";
@@ -28,15 +29,15 @@ const childVariants = {
 };
 
 const ResumePage = () => {
+  const isMobile = useIsMobile();
+
   return (
     <motion.div className={styles.resumeContainer} initial="hidden" whileInView="visible" variants={containerVariants}>
       <Header />
       <motion.div className={styles.skillSlider}>
         <SkillSlider />
       </motion.div>
-      <motion.div className={styles.work}>
-        <WorkMobile />
-      </motion.div>
+      <motion.div className={styles.work}>{isMobile ? <WorkMobile /> : <ResumeWork />}</motion.div>
       <motion.div className={styles.classes}>
         <ResumeClasses />
       </motion.div>
