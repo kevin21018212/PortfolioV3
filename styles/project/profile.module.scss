@@ -1,8 +1,8 @@
 @import "/app/common.module.scss";
 
 .profileContainer {
-  @include flexColumn(center, none);
-  width: 100%;
+  @include flexColumn(none, none);
+  width: 95%;
   height: 95%;
   padding: 2.5% 5%;
   background-color: $bgBlack;
@@ -14,29 +14,22 @@
     margin-bottom: 0.5vw;
 
     h3 {
-      @extend .subHeading;
       color: $white;
       text-wrap: nowrap;
     }
   }
 
   .statsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
+    @include flexCenter(center);
+    gap: 1rem;
 
     .statBox {
       @include flexColumn(center, center);
-      background: $secondaryColor;
-      border-radius: $roundInner;
+      @include boxBg($roundInner, $secondaryColor, $shadowLight);
       padding: 1vh 0.5vw;
       text-align: center;
-      width: 35%;
+      width: 40%;
       height: 90%;
-
-      box-shadow: $shadowLight;
-
       h4 {
         color: $white2;
         font-size: 1.5vw;
@@ -54,28 +47,27 @@
 
   .reposContainer {
     width: 100%;
-
     h3 {
-      @extend .subHeading;
+      color: $white;
       margin-bottom: 1vw;
     }
 
     ul {
+      margin-left: 2.5%;
       list-style: none;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 1vw;
+      gap: 0.5rem;
 
       li {
-        background: $primaryColor;
-        border-radius: $roundOuter;
-        padding: 0.75vw 1vw;
-        box-shadow: $shadowLight;
+        @include boxBg($roundMiddle, $primaryColor, $shadowLight);
+        padding: 1.5vh 1vw;
+
         width: 40%;
         a {
           text-decoration: none;
-          @extend .tag;
+          @extend .thin;
           font-size: 1.5vw;
         }
       }
@@ -83,23 +75,36 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .statsContainer {
-    flex-direction: column;
-    align-items: center;
-
-    .statBox {
-      width: 80%;
+@media screen and (max-width: 600px) {
+  .profileContainer {
+    width: 80vw;
+    .header h3 {
+      font-size: 4.5vh;
     }
-  }
-
-  .reposContainer ul li {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .reposContainer ul li {
-    width: 100%;
+    .statsContainer {
+      height: 15vh;
+      .statBox {
+        h4 {
+          font-size: 2.5vh;
+        }
+        p {
+          font-size: 3vh;
+        }
+      }
+    }
+    .reposContainer {
+      h3 {
+        font-size: 4.5vh;
+      }
+      ul {
+        li {
+          width: 45%;
+          a {
+            padding-left: 1vw;
+            font-size: 2.25vh;
+          }
+        }
+      }
+    }
   }
 }

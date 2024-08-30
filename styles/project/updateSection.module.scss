@@ -6,6 +6,7 @@
   gap: 1vh 1vw;
 
   @media screen and (max-width: 600px) {
+    width: 100%;
     gap: 2vw 2vw;
     padding: 1vh 1vw;
   }
@@ -19,24 +20,21 @@
   flex-direction: column;
 
   h5 {
-    color: $white;
+    @extend .tag;
   }
 
-  h6 {
+  p {
     margin: 0;
     margin-left: 2.5%;
-    color: $white2;
   }
 
   @media screen and (max-width: 600px) {
     width: 42.5vw;
     height: 20vh;
-
     h5 {
-      font-size: 3vh;
+      font-size: 2.75vh;
     }
-
-    h6 {
+    p {
       font-size: 2vh;
     }
   }
@@ -50,16 +48,15 @@
   display: flex;
   flex-direction: column;
 
-  h5,
-  h6 {
+  h5 {
     white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   @media screen and (max-width: 600px) {
-    height: 15vh;
-    padding: 1vh 1vw 0 3vw;
+    height: 13vh;
+    padding: 1vh 2.5vw;
   }
 }
 

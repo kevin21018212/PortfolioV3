@@ -19,12 +19,7 @@ $arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 
 /* Gradients */
-$simpleGradient: linear-gradient(
-  45deg,
-  $secondaryColor,
-  $accentColor,
-  $primaryColor
-);
+$simpleGradient: linear-gradient(45deg, $secondaryColor, $accentColor, $primaryColor);
 
 /* Typography */
 .title {
@@ -62,7 +57,10 @@ $simpleGradient: linear-gradient(
   font-size: 1.75vw;
   letter-spacing: 3px;
 }
-
+.thin {
+  font-family: "Monument Grotesk Thin", sans-serif;
+  color: $white;
+}
 /* Flex Utilities */
 
 @mixin flexColumn($justify: none, $align: none) {

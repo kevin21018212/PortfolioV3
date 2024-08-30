@@ -29,7 +29,7 @@ const ProjectsPage: React.FC = () => {
 
         const pushes = events.filter((event: any) => event.type === "PushEvent");
 
-        const recentCommits = pushes.slice(0, 9).map((push: any) => {
+        const recentCommits = pushes.slice(0, 8).map((push: any) => {
           const { repo, payload } = push;
           const commitDate = new Date(push.created_at);
           const commitUrl = payload.commits[0].url.replace("api.", "").replace("repos/", "");
@@ -84,11 +84,9 @@ const ProjectsPage: React.FC = () => {
       <div className={styles.nav}>
         <Projects />
       </div>
-      <div className={styles.projects}>
-        {projectData.map((item: any, index: number) => (
-          <Project key={index} project={item} />
-        ))}
-      </div>
+      {projectData.map((item: any, index: number) => (
+        <Project key={index} project={item} />
+      ))}
     </div>
   );
 };
