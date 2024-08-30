@@ -24,6 +24,7 @@
 
   h6 {
     margin: 0;
+    margin-left: 2.5%;
     color: $white2;
   }
 
@@ -43,7 +44,7 @@
 
 .cardTop {
   background-color: $gray;
-  height: 13.5vh;
+  height: 14vh;
   padding: 1vh 1vw;
   border-radius: 15px 15px 15px 0;
   display: flex;
@@ -63,16 +64,16 @@
 }
 
 .cardBottom {
-  height: 4.5vh;
+  height: 4vh;
   display: flex;
 
   .buttonSpacer {
-    width: 60%;
-    height: 100%;
-    margin-top: -0.5%;
-    margin-right: -1.5%;
+    width: 55%;
+    height: 90%;
+    margin-right: -1%;
+
     background-color: $gray;
-    border-radius: 0px 0px 20px 15px;
+    border-radius: 0px 0px 25px 15px;
 
     @media screen and (max-width: 600px) {
       margin-right: -3.5%;
@@ -83,13 +84,14 @@
     width: 45%;
     @include flexCenter(center);
     border-top-left-radius: 15px;
+    margin-top: -2%;
 
     .commitButton {
       background-color: $secondaryColor;
       border: none;
       border-radius: 10px;
-      height: 90%;
-      width: 90%;
+      height: 100%;
+      width: 100%;
       @include flexCenter();
       cursor: pointer;
 

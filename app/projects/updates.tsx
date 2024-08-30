@@ -58,22 +58,22 @@ export const Profile: React.FC<ProfileProps> = ({ username, repos, totalCommits 
   return (
     <div className={pstyles.profileContainer}>
       <div className={pstyles.header}>
-        <h2>Project Profile</h2>
+        <h3>Github </h3>
       </div>
 
       <div className={pstyles.statsContainer}>
         <div className={pstyles.statBox}>
-          <h4>Total Commits</h4>
+          <h4>Recent Commits</h4>
           <p>{totalCommits}</p>
         </div>
         <div className={pstyles.statBox}>
-          <h4>Leetcodes Complete</h4>
+          <h4>Leetcode </h4>
           <p>100</p>
         </div>
       </div>
 
       <div className={pstyles.reposContainer}>
-        <h4>Repositories</h4>
+        <h3>Repositories</h3>
         <ul>
           {repos.map((repo) => (
             <li key={repo.id}>
