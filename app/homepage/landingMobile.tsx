@@ -20,7 +20,7 @@ const LandingMobile: React.FC = () => {
     };
 
     return (
-      <motion.a className={tStyles.button} onClick={handleClick} onTap={handleClick} initial={{ boxShadow: "none" }}>
+      <motion.a className={tStyles.button} onTap={handleClick} initial={{ boxShadow: "none" }}>
         <motion.h1
           className={tStyles.primaryText}
           initial={{ top: 0, opacity: 1, visibility: "visible" }}

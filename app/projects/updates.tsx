@@ -9,7 +9,6 @@ import { Commit, Repo } from "@/utils/data/dataType";
 interface GitHubActivityProps {
   commits: Commit[];
 }
-
 interface ProfileProps {
   username: string | undefined;
   repos: Repo[];
@@ -81,12 +80,10 @@ export const Profile: React.FC<ProfileProps> = ({ username, repos, totalCommits 
     <div className={pstyles.header}>
       <h3>Github</h3>
     </div>
-
     <motion.div className={pstyles.statsContainer} variants={staggerDivVariant}>
-      <StatBox title="Recent Commits" value={totalCommits} link="https://github.com/yourprofile" />
-      <StatBox title="Leetcode" value={100} link="https://leetcode.com/yourprofile" />
+      <StatBox title="Recent Commits" value={totalCommits} link="https://github.com/kevin21018212" />
+      <StatBox title="Leetcode" value={100} link="https://leetcode.com/u/trashlinkmain/" />
     </motion.div>
-
     <div className={pstyles.reposContainer}>
       <h3>Repositories</h3>
       <ul>

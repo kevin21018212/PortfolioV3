@@ -10,9 +10,7 @@ import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 import { CardContainer, CardBody, CardItem } from "@/utils/components/card";
 
 // ShaderGradientBackground Component
-export const ShaderGradientBackground: React.FC<{ importedFiber?: any }> = ({
-  importedFiber,
-}) => {
+export const ShaderGradientBackground: React.FC<{ importedFiber?: any }> = ({ importedFiber }) => {
   return (
     <ShaderGradientCanvas
       importedFiber={importedFiber}
@@ -38,12 +36,7 @@ export const TextBox: React.FC = () => {
   return (
     <CardContainer>
       <CardBody>
-        <motion.a
-          className={styles.button}
-          onClick={handleClick}
-          onTap={handleClick}
-          initial={{ boxShadow: "none" }}
-        >
+        <motion.a className={styles.button} onClick={handleClick} onTap={handleClick} initial={{ boxShadow: "none" }}>
           <CardItem translateZ={1000}>
             <motion.h2
               className={styles.primaryText}
@@ -92,6 +85,13 @@ export const TextBox: React.FC = () => {
 
 // IconBox Component
 export const IconBox: React.FC = () => {
+  // Function to handle tap with delay
+  const handleTap = (url: string) => {
+    setTimeout(() => {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }, 100); // Delay to allow animation to run
+  };
+
   return (
     <>
       <motion.div
@@ -100,14 +100,9 @@ export const IconBox: React.FC = () => {
         whileHover="hover"
         variants={boxVariants()}
         className={styles.symbolBox}
+        onTap={() => handleTap("https://github.com/kevin21018212")}
       >
-        <a
-          href="https://github.com/kevin21018212"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub size={100} color="#F0F0F0" />
-        </a>
+        <FaGithub size={100} color="#F0F0F0" />
       </motion.div>
       <motion.div
         initial="hidden"
@@ -115,14 +110,9 @@ export const IconBox: React.FC = () => {
         whileHover="hover"
         variants={boxVariants()}
         className={styles.infoBox}
+        onTap={() => handleTap("https://www.linkedin.com/in/matthew-bennett-592102252/")}
       >
-        <a
-          href="https://www.linkedin.com/in/matthew-bennett-592102252/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin size={100} color="#F0F0F0" />
-        </a>
+        <FaLinkedin size={100} color="#F0F0F0" />
       </motion.div>
     </>
   );
