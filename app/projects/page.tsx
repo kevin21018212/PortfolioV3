@@ -11,7 +11,7 @@ import { GitHubActivity, Profile } from "./updates";
 const ProjectsPage: React.FC = () => {
   const [commits, setCommits] = useState<Commit[]>([]);
   const [repos, setRepos] = useState<Repo[]>([]);
-  const [totalCommits, setTotalCommits] = useState<number>(0);
+  const [totalCommits, setTotalCommits] = useState<number>(0); // Total commits for the current year
 
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || "";
   const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN || "";
@@ -29,25 +29,33 @@ const ProjectsPage: React.FC = () => {
 
         const pushes = events.filter((event: any) => event.type === "PushEvent");
 
-        const recentCommits = pushes.slice(0, 8).map((push: any) => {
+        // This variable will store the correct amount of commits
+        const recentCommits: Commit[] = [];
+
+        pushes.forEach((push: any) => {
           const { repo, payload } = push;
           const commitDate = new Date(push.created_at);
-          const commitUrl = payload.commits[0].url.replace("api.", "").replace("repos/", "");
+          const commitMessages = payload.commits;
 
-          // Count commits for the current year
+          // Count all commits for the current year
           if (commitDate.getFullYear() === currentYear) {
-            totalCommitsInYear += payload.commits.length;
+            totalCommitsInYear += commitMessages.length;
           }
 
-          return {
-            repoName: repo.name.split("/")[1],
-            commitMessage: payload.commits[0].message,
-            commitDate: commitDate.toLocaleDateString(),
-            commitUrl: commitUrl,
-          };
+          // Extract each commit's details
+          commitMessages.forEach((commit: any) => {
+            const commitUrl = commit.url.replace("api.", "").replace("repos/", "");
+            recentCommits.push({
+              repoName: repo.name.split("/")[1],
+              commitMessage: commit.message,
+              commitDate: commitDate.toLocaleDateString(),
+              commitUrl: commitUrl,
+            });
+          });
         });
 
-        setCommits(recentCommits);
+        // Store only the most recent 8 commits
+        setCommits(recentCommits.slice(0, 8));
 
         const sortedRepos = reposData
           .sort((a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
@@ -55,7 +63,7 @@ const ProjectsPage: React.FC = () => {
 
         setRepos(sortedRepos);
 
-        // Update total commits in the year
+        // Update total commits for the year
         setTotalCommits(totalCommitsInYear);
       } catch (error: any) {
         console.error("Error fetching GitHub data:", error);
@@ -73,9 +81,11 @@ const ProjectsPage: React.FC = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.leftColumn}>
+            {/* Profile section now displays total commits for the year */}
             <Profile username={username} repos={repos} totalCommits={totalCommits} />
           </div>
           <div className={styles.rightColumn}>
+            {/* GitHub activity shows only the recent 8 commits */}
             <GitHubActivity commits={commits} />
           </div>
         </div>
