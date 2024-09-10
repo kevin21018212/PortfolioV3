@@ -1,4 +1,4 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 
 $bg1: $gray;
 $bg2: #082c2c;
@@ -92,6 +92,11 @@ $maingd: $simpleGradient;
       margin-bottom: 2.5%;
       color: $white2;
     }
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 5vh;
+      }
+    }
   }
 
   .bottomContent {
@@ -108,6 +113,11 @@ $maingd: $simpleGradient;
       margin: 0;
       padding: 0;
       color: $white2;
+    }
+    @media screen and (max-width: 600px) {
+      h4 {
+        font-size: 5vh;
+      }
     }
   }
 }

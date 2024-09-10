@@ -88,10 +88,7 @@ const BottomContent = ({ project, controls }: any) => {
         custom={5}
         whileHover="hover"
       >
-        <div
-          className={contentStyles.bottomRightContent}
-          style={{ backgroundImage: `url(${project.img1})` }}
-        ></div>
+        <div className={contentStyles.bottomRightContent} style={{ backgroundImage: `url(${project.img1})` }}></div>
       </motion.div>
       <motion.div
         className={styles.bottomRight}
@@ -101,10 +98,7 @@ const BottomContent = ({ project, controls }: any) => {
         custom={6}
         whileHover="hover"
       >
-        <div
-          className={contentStyles.bottomRightContent}
-          style={{ backgroundImage: `url(${project.img2})` }}
-        ></div>
+        <div className={contentStyles.bottomRightContent} style={{ backgroundImage: `url(${project.img2})` }}></div>
       </motion.div>
     </>
   );
@@ -125,12 +119,7 @@ const Project = ({ project }: any) => {
 
   return (
     <div className={styles.frame} ref={ref}>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={controls}
-        className={styles.leftSection}
-      >
+      <motion.div variants={containerVariants} initial="hidden" animate={controls} className={styles.leftSection}>
         <LeftContent project={project} controls={controls} />
       </motion.div>
       <motion.div className={styles.rightSection}>
