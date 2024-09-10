@@ -84,8 +84,11 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 4vh;
+  }
   h2 {
-    font-size: 6.5vw;
+    font-size: 3.5vh;
   }
   h3 {
     font-size: 6vw;

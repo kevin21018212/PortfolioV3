@@ -29,15 +29,16 @@
     letter-spacing: 5px;
     color: $white;
     text-align: center;
+    font-size: 5vh;
   }
   .group {
     width: 100%;
 
     text-align: center;
-    h3 {
+    h2 {
       @extend .seperated;
       color: $white2;
-      font-size: 8vw;
+      font-size: 20vh;
       margin-top: 1;
       letter-spacing: 10px;
     }
