@@ -41,6 +41,7 @@ $maingd: $simpleGradient;
 
   .description {
     @extend .textBlock;
+    font-size: 1.1vw;
   }
 }
 
@@ -59,7 +60,7 @@ $maingd: $simpleGradient;
     @include boxBg($roundMiddle, $bg2, $shadowLight);
 
     h3 {
-      @extend .seperated;
+      @extend .separated;
       font-size: 1vw;
       letter-spacing: 2px;
       color: $white2;
@@ -114,6 +115,7 @@ $maingd: $simpleGradient;
       padding: 0;
       color: $white2;
     }
+
     @media screen and (max-width: 600px) {
       h4 {
         font-size: 5vh;

@@ -32,16 +32,13 @@
       height: 90%;
 
       h4 {
-        color: $white2;
-        font-size: 1.5vw;
-        @extend .tag;
+        font-size: 1.75vw;
+        letter-spacing: 1px;
       }
 
       p {
-        color: $white2;
         font-size: 2vw;
-        @extend .tag;
-        font-weight: bold;
+        @extend .label;
       }
     }
   }

@@ -1,8 +1,8 @@
-@import '/app/common.module.scss';
+@import "/app/common.module.scss";
 .paragraph {
   display: flex;
   flex-wrap: wrap;
-  @extend .seperated;
+  @extend .separated;
   letter-spacing: 1.5px;
   line-height: 0.5;
   font-size: 4.5vw;

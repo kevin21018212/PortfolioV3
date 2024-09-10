@@ -1,5 +1,3 @@
-/* styles/fonts.css */
-
 /* GT America Expanded Black */
 @font-face {
   font-family: "GT America Expanded Black";
@@ -12,60 +10,28 @@
   src: url("../public/fonts/GT America Extended Black.ttf") format("truetype");
 }
 
-/* Monument Extended Bold */
+/* GT America Medium */
 @font-face {
-  font-family: "Monument Extended Bold";
-  src: url("../public/fonts/Monument Extended Bold.ttf") format("truetype");
+  font-family: "GT America Medium";
+  src: url("../public/fonts/GT America Medium.ttf") format("truetype");
 }
 
-/* Monument Extended Variable */
+/* GT America Regular Italic */
 @font-face {
-  font-family: "Monument Extended Variable";
-  src: url("../public/fonts/Monument Extended Variable.ttf") format("truetype");
+  font-family: "GT America Regular Italic";
+  src: url("../public/fonts/GT America Regular Italic.otf") format("opentype");
 }
 
-/* Monument Grotesk Black */
+/* GT America Regular */
 @font-face {
-  font-family: "Monument Grotesk Black";
-  src: url("../public/fonts/Monument Grotesk Black.otf") format("opentype");
+  font-family: "GT America Regular";
+  src: url("../public/fonts/GT America Regular.otf") format("opentype");
 }
 
-/* Monument Grotesk Bold */
+/* GT America Standard Bold */
 @font-face {
-  font-family: "Monument Grotesk Bold";
-  src: url("../public/fonts/Monument Grotesk Bold.otf") format("opentype");
-}
-
-/* Monument Grotesk ExtBdIta */
-@font-face {
-  font-family: "Monument Grotesk ExtBdIta";
-  src: url("../public/fonts/Monument Grotesk ExtBdIta.otf") format("opentype");
-}
-
-/* Monument Grotesk ExtraBold */
-@font-face {
-  font-family: "Monument Grotesk ExtraBold";
-  src: url("../public/fonts/Monument Grotesk ExtraBold.otf") format("opentype");
-}
-
-/* Monument Grotesk Medium */
-@font-face {
-  font-family: "Monument Grotesk Medium";
-  src: url("../public/fonts/Monument Grotesk Medium.otf") format("opentype");
-}
-
-/* Monument Grotesk Mono Condensed */
-@font-face {
-  font-family: "Monument Grotesk Mono Condensed";
-  src: url("../public/fonts/Monument Grotesk Mono Condensed.otf")
-    format("opentype");
-}
-
-/* Monument Grotesk Mono SemCond */
-@font-face {
-  font-family: "Monument Grotesk Mono SemCond";
-  src: url("../public/fonts/Monument Grotesk Mono SemCond.otf")
-    format("opentype");
+  font-family: "GT America Standard Bold";
+  src: url("../public/fonts/GT America Standard Bold.otf") format("opentype");
 }
 
 /* Monument Grotesk Regular */
@@ -90,10 +56,4 @@
 @font-face {
   font-family: "Neue Montreal Semibold";
   src: url("../public/fonts/Neue Montreal Semibold.ttf") format("truetype");
-}
-
-/* Neue Montreal Variable */
-@font-face {
-  font-family: "Neue Montreal Variable";
-  src: url("../public/fonts/Neue Montreal Variable.ttf") format("truetype");
 }

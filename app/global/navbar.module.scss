@@ -16,7 +16,7 @@
 }
 
 .navbar p {
-  font-family: "Neue Montreal", sans-serif;
+  @extend .subHeading;
   font-size: 1.25vw;
   margin: 7.5% 2.5%;
   user-select: none;

@@ -22,9 +22,17 @@ $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
 $simpleGradient: linear-gradient(45deg, $secondaryColor, $accentColor, $primaryColor);
 
 /* Typography */
+
 .title {
   font-family: "GT America Expanded Black", sans-serif;
   letter-spacing: 15px;
+}
+
+.subtitle {
+  font-family: "GT America Regular Italic", sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: $white2;
 }
 
 .heading {
@@ -34,33 +42,57 @@ $simpleGradient: linear-gradient(45deg, $secondaryColor, $accentColor, $primaryC
 }
 
 .subHeading {
-  font-family: "Monument Grotesk Mono", sans-serif;
-
+  font-family: "Monument Grotesk Bold", sans-serif;
   color: $white2;
+  font-weight: 500;
 }
 
 .tag {
   font-family: "Monument Grotesk Mono SemCond", sans-serif;
+  color: $white2;
+}
 
+.label {
+  font-family: "Monument Grotesk Mono", sans-serif;
+  font-weight: 350;
+  letter-spacing: 1px;
   color: $white;
 }
 
 .description {
   font-family: "Neue Montreal Book", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 400;
+  font-weight: 300;
   color: $white2;
+  font-size: 1.5vw;
 }
 
-.seperated {
+.separated {
   font-family: "Monument Grotesk Regular", sans-serif;
-  font-size: 1.75vw;
   letter-spacing: 3px;
+  font-size: 1.75vw;
 }
+
 .thin {
   font-family: "Monument Grotesk Thin", sans-serif;
   color: $white;
 }
+
+.paragraph {
+  font-family: "GT America Regular", sans-serif;
+  font-weight: 300;
+}
+
+.caption {
+  font-family: "Neue Montreal Semibold", sans-serif;
+  color: $white;
+  letter-spacing: 2px;
+}
+
+.small-text {
+  font-family: "Neue Montreal Book", sans-serif;
+  font-weight: 400;
+}
+
 /* Flex Utilities */
 
 @mixin flexColumn($justify: none, $align: none) {

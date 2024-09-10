@@ -1,4 +1,4 @@
-@import '@/app/common.module.scss';
+@import "@/app/common.module.scss";
 
 .projectsContent {
   display: flex;
@@ -65,7 +65,7 @@
   margin: 2.5% 0%;
   width: 120%;
   p {
-    @extend .seperated;
+    @extend .separated;
     color: $white2;
   }
 }

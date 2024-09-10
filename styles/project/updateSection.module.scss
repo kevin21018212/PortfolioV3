@@ -22,12 +22,13 @@
   flex-direction: column;
 
   h5 {
-    @extend .tag;
+    @extend .caption;
   }
 
   p {
+    @extend .description;
     margin: 0;
-    margin-left: 2.5%;
+    margin-left: 5%;
   }
 
   @media screen and (max-width: 600px) {
@@ -38,7 +39,6 @@
     }
     p {
       font-size: 2vh;
-      margin-left: 5%;
     }
   }
 }
