@@ -85,13 +85,6 @@ export const TextBox: React.FC = () => {
 
 // IconBox Component
 export const IconBox: React.FC = () => {
-  // Function to handle tap with delay
-  const handleTap = (url: string) => {
-    setTimeout(() => {
-      window.open(url, "_blank", "noopener,noreferrer");
-    }, 100); // Delay to allow animation to run
-  };
-
   return (
     <>
       <motion.div
@@ -100,9 +93,10 @@ export const IconBox: React.FC = () => {
         whileHover="hover"
         variants={boxVariants()}
         className={styles.symbolBox}
-        onTap={() => handleTap("https://github.com/kevin21018212")}
       >
-        <FaGithub size={100} color="#F0F0F0" />
+        <a href="https://github.com/kevin21018212" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={100} color="#F0F0F0" />
+        </a>
       </motion.div>
       <motion.div
         initial="hidden"
@@ -110,9 +104,10 @@ export const IconBox: React.FC = () => {
         whileHover="hover"
         variants={boxVariants()}
         className={styles.infoBox}
-        onTap={() => handleTap("https://www.linkedin.com/in/matthew-bennett-592102252/")}
       >
-        <FaLinkedin size={100} color="#F0F0F0" />
+        <a href="https://www.linkedin.com/in/matthew-bennett-592102252/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={100} color="#F0F0F0" />
+        </a>
       </motion.div>
     </>
   );

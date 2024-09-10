@@ -32,16 +32,17 @@ const CommitCard: React.FC<{ commit: Commit; index: number }> = ({ commit, index
     </div>
     <div className={gstyles.cardBottom}>
       <div className={gstyles.buttonSpacer}></div>
-      <motion.div
-        className={gstyles.bottomButton}
-        variants={boxVariants("#239ad4")}
-        whileHover="hover"
-        whileTap={{ scale: 0.9 }}
-      >
-        <button className={gstyles.commitButton} onClick={() => window.open(commit.commitUrl, "_blank")}>
+      <div className={gstyles.bottomButton}>
+        <motion.button
+          className={gstyles.commitButton}
+          onClick={() => window.open(commit.commitUrl, "_blank")}
+          variants={boxVariants("#239ad4")}
+          whileHover="hover"
+          whileTap={{ scale: 0.9 }}
+        >
           <FaArrowAltCircleRight size={"85%"} />
-        </button>
-      </motion.div>
+        </motion.button>
+      </div>
     </div>
   </motion.div>
 );

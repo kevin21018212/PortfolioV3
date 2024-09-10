@@ -7,9 +7,10 @@
   margin-right: 5vw;
 
   @media screen and (max-width: 600px) {
-    width: 95%;
+    width: 100%;
     gap: 2vw 2vw;
-    padding: 1vh 2vw;
+    padding: 1vh 1vw;
+    margin: 0;
   }
 }
 
@@ -37,6 +38,7 @@
     }
     p {
       font-size: 2vh;
+      margin-left: 5%;
     }
   }
 }
