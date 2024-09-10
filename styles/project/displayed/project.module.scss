@@ -1,5 +1,10 @@
 @import "/app/common.module.scss";
 
+@mixin fullHeight($width) {
+  width: $width;
+  height: 100%;
+}
+
 .frame {
   display: flex;
   width: 80vw;
@@ -8,8 +13,7 @@
 }
 
 .leftSection {
-  width: 27.5vw;
-  height: 100%;
+  @include fullHeight(27.5vw);
 }
 
 .rightSection {
@@ -24,7 +28,7 @@
   .bottomLeft,
   .bottomMiddle,
   .bottomRight {
-    height: 100%;
+    @include fullHeight(100%);
   }
 
   .topLeft {
@@ -46,14 +50,17 @@
     width: 20vw;
   }
 }
+
 @media screen and (max-width: 600px) {
   .rightSection {
     display: none;
   }
+
   .frame {
     height: 45vh;
     margin: 0;
   }
+
   .leftSection {
     width: 65vw;
   }

@@ -30,16 +30,17 @@
       text-align: center;
       width: 40%;
       height: 90%;
+
       h4 {
         color: $white2;
         font-size: 1.5vw;
-        @extend.tag;
+        @extend .tag;
       }
 
       p {
         color: $white2;
         font-size: 2vw;
-        @extend.tag;
+        @extend .tag;
         font-weight: bold;
       }
     }
@@ -63,12 +64,19 @@
       li {
         @include boxBg($roundMiddle, $primaryColor, $shadowLight);
         padding: 1.5vh 1vw;
-
         width: 40%;
+
         a {
           text-decoration: none;
           @extend .thin;
           font-size: 1.5vw;
+          display: block;
+          transition: all 0.3s ease;
+          color: $white2; /* Default link color */
+
+          &:hover {
+            color: $highlightColor; /* Change only text color */
+          }
         }
       }
     }
