@@ -22,11 +22,12 @@
   @extend .spacerBase;
   @include flexColumn(none, center);
   padding: 2.5%;
-}
-
-.spacerContainer h3 {
-  color: #000;
-  margin: 0 5%;
+  h3 {
+    @extend .tag;
+    letter-spacing: 1px;
+    color: $Black;
+    margin: 0 5%;
+  }
 }
 
 .spacerContainerSimple {

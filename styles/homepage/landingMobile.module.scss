@@ -36,7 +36,7 @@
 
     text-align: center;
     h2 {
-      @extend .separated;
+      @extend .subtitle;
       color: $white2;
       font-size: 20vh;
       margin-top: 1;

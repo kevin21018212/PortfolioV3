@@ -94,9 +94,12 @@ const ProjectsPage: React.FC = () => {
       <div className={styles.nav}>
         <Projects />
       </div>
-      {projectData.map((item: any, index: number) => (
-        <Project key={index} project={item} />
-      ))}
+
+      <div className={styles.projects}>
+        {projectData.map((item: any, index: number) => (
+          <Project key={index} project={item} />
+        ))}
+      </div>
     </div>
   );
 };

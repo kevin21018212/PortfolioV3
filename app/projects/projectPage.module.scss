@@ -37,9 +37,16 @@
 }
 
 .nav {
-  height: 70vh;
+  height: 60vh;
+  margin-bottom: 5vh;
   width: 100%;
   padding: 0;
+}
+
+.projects {
+  margin-top: 5vh;
+  width: 100%;
+  @include flexColumn(center, center);
 }
 
 @media screen and (max-width: 600px) {

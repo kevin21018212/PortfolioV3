@@ -2,38 +2,35 @@
 
 .projectsComponent {
   width: 100vw;
-  height: 350vh;
+  margin-bottom: 20vh;
 }
 
 .projectContent {
-  height: 50vh;
+  height: auto;
+  .spacer {
+    height: 8vh;
+  }
 }
 
 .info {
-  width: 100vw;
   @include flexColumn();
+  padding: 5% 2.5%;
 }
 
 .about {
   @include flexCenter();
-  height: 25vh;
-  padding-left: 4vw;
-  h5 {
-    font-family: var(--mediumSeperated);
-    color: $white;
-  }
+  height: 22.5vh;
 
   .text {
-    width: 50%;
+    width: 45%;
     @include flexCenter();
-    padding: 2.5vh 0;
-    text-align: center;
+    margin: 0 2.5%;
   }
   .image {
-    margin: 0vh 2.5vw;
-    width: 50%;
-    height: 85%;
-    @include boxBg($roundOuter, $simpleGradient, none);
+    margin: 0 2.5%;
+    width: 45%;
+    height: 80%;
+    @include boxBg($roundOuter, $simpleGradient);
   }
 }
 
