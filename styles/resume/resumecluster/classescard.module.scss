@@ -4,47 +4,64 @@
   width: 35%;
   height: 75%;
   margin: 1%;
-  overflow-y: hidden;
+  overflow: hidden;
   @include flexColumn(flex-end, none);
   @include boxBg($roundMiddle, $simpleGradient, $shadowLight);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
 }
 
 .description {
   width: 100%;
   @include boxBg(0 0 $roundMiddle $roundMiddle, $white, none);
   transition: height 0.3s ease;
+  overflow: hidden;
 
   .title {
-    padding: 1% 2.5% 2.5% 2.5%;
+    padding: 1% 2.5% 1% 2.5%;
     h4 {
       color: $bgBlack;
     }
   }
 
   .content {
-    padding-right: 1rem; // Add some padding for better readability
+    padding: 0.5rem 1rem 2rem 1rem;
+
+    max-height: calc(95% - 50px);
+    overflow-y: auto;
+    display: none;
+    scrollbar-width: thin;
+    scrollbar-color: $primaryColor $white;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primaryColor;
+      border-radius: 4px;
+    }
+
     p {
-      margin-left: 2.5%;
+      margin-left: 0;
+
       color: $Black;
     }
   }
-}
 
-@media screen and (max-width: 900px) {
-  .card {
-    width: 85%;
-    height: 55vh;
-    margin-bottom: 2.5vh;
-  }
-
-  .description .content p {
-    font-size: 2.5vw;
-  }
-
-  .description .title {
-    font-size: 5vw;
-    margin-top: 0;
-    padding-top: 0.5%;
+  &.expanded {
+    .content {
+      display: block;
+    }
   }
 }
 

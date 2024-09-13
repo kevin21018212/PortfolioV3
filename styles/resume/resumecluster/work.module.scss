@@ -43,21 +43,24 @@
 
 .jobtext {
   h5 {
-    color: $white;
     margin: 0.5%;
+    @extend .tag;
   }
 
   h6 {
-    color: $white2;
+    color: $white;
+    @extend .description;
+    font-size: 2vw;
+    font-weight: bold;
   }
   p {
-    color: $white2;
+    @extend .paragraph;
     @for $i from 2 through 4 {
       &:nth-child(#{$i}) {
         padding-left: (5% * ($i - 1));
       }
 
-      font-size: 1.25vw;
+      font-size: 1.5vw;
       margin: 1%;
     }
   }

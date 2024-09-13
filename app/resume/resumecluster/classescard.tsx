@@ -1,44 +1,33 @@
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import styles from "@/styles/resume/resumecluster/classescard.module.scss";
 import { ClassesCardProps } from "@/utils/data/dataType";
-import { textAnimation } from "@/utils/framer";
-
-const descriptionVariants = {
-  hidden: { height: "12.5%" },
-  visible: { height: "90%" },
-};
-
-const contentVariants = {
-  hidden: { display: "none" },
-  visible: { display: "block" },
-};
 
 const ClassesCard = ({ category }: ClassesCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleDescription = () => {
+    setIsExpanded((prevState) => !prevState);
+  };
+
   return (
     <div className={styles.card}>
-      <motion.div
-        className={styles.description}
-        initial="hidden"
-        whileHover="visible"
-        animate="hidden"
-        variants={descriptionVariants}
-        transition={{ duration: 0.5 }}
+      <div
+        className={`${styles.description} ${isExpanded ? styles.expanded : ""}`}
+        onClick={toggleDescription}
+        style={{
+          height: isExpanded ? "90%" : "12.5%",
+          transition: "height 0.3s ease",
+        }}
       >
         <div className={styles.title}>
           <h4>{category.name}</h4>
         </div>
-        <motion.div
-          className={styles.content}
-          variants={contentVariants}
-          transition={{ duration: 1 }}
-        >
+        <div className={styles.content}>
           {category.courses.map((course, index) => (
-            <motion.p key={index} variants={textAnimation}>
-              {course}
-            </motion.p>
+            <p key={index}>{course}</p>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
