@@ -26,8 +26,8 @@
   margin-bottom: 2.5vh;
   h1 {
     @extend .title;
-    letter-spacing: 5px;
     color: $white;
+    letter-spacing: 5px;
     text-align: center;
     font-size: 5vh;
   }
@@ -36,8 +36,8 @@
 
     text-align: center;
     h2 {
-      @extend .subtitle;
-      color: $white2;
+      @extend .subTitle;
+
       font-size: 20vh;
       margin-top: 1;
       letter-spacing: 10px;
