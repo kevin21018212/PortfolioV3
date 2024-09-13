@@ -7,13 +7,16 @@ $secondaryHoverColor: #239ad4;
 $highlightColor: #d7f227;
 $accentColor: #f2a778;
 $gray: #262d33;
+$gray2: #7d7d7d;
 $bgBlack: #1b2126;
-$Black: #242a30;
+$black: #242a30;
+$black2: #f0f0f0;
 $white2: #f0f0f0;
 $white: #fbfbfb;
+$offWhite: #e5e5e5;
 
 /* Shadows */
-$shadowHeavy: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$shadowHeavy: rgba(0, 0, 0, 0.5) 0px 4px 0px;
 $shadowLight: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 $arrowShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $topShadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
@@ -45,6 +48,7 @@ $simpleGradient: linear-gradient(45deg, $secondaryColor, $accentColor, $primaryC
   font-family: "Monument Grotesk Bold", sans-serif;
   color: $white2;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .tag {
@@ -75,6 +79,7 @@ $simpleGradient: linear-gradient(45deg, $secondaryColor, $accentColor, $primaryC
 .thin {
   font-family: "Monument Grotesk Thin", sans-serif;
   color: $white;
+  font-weight: 300;
 }
 
 .paragraph {
@@ -125,8 +130,6 @@ $simpleGradient: linear-gradient(45deg, $secondaryColor, $accentColor, $primaryC
 $roundOuter: 30px;
 $roundMiddle: 15px;
 $roundInner: 7.5px;
-
-$boxBgInverse: #f0f0f0;
 
 /* Box Styles */
 @mixin boxBg($radius: 0, $bgColor: $gray, $shadow: $shadowHeavy) {

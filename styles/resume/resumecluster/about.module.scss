@@ -12,11 +12,11 @@
     background: $simpleGradient;
     text-align: left;
     h3 {
-      color: $white;
+      @extend .tag;
       padding-left: 2.5%;
     }
     h5 {
-      color: $white2;
+      @extend .label;
       text-align: left;
       padding-left: 5%;
     }

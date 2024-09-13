@@ -4,18 +4,20 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "@/styles/homepage/landing.module.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { boxVariants } from "../../utils/framer";
+import { boxVariants, containerVariants } from "../../utils/framer";
 
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 import { CardContainer, CardBody, CardItem } from "@/utils/components/card";
 
 // ShaderGradientBackground Component
+
 export const ShaderGradientBackground: React.FC<{ importedFiber?: any }> = ({ importedFiber }) => {
   return (
     <ShaderGradientCanvas
       importedFiber={importedFiber}
       style={{
-        borderRadius: "0px 20px 20px 0px",
+        width: "100%",
+        height: "100%",
       }}
     >
       <ShaderGradient
@@ -33,10 +35,25 @@ export const TextBox: React.FC = () => {
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
+
+  const variants = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -50 },
+  };
+
   return (
     <CardContainer>
       <CardBody>
-        <motion.a className={styles.button} onClick={handleClick} onTap={handleClick} initial={{ boxShadow: "none" }}>
+        <motion.a
+          className={styles.button}
+          onClick={handleClick}
+          onTap={handleClick}
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          transition={{ duration: 1 }}
+        >
           <CardItem translateZ={1000}>
             <motion.h2
               className={styles.primaryText}
@@ -119,7 +136,19 @@ const Landing: React.FC = () => {
     <>
       <div className={styles.landingContainer}>
         <div className={styles.gradientBox}>
-          <ShaderGradientBackground />
+          <motion.div
+            initial={{ x: "-100%" }} // Start off-screen to the left
+            animate={{ x: 0 }} // Animate to its final position
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }} // Adjust as needed
+            style={{
+              borderRadius: "0px 20px 20px 0px",
+              overflow: "hidden",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <ShaderGradientBackground />
+          </motion.div>
         </div>
         <div className={styles.textBox}>
           <TextBox />

@@ -4,7 +4,7 @@
 .spacerBase {
   height: 100%;
   display: flex;
-  @include boxBg(0, $boxBgInverse);
+  @include boxBg(0, $white2);
 }
 
 .flexColumn {
@@ -25,7 +25,7 @@
   h3 {
     @extend .tag;
     letter-spacing: 1px;
-    color: $Black;
+    color: $black;
     margin: 0 5%;
   }
 }

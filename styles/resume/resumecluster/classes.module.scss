@@ -1,7 +1,7 @@
 @import "/app/common.module.scss"; // Import the common SCSS file
 
 .classescontainer {
-  @include boxBg(0, $boxBgInverse);
+  @include boxBg(0, $white2);
   position: relative;
   overflow: hidden;
 
@@ -22,13 +22,19 @@
   }
 
   @media screen and (max-width: 800px) {
-    .classescontainer {
-      display: flex;
-      justify-content: center;
-      .classestitle {
-        height: 18vh;
-        margin: 2.5vw;
+    padding-top: 2%;
+
+    .classestitle {
+      height: auto;
+      padding: 10%;
+      h1 {
+        font-size: 5.75vh;
       }
+    }
+
+    .cardcontainer {
+      margin-top: 2%;
+      padding: 0 2%;
     }
   }
 }

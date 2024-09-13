@@ -69,8 +69,15 @@ $maingd: $simpleGradient;
 }
 
 .leftContent {
-  display: flex;
-  overflow: hidden;
+  width: 105%;
+  height: 100%;
+  background: none;
+
+  .glareCard {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
 
   .topContent,
   .bottomContent {
@@ -79,7 +86,8 @@ $maingd: $simpleGradient;
   }
 
   .topContent {
-    width: 80%;
+    flex: 1;
+    width: 90%;
     background-color: $bg1;
     justify-content: flex-end;
     align-items: flex-end;
@@ -93,6 +101,7 @@ $maingd: $simpleGradient;
       margin-bottom: 2.5%;
       color: $white2;
     }
+
     @media screen and (max-width: 600px) {
       h1 {
         font-size: 5vh;

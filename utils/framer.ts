@@ -1,5 +1,5 @@
 // Utility function to create spring transition
-const springTransition = (stiffness: number, damping: number, duration?: number, delay?: number) => ({
+export const springTransition = (stiffness: number, damping: number, duration?: number, delay?: number) => ({
   type: "spring",
   stiffness,
   damping,

@@ -1,18 +1,22 @@
+// ResumeClasses.jsx
+
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "@/styles/resume/resumecluster/classes.module.scss";
 import ClassesCard from "./classescard";
 import courseCategories from "@/utils/data/coursecategories";
-import { containerVariants } from "@/utils/framer";
+import { containerVariants, textAnimation } from "@/utils/framer";
 
 const ResumeClasses = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView();
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -25,24 +29,14 @@ const ResumeClasses = () => {
       exit="hidden"
       variants={containerVariants}
     >
-      <motion.div
-        className={styles.classestitle}
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <motion.div className={styles.classestitle} variants={textAnimation}>
         <h1>CLASSES</h1>
       </motion.div>
-      <motion.div
-        className={styles.cardcontainer}
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
+      <div className={styles.cardcontainer}>
         {courseCategories.map((category, index) => (
-          <ClassesCard key={index} category={category} />
+          <ClassesCard key={index} category={category} controls={controls} index={index} />
         ))}
-      </motion.div>
+      </div>
     </motion.div>
   );
 };

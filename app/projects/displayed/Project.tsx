@@ -6,22 +6,21 @@ import styles from "@/styles/project/displayed/project.module.scss";
 import contentStyles from "@/styles/project/displayed/projectContent.module.scss";
 import { containerVariants } from "@/utils/framer";
 import { FaArrowAltCircleUp } from "react-icons/fa";
+import { GlareCard } from "@/utils/components/glareCard";
 
 // LeftContent Component
-const LeftContent = ({ project, controls }: any) => {
+const LeftContent = ({ project }: any) => {
   return (
-    <motion.div
-      className={contentStyles.leftContent}
-      onClick={() => window.open(project.linkUrl, "_blank")}
-      whileHover={{ scale: 1.05 }}
-    >
-      <div className={contentStyles.topContent}>
-        <h1>{project.projectTitle}</h1>
-      </div>
-      <div className={contentStyles.bottomContent}>
-        <h4>00{project.id}</h4>
-      </div>
-    </motion.div>
+    <div className={contentStyles.leftContent} onClick={() => window.open(project.linkUrl, "_blank")}>
+      <GlareCard className={contentStyles.glareCard}>
+        <div className={contentStyles.topContent}>
+          <h1>{project.projectTitle}</h1>
+        </div>
+        <div className={contentStyles.bottomContent}>
+          <h4>00{project.id}</h4>
+        </div>
+      </GlareCard>
+    </div>
   );
 };
 

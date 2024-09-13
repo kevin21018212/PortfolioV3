@@ -50,12 +50,12 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
+export const useIsMobile = (): boolean | null => {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null); // Start with null to represent "unknown" state
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // You can adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint if needed
     };
 
     checkMobile(); // Initial check

@@ -1,14 +1,19 @@
 "use client";
+import React from "react";
+import { useIsMobile } from "@/utils/functions"; // Import your hook
 import styles from "./page.module.css";
 import Landing from "./homepage/landing";
+import LandingMobile from "./homepage/landingMobile";
 import NewProjects from "./homepage/newprojects";
 import NewProjectsMobile from "./homepage/newprojectsmobile";
-import LandingMobile from "./homepage/landingMobile";
 import BackgroundBeams from "@/utils/components/backgroundBeams";
-import { useIsMobile } from "@/utils/functions";
 
-export default function Home() {
-  const isMobile = useIsMobile();
+const Home: React.FC = () => {
+  const isMobile = useIsMobile(); // Use the hook
+
+  if (isMobile == null) {
+    return <div>Loading...</div>;
+  }
 
   return isMobile ? (
     <div className={styles.mobilePageContainer}>
@@ -28,4 +33,6 @@ export default function Home() {
       <BackgroundBeams className={styles.backgroundBeams} />
     </div>
   );
-}
+};
+
+export default Home;
