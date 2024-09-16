@@ -11,7 +11,7 @@ export const allTags = [
   "Languages",
   "Assembly",
 ];
-export const mobileTags = ["Frontend", "Backend", "Devops"];
+export const mobileTags = ["Frontend", "Backend", "DevOps"];
 
 const skillsData: SkillData[] = [
   {
@@ -34,7 +34,7 @@ const skillsData: SkillData[] = [
   },
   {
     title: "PROGRAMMING",
-    skillName: "Javascript",
+    skillName: "JavaScript",
     experience: "3 years, Class",
     tags: ["Languages", "Frontend"],
   },
@@ -48,7 +48,7 @@ const skillsData: SkillData[] = [
     title: "STYLING",
     skillName: "CSS/SASS",
     experience: "3 years, Class",
-    tags: ["Languages", "Frontend"],
+    tags: ["Styling", "Frontend"],
   },
   {
     title: "FRONTEND",
@@ -60,7 +60,7 @@ const skillsData: SkillData[] = [
     title: "FRONTEND",
     skillName: "React",
     experience: "3.5 years, On-Job/Personal Projects",
-    tags: ["Framework", "Frontend"],
+    tags: ["Framework", "Frontend", "React"],
   },
   {
     title: "FRONTEND",
@@ -72,25 +72,25 @@ const skillsData: SkillData[] = [
     title: "FRONTEND",
     skillName: "MUI",
     experience: "2 years, Personal Projects",
-    tags: ["Framework"],
+    tags: ["Framework", "Frontend"],
   },
   {
     title: "TOOLS",
     skillName: "Git",
     experience: "3 years, On-Job/Personal Projects",
-    tags: ["DevOps"],
+    tags: ["DevOps", "Version Control"],
   },
   {
     title: "TOOLS",
     skillName: "Jira",
     experience: "2 years, On-Job",
-    tags: ["DevOps"],
+    tags: ["DevOps", "Project Management"],
   },
   {
     title: "TOOLS",
     skillName: "Agile",
     experience: "2 years, On-Job",
-    tags: ["DevOps"],
+    tags: ["DevOps", "Project Management"],
   },
   {
     title: "TOOLS",
@@ -102,25 +102,25 @@ const skillsData: SkillData[] = [
     title: "DATABASE",
     skillName: "Postgres",
     experience: "1 year, On-Job",
-    tags: ["Backend"],
+    tags: ["Databases", "Backend"],
   },
   {
     title: "DATABASE",
     skillName: "MongoDB",
     experience: "0.5 years, On-Job",
-    tags: ["Backend"],
+    tags: ["Databases", "Backend"],
   },
   {
     title: "DATABASE",
     skillName: "SQL",
     experience: "1 year, On-Job",
-    tags: ["Backend"],
+    tags: ["Databases", "Backend"],
   },
   {
     title: "CLOUD",
     skillName: "IaaS",
     experience: "1 year, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Infrastructure"],
   },
   {
     title: "CLOUD",
@@ -130,45 +130,45 @@ const skillsData: SkillData[] = [
   },
   {
     title: "CLOUD",
-    skillName: "Api Gateway",
+    skillName: "API Gateway",
     experience: "0.5 years, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "APIs"],
   },
   {
     title: "CLOUD",
     skillName: "RDS",
     experience: "0.5 years, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Databases"],
   },
   {
     title: "CLOUD",
-    skillName: "S3 buckets",
+    skillName: "S3 Buckets",
     experience: "1 year, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Storage"],
   },
   {
     title: "CLOUD",
     skillName: "ECS",
     experience: "1 year, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Deployment"],
   },
   {
     title: "CLOUD",
     skillName: "EC2",
     experience: "0.5 years, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Deployment"],
   },
   {
     title: "CLOUD",
     skillName: "Lambda",
     experience: "0.5 years, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Serverless"],
   },
   {
     title: "CLOUD",
-    skillName: "Cloudwatch",
+    skillName: "CloudWatch",
     experience: "0.5 years, On-Job",
-    tags: ["Cloud"],
+    tags: ["Cloud", "Monitoring"],
   },
   {
     title: "CLOUD",
@@ -178,19 +178,19 @@ const skillsData: SkillData[] = [
   },
   {
     title: "BACKEND",
-    skillName: "Oauth",
+    skillName: "OAuth",
     experience: "1 year, On-Job",
-    tags: ["Backend", "Framework"],
+    tags: ["Backend", "APIs", "Security"],
   },
   {
     title: "BACKEND",
-    skillName: "HTTP requests",
+    skillName: "HTTP Requests",
     experience: "1 year, On-Job",
     tags: ["Backend", "Networking"],
   },
   {
     title: "BACKEND",
-    skillName: "Socket Apis",
+    skillName: "Socket APIs",
     experience: "0.5 years, On-Job",
     tags: ["Backend", "Networking"],
   },
@@ -204,49 +204,49 @@ const skillsData: SkillData[] = [
     title: "SYSTEM ARCHITECTURE",
     skillName: "Operating Systems",
     experience: "0.5 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Digital Logic",
     experience: "0.5 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Data Structures",
     experience: "3 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture", "Algorithms"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Embedded Systems",
     experience: "1 year, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Software Architecture",
     experience: "2.5 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture", "Software Engineering"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Scalable Infrastructure",
     experience: "1.5 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture", "Cloud"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Test Driven Development",
     experience: "2 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture", "Testing"],
   },
   {
     title: "SYSTEM ARCHITECTURE",
     skillName: "Software Testing",
     experience: "2 years, Class",
-    tags: ["System and Architecture"],
+    tags: ["System Architecture", "Testing"],
   },
 ];
 
