@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "@/styles/project/displayed/project.module.scss";
 import contentStyles from "@/styles/project/displayed/projectContent.module.scss";
-import { containerVariants } from "@/utils/framer";
+import { boxVariants, containerVariants, staggerDivVariant, staggerText, textAnimation } from "@/utils/framer";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { GlareCard } from "@/utils/components/glareCard";
 
@@ -60,6 +60,7 @@ const TopContent = ({ project, controls }: any) => {
 };
 
 // BottomContent Component
+
 const BottomContent = ({ project, controls }: any) => {
   return (
     <>
@@ -71,14 +72,23 @@ const BottomContent = ({ project, controls }: any) => {
         custom={4}
         whileHover="hover"
       >
-        <div className={contentStyles.bottomLeftContent}>
+        <motion.div className={contentStyles.bottomLeftContent} variants={staggerText}>
           {project.projectTech.split(" ").map((tech: string, index: number) => (
-            <div key={index} className={contentStyles.tag}>
-              <h3>{tech}</h3>
-            </div>
+            <motion.div
+              key={index}
+              className={contentStyles.tag}
+              variants={staggerDivVariant}
+              initial="hidden"
+              animate={controls}
+              custom={index + 4}
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.h3 variants={textAnimation}>{tech}</motion.h3>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
+
       <motion.div
         className={styles.bottomMiddle}
         variants={containerVariants}
@@ -89,6 +99,7 @@ const BottomContent = ({ project, controls }: any) => {
       >
         <div className={contentStyles.bottomRightContent} style={{ backgroundImage: `url(${project.img1})` }}></div>
       </motion.div>
+
       <motion.div
         className={styles.bottomRight}
         variants={containerVariants}
