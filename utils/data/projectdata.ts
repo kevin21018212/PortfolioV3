@@ -66,4 +66,17 @@ export const projectData: Project[] = [
     linkUrl: "",
     githubUrl: "",
   },
+  {
+    id: 6,
+    projectNumber: "Project 006",
+    projectTitle: "DaBaby Mod",
+    projectTag: "Minecraft AI Mod",
+    description:
+      "DaBaby Mod is a Minecraft Forge mod written in Java featuring a complex AI system (20+ behaviors), custom mobs, items, and interactive gameplay. Leveraged Minecraft Forge API for compatibility with other mods and utilized advanced Java programming techniques to design and implement the AI system.",
+    projectTech: "JAVA MINECRAFT FORGE OOP PROJECT MANAGEMENT",
+    img1: "",
+    img2: "",
+    linkUrl: "",
+    githubUrl: "",
+  },
 ];
