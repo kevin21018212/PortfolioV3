@@ -65,19 +65,13 @@ const SubHeading = () => (
       <motion.a
         href="/resume.pdf"
         className={styles.simpleGradient}
-        whileHover={{
-          scale: 1.05,
-          transition: {
-            duration: 0.3,
-            ease: "easeOut",
-          },
-
-          animation: "gradientAnimation 3s ease infinite",
-        }}
+        whileHover={{ scale: 1.01 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         target="_blank"
         rel="noopener noreferrer"
       >
-        download resume
+        {"  "}
+        download resume{" "}
       </motion.a>
       for a more formal look at my talents
     </h3>

@@ -28,15 +28,23 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-right: 1.5%;
+
+    // Ensure static gradient when not hovered
+    background-size: 100% 100%;
+
+    // Hover animation
+    &:hover {
+      background-size: 200% 200%;
+      animation: gradientAnimation 4s ease-in-out infinite;
+    }
+
+    // Keyframe for gradient animation
     @keyframes gradientAnimation {
       0% {
         background-position: 0% 50%;
       }
-      50% {
-        background-position: 100% 50%;
-      }
       100% {
-        background-position: 0% 50%;
+        background-position: 100% 50%;
       }
     }
   }
