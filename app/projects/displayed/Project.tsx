@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import styles from "@/styles/project/displayed/project.module.scss";
 import contentStyles from "@/styles/project/displayed/projectContent.module.scss";
 import { boxVariants, containerVariants, staggerDivVariant, staggerText, textAnimation } from "@/utils/framer";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowAltCircleUp, FaGithub } from "react-icons/fa";
 import { GlareCard } from "@/utils/components/glareCard";
 
 // LeftContent Component
@@ -49,10 +49,11 @@ const TopContent = ({ project, controls }: any) => {
       >
         <motion.div
           onClick={() => window.open(project.githubUrl, "_blank")}
-          whileHover={{ scale: 1.05 }}
+          whileHover="hover"
+          variants={boxVariants()}
           className={contentStyles.topRightContent}
         >
-          <FaArrowAltCircleUp size={"50%"} color="#F0F0F0" />
+          <FaGithub size={"50%"} color="#F0F0F0" />
         </motion.div>
       </motion.div>
     </>

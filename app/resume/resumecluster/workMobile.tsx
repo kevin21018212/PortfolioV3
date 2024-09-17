@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/styles/resume/resumecluster/workMobile.module.scss";
 import AboutDisplay from "./about";
 import { jobData } from "@/utils/data/smallData";
-import SpacerContainer from "@/app/global/spacer";
+
 import { motion } from "framer-motion";
 
 const WorkMobile = () => {
