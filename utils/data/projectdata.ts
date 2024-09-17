@@ -9,8 +9,8 @@ export const projectData: Project[] = [
     description:
       "In the digital age, a portfolio is a must-have for any professional. A portfolio acts almost as an art gallery for works in the digital age. I see my portfolio as not just a digital resume but a showcase of my creativity and personality. I wanted to challenge myself to make a visual identity for my works to build off in future projects. All the code in this project, built through Next.js and Framer Motion, is built to be used and expanded upon in other projects, making this not only act as a jumping-off point for viewers to explore my works but also as a platform that supports my other projects.",
     projectTech: "GITHUB NEXTJS SCSS FRAMER DEVOPS",
-    img1: "",
-    img2: "",
+    img1: "https://img.freepik.com/premium-photo/abstract-fluid-liquid-metal-background_92086-627.jpg",
+    img2: "https://t3.ftcdn.net/jpg/05/37/65/72/360_F_537657269_NKN0VTSYs3Mwk1ab4PHx9KhgSITPg1iD.jpg",
     linkUrl: "https://portfolio-v3-jet.vercel.app/",
     githubUrl: "https://github.com/kevin21018212/PortfolioV3",
   },
@@ -48,7 +48,7 @@ export const projectData: Project[] = [
     description:
       "As a music lover, I often get asked by my friends what I am listening to or for music recommendations. I wanted to create a platform that would allow me to share my music taste with my friends. Kev.FM is a music sharing platform that allows users to share their music taste with the world. Users can create a profile, share their favorite songs, and create playlists. KevFM is designed to log and store all my Spotify data, even songs I am currently listening to, and display them for my friends to see without having to log in through any third-party services.",
     projectTech: "API ROUTING SSR NEXTJS HOOKS",
-    img1: "",
+    img1: "https://indieground.net/wp-content/uploads/2019/05/Freebie-HolographicTextures-Preview-02.jpg",
     img2: "https://storage.googleapis.com/pr-newsroom-wp/1/2023/01/AppleCompetition-FTRHeader_V2-1440x733.png",
     linkUrl: "https://kev-fm.vercel.app/",
     githubUrl: "https://github.com/kevin21018212/KevFm",
@@ -73,10 +73,10 @@ export const projectData: Project[] = [
     projectTag: "Minecraft AI Mod",
     description:
       "DaBaby Mod is a Minecraft Forge mod written in Java featuring a complex AI system (20+ behaviors), custom mobs, items, and interactive gameplay. Leveraged Minecraft Forge API for compatibility with other mods and utilized advanced Java programming techniques to design and implement the AI system.",
-    projectTech: "JAVA MINECRAFT FORGE OOP PROJECT MANAGEMENT",
-    img1: "",
-    img2: "",
-    linkUrl: "",
-    githubUrl: "",
+    projectTech: "JAVA MINECRAFT FORGE OOP API AI",
+    img1: "https://static.planetminecraft.com/files/image/minecraft/mod/2021/435/14206313_xl.webp",
+    img2: "https://files.minecraftforge.net/static/images/embed_logo.png",
+    linkUrl: "https://github.com/kevin21018212/Dababymod",
+    githubUrl: "https://github.com/kevin21018212/Dababymod",
   },
 ];
