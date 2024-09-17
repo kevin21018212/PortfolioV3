@@ -70,7 +70,12 @@
     padding: 1%;
 
     .heading {
-      width: 90%;
+      width: 80%;
+
+      h2 {
+        font-size: 6.25vw;
+        letter-spacing: 2px;
+      }
     }
 
     .subHeading {
