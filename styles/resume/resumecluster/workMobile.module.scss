@@ -5,7 +5,7 @@
 }
 
 .workinfo {
-  height: 125vh;
+  height: 160vh;
   @include flexColumn(center, center);
 }
 
@@ -13,13 +13,14 @@
   z-index: -10;
   position: absolute;
   width: 100vw;
-  height: 125vh;
+  height: 160vh;
   background: url(../../../public/deereimg.jpeg);
   background-size: cover;
 }
 
 /* Display For Jobs */
 .workdisplay {
+  height: auto;
   width: 90vw;
   padding: 2.5%;
   @include flexColumn(center, flex-start);

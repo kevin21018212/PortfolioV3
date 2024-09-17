@@ -40,7 +40,7 @@ const CommitCard: React.FC<{ commit: Commit; index: number }> = ({ commit, index
           whileHover="hover"
           whileTap={{ scale: 0.9 }}
         >
-          <FaArrowAltCircleRight size={"85%"} />
+          <FaArrowAltCircleRight className={gstyles.icon} size={"85%"} />
         </motion.button>
       </div>
     </div>
