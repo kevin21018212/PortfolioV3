@@ -72,6 +72,7 @@ $maingd: $simpleGradient;
   width: 105%;
   height: 100%;
   background: none;
+  box-shadow: none;
 
   .glareCard {
     display: flex;
@@ -95,15 +96,21 @@ $maingd: $simpleGradient;
 
     h1 {
       @extend .title;
+
       font-size: 3.5vw;
       letter-spacing: 2px;
       line-height: 1;
       margin-bottom: 2.5%;
       color: $white2;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     @media screen and (max-width: 600px) {
       h1 {
+        padding-top: 5%;
         font-size: 5vh;
       }
     }

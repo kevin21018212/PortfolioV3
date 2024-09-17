@@ -22,8 +22,13 @@
   @extend .spacerBase;
   @include flexColumn(none, center);
   padding: 2.5%;
+  h1 {
+    text-wrap: nowrap;
+    letter-spacing: 5px;
+  }
   h3 {
     @extend .tag;
+
     letter-spacing: 1px;
     color: $black;
     margin: 0 5%;
