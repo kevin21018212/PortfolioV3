@@ -8,7 +8,7 @@
 .frame {
   display: flex;
   width: 80vw;
-  height: 65vh;
+  height: 70vh;
   margin: 2vh 2vw;
 }
 
@@ -18,7 +18,7 @@
 
 .rightSection {
   width: 60vw;
-  height: 31.5vh;
+  height: 34vh;
   gap: 2vh 1vw;
   @include flexCenter(center);
   flex-wrap: wrap;
