@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const words = [
-    { text: "Email \xa0", url: "mailto:your.email@example.com" },
+    { text: "Email \xa0", url: "mailto:trashlinkmain@gmail.com" },
     {
       text: "LinkedIn \xa0",
       url: "https://www.linkedin.com/in/matthew-bennett-592102252/",
@@ -39,12 +39,7 @@ const ContactPage = () => {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(-1)}
         >
-          <Marquee
-            className={styles.marquee}
-            pauseOnHover={true}
-            autoFill={true}
-            direction="right"
-          >
+          <Marquee className={styles.marquee} pauseOnHover={true} autoFill={true} direction="right">
             <h1>{word.text}</h1>
           </Marquee>
         </a>
