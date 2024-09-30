@@ -10,7 +10,6 @@ interface GitHubActivityProps {
   commits: Commit[];
 }
 interface ProfileProps {
-  username: string | undefined;
   repos: Repo[];
   totalCommits: number;
 }
@@ -70,7 +69,7 @@ const StatBox: React.FC<{ title: string; value: string | number; link: string }>
   </motion.div>
 );
 
-export const Profile: React.FC<ProfileProps> = ({ username, repos, totalCommits }) => (
+export const Profile: React.FC<ProfileProps> = ({ repos, totalCommits }) => (
   <motion.div
     className={pstyles.profileContainer}
     initial="hidden"

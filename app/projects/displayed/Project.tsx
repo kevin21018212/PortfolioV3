@@ -5,10 +5,9 @@ import { useInView } from "react-intersection-observer";
 import styles from "@/styles/project/displayed/project.module.scss";
 import contentStyles from "@/styles/project/displayed/projectContent.module.scss";
 import { boxVariants, containerVariants, staggerDivVariant, staggerText, textAnimation } from "@/utils/framer";
-import { FaArrowAltCircleUp, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { GlareCard } from "@/utils/components/glareCard";
 
-// LeftContent Component
 const LeftContent = ({ project }: any) => {
   return (
     <div className={contentStyles.leftContent} onClick={() => window.open(project.linkUrl, "_blank")}>
@@ -24,7 +23,6 @@ const LeftContent = ({ project }: any) => {
   );
 };
 
-// TopContent Component
 const TopContent = ({ project, controls }: any) => {
   return (
     <>
@@ -59,8 +57,6 @@ const TopContent = ({ project, controls }: any) => {
     </>
   );
 };
-
-// BottomContent Component
 
 const BottomContent = ({ project, controls }: any) => {
   return (
@@ -115,7 +111,6 @@ const BottomContent = ({ project, controls }: any) => {
   );
 };
 
-// Main Project Component
 const Project = ({ project }: any) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();

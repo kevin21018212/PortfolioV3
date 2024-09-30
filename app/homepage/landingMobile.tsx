@@ -8,7 +8,6 @@ import * as fiber from "@react-three/fiber";
 import { IconBox, ShaderGradientBackground } from "./landing";
 import { motion } from "framer-motion";
 
-// Landing Component
 const LandingMobile: React.FC = () => {
   const importedFiberProps = { ...fiber, ...drei, ...reactSpring };
 

@@ -2,15 +2,13 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/homepage/projectinfo.module.scss";
-
-import { staggerText, textAnimation, staggerDivVariant, springTransition } from "../../utils/framer";
+import { staggerText, springTransition } from "../../utils/framer";
 import { Project } from "@/utils/data/dataType";
 
-// Variants for left and right side text entry
 const leftTextVariant = {
   hidden: {
     opacity: 0,
-    x: -50, // comes in from left
+    x: -50,
   },
   visible: (index: number) => ({
     opacity: 1,
@@ -22,7 +20,7 @@ const leftTextVariant = {
 const rightTextVariant = {
   hidden: {
     opacity: 0,
-    x: 50, // comes in from right
+    x: 50,
   },
   visible: (index: number) => ({
     opacity: 1,

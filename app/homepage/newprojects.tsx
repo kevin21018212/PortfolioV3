@@ -26,11 +26,9 @@ const NewProjects = () => {
   };
 
   const handleCircleClick = (circleId: number) => {
-    setSelectedCircle(circleId); // Update the selected circle
+    setSelectedCircle(circleId);
     if (circleId != null || circleId !== 0) {
-      const selectedProject = projectData.find(
-        (project) => project.id === circleId
-      ) as Project;
+      const selectedProject = projectData.find((project) => project.id === circleId) as Project;
       console.log(selectedProject);
       setProjectData(selectedProject);
     }
@@ -61,17 +59,14 @@ const NewProjects = () => {
           {circles.map((circle) => (
             <motion.div
               key={circle.id}
-              className={`${styles.circle} ${
-                selectedCircle === circle.id ? styles.selected : ""
-              }`}
+              className={`${styles.circle} ${selectedCircle === circle.id ? styles.selected : ""}`}
               onClick={() => {
                 handleCircleClick(circle.id);
               }}
               whileHover={{ scale: 1.2, rotate: 10 }}
               whileTap={{ scale: 0.9 }}
               animate={{
-                backgroundColor:
-                  selectedCircle === circle.id ? "#1b2126" : "transparent",
+                backgroundColor: selectedCircle === circle.id ? "#1b2126" : "transparent",
                 transition: { duration: 0.3 },
               }}
             ></motion.div>

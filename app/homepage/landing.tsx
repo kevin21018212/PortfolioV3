@@ -9,8 +9,6 @@ import { boxVariants, containerVariants } from "../../utils/framer";
 import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 import { CardContainer, CardBody, CardItem } from "@/utils/components/card";
 
-// ShaderGradientBackground Component
-
 export const ShaderGradientBackground: React.FC<{ importedFiber?: any }> = ({ importedFiber }) => {
   return (
     <ShaderGradientCanvas
@@ -28,7 +26,6 @@ export const ShaderGradientBackground: React.FC<{ importedFiber?: any }> = ({ im
   );
 };
 
-// TextBox Component
 export const TextBox: React.FC = () => {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -100,7 +97,6 @@ export const TextBox: React.FC = () => {
   );
 };
 
-// IconBox Component
 export const IconBox: React.FC = () => {
   return (
     <>
@@ -130,16 +126,15 @@ export const IconBox: React.FC = () => {
   );
 };
 
-// Landing Component
 const Landing: React.FC = () => {
   return (
     <>
       <div className={styles.landingContainer}>
         <div className={styles.gradientBox}>
           <motion.div
-            initial={{ x: "-100%" }} // Start off-screen to the left
-            animate={{ x: 0 }} // Animate to its final position
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }} // Adjust as needed
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
             style={{
               borderRadius: "0px 20px 20px 0px",
               overflow: "hidden",

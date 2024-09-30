@@ -11,7 +11,7 @@ import { GitHubActivity, Profile } from "./updates";
 const ProjectsPage: React.FC = () => {
   const [commits, setCommits] = useState<Commit[]>([]);
   const [repos, setRepos] = useState<Repo[]>([]);
-  const [totalCommits, setTotalCommits] = useState<number>(0); // Total commits for the current year
+  const [totalCommits, setTotalCommits] = useState<number>(0);
 
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || "";
   const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN || "";
@@ -29,7 +29,6 @@ const ProjectsPage: React.FC = () => {
 
         const pushes = events.filter((event: any) => event.type === "PushEvent");
 
-        // This variable will store the correct amount of commits
         const recentCommits: Commit[] = [];
 
         pushes.forEach((push: any) => {
@@ -37,12 +36,12 @@ const ProjectsPage: React.FC = () => {
           const commitDate = new Date(push.created_at);
           const commitMessages = payload.commits;
 
-          // Count all commits for the current year
+          // count all commits for the current year
           if (commitDate.getFullYear() === currentYear) {
             totalCommitsInYear += commitMessages.length;
           }
 
-          // Extract each commit's details
+          // extractcommit details
           commitMessages.forEach((commit: any) => {
             const commitUrl = commit.url.replace("api.", "").replace("repos/", "");
             recentCommits.push({
@@ -54,7 +53,6 @@ const ProjectsPage: React.FC = () => {
           });
         });
 
-        // Store only the most recent 8 commits
         setCommits(recentCommits.slice(0, 8));
 
         const sortedRepos = reposData
@@ -62,8 +60,6 @@ const ProjectsPage: React.FC = () => {
           .slice(0, 6);
 
         setRepos(sortedRepos);
-
-        // Update total commits for the year
         setTotalCommits(totalCommitsInYear);
       } catch (error: any) {
         console.error("Error fetching GitHub data:", error);
@@ -81,11 +77,9 @@ const ProjectsPage: React.FC = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.leftColumn}>
-            {/* Profile section now displays total commits for the year */}
-            <Profile username={username} repos={repos} totalCommits={totalCommits} />
+            <Profile repos={repos} totalCommits={totalCommits} />
           </div>
           <div className={styles.rightColumn}>
-            {/* GitHub activity shows only the recent 8 commits */}
             <GitHubActivity commits={commits} />
           </div>
         </div>
